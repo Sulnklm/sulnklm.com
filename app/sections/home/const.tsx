@@ -16,7 +16,7 @@ export const HOME_HERO_CONST = {
 
   DESCRIPTION: {
     DESCRIPTION1:
-      "Based in Vancouver, BC, Canada. I focus on usability, clarity, and aesthetics.",
+      "Based in Vancouver, BC, Canada.",
     DESCRIPTION2: "I focus on usability, clarity, and aesthetics.",
   },
 };
