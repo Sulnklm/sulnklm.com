@@ -1,3 +1,4 @@
+import NavBar from './components/Navbar';
 import './globals.css';
 import { ReactNode } from 'react'
 
@@ -14,9 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="bg-background text-primary font-Sans">
        
-        <header>
-            {/* 나중에 컴포넌트 */}
-        </header>
+      <NavBar />
 
         <main>{children}</main>
 
