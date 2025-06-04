@@ -3,7 +3,7 @@ import React from 'react';
 type Props = {
 };
 
-const ComponentName = (props: Props): JSX.Element => {
+const Projects = (props: Props): JSX.Element => {
   return (
     <div>
       
@@ -11,4 +11,4 @@ const ComponentName = (props: Props): JSX.Element => {
   );
 };
 
-export default ComponentName;
+export default Projects;

@@ -18,14 +18,21 @@ module.exports = {
       colors: {
         primary: "#252525",
         background: "#FFFFFF",
-        lightGrey: "#F6F6F8",
-        darkGrey: "#A4A4A4",
+        grey_scale_100: "#FCFBFC",
+        grey_scale_300: "#F6F6F8",
+        grey_scale_500: "#A4A4A4",
+        grey_scale_700: "#7C7C7C",
       },
       fontSize: {
         h1: ["50px", { lineHeight: "1.1" }],
-        "h1-md": ["40px"],
-        "h1-lg": ["45px"],
+        "h1-md": ["70px"],
+        "h1-lg": ["75px"],
         "h1-2xl": ["80px"],
+
+        h3: ["26px", { lineHeight: "1.1" }],
+        "h3-md": ["28px"],
+        "h3-lg": ["30px"],
+        "h3-2xl": ["32px"],
 
         p: ["16px", { lineHeight: "1.3" }],
         "p-md": ["16px"],
@@ -54,9 +61,22 @@ module.exports = {
             "@apply text-h1-2xl": {},
           },
         },
+        h3: {
+          "@apply text-h3 font-Schoolbell text-primary dark:text-white":
+            {},
+          "@media (min-width: 768px)": {
+            "@apply text-h3-md": {},
+          },
+          "@media (min-width: 1024px)": {
+            "@apply text-h3-lg": {},
+          },
+          "@media (min-width: 1536px)": {
+            "@apply text-h3-2xl": {},
+          },
+        },
 
         p: {
-          "@apply text-p font-Sans  font-[400] text-center":
+          "@apply text-p font-Sans font-[400]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},
