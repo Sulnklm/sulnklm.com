@@ -2,6 +2,8 @@ export const NAVBAR_CONST = {
   LOGO: {
     HREF: "/",
     LABEL: "home",
+    SRC: "/images/logo.svg",
+    ALT: "Smiley Face Logo",
   },
   LINKS: [
     {

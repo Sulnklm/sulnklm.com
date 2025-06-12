@@ -4,3 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-gradient {
+    @apply bg-gradient bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-dark {
+    @apply dark:bg-gradient-dark bg-clip-text text-transparent;
+  }
+  

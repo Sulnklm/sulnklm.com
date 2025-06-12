@@ -5,7 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
   ],
-  
+
   theme: {
     extend: {
       screens: {
@@ -18,13 +18,18 @@ module.exports = {
       colors: {
         primary: "#252525",
         background: "#FFFFFF",
-        grey_scale_100: "#FCFBFC",
+        grey_scale_100: "#F0F0F0",
         grey_scale_300: "#F6F6F8",
         grey_scale_500: "#A4A4A4",
         grey_scale_700: "#7C7C7C",
+        grey_scale_900: "#434343"
+      },
+      backgroundImage: {
+        "gradient": "linear-gradient(180deg, #7C7C7C, #000000)",
+        "gradient-dark": "linear-gradient(180deg, #4F4F4F 0%, #F6F6F8 40%, #FCFBFC 60%, #B6B6B6 100%)",
       },
       fontSize: {
-        h1: ["50px", { lineHeight: "1.1" }],
+        h1: ["50px", { lineHeight: "1.03" }],
         "h1-md": ["70px"],
         "h1-lg": ["75px"],
         "h1-2xl": ["80px"],
@@ -62,8 +67,7 @@ module.exports = {
           },
         },
         h3: {
-          "@apply text-h3 font-Schoolbell text-primary dark:text-white":
-            {},
+          "@apply text-h3 font-Schoolbell text-primary dark:text-white": {},
           "@media (min-width: 768px)": {
             "@apply text-h3-md": {},
           },
@@ -76,8 +80,7 @@ module.exports = {
         },
 
         p: {
-          "@apply text-p font-Sans font-[400]":
-            {},
+          "@apply text-p font-Sans font-[400]": {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},
           },

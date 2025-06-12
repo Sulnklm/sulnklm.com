@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type ButtonPropTypes = {
   href?: string;
   children: React.ReactNode;
@@ -9,4 +11,5 @@ export type ButtonPropTypes = {
     hover?: string;
   };
   theme?: "primary" | "secondary" | "tertiary";
+  icon?: ReactNode;
 };
