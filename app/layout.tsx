@@ -1,6 +1,7 @@
 import NavBar from './components/Navbar';
 import './globals.css';
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
+import { Providers } from './providers';
 
 export const metadata = {
   title: 'Suin Kim | Portfolio',
@@ -8,20 +9,18 @@ export const metadata = {
   authors: [{ name: 'Suin Kim', url: 'https://sulnklm.com' }],
   creator: 'Suin Kim',
   description: 'Welcome to my portfolio!',
-}
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-background text-primary font-Sans">
-       
-      <NavBar />
-
-        <main>{children}</main>
-
-        <footer>
-        </footer>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Providers>
+          <NavBar />
+          <main>{children}</main>
+          <footer></footer>
+        </Providers>
       </body>
     </html>
-  )
+  );
 }

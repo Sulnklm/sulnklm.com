@@ -4,7 +4,7 @@ import Profile from './(pages)/home/components/Profile'
 
 export default function HomePage() {
   return (
-    <div>
+    <div className='bg-white dark:bg-black'>
       <Hero />
       <Projects />
       <Profile />

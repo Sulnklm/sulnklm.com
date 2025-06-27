@@ -1,97 +1,150 @@
 "use client";
-type Props = {};
-import { HOME_HERO_CONST } from "../const";
-import WavyText from "@/components/animation/WavyText";
-import WavyImage from "@/components/animation/WavyImage";
-import { GridBackground } from "@/components/GridBackground";
-import { Button } from "@/components/Button";
-import { EXTERNAL_LINKS } from "@/lib/const";
-import { ArrowRight } from "lucide-react";
-import { useVancouverTime } from "@/hooks/useVancouverTime";
-import { ToolIcon } from "@/components/ToolIcon/ToolIcon";
-import { TECH_STACK } from "@/lib/const";
+
 import React from "react";
+import { ArrowRight } from "lucide-react";
+import WavyImage from "@/components/animation/WavyImage";
+import { DotBackground } from "@/components/DotBackground";
+import { Button } from "@/components/Button";
+import { ToolIcon } from "@/components/ToolIcon/ToolIcon";
+import { useVancouverTime } from "@/hooks/useVancouverTime";
+import { EXTERNAL_LINKS, TECH_STACK } from "@/lib/const";
+import { HOME_HERO_CONST } from "../const";
+
 export default function Hero() {
   const time = useVancouverTime();
 
+  const actions = [
+    {
+      href: EXTERNAL_LINKS.GITHUB.href,
+      theme: "primary" as const,
+      label: EXTERNAL_LINKS.GITHUB.label,
+      icon: null,
+      extraClasses: "dark:px-8",
+    },
+    {
+      href: EXTERNAL_LINKS.LINKEDIN.href,
+      theme: "secondary" as const,
+      label: EXTERNAL_LINKS.LINKEDIN.label,
+      icon: <ArrowRight size={16} />,
+      extraClasses: "",
+    },
+  ];
+
+  const titleParts = [
+    { text: HOME_HERO_CONST.TITLE.PART1 },
+    { text: HOME_HERO_CONST.TITLE.PART2 },
+    { text: HOME_HERO_CONST.TITLE.PART3, highlighted: true },
+    { text: HOME_HERO_CONST.TITLE.PART4 },
+    { text: HOME_HERO_CONST.TITLE.PART5, highlighted: true },
+    { text: HOME_HERO_CONST.TITLE.PART6, highlighted: true },
+    { text: HOME_HERO_CONST.TITLE.PART7, highlighted: true },
+  ];
+
   return (
-    <section className="relative h-screen bg-white dark:bg-primary">
+    <section className="relative h-screen bg-background dark:bg-primary overflow-hidden px-5">
       <div className="absolute inset-0 z-0">
-        <GridBackground />
+        <DotBackground />
       </div>
+
+      <img
+        src={HOME_HERO_CONST.SUNSHINE.SRC}
+        alt={HOME_HERO_CONST.SUNSHINE.ALT}
+        className="absolute scale-[200%] brightness-200 md:-left-1/4 top-20 md:-bottom-20 dark:hidden"
+      />
+
       <div className="relative z-10 container mx-auto flex flex-col items-center justify-center gap-5 h-full text-center -mt-10">
-        <WavyImage
-          src={HOME_HERO_CONST.HEADSHOT.SRC}
-          alt={HOME_HERO_CONST.HEADSHOT.ALT}
-          width={300}
-          height={300}
-          delay={1.4}
-          className="relative object-cover w-40 h-40 hover:rotate-6 duration-300"
-        />
-        <div className="dark:hidden flex flex-col items-center">
-          <div className="flex gap-5">
-            <h1 className="text-gradient text-center">
-              {HOME_HERO_CONST.TITLE.PART1}
-            </h1>
-            <WavyText
-              text="creative"
-              replay={true}
-              className="text-gradient inline-block font-Schoolbell font-[400]"
-            />
+        {/* 3.1) TITLE */}
+        <div className="flex flex-col items-center">
+          <div className="flex gap-3 md:gap-4">
+            {titleParts.slice(0, 3).map((p, i) => (
+              <React.Fragment key={i}>
+                <h1
+                  className={`text-center font-[450] ${
+                    p.highlighted
+                      ? "text-grey_scale_900 dark:text-grey_scale_300/90"
+                      : "text-grey_scale_700 dark:text-grey_scale_800"
+                  }`}
+                >
+                  {p.text}
+                </h1>
+
+                {/* headshot */}
+                {i === 1 && (
+                  <WavyImage
+                    src={HOME_HERO_CONST.HEADSHOT.SRC}
+                    alt={HOME_HERO_CONST.HEADSHOT.ALT}
+                    width={300}
+                    height={300}
+                    delay={1.4}
+                    className="relative object-cover min-w-[60px] max-w-16 sm:max-w-18 lg:max-w-24 w-full h-auto hover:rotate-6 duration-300 border-[2.5px] shadow-br rounded-3xl -translate-y md:mx-3"
+                  />
+                )}
+              </React.Fragment>
+            ))}
           </div>
-          <h1 className="text-gradient text-center p-1">
-            {HOME_HERO_CONST.TITLE.PART3}
-          </h1>
+
+          <div className="flex gap-3 md:gap-4 mt-3">
+            {titleParts.slice(3).map((p, i) => (
+              <h1
+                key={i}
+                className={`text-center font-[450] ${
+                  p.highlighted
+                    ? "text-grey_scale_900 dark:text-grey_scale_300/90"
+                    : "text-grey_scale_700 dark:text-grey_scale_800"
+                }`}
+              >
+                {p.text}
+              </h1>
+            ))}
+          </div>
         </div>
 
-        <div className="hidden dark:flex flex-col items-center">
-          <div className="flex gap-5">
-            <h1 className="text-gradient-dark text-center">
-              {HOME_HERO_CONST.TITLE.PART1}
-            </h1>
-            <WavyText
-              text="creative"
-              replay={true}
-              className="text-gradient-dark inline-block font-Schoolbell font-[400]"
-            />
-          </div>
-          <h1 className="text-gradient-dark text-center p-1">
-            {HOME_HERO_CONST.TITLE.PART3}
-          </h1>
-        </div>
-        <p className="text-grey_scale_700 dark:text-grey_scale_500 max-w-2xl">
-          {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION1} <br />
+        {/* 3.2) DESCRIPTION */}
+        <p className="mt-5 text-grey_scale_700 dark:text-grey_scale_500 max-w-2xl font-[300] text-base tracking-wide">
+          {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION1}
+          <br />
           {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION2}
         </p>
-        <div className="flex gap-4 mt-8">
-          <Button href={EXTERNAL_LINKS.GITHUB.href} theme="primary">
-            {EXTERNAL_LINKS.GITHUB.label}
-          </Button>
-          <Button
-            href={EXTERNAL_LINKS.LINKEDIN.href}
-            theme="secondary"
-            icon={<ArrowRight size={16} />}
-          >
-            {EXTERNAL_LINKS.LINKEDIN.label}
-          </Button>
-        </div>
-      </div>
 
-      {Object.entries(TECH_STACK).map(([category, tools]) => (
-        <div
-          key={category}
-          className="flex items-center justify-center gap-10 mt-5"
-        >
-          {tools.map((tool, i) => (
-            <React.Fragment key={tool.label}>
-              <ToolIcon iconSrc={tool.iconSrc} label={tool.label} />
-              {category === "DESIGN" && i === tools.length - 1 && (
-                <span className="text-grey_scale_500 text-base">+ More</span>
-              )}
-            </React.Fragment>
+        {/* 3.3) ACTIONS */}
+        <div className="flex gap-4 dark:gap-2 mt-5">
+          {actions.map((act, i) => (
+            <Button
+              key={i}
+              href={act.href}
+              theme={act.theme}
+              icon={act.icon || undefined}
+              additionalClasses={act.extraClasses}
+            >
+              {act.label}
+            </Button>
           ))}
         </div>
-      ))}
+
+        {/* 3.4) TECH STACK */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-grey_scale_500 dark:text-grey_scale_700">
+          {Object.entries(TECH_STACK).map(([category, tools]) => (
+            <div
+              key={category}
+              className="flex items-center justify-center gap-10 mt-3"
+            >
+              {tools.map((tool, idx) => (
+                <React.Fragment key={tool.label}>
+                  <ToolIcon iconSrc={tool.iconSrc} label={tool.label} />
+                  {category === "DESIGN" && idx === tools.length - 1 && (
+                    <Button href={EXTERNAL_LINKS.LINKEDIN.href}>
+                      More
+                      <span className="group-hover:translate-x-1 duration-300">
+                        <ArrowRight size={17} />
+                      </span>
+                    </Button>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
