@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import WavyImage from "@/components/animation/WavyImage";
@@ -45,12 +44,6 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <DotBackground />
       </div>
-
-      <img
-        src={HOME_HERO_CONST.SUNSHINE.SRC}
-        alt={HOME_HERO_CONST.SUNSHINE.ALT}
-        className="absolute scale-[200%] brightness-200 md:-left-1/4 top-20 md:-bottom-20 dark:hidden"
-      />
 
       <div className="relative z-10 container mx-auto flex flex-col items-center justify-center gap-5 h-full text-center -mt-10">
         {/* 3.1) TITLE */}

@@ -7,8 +7,8 @@ export const NAVBAR_CONST = {
   },
   LINKS: [
     {
-      HREF: "/projects",
-      LABEL: "Projects",
+      HREF: "/works",
+      LABEL: "Works",
     },
     {
       HREF: "/about",

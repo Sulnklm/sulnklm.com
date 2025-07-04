@@ -31,3 +31,11 @@ export const HOME_HERO_CONST = {
     DESCRIPTION2: "✓ I focus on usability, clarity, and aesthetics.",
   },
 };
+
+export const SELECTED_WORKS_CONST = {
+  HEADING: "selected works",
+  BUTTON: {
+    HREF: "/projects",
+    TEXT: "view all works",
+  },
+};

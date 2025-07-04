@@ -69,7 +69,7 @@ export const ShimmerButton = React.forwardRef<
           className={cn(
             "insert-0 absolute size-full",
 
-            "rounded-2xl px-4 py-1.5 text-sm font-medium ",
+            "rounded-2xl px-4 py-1.5 text-sm font-medium",
 
             // transition
             "transform-gpu transition-all duration-300 ease-in-out",

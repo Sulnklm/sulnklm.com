@@ -58,7 +58,7 @@ module.exports = {
       },
       colors: {
         primary: "#252525",
-        background: "#D9D9D1",
+        background: "#F1F1EF",
         grey_scale_100: "#F8F8F8",
         grey_scale_200: "#EFEFF1",
         grey_scale_300: "#F6F6F8",
@@ -66,6 +66,7 @@ module.exports = {
         grey_scale_700: "#9A9A9A",
         grey_scale_800: "#616161",
         grey_scale_900: "#434343",
+
       },
       backgroundImage: {
         gradient: "linear-gradient(180deg, #434343, #000000)",

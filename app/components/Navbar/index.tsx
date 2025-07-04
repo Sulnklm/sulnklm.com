@@ -14,18 +14,13 @@ const NavBar = (): JSX.Element => {
   return (
     <header
       className="fixed top-0 left-0 right-0 z-[100] mx-auto 
-                   bg-background/50 dark:bg-black/50 backdrop-blur-md">
+                    dark:bg-black/50 backdrop-blur-md">
       <nav className="container mx-auto flex justify-between items-center p-2.5 max-w-[1280px]">
         <ul className="flex items-center gap-5 text-base">
           <Link
             href="/"
             className="group flex items-center hover:gap-2.5 duration-300 gap-1.5 pl-5 pr-5"
           >
-            {/* <img
-              src={NAVBAR_CONST.LOGO.SRC}
-              alt={NAVBAR_CONST.LOGO.ALT}
-              className="w-8 h-8 object-cover dark:invert group-hover:scale-125 group-hover:-rotate-12 duration-300 pb-0.5"
-            /> */}
             <h3 className="group-hover:scale-95 duration-300 font-Crimson italic text-primary dark:text-white/90">
               ✦ (Logo)
             </h3>

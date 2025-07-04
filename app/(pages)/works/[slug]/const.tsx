@@ -1,0 +1,1 @@
+// Project Details Constants for Works Page
