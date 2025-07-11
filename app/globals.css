@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Schoolbell&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Reenie+Beanie&display=swap");
+@font-face {
+  font-family: "Perfectly Nineties";
+  src: url("/fonts/perfectly-nineties-regular.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -124,5 +131,14 @@
 :root {
   --anim--hover-time: 400ms;
   --anim--hover-ease: cubic-bezier(0.25, 1, 0.5, 1);
-  /* 기타 전역 변수 */
+  --border-color: #e5e7eb;
+  padding: 20px;
+}
+
+.dark {
+  --border-color: #36393d; 
+}
+
+.border {
+  border-color: var(--border-color);
 }

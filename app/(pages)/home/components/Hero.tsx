@@ -54,7 +54,7 @@ export default function Hero() {
                 <h1
                   className={`text-center font-[450] ${
                     p.highlighted
-                      ? "text-grey_scale_900 dark:text-grey_scale_300/90"
+                      ? "text-grey_scale_900  dark:text-grey_scale_300/90 "
                       : "text-grey_scale_700 dark:text-grey_scale_800"
                   }`}
                 >
@@ -68,7 +68,7 @@ export default function Hero() {
                     alt={HOME_HERO_CONST.HEADSHOT.ALT}
                     width={300}
                     height={300}
-                    delay={1.4}
+                    delay={0.5}
                     className="relative object-cover min-w-[60px] max-w-16 sm:max-w-18 lg:max-w-24 w-full h-auto hover:rotate-6 duration-300 border-[2.5px] shadow-br rounded-3xl -translate-y md:mx-3"
                   />
                 )}
@@ -76,13 +76,13 @@ export default function Hero() {
             ))}
           </div>
 
-          <div className="flex gap-3 md:gap-4 mt-3">
+          <div className="flex gap-3 md:gap-4 mt-1">
             {titleParts.slice(3).map((p, i) => (
               <h1
                 key={i}
                 className={`text-center font-[450] ${
                   p.highlighted
-                    ? "text-grey_scale_900 dark:text-grey_scale_300/90"
+                    ? "text-grey_scale_900 dark:text-grey_scale_300/85"
                     : "text-grey_scale_700 dark:text-grey_scale_800"
                 }`}
               >
@@ -93,11 +93,11 @@ export default function Hero() {
         </div>
 
         {/* 3.2) DESCRIPTION */}
-        <p className="mt-5 text-grey_scale_700 dark:text-grey_scale_500 max-w-2xl font-[300] text-base tracking-wide">
+        <h5 className="mt-5 max-w-2xl font-[300] text-base tracking-wide">
           {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION1}
           <br />
           {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION2}
-        </p>
+        </h5>
 
         {/* 3.3) ACTIONS */}
         <div className="flex gap-4 dark:gap-2 mt-5">

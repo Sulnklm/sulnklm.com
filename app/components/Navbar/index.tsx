@@ -14,16 +14,28 @@ const NavBar = (): JSX.Element => {
   return (
     <header
       className="fixed top-0 left-0 right-0 z-[100] mx-auto 
-                    dark:bg-black/50 backdrop-blur-md">
+                    dark:bg-black/50 backdrop-blur-md"
+    >
       <nav className="container mx-auto flex justify-between items-center p-2.5 max-w-[1280px]">
         <ul className="flex items-center gap-5 text-base">
           <Link
             href="/"
             className="group flex items-center hover:gap-2.5 duration-300 gap-1.5 pl-5 pr-5"
           >
-            <h3 className="group-hover:scale-95 duration-300 font-Crimson italic text-primary dark:text-white/90">
-              ✦ (Logo)
-            </h3>
+            {" "}
+            <p className="text-2xl group-hover:scale-95 duration-300 font-[300] font-PerfectlyNineties dark:text-background">
+            (✦SUIN)
+            </p>
+            {/* <div className="flex justify-center items-center gap-3">
+              <div className="bg-gradient dark:bg-primary bg-grey_scale_200 w-fit p-1 rounded-[20px] shadow-lg border">
+                <div className="bg-gradient dark:bg-primary border-dashed border-[1px] border-grey_scale_500 bg-white/80 py-2 px-3 rounded-2xl flex items-center gap-2">
+                  <p className="text-xl group-hover:scale-95 duration-300 font-[300] font-PerfectlyNineties text-background">
+                    ✦
+                  </p>
+                </div>
+              </div>
+              <p>Suin.k</p>
+            </div> */}
           </Link>
           {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, LABEL }) => {
             const isCurrentPage = pathname === HREF;

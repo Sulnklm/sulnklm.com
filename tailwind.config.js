@@ -10,6 +10,10 @@ module.exports = {
 
   theme: {
     extend: {
+      borderColor: {
+        DEFAULT: 'var(--border-color)', 
+      },
+
       boxShadow: {
         'br': '4px 4px 10px rgba(0, 0, 0, 0.55)',
       },
@@ -78,25 +82,37 @@ module.exports = {
         "h1-sm": ["55px"],
         "h1-md": ["80px"],
         "h1-lg": ["85px"],
-        "h1-2xl": ["90px"],
+        "h1-2xl": ["100px"],
 
         h2: ["26px", { lineHeight: "1.03" }],
         "h2-md": ["42px"],
-        "h2-lg": ["45px"],
+        "h2-lg": ["60px"],
 
         h3: ["26px", { lineHeight: "1.1" }],
         "h3-md": ["28px"],
         "h3-lg": ["30px"],
 
+        h4: ["20px", { lineHeight: "1.1" }],
+        "h4-md": ["22px"],
+        "h4-lg": ["24px"],
+
+        h5: ["16px", { lineHeight: "1.3" }],
+        "h5-md": ["16px"],
+        "h5-lg": ["16px"],
+
         p: ["16px", { lineHeight: "1.3" }],
         "p-md": ["16px"],
-        "p-lg": ["17px"],
+        "p-lg": ["16px"],
       },
       fontFamily: {
         Sans: ['"Geist", sans-serif'],
         Schoolbell: ['"Schoolbell", cursive'],
         JetBrains: ['"JetBrains Mono", monospace'],
         Crimson: ['"Crimson Pro", serif'],
+        Reenie : ['"Reenie Beanie", cursive'],
+        Chelsea: ['"Chelsea Market", system-ui'],
+        Playfair: ['"Playfair Display", serif'],
+        PerfectlyNineties: ["'Perfectly Nineties'", "sans-serif"],
       },
     },
   },
@@ -104,7 +120,7 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         h1: {
-          "@apply text-h1 font-Sans text-primary dark:text-white font-[500] text-center tracking-tighter":
+          "@apply text-h1 font-PerfectlyNineties text-primary dark:text-white font-[500] text-center":
             {},
             "@media (min-width: 340px)": {
               "@apply text-h1-sm": {},
@@ -120,7 +136,7 @@ module.exports = {
           },
         },
         h2: {
-          "@apply text-h2 font-Schoolbell font-[400] text-primary dark:text-white text-center":
+          "@apply text-h2 font-PerfectlyNineties text-grey_scale_900 dark:text-white text-center":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h2-md": {},
@@ -130,7 +146,7 @@ module.exports = {
           },
         },
         h3: {
-          "@apply text-h3 font-Schoolbell text-primary dark:text-white": {},
+          "@apply text-h3 font-Schoolbell text-grey_scale_900 dark:text-white": {},
           "@media (min-width: 768px)": {
             "@apply text-h3-md": {},
           },
@@ -138,16 +154,34 @@ module.exports = {
             "@apply text-h3-lg": {},
           },
         },
+        h4: {
+          "@apply text-h4 font-PerfectlyNineties font-[500] dark:text-white text-grey_scale_900": {},
+          "@media (min-width: 768px)": {
+            "@apply text-h4-md": {},
+          },
+          "@media (min-width: 1024px)": {
+            "@apply text-h4-lg": {},
+          },
+        },
+
+        h5: {
+          "@apply text-h5 font-Sans text-grey_scale_800 dark:text-grey_scale_500/90 font-[300]": {},
+          "@media (min-width: 768px)": {
+            "@apply text-h5-md": {},
+          },
+          "@media (min-width: 1024px)": {
+            "@apply text-h5-lg": {},
+          },
+        },
 
         p: {
-          "@apply text-p font-Sans font-[350]": {},
+          "@apply text-p font-Sans dark:text-white text-grey_scale_900 font-[300]": {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},
           },
           "@media (min-width: 1024px)": {
             "@apply text-p-lg": {},
           },
-         
         },
       });
     },

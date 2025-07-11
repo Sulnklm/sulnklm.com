@@ -1,17 +1,15 @@
 import React from "react";
-import { Safari } from "@/components/SafariMode/SafariMode";
+import { DotBackground } from "@/components/DotBackground";
+import Values from "@/(pages)/about/components/values/Values";
+// import { Safari } from "@/components/SafariMode/SafariMode";
 type Props = {};
 
 const Profile = (props: Props): JSX.Element => {
   return (
-    <section>
-      <div className="container mx-auto flex justify-center">
-        <Safari
-          url="sulnklm.com"
-          mode="default"
-          videoSrc="https://example.com/video.mp4"
-        />
-      </div>
+    <section className="z-10 h-screen place-content-center">
+              <Values />
+
+      
     </section>
   );
 };

@@ -1,13 +1,13 @@
-import Hero from './home/components/Hero'
-import SelectedWorks from './home/components/SelectedWorks'
-import Profile from './home/components/Profile'
+import Hero from "./home/components/Hero";
+import SelectedWorks from "./home/components/SelectedWorks";
+import Profile from "./home/components/Profile";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Hero />
-      <SelectedWorks />
       <Profile />
+      <SelectedWorks />
     </div>
-  )
+  );
 }
