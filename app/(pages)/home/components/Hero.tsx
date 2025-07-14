@@ -8,6 +8,7 @@ import { ToolIcon } from "@/components/ToolIcon/ToolIcon";
 import { useVancouverTime } from "@/hooks/useVancouverTime";
 import { EXTERNAL_LINKS, TECH_STACK } from "@/lib/const";
 import { HOME_HERO_CONST } from "../const";
+import { InsetBlock } from "@/components/InsetBlock";
 
 export default function Hero() {
   const time = useVancouverTime();
@@ -40,7 +41,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative h-screen bg-background dark:bg-primary overflow-hidden px-5">
+    <section className="col-span-full relative h-screen bg-background dark:bg-primary overflow-hidden px-5">
       <div className="absolute inset-0 z-0">
         <DotBackground />
       </div>
@@ -54,7 +55,7 @@ export default function Hero() {
                 <h1
                   className={`text-center font-[450] ${
                     p.highlighted
-                      ? "text-grey_scale_900  dark:text-grey_scale_300/90 "
+                      ? "text-grey_scale_900  dark:text-grey_scale_300/90 font-Playfair italic"
                       : "text-grey_scale_700 dark:text-grey_scale_800"
                   }`}
                 >

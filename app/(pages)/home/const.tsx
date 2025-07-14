@@ -32,10 +32,10 @@ export const HOME_HERO_CONST = {
   },
 };
 
-export const SELECTED_WORKS_CONST = {
-  HEADING: "selected works",
-  BUTTON: {
-    HREF: "/projects",
-    TEXT: "view all works",
-  },
+export const WORKS_CONST = {
+  HEADING: "My Works ✦",
+  // BUTTON: {
+  //   HREF: "/projects",
+  //   TEXT: "view all works",
+  // },
 };

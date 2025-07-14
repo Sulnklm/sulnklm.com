@@ -16,7 +16,7 @@ const NavBar = (): JSX.Element => {
       className="fixed top-0 left-0 right-0 z-[100] mx-auto 
                     dark:bg-black/50 backdrop-blur-md"
     >
-      <nav className="container mx-auto flex justify-between items-center p-2.5 max-w-[1280px]">
+      <nav className="container mx-auto flex justify-between items-center p-2.5">
         <ul className="flex items-center gap-5 text-base">
           <Link
             href="/"

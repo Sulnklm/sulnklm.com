@@ -18,7 +18,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
 
   return (
     <div
-      className="group relative shadow-sm rounded-[45px] bg-grey_scale_50 dark:bg-primary p-2 z-0 border"
+      className="group relative shadow-lg rounded-[45px] bg-grey_scale_200 dark:bg-primary p-2 z-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -52,11 +52,11 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
           <img
             src={PROJECT.IMAGE.SRC}
             alt={PROJECT.IMAGE.ALT}
-            className="object-cover bg-background dark:bg-grey_scale_900/30 duration-300 rounded-[40px] w-full h-auto border"
+            className="object-cover dark:bg-primary bg-background dark:group-hover:bg-black duration-300 rounded-[40px] w-full h-auto border"
           />
         </div>
         <div className="flex-1">
-          <div className="w-full bg-grey_scale_50 dark:bg-primary rounded-[45px] pr-10">
+          <div className="w-full bg-white dark:bg-primary rounded-[45px] pr-10">
             <div className="relative z-10">
               <div className="space-y-2 pb-5">
                 <p className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]">
@@ -66,7 +66,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
               </div>
               <div className="">
                 <div className="border-t border-dashed dark:border-t-grey_scale_900 pt-4">
-                  {/* <motion.div
+                  <motion.div
                     initial={{ maxHeight: 0, opacity: 0 }}
                     animate={{
                       maxHeight: isHovered ? descHeight : 0,
@@ -74,17 +74,14 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
                     }}
                     transition={{ duration: 0.2, ease: "easeInOut" }}
                     style={{ overflow: "hidden" }}
-                  > */}
-                  <div>
+                  >
                     <p
                       ref={descriptionRef}
                       className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400] pb-6"
                     >
                       {PROJECT.DESCRIPTION}
                     </p>
-                  </div>
-
-                  {/* </motion.div> */}
+                  </motion.div>
 
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap -space-x-2">

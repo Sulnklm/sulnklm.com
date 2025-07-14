@@ -11,11 +11,29 @@ module.exports = {
   theme: {
     extend: {
       borderColor: {
-        DEFAULT: 'var(--border-color)', 
+        DEFAULT: "var(--border-color)",
+      },
+
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
+        screens: {
+          sm: "640px",
+          md: "768px",
+          lg: "1024px",
+          xl: "1280px",
+          "2xl": "1440px",
+        },
       },
 
       boxShadow: {
-        'br': '4px 4px 10px rgba(0, 0, 0, 0.55)',
+        br: "4px 4px 10px rgba(0, 0, 0, 0.55)",
       },
 
       animation: {
@@ -63,6 +81,7 @@ module.exports = {
       colors: {
         primary: "#252525",
         background: "#F1F1EF",
+        grey_scale_50: "#F9F9F9",
         grey_scale_100: "#F8F8F8",
         grey_scale_200: "#EFEFF1",
         grey_scale_300: "#F6F6F8",
@@ -70,7 +89,6 @@ module.exports = {
         grey_scale_700: "#9A9A9A",
         grey_scale_800: "#616161",
         grey_scale_900: "#434343",
-
       },
       backgroundImage: {
         gradient: "linear-gradient(180deg, #434343, #000000)",
@@ -109,7 +127,7 @@ module.exports = {
         Schoolbell: ['"Schoolbell", cursive'],
         JetBrains: ['"JetBrains Mono", monospace'],
         Crimson: ['"Crimson Pro", serif'],
-        Reenie : ['"Reenie Beanie", cursive'],
+        Reenie: ['"Reenie Beanie", cursive'],
         Chelsea: ['"Chelsea Market", system-ui'],
         Playfair: ['"Playfair Display", serif'],
         PerfectlyNineties: ["'Perfectly Nineties'", "sans-serif"],
@@ -120,11 +138,11 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         h1: {
-          "@apply text-h1 font-PerfectlyNineties text-primary dark:text-white font-[500] text-center":
+          "@apply text-h1 font-Sans text-primary dark:text-white font-[500] text-center tracking-tighter":
             {},
-            "@media (min-width: 340px)": {
-              "@apply text-h1-sm": {},
-            },
+          "@media (min-width: 340px)": {
+            "@apply text-h1-sm": {},
+          },
           "@media (min-width: 768px)": {
             "@apply text-h1-md": {},
           },
@@ -146,7 +164,8 @@ module.exports = {
           },
         },
         h3: {
-          "@apply text-h3 font-Schoolbell text-grey_scale_900 dark:text-white": {},
+          "@apply text-h3 font-Schoolbell text-grey_scale_900 dark:text-white":
+            {},
           "@media (min-width: 768px)": {
             "@apply text-h3-md": {},
           },
@@ -155,7 +174,8 @@ module.exports = {
           },
         },
         h4: {
-          "@apply text-h4 font-PerfectlyNineties font-[500] dark:text-white text-grey_scale_900": {},
+          "@apply text-h4 font-PerfectlyNineties font-[500] dark:text-white text-grey_scale_900":
+            {},
           "@media (min-width: 768px)": {
             "@apply text-h4-md": {},
           },
@@ -165,7 +185,8 @@ module.exports = {
         },
 
         h5: {
-          "@apply text-h5 font-Sans text-grey_scale_800 dark:text-grey_scale_500/90 font-[300]": {},
+          "@apply text-h5 font-Sans text-grey_scale_800 dark:text-grey_scale_500/90 font-[300]":
+            {},
           "@media (min-width: 768px)": {
             "@apply text-h5-md": {},
           },
@@ -175,7 +196,8 @@ module.exports = {
         },
 
         p: {
-          "@apply text-p font-Sans dark:text-white text-grey_scale_900 font-[300]": {},
+          "@apply text-p font-Sans dark:text-white text-grey_scale_900 font-[300]":
+            {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},
           },

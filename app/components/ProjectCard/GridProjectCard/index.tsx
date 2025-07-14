@@ -18,25 +18,25 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
 
   return (
     <div
-      className="group relative shadow-lg rounded-[45px] overflow-hidden border dark:border-grey_scale_900 bg-white dark:bg-primary w-full min-w-[20rem] p-2"
+      className="group relative rounded-[30px] overflow-hidden border dark:border-grey_scale_900 bg-grey_scale_50 dark:bg-primary w-full min-w-[20rem] p-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <img
         src={PROJECT.IMAGE.SRC}
         alt={PROJECT.IMAGE.ALT}
-        className="bg-white dark:bg-primary group-hover:bg-background dark:group-hover:bg-black group-hover:grayscale duration-300 rounded-t-[40px] mb-36 w-full h-auto max-h-[10rem] object-cover min-h-[20rem]"
+        className="bg-grey_scale_50 dark:bg-primary group-hover:bg-background dark:group-hover:bg-black duration-300 rounded-t-[25px] mb-36 w-full h-auto object-cover min-h-[20rem]"
       />
 
-      <div className="absolute bottom-0 left-0 bg-white dark:bg-primary rounded-[45px] w-full">
-        <div className="absolute dark:hidden -top-9 z-10 right-0 left-0">
+      <div className="absolute bottom-0 left-0 bg-grey_scale_50 dark:bg-primary rounded-[45px] w-full">
+        {/* <div className="absolute dark:hidden -top-9 z-10 right-0 left-0">
           <svg
             viewBox="0 0 700 226.5"
             xmlns="http://www.w3.org/2000/svg"
             className="folder-shape"
           >
             <path
-              fill="white"
+              style={{ fill: "#252525" }}
               d="M1.3042e-06 20C1.37396e-06 8.95431 8.95431 0 20 0H303.176C314.41 0 325.419 3.15428 334.949 9.10375L388.306 42.4135C396.248 47.3714 405.422 50 414.784 50H768.23H920C931.046 50 940 58.9543 940 70V206.5C940 217.546 931.046 226.5 920 226.5H20C8.9543 226.5 5.65529e-08 217.546 1.26314e-07 206.5L1.3042e-06 20Z"
             ></path>
           </svg>
@@ -53,7 +53,7 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
               d="M1.3042e-06 20C1.37396e-06 8.95431 8.95431 0 20 0H303.176C314.41 0 325.419 3.15428 334.949 9.10375L388.306 42.4135C396.248 47.3714 405.422 50 414.784 50H768.23H920C931.046 50 940 58.9543 940 70V206.5C940 217.546 931.046 226.5 920 226.5H20C8.9543 226.5 5.65529e-08 217.546 1.26314e-07 206.5L1.3042e-06 20Z"
             ></path>
           </svg>
-        </div>
+        </div> */}
         <div className="relative z-10 -translate-y-7">
           <div className="p-5 space-y-2">
             <p className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]">

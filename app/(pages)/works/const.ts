@@ -18,6 +18,7 @@ export const PROJECTS_CONST = {
       ],
       DISCIPLINE: ["Web Development"],
       TIMELINE: "December 2024",
+      CATEGORY: ["all", "selected", "development"],
     },
     {
       // Project 2
@@ -35,6 +36,7 @@ export const PROJECTS_CONST = {
       ],
       DISCIPLINE: ["UX/UI Design"],
       TIMELINE: "December 2024",
+      CATEGORY: ["all", "case-study", "selected"],
     },
     {
       // Project 3
@@ -52,6 +54,7 @@ export const PROJECTS_CONST = {
       ],
       DISCIPLINE: ["UX/UI Design"],
       TIMELINE: "January 2025",
+      CATEGORY: ["all", "case-study"],
     },
   ],
 };
