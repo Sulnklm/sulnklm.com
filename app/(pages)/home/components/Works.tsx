@@ -18,7 +18,7 @@ import { WORKS_CONST } from "../const";
 
 const CATEGORY_TABS = ["All", "Selected", "Case Study", "Development"];
 const categoryKeys = ["all", "selected", "case-study", "development"];
-const viewIcons = [<ListIcon key="list" />, <Grid2X2Icon key="grid" />];
+const viewIcons = [<Grid2X2Icon key="grid" />, <ListIcon key="list" />];
 
 const categoryIconMap: Record<string, React.ReactNode> = {
   all: <ArchiveIcon size={16} />,
@@ -37,7 +37,7 @@ const Works = () => {
 
   const categoryKeys = ["all", "selected", "case-study", "development"];
   const selectedCategory = categoryKeys[selectedCategoryIndex];
-  const viewMode = viewModeIndex === 0 ? "list" : "grid";
+  const viewMode = viewModeIndex === 0 ? "grid" : "list";
 
   // 카테고리별 필터링
   const filteredProjects = PROJECTS_CONST.PROJECTS.filter((project) =>

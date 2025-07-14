@@ -29,7 +29,7 @@ export const CategoriesTabs: React.FC<CategoriesTabsProps> = ({
         const baseClassName = `text-black dark:text-white font-[300] px-5 py-1.5 rounded-full transition-colors whitespace-nowrap font-Sans ${
           isSelected
             ? "text-black border-b dark:bg-white/10 border border-dashed font-[400]"
-            : "text-white/50 hover:text-orange-500 duration-300"
+            : "text-black dark:text-white/50 hover:text-orange-500 duration-300"
         }`;
 
         const content = (
