@@ -131,12 +131,14 @@
 :root {
   --anim--hover-time: 400ms;
   --anim--hover-ease: cubic-bezier(0.25, 1, 0.5, 1);
-  --border-color: #e5e7eb;
-  padding: 20px;
+  --border-color: #dddddd;
+  --pattern-fg: rgba(255, 255, 255, 0.05); 
+
 }
 
 .dark {
   --border-color: #36393d; 
+  --pattern-fg: rgba(138, 138, 138, 0.1);
 }
 
 .border {

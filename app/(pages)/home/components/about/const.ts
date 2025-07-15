@@ -1,9 +1,7 @@
 import type { IllustCardProps } from "@/components/IllustCard/types";
 
 export const VALUE_INTRO = {
-  heading: "What I Stand For",
-  paragraph:
-    "I believe creativity and innovation drive meaningful design. With a versatile skill set spanning UI/UX, graphic design, and frontend development, I strive to craft seamless digital experiences. I am a fast learner who adapts quickly to new trends and challenges in this ever-evolving industry.",
+  heading: "I create story-driven designs and enjoy the thoughtful process of coding that brings ideas to life."
 };
 
 export const VALUES: IllustCardProps[] = [

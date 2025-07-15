@@ -28,12 +28,19 @@ module.exports = {
           md: "768px",
           lg: "1024px",
           xl: "1280px",
-          "2xl": "1440px",
+          "2xl": "1540px",
         },
       },
 
       boxShadow: {
         br: "4px 4px 10px rgba(0, 0, 0, 0.55)",
+        brWhite: "4px 4px 10px rgba(255, 255, 255, 0.55)",
+        brBoth:
+          "inset 0.5px 2px 2px rgba(0, 0, 0, 0.08), inset 0 -1px 5px rgba(0, 0, 0, 0.03), 4px 4px 25px rgba(255, 255, 255, 0.9)",
+        "inner-custom": "inset 0 1px 3px rgba(0, 0, 0, 0.1)",
+        brBothDark:
+          "inset 0.5px 2px 2px rgba(0, 0, 0, 0.1), inset 0 -1px 5px rgba(0, 0, 0, 0.2), 4px 4px 15px rgba(255, 255, 255, 0.022)",
+        "inner-custom": "inset 0 1px 3px rgba(0, 0, 0, 0.1)",
       },
 
       animation: {
@@ -79,8 +86,8 @@ module.exports = {
         "3xl-custom": { raw: "(min-width: 2300px) and (max-width: 3000px)" },
       },
       colors: {
-        primary: "#252525",
-        background: "#F1F1EF",
+        primary: "#111111",
+        background: "#EBEBE7",
         grey_scale_50: "#F9F9F9",
         grey_scale_100: "#F8F8F8",
         grey_scale_200: "#EFEFF1",
@@ -91,9 +98,12 @@ module.exports = {
         grey_scale_900: "#434343",
       },
       backgroundImage: {
+        'pattern-bg': "url('/images/pattern.png')",
         gradient: "linear-gradient(180deg, #434343, #000000)",
         "gradient-dark":
           "linear-gradient(180deg, #434343 0%, #F6F6F8 40%, #FCFBFC 60%, #B6B6B6 100%)",
+        "orange-gradient":
+          "linear-gradient(180deg, #ED3C00 0%, #FF6741 60%, #A81C00 100%)",
       },
       fontSize: {
         h1: ["48px", { lineHeight: "1" }],
@@ -102,13 +112,13 @@ module.exports = {
         "h1-lg": ["85px"],
         "h1-2xl": ["100px"],
 
-        h2: ["26px", { lineHeight: "1.03" }],
-        "h2-md": ["42px"],
+        h2: ["40px", { lineHeight: "1.03" }],
+        "h2-md": ["50px"],
         "h2-lg": ["60px"],
 
-        h3: ["26px", { lineHeight: "1.1" }],
-        "h3-md": ["28px"],
-        "h3-lg": ["30px"],
+        h3: ["30px", { lineHeight: "1.1" }],
+        "h3-md": ["33px"],
+        "h3-lg": ["35px"],
 
         h4: ["20px", { lineHeight: "1.1" }],
         "h4-md": ["22px"],
@@ -154,7 +164,7 @@ module.exports = {
           },
         },
         h2: {
-          "@apply text-h2 font-PerfectlyNineties text-grey_scale_900 dark:text-white text-center":
+          "@apply text-h2 font-Sans font-[500] tracking-tighter text-grey_scale_900 dark:text-white text-center":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h2-md": {},
@@ -164,7 +174,7 @@ module.exports = {
           },
         },
         h3: {
-          "@apply text-h3 font-Schoolbell text-grey_scale_900 dark:text-white":
+          "@apply text-h3 font-Sans tracking-tighter text-grey_scale_900 font-[450] dark:text-white":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h3-md": {},

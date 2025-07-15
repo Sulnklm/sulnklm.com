@@ -4,6 +4,7 @@ import { ToolImage } from "../../ToolImage";
 import { ListProjectCardPropTypes } from "./types";
 import { Button } from "../../Button";
 import { ArrowRight } from "lucide-react";
+import { GlowingEffect } from "@/components/GlowingEffect/GlowingEffect";
 
 export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -22,6 +23,14 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      <GlowingEffect
+        spread={40}
+        glow={true}
+        disabled={false}
+        proximity={64}
+        inactiveZone={0.01}
+        className="rounded-[inherit]"
+      />
       {/* <div className="absolute dark:hidden -top-9 z-10 right-0 left-0">
         <svg
           viewBox="0 0 940 226.5"
@@ -52,7 +61,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
           <img
             src={PROJECT.IMAGE.SRC}
             alt={PROJECT.IMAGE.ALT}
-            className="object-cover bg-background dark:bg-grey_scale_900/30 duration-300 rounded-[40px] w-full h-auto border"
+            className="object-cover bg-background dark:bg-grey_scale_900/20 duration-300 rounded-[35px] w-full h-auto"
           />
         </div>
         <div className="flex-1">
@@ -123,7 +132,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
                             additionalClasses="px-4 py-2 text-sm"
                             icon={<ArrowRight className="w-4 h-4 ml-1" />}
                           >
-                            Read Me
+                            Read me
                           </Button>
                         </motion.div>
                       )}

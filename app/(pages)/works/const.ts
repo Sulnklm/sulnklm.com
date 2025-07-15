@@ -1,5 +1,7 @@
-// Project Constants for Works Page
 export const PROJECTS_CONST = {
+  HEADING1: "Key",
+  HEADING2: "✦",
+  HEADING3: "Projects",
   PROJECTS: [
     {
       // Project 1

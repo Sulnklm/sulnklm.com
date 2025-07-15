@@ -1,18 +1,107 @@
 "use client";
-import { PROJECTS_CONST } from "../const";
 
+import React, { useState } from "react";
+import { ListProjectCard } from "@/components/ProjectCard/ListProjectCard";
 import { GridProjectCard } from "@/components/ProjectCard/GridProjectCard";
-import { WorksHero } from "./WorksHero";
+import { PROJECTS_CONST } from "@/(pages)/works/const";
+import { ViewTabs } from "@/components/ProjectsTabs/ViewTabs/ViewTabs";
+import {
+  Grid2X2Icon,
+  ListIcon,
+  ArchiveIcon,
+  StarIcon,
+  FileTextIcon,
+  CodeIcon,
+} from "lucide-react";
+import { CategoriesTabs } from "@/components/ProjectsTabs/CategoriesTabs/CategoriesTabs";
+import { InsetBlock } from "@/components/InsetBlock";
+import PatternBackground from "@/components/PatternBackground/PatternBackground";
+import OrangeTextBox from "@/components/OrangeTextBox/OrangeTextBox";
+const CATEGORY_TABS = ["All", "Selected", "Case Study", "Development"];
+const categoryKeys = ["all", "selected", "case-study", "development"];
+const viewIcons = [<Grid2X2Icon key="grid" />, <ListIcon key="list" />];
 
-export const Works = () => {
+const categoryIconMap: Record<string, React.ReactNode> = {
+  all: <ArchiveIcon size={16} />,
+  selected: <StarIcon size={16} />,
+  "case-study": <FileTextIcon size={16} />,
+  development: <CodeIcon size={16} />,
+};
+
+const icons = categoryKeys.map((key) => categoryIconMap[key]);
+
+const Works = () => {
+  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
+  const [viewModeIndex, setViewModeIndex] = useState(0);
+  const categoryKeys = ["all", "selected", "case-study", "development"];
+  const selectedCategory = categoryKeys[selectedCategoryIndex];
+  const viewMode = viewModeIndex === 0 ? "grid" : "list";
+  const filteredProjects = PROJECTS_CONST.PROJECTS.filter((project) =>
+    project.CATEGORY?.includes(selectedCategory)
+  );
+
   return (
-    <div className="relative z-10">
-      <WorksHero />
-      <div className="flex h-screen justify-center items-center gap-10">
-      {PROJECTS_CONST.PROJECTS.map((PROJECT, index) => (
-        <GridProjectCard key={index} PROJECT={PROJECT} />
-      ))}
-      </div>
+    <div>
+      {/* <OrangeTextBox text="My works" /> */}
+      <InsetBlock>
+        <PatternBackground />
+        <section className="z-50 px-20">
+          <div className="relative lg:gap-20">
+            <div className="flex flex-col justify-start mb-10">
+              <div className="flex gap-2 items-center">
+                <h2 className="text-start">{PROJECTS_CONST.HEADING1}</h2>
+                <h2 className="text-start">
+                  {PROJECTS_CONST.HEADING2}
+                </h2>
+                <h2 className="text-start font-PerfectlyNineties tracking-normal italic">
+                  {PROJECTS_CONST.HEADING3}
+                </h2>
+              </div>
+              <div className="flex items-center mt-5">
+                <div className="flex-1 flex justify-start">
+                  <CategoriesTabs
+                    labels={CATEGORY_TABS}
+                    icons={icons}
+                    selectedIndex={selectedCategoryIndex}
+                    onSelect={setSelectedCategoryIndex}
+                  />
+                </div>
+                <div className="flex-1 flex justify-end">
+                  <ViewTabs
+                    icons={viewIcons}
+                    selectedIndex={viewModeIndex}
+                    onSelect={setViewModeIndex}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              className={
+                viewMode === "grid"
+                  ? "grid lg:grid-cols-2 xl:grid-cols-3 gap-5 2xl:gap-10 place-items-center bg-customGray w-full"
+                  : "relative flex flex-col gap-5 bg-customGray w-full"
+              }
+            >
+              {filteredProjects.length === 0 ? (
+                <p className="text-center text-gray-500">No projects found.</p>
+              ) : (
+                filteredProjects.map((project, index) =>
+                  viewMode === "grid" ? (
+                    <GridProjectCard key={project.SLUG} PROJECT={project} />
+                  ) : (
+                    <div key={project.SLUG} className={`sticky top-[15vh]`}>
+                      <ListProjectCard PROJECT={project} index={index} />
+                    </div>
+                  )
+                )
+              )}
+            </div>
+          </div>
+        </section>
+      </InsetBlock>
     </div>
   );
 };
+
+export default Works;

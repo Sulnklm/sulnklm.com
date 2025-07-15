@@ -28,7 +28,7 @@ export const ToolImage = ({ src, alt, size = 24 }: ToolImageProps) => {
       <AnimatePresence>
         {showTooltip && (
           <motion.div
-            className="absolute bottom-full mb-2 left-0 whitespace-nowrap rounded bg-black text-white text-xs px-2 py-1 shadow-lg z-50"
+            className="absolute bottom-full mb-2 left-0 whitespace-nowrap rounded bg-primary text-white text-xs px-2 py-1 shadow-lg z-50"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 5 }}

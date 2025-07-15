@@ -4,6 +4,7 @@ import { ToolImage } from "../../ToolImage";
 import { GridProjectCardPropTypes, ToolPropTypes } from "./types";
 import { Button } from "../../Button";
 import { ArrowRight } from "lucide-react";
+import { GlowingEffect } from "@/components/GlowingEffect/GlowingEffect";
 
 export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -18,10 +19,18 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
 
   return (
     <div
-      className="group relative rounded-[30px] overflow-hidden border dark:border-grey_scale_900 bg-grey_scale_50 dark:bg-primary w-full min-w-[20rem] p-2"
+      className="group relative rounded-[30px] overflow-visible border dark:border-grey_scale_900 bg-grey_scale_50 dark:bg-primary w-full min-w-[20rem] p-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      <GlowingEffect
+        spread={40}
+        glow={true}
+        disabled={false}
+        proximity={64}
+        inactiveZone={0.01}
+        className="rounded-[inherit]"
+      />
       <img
         src={PROJECT.IMAGE.SRC}
         alt={PROJECT.IMAGE.ALT}
@@ -117,7 +126,7 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
                         additionalClasses="px-4 py-2 text-sm"
                         icon={<ArrowRight className="w-4 h-4 ml-1" />}
                       >
-                        Read Me
+                        Read me
                       </Button>
                     </motion.div>
                   )}

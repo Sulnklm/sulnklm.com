@@ -15,7 +15,9 @@ import {
 } from "lucide-react";
 import { CategoriesTabs } from "@/components/ProjectsTabs/CategoriesTabs/CategoriesTabs";
 import { WORKS_CONST } from "../const";
-
+import { InsetBlock } from "@/components/InsetBlock";
+import PatternBackground from "@/components/PatternBackground/PatternBackground";
+import OrangeTextBox from "@/components/OrangeTextBox/OrangeTextBox";
 const CATEGORY_TABS = ["All", "Selected", "Case Study", "Development"];
 const categoryKeys = ["all", "selected", "case-study", "development"];
 const viewIcons = [<Grid2X2Icon key="grid" />, <ListIcon key="list" />];
@@ -30,67 +32,76 @@ const categoryIconMap: Record<string, React.ReactNode> = {
 const icons = categoryKeys.map((key) => categoryIconMap[key]);
 
 const Works = () => {
-  // 카테고리 탭 상태
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
-  // 뷰 모드 탭 상태
   const [viewModeIndex, setViewModeIndex] = useState(0);
-
   const categoryKeys = ["all", "selected", "case-study", "development"];
   const selectedCategory = categoryKeys[selectedCategoryIndex];
   const viewMode = viewModeIndex === 0 ? "grid" : "list";
-
-  // 카테고리별 필터링
   const filteredProjects = PROJECTS_CONST.PROJECTS.filter((project) =>
     project.CATEGORY?.includes(selectedCategory)
   );
 
   return (
-    <section className="col-span-full relative container mx-auto z-50 bg-primary/1 rounded-[30px] border border-dashed shadow-sm bg-white/30 dark:bg-grey_scale_700/20">
-      <div className="relative py-20 gap-20">
-        <div className="flex flex-col justify-start mb-10">
-          <h2 className="text-start">{WORKS_CONST.HEADING}</h2>
-          <div className="flex items-center mt-5 border-b">
-            <div className="flex-1 flex justify-start">
-              <CategoriesTabs
-                labels={CATEGORY_TABS}
-                icons={icons}
-                selectedIndex={selectedCategoryIndex}
-                onSelect={setSelectedCategoryIndex}
-              />
+    <div>
+      {/* <OrangeTextBox text="My works" /> */}
+      <InsetBlock>
+        <PatternBackground />
+        <section className="z-50 px-20">
+          <div className="relative lg:gap-20">
+            <div className="flex flex-col justify-start mb-10">
+              <div className="flex gap-2 items-center">
+                <h2 className="text-start">{WORKS_CONST.HEADING1}</h2>
+                <h2 className="text-start">
+                  {WORKS_CONST.HEADING2}
+                </h2>
+                <h2 className="text-start font-PerfectlyNineties tracking-normal italic">
+                  {WORKS_CONST.HEADING3}
+                </h2>
+              </div>
+              <div className="flex items-center mt-5">
+                <div className="flex-1 flex justify-start">
+                  <CategoriesTabs
+                    labels={CATEGORY_TABS}
+                    icons={icons}
+                    selectedIndex={selectedCategoryIndex}
+                    onSelect={setSelectedCategoryIndex}
+                  />
+                </div>
+                <div className="flex-1 flex justify-end">
+                  <ViewTabs
+                    icons={viewIcons}
+                    selectedIndex={viewModeIndex}
+                    onSelect={setViewModeIndex}
+                  />
+                </div>
+              </div>
             </div>
-            <div className="flex-1 flex justify-end">
-              <ViewTabs
-                icons={viewIcons}
-                selectedIndex={viewModeIndex}
-                onSelect={setViewModeIndex}
-              />
+
+            <div
+              className={
+                viewMode === "grid"
+                  ? "grid lg:grid-cols-2 xl:grid-cols-3 gap-5 2xl:gap-10 place-items-center bg-customGray w-full"
+                  : "relative flex flex-col gap-5 bg-customGray w-full"
+              }
+            >
+              {filteredProjects.length === 0 ? (
+                <p className="text-center text-gray-500">No projects found.</p>
+              ) : (
+                filteredProjects.map((project, index) =>
+                  viewMode === "grid" ? (
+                    <GridProjectCard key={project.SLUG} PROJECT={project} />
+                  ) : (
+                    <div key={project.SLUG} className={`sticky top-[15vh]`}>
+                      <ListProjectCard PROJECT={project} index={index} />
+                    </div>
+                  )
+                )
+              )}
             </div>
           </div>
-        </div>
-
-        <div
-          className={
-            viewMode === "grid"
-              ? "grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 place-items-center bg-customGray w-full"
-              : "relative flex flex-col gap-5 bg-customGray w-full"
-          }
-        >
-          {filteredProjects.length === 0 ? (
-            <p className="text-center text-gray-500">No projects found.</p>
-          ) : (
-            filteredProjects.map((project, index) =>
-              viewMode === "grid" ? (
-                <GridProjectCard key={project.SLUG} PROJECT={project} />
-              ) : (
-                <div key={project.SLUG} className={`sticky top-[15vh]`}>
-                  <ListProjectCard PROJECT={project} index={index} />
-                </div>
-              )
-            )
-          )}
-        </div>
-      </div>
-    </section>
+        </section>
+      </InsetBlock>
+    </div>
   );
 };
 
