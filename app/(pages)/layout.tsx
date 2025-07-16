@@ -3,6 +3,8 @@ import "../globals.css";
 import { ReactNode } from "react";
 import { Providers } from "../providers";
 import { HOME_HERO_CONST } from "./home/const";
+import Footer from "@/components/Footer/Footer";
+import { SoundProvider } from "@/components/SoundContextType/SoundContextType";
 
 export const metadata = {
   title: "Suin Kim | Portfolio",
@@ -21,19 +23,21 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-background dark:bg-black">
-        <Providers>
-          <NavBar />
-          <main>
-            <img
-              src={HOME_HERO_CONST.SUNSHINE.SRC}
-              alt={HOME_HERO_CONST.SUNSHINE.ALT}
-              className="absolute scale-[150%] brightness-200 md:-left-1/4 top-20 md:-bottom-20 dark:hidden z-[1]"
-            />
-            {children}
-          </main>
-          <footer></footer>
-        </Providers>
+      <body className="bg-background dark:bg-black overflow-x-hidden">
+        <SoundProvider>
+          <Providers>
+            <NavBar />
+            <main>
+              <img
+                src={HOME_HERO_CONST.SUNSHINE.SRC}
+                alt={HOME_HERO_CONST.SUNSHINE.ALT}
+                className="absolute scale-[150%] brightness-200 md:-left-1/4 top-20 md:-bottom-20 dark:hidden z-[1]"
+              />
+              {children}
+            </main>
+            <Footer />
+          </Providers>
+        </SoundProvider>
       </body>
     </html>
   );

@@ -15,7 +15,7 @@ const PatternBackground = () => {
           top: 0,
           left: 0,
         }}
-        className="absolute inset-0 rounded-[30px] pointer-events-none select-none"
+        className="absolute inset-0 pointer-events-none select-none"
         aria-hidden="true"
       />
     );

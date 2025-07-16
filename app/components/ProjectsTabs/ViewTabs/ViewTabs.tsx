@@ -16,7 +16,7 @@ export const ViewTabs: React.FC<ViewTabsProps> = ({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="flex space-x-2.5 rounded-2xl px-3 py-2.5 relative bg-background dark:bg-black/10 shadow-brBoth dark:shadow-brBothDark">
+    <div className="flex space-x-2.5 rounded-2xl px-3 py-2.5 relative bg-background dark:bg-black/70 shadow-brBoth dark:shadow-brBothDark">
       {icons.map((icon, idx) => (
         <button
           key={idx}

@@ -38,7 +38,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full md:px-10 container border rounded-[30px] border-dashed bg-white/30 dark:bg-primary py-10 lg:py-20"
+      className="relative z-50 w-full md:px-10 container border rounded-[30px] border-dashed bg-white/30 dark:bg-primary py-10 lg:py-20"
       ref={containerRef}
     >
       <OrangeTextBox text="Experience" />

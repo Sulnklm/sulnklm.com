@@ -47,17 +47,19 @@ const Works = () => {
         <PatternBackground />
         <section className="z-50 px-20">
           <div className="relative lg:gap-20">
-            <div className="flex flex-col justify-start mb-10">
-              <div className="flex gap-2 items-center">
-                <h2 className="text-start">{PROJECTS_CONST.HEADING1}</h2>
-                <h2 className="text-start">
+            <div className="flex flex-col justify-center mb-3">
+            <p className="text-center mx-auto mb-2 text-grey_scale_700 dark:text-grey_scale_700 border rounded-full w-fit px-3 py-2 bg-white dark:bg-primary">{PROJECTS_CONST.PARAGRAPH}</p>
+
+              <div className="flex gap-2 items-center justify-center">
+                <h2 className="text-center">{PROJECTS_CONST.HEADING1}</h2>
+                <h2 className="text-center">
                   {PROJECTS_CONST.HEADING2}
                 </h2>
-                <h2 className="text-start font-PerfectlyNineties tracking-normal italic">
+                <h2 className="text-center font-PerfectlyNineties tracking-normal italic00">
                   {PROJECTS_CONST.HEADING3}
                 </h2>
               </div>
-              <div className="flex items-center mt-5">
+              <div className="flex items-start mt-14">
                 <div className="flex-1 flex justify-start">
                   <CategoriesTabs
                     labels={CATEGORY_TABS}

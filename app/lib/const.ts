@@ -1,10 +1,10 @@
 export const EXTERNAL_LINKS = {
   GITHUB: {
-    href: "",
+    href: "https://github.com/Sulnklm",
     label: "GitHub",
   },
   LINKEDIN: {
-    href: "",
+    href: "https://www.linkedin.com/in/suink",
     label: "LinkedIn",
   },
   RESUME: {

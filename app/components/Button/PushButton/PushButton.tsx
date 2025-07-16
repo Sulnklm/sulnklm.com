@@ -3,7 +3,7 @@ import styles from "./PushButton.module.css";
 import GlassButton from "../GlassButton/GlassButton";
 
 interface PushButtonProps {
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
   theme?: "secondary" | "tertiary";
   icon?: React.ReactNode;

@@ -28,7 +28,7 @@ export const CategoriesTabs: React.FC<CategoriesTabsProps> = ({
         const isSelected = idx === selectedIndex;
         const baseClassName = `text-black dark:text-white font-[300] px-4 py-2.5 rounded-full transition-colors whitespace-nowrap font-Sans ${
           isSelected
-          ? "text-black bg-white border dark:bg-grey_scale_900/50 font-[400]"
+          ? "text-orange-600 dark:text-orange-[#FD5D27] bg-orange-100/30 border !border-orange-300 dark:bg-grey_scale_900/50 font-[400]"
           : "text-black dark:text-white/50 hover:text-orange-500 dark:hover:text-orange-500 duration-300"
         
         }`;

@@ -1,4 +1,5 @@
 export const PROJECTS_CONST = {
+  PARAGRAPH: "From 2024 - 2025",
   HEADING1: "Key",
   HEADING2: "✦",
   HEADING3: "Projects",

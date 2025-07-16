@@ -21,7 +21,7 @@ export default function Experience() {
       company: item.company,
       description: item.description,
       content: (
-        <div className="p-5 shadow-brBoth dark:shadow-brBothDark bg-background dark:bg-black rounded-[30px]">
+        <div className="relative z-50 p-5 shadow-brBoth dark:shadow-brBothDark bg-background dark:bg-black rounded-[30px]">
           {/* <h4>{item.company}</h4>
           <h5 className="mb-8 mt-1 text-grey_scale_700 text-sm">
             {item.description}

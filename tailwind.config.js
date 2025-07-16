@@ -39,7 +39,7 @@ module.exports = {
           "inset 0.5px 2px 2px rgba(0, 0, 0, 0.08), inset 0 -1px 5px rgba(0, 0, 0, 0.03), 4px 4px 25px rgba(255, 255, 255, 0.9)",
         "inner-custom": "inset 0 1px 3px rgba(0, 0, 0, 0.1)",
         brBothDark:
-          "inset 0.5px 2px 2px rgba(0, 0, 0, 0.1), inset 0 -1px 5px rgba(0, 0, 0, 0.2), 4px 4px 15px rgba(255, 255, 255, 0.022)",
+          "inset 0.5px 2px 2px rgba(0, 0, 0, 2), inset 0 -2px 5px rgba(0, 0, 0, 0.5), 4px 4px 20px rgba(255, 255, 255, 0.029)",
         "inner-custom": "inset 0 1px 3px rgba(0, 0, 0, 0.1)",
       },
 
@@ -94,11 +94,11 @@ module.exports = {
         grey_scale_300: "#F6F6F8",
         grey_scale_500: "#A4A4A4",
         grey_scale_700: "#9A9A9A",
-        grey_scale_800: "#616161",
+        grey_scale_800: "#797979",
         grey_scale_900: "#434343",
       },
       backgroundImage: {
-        'pattern-bg': "url('/images/pattern.png')",
+        "pattern-bg": "url('/images/pattern.png')",
         gradient: "linear-gradient(180deg, #434343, #000000)",
         "gradient-dark":
           "linear-gradient(180deg, #434343 0%, #F6F6F8 40%, #FCFBFC 60%, #B6B6B6 100%)",

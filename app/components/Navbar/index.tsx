@@ -4,12 +4,14 @@ import { NAVBAR_CONST } from "./const";
 import { Button } from "../Button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MessageCircleMore, Sun, Moon } from "lucide-react";
+import { MessageCircleMore, Sun, Moon, Volume2, VolumeX } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useSound } from "../SoundContextType/SoundContextType";
 
 const NavBar = (): JSX.Element => {
   const { theme, setTheme } = useTheme();
   const pathname = usePathname();
+  const { muted, setMuted } = useSound();
 
   return (
     <header
@@ -24,7 +26,7 @@ const NavBar = (): JSX.Element => {
           >
             {" "}
             <p className="text-2xl group-hover:scale-95 duration-300 font-[300] font-PerfectlyNineties dark:text-background">
-            (✦SUIN)
+              (✦SUIN)
             </p>
             {/* <div className="flex justify-center items-center gap-3">
               <div className="bg-gradient dark:bg-primary bg-grey_scale_200 w-fit p-1 rounded-[20px] shadow-lg border">
@@ -56,6 +58,16 @@ const NavBar = (): JSX.Element => {
           })}
         </ul>
         <ul className="flex items-center gap-4 dark:text-white/80 text-base">
+          <li>
+            <Button
+              onClick={() => setMuted((m) => !m)}
+              theme="tertiary"
+              additionalClasses="p-2 rounded-full"
+              icon={muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+            >
+              <span className="sr-only">{muted ? "Unmute" : "Mute"}</span>
+            </Button>
+          </li>
           <li>
             <Button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

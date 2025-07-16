@@ -22,8 +22,8 @@
 .dashed-horizontal-fade {
   background-image: repeating-linear-gradient(
     to right,
-    rgb(46, 46, 46),
-    white 3px,
+    rgb(35, 35, 35),
+    rgb(255, 255, 255) 3px,
     transparent 3px,
     transparent 6px
   );
@@ -35,8 +35,8 @@
 .dashed-vertical-fade {
   background-image: repeating-linear-gradient(
     to bottom,
-    rgb(46, 46, 46),
-    white 3px,
+    rgb(20, 20, 20),
+    rgb(255, 255, 255) 3px,
     transparent 3px,
     transparent 6px
   );
@@ -132,7 +132,7 @@
   --anim--hover-time: 400ms;
   --anim--hover-ease: cubic-bezier(0.25, 1, 0.5, 1);
   --border-color: #dddddd;
-  --pattern-fg: rgba(255, 255, 255, 0.05); 
+  --pattern-fg: rgba(119, 119, 119, 0.1); 
 
 }
 

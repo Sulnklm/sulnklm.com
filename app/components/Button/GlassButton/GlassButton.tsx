@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./GlassButton.module.css";
 
 interface GlassButtonProps {
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   label?: string;
   icon?: React.ReactNode;           
   className?: string;              

@@ -44,7 +44,7 @@ const Works = () => {
   return (
     <div>
       {/* <OrangeTextBox text="My works" /> */}
-      <InsetBlock>
+      {/* <InsetBlock> */}
         <PatternBackground />
         <section className="z-50 px-20">
           <div className="relative lg:gap-20">
@@ -100,7 +100,7 @@ const Works = () => {
             </div>
           </div>
         </section>
-      </InsetBlock>
+      {/* </InsetBlock> */}
     </div>
   );
 };

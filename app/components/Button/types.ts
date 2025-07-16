@@ -7,4 +7,5 @@ export type ButtonPropTypes = {
   additionalClasses?: string; 
   theme?: "primary" | "secondary" | "tertiary";
   icon?: ReactNode;
+  muted?: boolean;
 };
