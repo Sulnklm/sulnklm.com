@@ -15,7 +15,7 @@ export const GlassButton: React.FC<GlassButtonProps> = ({
   icon,
   className = "",
 }) => (
-  <div className={`relative flex items-center justify-center w-full h-full ${className}`}>
+  <div className={`scale-90 md:scale-100 relative flex items-center justify-center w-full h-full ${className}`}>
     <div className={styles.buttonWrap}>
       <button className={styles.btn} onClick={onClick}>
         <p className={`font-[350] flex items-center gap-2 ${styles.btnText}`}>

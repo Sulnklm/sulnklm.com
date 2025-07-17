@@ -17,7 +17,7 @@ module.exports = {
       container: {
         center: true,
         padding: {
-          DEFAULT: "1rem",
+          DEFAULT: "0.5rem",
           sm: "2rem",
           lg: "4rem",
           xl: "5rem",
@@ -41,6 +41,7 @@ module.exports = {
         brBothDark:
           "inset 0.5px 2px 2px rgba(0, 0, 0, 2), inset 0 -2px 5px rgba(0, 0, 0, 0.5), 4px 4px 20px rgba(255, 255, 255, 0.029)",
         "inner-custom": "inset 0 1px 3px rgba(0, 0, 0, 0.1)",
+        "3dShadow":"0 0 24px rgba(34,42,53,0.06), 0 1px 1px rgba(0,0,0,0.05), 0 0 0 1px rgba(34,42,53,0.04), 0 0 4px rgba(34,42,53,0.08), 0 16px 68px rgba(47,48,55,0.05), 0 1px 0 rgba(255,255,255,0.1) inset",
       },
 
       animation: {
@@ -103,22 +104,22 @@ module.exports = {
         "gradient-dark":
           "linear-gradient(180deg, #434343 0%, #F6F6F8 40%, #FCFBFC 60%, #B6B6B6 100%)",
         "orange-gradient":
-          "linear-gradient(180deg, #ED3C00 0%, #FF6741 60%, #A81C00 100%)",
+          "linear-gradient(180deg, #F59C83 10%, #F8805E 40%, #FF4C1F 60%, #A80000 100%)",
       },
       fontSize: {
-        h1: ["48px", { lineHeight: "1" }],
-        "h1-sm": ["55px"],
-        "h1-md": ["80px"],
+        h1: ["40px", { lineHeight: "0.5" }],
+        "h1-sm": ["45px"],
+        "h1-md": ["80px" , { lineHeight: "1" }],
         "h1-lg": ["85px"],
         "h1-2xl": ["100px"],
 
-        h2: ["40px", { lineHeight: "1.03" }],
-        "h2-md": ["50px"],
-        "h2-lg": ["60px"],
+        h2: ["28px", { lineHeight: "1.03" }],
+        "h2-md": ["40px"],
+        "h2-lg": ["45px"],
 
-        h3: ["30px", { lineHeight: "1.1" }],
-        "h3-md": ["33px"],
-        "h3-lg": ["35px"],
+        h3: ["25px", { lineHeight: "1.1" }],
+        "h3-md": ["28px"],
+        "h3-lg": ["30px"],
 
         h4: ["20px", { lineHeight: "1.1" }],
         "h4-md": ["22px"],
@@ -195,7 +196,7 @@ module.exports = {
         },
 
         h5: {
-          "@apply text-h5 font-Sans text-grey_scale_800 dark:text-grey_scale_500/90 font-[300]":
+          "@apply text-h5 font-Sans text-grey_scale_900/80 dark:text-grey_scale_500/90 font-[350] lg:font-[300]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h5-md": {},
@@ -206,7 +207,7 @@ module.exports = {
         },
 
         p: {
-          "@apply text-p font-Sans dark:text-white text-grey_scale_900 font-[300]":
+          "@apply text-p font-Sans dark:text-white text-grey_scale_900 font-[350] lg:font-[300]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},

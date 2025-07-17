@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ToolImage } from "../../ToolImage";
 import { GridProjectCardPropTypes, ToolPropTypes } from "./types";
-import { Button } from "../../Button";
+import { Button } from "../../Button/Button";
 import { ArrowRight } from "lucide-react";
 import { GlowingEffect } from "@/components/GlowingEffect/GlowingEffect";
 
@@ -19,7 +19,7 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
 
   return (
     <div
-      className="group relative rounded-[30px] overflow-visible border dark:border-grey_scale_900 bg-grey_scale_50 dark:bg-primary w-full min-w-[20rem] p-2"
+      className="group relative rounded-[10px] overflow-visible border dark:border-grey_scale_900 bg-grey_scale_50 dark:bg-primary w-full min-w-[20rem] p-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -34,7 +34,7 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
       <img
         src={PROJECT.IMAGE.SRC}
         alt={PROJECT.IMAGE.ALT}
-        className="bg-grey_scale_50 dark:bg-primary group-hover:bg-background dark:group-hover:bg-black duration-300 rounded-t-[25px] mb-36 w-full h-auto object-cover min-h-[20rem]"
+        className="bg-grey_scale_50 dark:bg-primary group-hover:bg-background dark:group-hover:bg-black duration-300 rounded-t-[10px] mb-36 w-full h-auto object-cover min-h-[20rem]"
       />
 
       <div className="absolute bottom-0 left-0 bg-grey_scale_50 dark:bg-primary rounded-[45px] w-full">

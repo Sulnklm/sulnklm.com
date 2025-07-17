@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ToolImage } from "../../ToolImage";
 import { ListProjectCardPropTypes } from "./types";
-import { Button } from "../../Button";
+import { Button } from "../../Button/Button";
 import { ArrowRight } from "lucide-react";
 import { GlowingEffect } from "@/components/GlowingEffect/GlowingEffect";
 
@@ -19,7 +19,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
 
   return (
     <div
-      className="group relative shadow-sm rounded-[45px] bg-grey_scale_50 dark:bg-primary p-2 z-0 border"
+      className="group relative shadow-sm rounded-[20px] bg-grey_scale_50 dark:bg-primary p-2 z-0 border"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -61,7 +61,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
           <img
             src={PROJECT.IMAGE.SRC}
             alt={PROJECT.IMAGE.ALT}
-            className="object-cover bg-background dark:bg-grey_scale_900/20 duration-300 rounded-[35px] w-full h-auto"
+            className="object-cover bg-background dark:bg-grey_scale_900/20 duration-300 rounded-[10px] w-full h-auto"
           />
         </div>
         <div className="flex-1">

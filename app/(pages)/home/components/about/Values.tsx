@@ -2,7 +2,7 @@ import IllustCard from "@/components/IllustCard/IllustCard";
 import React from "react";
 import { VALUES, VALUE_INTRO } from "./const";
 import { InsetBlock } from "@/components/InsetBlock";
-import { Button } from "@/components/Button";
+import { Button } from "@/components/Button/Button";
 import { INTRO_CONST } from "../../const";
 import { ArrowRight } from "lucide-react";
 import OrangeTextBox from "@/components/OrangeTextBox/OrangeTextBox";
@@ -11,10 +11,10 @@ const Values = () => {
   return (
     <InsetBlock>
       <OrangeTextBox text="About Me" />
-      <div className="max-w-[68rem] mx-auto mb-10">
-        <h2 className="text-start lg:text-center mb-3 text-5xl">{VALUE_INTRO.heading}</h2>
+      <div className="max-w-[68rem] mx-auto mb-6 md:mb-10">
+        <h2 className="text-start lg:text-center mb-3">{VALUE_INTRO.heading}</h2>
       </div>
-      <div className="max-w-[60rem] mx-auto px-5">
+      <div className="max-w-[60rem] mx-auto">
         {VALUES.map(({ icon, alt, title, description }, index) => (
           <IllustCard
             key={index}

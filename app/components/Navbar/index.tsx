@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
 import { NAVBAR_CONST } from "./const";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MessageCircleMore, Sun, Moon, Volume2, VolumeX } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useSound } from "../SoundContextType/SoundContextType";
+import { HyperText } from "../HyperText/HyperText";
+import { ScrollProgress } from "../ScrollProgress/ScrollProgress";
 
 const NavBar = (): JSX.Element => {
   const { theme, setTheme } = useTheme();
@@ -15,16 +17,13 @@ const NavBar = (): JSX.Element => {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-[100] mx-auto 
-                    dark:bg-black/50 backdrop-blur-md"
-    >
+      className="relative md:fixed top-0 left-0 right-0 z-[1000] mx-auto dark:bg-black/[1%] backdrop-blur-md">
       <nav className="container mx-auto flex justify-between items-center p-2.5">
         <ul className="flex items-center gap-5 text-base">
           <Link
             href="/"
             className="group flex items-center hover:gap-2.5 duration-300 gap-1.5 pl-5 pr-5"
           >
-            {" "}
             <p className="text-2xl group-hover:scale-95 duration-300 font-[300] font-PerfectlyNineties dark:text-background">
               (✦SUIN)
             </p>
@@ -51,7 +50,7 @@ const NavBar = (): JSX.Element => {
                       : "text-grey_scale_700 dark:text-white/40 text-sm"
                   }
                 >
-                  {LABEL}
+                  <HyperText key={LABEL}>{LABEL}</HyperText>
                 </Button>
               </li>
             );
@@ -79,7 +78,7 @@ const NavBar = (): JSX.Element => {
             </Button>
           </li>
 
-          <li>
+          <li className="hidden sm:block">
             <Button
               href={NAVBAR_CONST.CONTACT.HREF}
               theme="primary"
@@ -91,6 +90,7 @@ const NavBar = (): JSX.Element => {
           </li>
         </ul>
       </nav>
+      <ScrollProgress />
     </header>
   );
 };

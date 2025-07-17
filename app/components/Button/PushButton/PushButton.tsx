@@ -19,6 +19,7 @@ export const PushButton: React.FC<PushButtonProps> = ({
 }) => {
   if (theme === "secondary") {
     return (
+      <div className="scale-90 md:scale-100">
       <button
         className={`${styles.pushButton} ${additionalClasses}`}
         onClick={onClick}
@@ -26,7 +27,7 @@ export const PushButton: React.FC<PushButtonProps> = ({
         <div className={styles.outer}>
           <div className={styles.inner}>
             <p
-              className={`${styles.label} font-[350] font-Sans dark:text-primary flex items-center gap-2`}
+              className={`${styles.label} font-[400] md:font-[350] font-Sans text-black dark:text-primary flex items-center gap-2`}
             >
               {children}
               {icon && <span>{icon}</span>}
@@ -34,6 +35,7 @@ export const PushButton: React.FC<PushButtonProps> = ({
           </div>
         </div>
       </button>
+      </div>
     );
   }
   return <GlassButton onClick={onClick} label={typeof children === "string" ? children : undefined} />;

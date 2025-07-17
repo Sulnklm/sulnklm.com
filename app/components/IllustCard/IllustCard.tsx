@@ -40,7 +40,7 @@ const IllustCard: React.FC<IllustCardProps & { isFirst?: boolean }> = ({
     <motion.div
       ref={ref}
       animate={isFirst ? controls : undefined}
-      className="flex items-center gap-4 rounded-2xl p-5 bg-white dark:bg-primary border"
+      className="flex lg:items-center gap-4 rounded-2xl p-5 bg-white dark:bg-primary border"
       style={{
         boxShadow: "0px 2px 10px rgba(0,0,0,0.05)", 
       }}
@@ -48,7 +48,7 @@ const IllustCard: React.FC<IllustCardProps & { isFirst?: boolean }> = ({
       <img src={icon} alt={alt} className="w-12 h-12 object-contain flex-shrink-0" />
       <div>
         <p className="text-lg font-PerfectlyNineties">{title}</p>
-        <h5 className="text-grey_scale_700 text-sm">{description}</h5>
+        <h5 className="text-grey_scale_800 text-sm">{description}</h5>
       </div>
     </motion.div>
     </div>

@@ -50,15 +50,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
               <div className="md:pl-10">
-                <h5 className="hidden md:block mb-5 font-[400] opacity-80 border rounded-full w-fit px-3 py-2 bg-white dark:bg-primary">
+                <h5 className="hidden md:block mb-5 font-[400] opacity-80 border rounded-full w-fit px-3 py-1 bg-white dark:bg-primary">
                   {item.time}
                 </h5>
                 <div>
-                  <h3 className="hidden md:block">{item.position}</h3>
-                  <h5 className="hidden md:block font-[400] text-lg">
+                  <h3 className="hidden md:block font-PerfectlyNineties tracking-normal dark:text-background">{item.position}</h3>
+                  <h5 className="hidden md:block font-[350] text-sm text-primary dark:text-background">
                     {item.company}
                   </h5>
-                  <p className="hidden md:block mt-5 font-[400] text-grey_scale_800 dark:text-grey_scale_700">
+                  <p className="hidden md:block mt-3 font-[350] text-sm leading-tight text-grey_scale_800 dark:text-grey_scale_700">
                     {item.description}
                   </p>
                 </div>
@@ -67,15 +67,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
             <div className="relative pl-10 pr-4 md:pl-4 w-full">
               <div>
-                <h5 className="md:hidden mb-5 font-[400] opacity-80 border rounded-full w-fit px-3 py-2 bg-white dark:bg-primary">
+                <h5 className="md:hidden mb-5 font-[400] opacity-80 border rounded-full w-fit px-3 py-1 bg-white dark:bg-primary">
                   {item.time}
                 </h5>
                 <div>
-                  <h3 className="md:hidden">{item.position}</h3>
-                  <h5 className="md:hidden font-[400] text-lg">
+                  <h3 className="md:hidden font-PerfectlyNineties tracking-normal dark:text-background">{item.position}</h3>
+                  <h5 className="md:hidden font-[400] text-base text-primary dark:text-background">
                     {item.company}
                   </h5>
-                  <h5 className="md:hidden mb-6 mt-3 font-[400] text-grey_scale_800 dark:text-grey_scale_700">
+                  <h5 className="md:hidden mb-6 mt-3 font-[350] text-sm leading-tight text-grey_scale_800 dark:text-grey_scale_700">
                     {item.description}
                   </h5>
                 </div>
@@ -88,14 +88,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           style={{
             height: height + "px",
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute md:left-8 left-7 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >
           <motion.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-orange-300 via-orange-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-orange-500 via-orange-200 dark:from-orange-400 dark:via-orange-200 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>

@@ -1,8 +1,10 @@
 export const PROJECTS_CONST = {
-  PARAGRAPH: "From 2024 - 2025",
-  HEADING1: "Key",
-  HEADING2: "✦",
-  HEADING3: "Projects",
+  PARAGRAPH: "From design to dev",
+  SELECTED_HEADING1: "Key",
+  SELECTED_HEADING2: "✦",
+  SELECTED_HEADING3: "Projects",
+
+  WORKS_HEADING: "",
   PROJECTS: [
     {
       // Project 1
@@ -57,7 +59,8 @@ export const PROJECTS_CONST = {
       ],
       DISCIPLINE: ["UX/UI Design"],
       TIMELINE: "January 2025",
-      CATEGORY: ["all", "case-study"],
+      CATEGORY: ["all", "case-study", "selected"],
     },
   ],
 };
+

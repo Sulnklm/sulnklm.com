@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ToolImage } from "../../ToolImage";
 import { ListProjectCardPropTypes } from "./types";
-import { Button } from "../../Button";
+import { Button } from "../../Button/Button";
 import { ArrowRight } from "lucide-react";
 
 export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {

@@ -1,6 +1,6 @@
 import Hero from "./home/components/Hero";
 import Values from "./home/components/about/Values";
-import Works from "./works/components/Works";
+import Works from "./home/components/SelectedWorks";
 
 
 export default function HomePage() {

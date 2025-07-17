@@ -1,4 +1,3 @@
-import type { ExperienceItem } from "./types";
 
 export const HOME_HERO_CONST = {
   HEADSHOT: {
@@ -28,16 +27,18 @@ export const HOME_HERO_CONST = {
   },
 
   DESCRIPTION: {
-    DESCRIPTION1: "✓ Based in Vancouver, BC, Canada.",
-    DESCRIPTION2: "✓ I focus on usability, clarity, and aesthetics.",
+    DESCRIPTION1: "Based in Vancouver, BC, Canada",
+    DESCRIPTION2: "I focus on usability, clarity, and aesthetics.",
   },
 };
 
-export const WORKS_CONST = {
-  HEADING1: "Key",
-  HEADING2: "✦",
-  HEADING3: "Projects",
+export const SELECTED_PROJECTS_CONST = {
+  PARAGRAPH: "From 2024 to 2025",
+  SELECTED_HEADING1: "Key",
+  SELECTED_HEADING2: "✦",
+  SELECTED_HEADING3: "Projects",
 };
+
 export const INTRO_CONST = {
   HEADING1:
     "I create story-driven designs and enjoy the thoughtful process of coding that brings ideas to life.",
@@ -48,60 +49,3 @@ export const INTRO_CONST = {
     TEXT: "Learn more",
   },
 };
-export const EXPERIENCE_CONST: ExperienceItem[] = [
-  {
-    time: "May - July 2025",
-    position: "Media designer",
-    company: "Internship @ Pixel Ramen",
-    images: [
-      {
-        src: "/images/about/experience/pixelramen1.png",
-        alt: "Pixel Ramen Post Design Image 1",
-      },
-      {
-        src: "/images/about/experience/pixelramen2.png",
-        alt: "Pixel Ramen Post Design Image 2",
-      },
-      {
-        src: "/images/about/experience/pixelramen3.png",
-        alt: "Pixel Ramen Post Design Image 3",
-      },
-      {
-        src: "/images/about/experience/pixelramen4.png",
-        alt: "Pixel Ramen Post Design Image 4",
-      },
-    ],
-    description: "Designed scroll-stopping visuals for social media",
-  },
-  {
-    time: "May - July 2025",
-    position: "Web developer",
-    company: "Internship @ Convergence",
-    images: [
-      {
-        src: "/images/about/experience/convergence.png",
-        alt: "Convergence logo",
-      },
-      {
-        src: "/images/about/experience/simuhealth.png",
-        alt: "Simuhealth logo",
-      },
-    ],
-    description:
-      "Worked on several exciting projects integrating UI/UX and frontend",
-  },
-  {
-    time: "May - July 2025",
-    company: "Freelance",
-    position: "Designer & Developer",
-    images: [
-      {
-        src: "/images/about/experience/pixelramen3.png",
-        alt: "Graphic design image3",
-      },
-      { src: "/images/home/experience4.png", alt: "Graphic design image4" },
-    ],
-    description:
-      "Worked on several exciting projects integrating UI/UX and frontend",
-  },
-];

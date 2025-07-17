@@ -31,7 +31,8 @@ const OrangeTextBox: React.FC<OrangeTextBoxProps> = ({
         py-2
         text-orange-600
         font-semibold
-        shadow-[0_0_15px_2px_rgba(255,138,0,0.8),0_0_30px_2px_rgba(255,138,0,0.2)]
+        shadow-[0_0_15px_2px_rgba(255,176,124,1),0_0_30px_2px_rgba(255,209,166,0.2)]
+        dark:shadow-[0_0_15px_2px_rgba(255,165,82,0.3),0_0_30px_2px_rgba(255,176,117,0.2)]
         before:absolute
         before:left-[-12px]
         before:top-1/2

@@ -1,6 +1,6 @@
 import React from "react";
 import { Timeline } from "@/components/Timeline/Timeline";
-import { EXPERIENCE_CONST } from "../../home/const";
+import { EXPERIENCE_CONST } from "../const";
 import { ExperienceItem } from "../../home/types";
 import OrangeTextBox from "@/components/OrangeTextBox/OrangeTextBox";
 import PatternBackground from "@/components/PatternBackground/PatternBackground";
@@ -34,7 +34,7 @@ export default function Experience() {
                 alt={img.alt}
                 width={500}
                 height={500}
-                className="h-auto max-w-[13rem] min-h-[3rem] w-full rounded-lg bg-background dark:bg-primary object-cover p-0.5 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                className="h-auto max-w-[13rem] min-h-[2rem] w-full rounded-lg bg-background dark:bg-primary object-contain p-0.5 shadow-3dShadow"
               />
             ))}
           </div>
