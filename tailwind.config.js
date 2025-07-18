@@ -165,7 +165,7 @@ module.exports = {
           },
         },
         h2: {
-          "@apply text-h2 font-Sans font-[500] tracking-tighter text-grey_scale_900 dark:text-white text-center":
+          "@apply text-h2 font-Sans font-[500] tracking-tighter text-grey_scale_900 dark:text-grey_scale_300 text-center":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h2-md": {},
@@ -175,7 +175,7 @@ module.exports = {
           },
         },
         h3: {
-          "@apply text-h3 font-Sans tracking-tighter text-grey_scale_900 font-[450] dark:text-white":
+          "@apply text-h3 font-Sans tracking-tighter text-grey_scale_900 font-[450] dark:text-grey_scale_100":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h3-md": {},
@@ -185,7 +185,7 @@ module.exports = {
           },
         },
         h4: {
-          "@apply text-h4 font-PerfectlyNineties font-[500] dark:text-white text-grey_scale_900":
+          "@apply text-h4 font-PerfectlyNineties font-[500] dark:text-grey_scale_100 text-grey_scale_900":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h4-md": {},
@@ -207,7 +207,7 @@ module.exports = {
         },
 
         p: {
-          "@apply text-p font-Sans dark:text-white text-grey_scale_900 font-[350] lg:font-[300]":
+          "@apply text-p font-Sans dark:text-grey_scale_500 text-grey_scale_900/80 font-[350] lg:font-[300]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},

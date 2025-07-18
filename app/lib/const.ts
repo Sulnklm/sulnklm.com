@@ -9,7 +9,11 @@ export const EXTERNAL_LINKS = {
   },
   RESUME: {
     href: "",
-    label: "Resume",
+    label: "View Resume",
+  },
+  CONTACT: {
+    HREF: "hello@sulnklm.com",
+    LABEL: "Contact",
   },
 };
 

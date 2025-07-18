@@ -64,7 +64,7 @@ const OrangeTextBox: React.FC<OrangeTextBoxProps> = ({
         ${className ?? ""}
       `}
     >
-      <p className="font-Sans text-white font-[400]">{text}</p>
+      <p className="font-Sans text-white dark:text-white font-[400]">{text}</p>
     </button>
   );
 };

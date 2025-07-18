@@ -19,7 +19,7 @@ export const PushButton: React.FC<PushButtonProps> = ({
 }) => {
   if (theme === "secondary") {
     return (
-      <div className="scale-90 md:scale-100">
+      <div>
       <button
         className={`${styles.pushButton} ${additionalClasses}`}
         onClick={onClick}

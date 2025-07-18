@@ -15,16 +15,9 @@ export const NAVBAR_CONST = {
       LABEL: "About",
     },
     {
-      HREF: "mailto:suink2005@gmail.com",
+      HREF: "mailto:hello@sulnklm.com",
       LABEL: "Contact",
     },
   ],
-  CONTACT: {
-    HREF: "mailto:suink2005@gmail.com",
-    LABEL: "Contact",
-  },
-  NAV_BAR: {
-    SHOW_MENU: "show menu",
-    HIDE_MENU: "hide menu",
-  },
+
 };

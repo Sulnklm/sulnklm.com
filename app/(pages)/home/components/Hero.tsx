@@ -10,6 +10,7 @@ import { EXTERNAL_LINKS, TECH_STACK } from "@/lib/const";
 import { HOME_HERO_CONST } from "../const";
 import { InsetBlock } from "@/components/InsetBlock";
 import { SubTextBox } from "@/components/SubTextBox/SubTextBox";
+import { FlipWords } from "@/components/FlipWords/FlipWords";
 
 export default function Hero() {
   const time = useVancouverTime();
@@ -42,7 +43,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="col-span-full md:mt-0 h-[65vh] md:h-screen bg-background dark:bg-primary overflow-hidden px-5 border-b !border-b-grey_scale_500/40 dark:!border-b-grey_scale_900 border-dashed">
+    <section className="md:mt-0 h-[60vh] md:h-screen bg-background dark:bg-primary px-5 border-b !border-b-grey_scale_500/40 dark:!border-b-grey_scale_900 border-dashed">
       <div className="absolute inset-0 z-0">
         <DotBackground />
       </div>
@@ -106,7 +107,7 @@ export default function Hero() {
         
 
         {/* 3.3) ACTIONS */}
-        <div className="flex gap-1 dark:gap-0  md:gap-4 md:dark:gap-2 -mt-3 md:mt-0">
+        <div className="scale-90 md:scale-100 flex gap-3.5 dark:gap-1 md:gap-4 md:dark:gap-2 -mt-3 md:mt-0">
           {actions.map((act, i) => (
             <Button
               key={i}

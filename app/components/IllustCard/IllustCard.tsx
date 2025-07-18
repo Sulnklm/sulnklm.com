@@ -20,10 +20,10 @@ const IllustCard: React.FC<IllustCardProps & { isFirst?: boolean }> = ({
   React.useEffect(() => {
     if (isFirst && inView) {
       controls.start({
-        y: 20,
-        rotate:3,
-        boxShadow: "0px 5px 8px rgba(0,0,0,0.15)",
-        transition: { duration: 0.4, delay: 0.3 },
+        y: 18,
+        rotate:2,
+        boxShadow: "0px 3px 10px rgba(0,0,0,0.15)",
+        transition: { duration: 0.4, delay: 0.5 },
       });
     } else if (isFirst && !inView) {
       controls.start({
@@ -47,7 +47,7 @@ const IllustCard: React.FC<IllustCardProps & { isFirst?: boolean }> = ({
     >
       <img src={icon} alt={alt} className="w-12 h-12 object-contain flex-shrink-0" />
       <div>
-        <p className="text-lg font-PerfectlyNineties">{title}</p>
+        <p className="text-lg font-PerfectlyNineties dark:text-white">{title}</p>
         <h5 className="text-grey_scale_800 text-sm">{description}</h5>
       </div>
     </motion.div>

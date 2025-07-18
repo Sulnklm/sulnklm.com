@@ -5,7 +5,7 @@ import { MouseTagProps } from "./types";
 export const MouseTag: React.FC<MouseTagProps> = ({
   label = "",
   bgClass = "bg-orange-500",
-  textClass = "text-white",
+  textClass = "text-white dark:text-white",
   arrowClass = "fill-orange-500",
   arrowPosition = "left",
   additionalClassName = "",
@@ -34,7 +34,7 @@ export const MouseTag: React.FC<MouseTagProps> = ({
   return (
     <div
       className={clsx(
-        "flex items-center gap-3",
+        "flex items-center gap-3 w-fit",
         arrowPosition === "right" && "flex-row-reverse",
         additionalClassName
       )}

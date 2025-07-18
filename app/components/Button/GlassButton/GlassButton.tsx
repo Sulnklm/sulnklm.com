@@ -15,10 +15,10 @@ export const GlassButton: React.FC<GlassButtonProps> = ({
   icon,
   className = "",
 }) => (
-  <div className={`scale-90 md:scale-100 relative flex items-center justify-center w-full h-full ${className}`}>
+  <div className={`relative flex items-center justify-center w-full h-full ${className}`}>
     <div className={styles.buttonWrap}>
       <button className={styles.btn} onClick={onClick}>
-        <p className={`font-[350] flex items-center gap-2 ${styles.btnText}`}>
+        <p className={`font-[350] flex items-center gap-2 dark:text-white ${styles.btnText}`}>
           {label}
           {icon && <span>{icon}</span>}
           </p>

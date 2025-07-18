@@ -47,7 +47,7 @@ export const Button: React.FC<ButtonPropTypes> = ({
 
   if (!mounted) return null;
 
-  // 프라이머리
+  // primary
   if (theme === "primary") {
     return (
       <ShimmerButton onClick={handleClick} className={additionalClasses}>
@@ -57,7 +57,7 @@ export const Button: React.FC<ButtonPropTypes> = ({
     );
   }
 
-  // 세컨더리
+  // secondary
   if (theme === "secondary") {
     return currentTheme === "dark" ? (
       <GlassButton
@@ -77,7 +77,7 @@ export const Button: React.FC<ButtonPropTypes> = ({
     );
   }
 
-  // 링크 버튼
+  // link btn
   if (href) {
     return (
       <a

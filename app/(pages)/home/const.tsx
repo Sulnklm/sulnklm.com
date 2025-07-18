@@ -34,9 +34,7 @@ export const HOME_HERO_CONST = {
 
 export const SELECTED_PROJECTS_CONST = {
   PARAGRAPH: "From 2024 to 2025",
-  SELECTED_HEADING1: "Key",
-  SELECTED_HEADING2: "✦",
-  SELECTED_HEADING3: "Projects",
+  SELECTED_HEADING1: "Selected ✦",
 };
 
 export const INTRO_CONST = {

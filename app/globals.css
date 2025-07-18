@@ -144,3 +144,7 @@
 .border {
   border-color: var(--border-color);
 }
+
+body, html {
+  overflow: auto !important;
+}

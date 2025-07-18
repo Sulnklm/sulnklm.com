@@ -29,7 +29,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   starDensity = 0.00015,
   allStarsTwinkle = true,
   twinkleProbability = 1,
-  minTwinkleSpeed = 0.5,
+  minTwinkleSpeed = 1,
   maxTwinkleSpeed = 1,
   className,
 }) => {

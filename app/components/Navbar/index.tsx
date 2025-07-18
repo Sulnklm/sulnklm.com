@@ -9,6 +9,7 @@ import { useTheme } from "next-themes";
 import { useSound } from "../SoundContextType/SoundContextType";
 import { HyperText } from "../HyperText/HyperText";
 import { ScrollProgress } from "../ScrollProgress/ScrollProgress";
+import { EXTERNAL_LINKS } from "@/lib/const";
 
 const NavBar = (): JSX.Element => {
   const { theme, setTheme } = useTheme();
@@ -80,12 +81,12 @@ const NavBar = (): JSX.Element => {
 
           <li className="hidden sm:block">
             <Button
-              href={NAVBAR_CONST.CONTACT.HREF}
+              href={EXTERNAL_LINKS.CONTACT.HREF}
               theme="primary"
               icon={<MessageCircleMore size={16} className="ml-2" />}
               additionalClasses="!py-2.5 !px-3.5 text-sm rounded-[11px]"
             >
-              {NAVBAR_CONST.CONTACT.LABEL}
+              {EXTERNAL_LINKS.CONTACT.LABEL}
             </Button>
           </li>
         </ul>

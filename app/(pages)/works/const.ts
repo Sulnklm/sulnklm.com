@@ -1,9 +1,6 @@
 export const PROJECTS_CONST = {
-  PARAGRAPH: "From design to dev",
-  SELECTED_HEADING1: "Key",
-  SELECTED_HEADING2: "✦",
-  SELECTED_HEADING3: "Projects",
-
+  PARAGRAPH: "From Design to Dev",
+  HEADING1: "My ✦",
   WORKS_HEADING: "",
   PROJECTS: [
     {

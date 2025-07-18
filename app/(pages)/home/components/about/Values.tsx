@@ -29,7 +29,7 @@ const Values = () => {
               href={INTRO_CONST.BUTTON.HREF}
               theme="primary"
               icon={<ArrowRight size={16} className="ml-2" />}
-              additionalClasses="mt-5 justify-self-center md:justify-self-end px-5"
+              additionalClasses="w-full mt-5 justify-self-center md:justify-self-end px-5"
             >
               {INTRO_CONST.BUTTON.TEXT}
             </Button>
