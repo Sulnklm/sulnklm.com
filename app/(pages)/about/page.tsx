@@ -1,13 +1,9 @@
-import Experience from "./components/Experience";
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
+import About from "./components/About";
 
 export default function AboutPage() {
   return (
     <div>
-      <Hero />
-      <Skills />
-      <Experience />
+      <About />
     </div>
   );
 }

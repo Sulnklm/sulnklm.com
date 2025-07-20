@@ -1,4 +1,4 @@
-import NavBar from "../components/Navbar";
+import NavBar from "../components/Navbar/Navbar";
 import "../globals.css";
 import { ReactNode } from "react";
 import { Providers } from "../providers";

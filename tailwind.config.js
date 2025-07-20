@@ -27,7 +27,7 @@ module.exports = {
           sm: "640px",
           md: "768px",
           lg: "1024px",
-          xl: "1280px",
+          xl: "1440px",
           "2xl": "1540px",
         },
       },
@@ -41,7 +41,8 @@ module.exports = {
         brBothDark:
           "inset 0.5px 2px 2px rgba(0, 0, 0, 2), inset 0 -2px 5px rgba(0, 0, 0, 0.5), 4px 4px 20px rgba(255, 255, 255, 0.029)",
         "inner-custom": "inset 0 1px 3px rgba(0, 0, 0, 0.1)",
-        "3dShadow":"0 0 24px rgba(34,42,53,0.06), 0 1px 1px rgba(0,0,0,0.05), 0 0 0 1px rgba(34,42,53,0.04), 0 0 4px rgba(34,42,53,0.08), 0 16px 68px rgba(47,48,55,0.05), 0 1px 0 rgba(255,255,255,0.1) inset",
+        "3dShadow":
+          "0 0 24px rgba(34,42,53,0.06), 0 1px 1px rgba(0,0,0,0.05), 0 0 0 1px rgba(34,42,53,0.04), 0 0 4px rgba(34,42,53,0.08), 0 16px 68px rgba(47,48,55,0.05), 0 1px 0 rgba(255,255,255,0.1) inset",
       },
 
       animation: {
@@ -89,6 +90,7 @@ module.exports = {
       colors: {
         primary: "#111111",
         background: "#EBEBE7",
+        coral: "#F76239",
         grey_scale_50: "#F9F9F9",
         grey_scale_100: "#F8F8F8",
         grey_scale_200: "#EFEFF1",
@@ -105,11 +107,13 @@ module.exports = {
           "linear-gradient(180deg, #434343 0%, #F6F6F8 40%, #FCFBFC 60%, #B6B6B6 100%)",
         "orange-gradient":
           "linear-gradient(180deg, #F59C83 10%, #F8805E 40%, #FF4C1F 60%, #A80000 100%)",
+        "orange-diagonal":
+          "linear-gradient(135deg, #FF906F 0%, #FF804D 22%, #FF6A3D 48%, #FF804D 75%, #FF9D7F 100%)",
       },
       fontSize: {
         h1: ["40px", { lineHeight: "0.5" }],
         "h1-sm": ["45px"],
-        "h1-md": ["80px" , { lineHeight: "1" }],
+        "h1-md": ["80px", { lineHeight: "1" }],
         "h1-lg": ["85px"],
         "h1-2xl": ["100px"],
 
@@ -165,7 +169,7 @@ module.exports = {
           },
         },
         h2: {
-          "@apply text-h2 font-Sans font-[500] tracking-tighter text-grey_scale_900 dark:text-grey_scale_300 text-center":
+          "@apply text-h2 font-PerfectlyNineties font-[500] text-grey_scale_900 dark:text-grey_scale_300 text-center":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h2-md": {},
@@ -207,7 +211,7 @@ module.exports = {
         },
 
         p: {
-          "@apply text-p font-Sans dark:text-grey_scale_500 text-grey_scale_900/80 font-[350] lg:font-[300]":
+          "@apply text-p font-Sans dark:text-grey_scale_500 text-primary font-[350] lg:font-[300]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},

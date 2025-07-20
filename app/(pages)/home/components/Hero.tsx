@@ -48,7 +48,7 @@ export default function Hero() {
         <DotBackground />
       </div>
 
-      <div className="relative z-[100] container mx-auto flex flex-col items-center justify-center gap-5 h-full text-center mt-5 md:-mt-10">
+      <div className="relative z-[100] container mx-auto flex flex-col items-center justify-center gap-5 h-full text-center mt-28 md:-mt-10">
         {/* 3.1) TITLE */}
         <div className="flex flex-col items-center">
           <div className="flex gap-2 md:gap-4">

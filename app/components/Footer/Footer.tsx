@@ -55,7 +55,7 @@ const Footer = () => {
             <h2 className="text-white/90 dark:text-white/90 md:text-4xl text-start font-PerfectlyNineties tracking-normal">{FOOTER_CONST.HEADING1}</h2>
             <PointerHighlight
               rectangleClassName="!border-orange-200 bg-blue-700/10 dark:bg-blue-700/10"
-              pointerClassName="text-orange-400"
+              pointerClassName="text-coral"
             >
               <h2 className="text-white text-6xl md:text-7xl">{FOOTER_CONST.HEADING2}</h2>
             </PointerHighlight>

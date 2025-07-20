@@ -89,7 +89,7 @@ export function ProgressiveBlur({
           />
         );
       })}
-      <div
+      {/* <div
         className="absolute inset-0"
         style={{
           zIndex: blurLevels.length + 1,
@@ -97,7 +97,7 @@ export function ProgressiveBlur({
           background:
             "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.04) 60%, rgba(0,0,0,0.10) 80%, rgba(0,0,0,0.18) 100%)",
         }}
-      />
+      /> */}
       {/* Last blur layer (pseudo element) */}
       <div
         className="absolute inset-0"

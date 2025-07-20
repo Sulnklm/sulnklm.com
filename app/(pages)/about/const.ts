@@ -11,11 +11,11 @@ export const ABOUT_CONST = {
       ALT: "Image of Suin 1",
     },
     IMAGE2: {
-      SRC: "/images/about/hero/about2.jpg",
+      SRC: "/images/about/hero/about4.jpg",
       ALT: "Image of Suin 2",
     },
     IMAGE3: {
-      SRC: "/images/about/hero/about3.jpg",
+      SRC: "/images/about/hero/about5.jpg",
       ALT: "Image of Suin 3",
     },
     HEADING1: "Hi again!",
@@ -29,6 +29,50 @@ export const ABOUT_CONST = {
     PARAGRAPH2:
       "Completing my first internship, I came to understand that in the ever-evolving world of digital design, there is always infinite room for growth. This ongoing journey of improvement deepened my passion for the field and drives me to continuously push my creative and technical boundaries. Moving forward, I aspire to create work that truly inspires while evolving into a more innovative designer and developer.",
   },
+};
+
+export const SKILLS_CONST = {
+  HEADING: "Key ✦ Skills",
+  DEVELOPMENT_TOOLS: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "React Native",
+    "Tailwind",
+    "Bootstrap",
+    "jQuery",
+    "Express.js",
+    "PHP",
+    "WordPress",
+    "Git",
+    "GitHub",
+    "Postman",
+    "Framer Motion",
+    "GSAP",
+  ],
+  DESIGN_TOOLS: [
+    "Figma",
+    "Photoshop",
+    "Illustrator",
+    "InDesign",
+    "After Effects",
+    "Premiere Pro",
+    "Dimension",
+  ],
+  DEVELOPMENT_SKILLS: [],
+  DESIGN_SKILLS: [
+    "UX Research",
+    "Information Architecture",
+    "Design System",
+    "Wireframing",
+    "Usability Testing",
+    "Web Design",
+    "Branding",
+    "Marketing Graphics",
+  ],
 };
 
 export const EXPERIENCE_CONST: ExperienceItem[] = [

@@ -22,10 +22,6 @@ export default function Experience() {
       description: item.description,
       content: (
         <div className="relative z-50 p-5 shadow-brBoth dark:shadow-brBothDark bg-background dark:bg-black rounded-[30px]">
-          {/* <h4>{item.company}</h4>
-          <h5 className="mb-8 mt-1 text-grey_scale_700 text-sm">
-            {item.description}
-          </h5> */}
           <div className="grid grid-cols-2 xl:grid-cols-4 gap-3">
             {item.images.map((img, idx) => (
               <img
@@ -44,8 +40,7 @@ export default function Experience() {
   );
 
   return (
-      <div className="relative w-full overflow-clip">
-      {/* <PatternBackground /> */}
+      <div className="relative w-full overflow-clip pb-10">
         <Timeline data={timelineData} />
       </div>
   );

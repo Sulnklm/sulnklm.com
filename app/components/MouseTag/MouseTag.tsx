@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx"; // (or use your cn 함수)
 import { MouseTagProps } from "./types";
+import { TypingAnimation } from "components/magicui/typing-animation";
 
 export const MouseTag: React.FC<MouseTagProps> = ({
   label = "",
@@ -20,14 +21,18 @@ export const MouseTag: React.FC<MouseTagProps> = ({
       className={arrowClass}
       style={
         arrowPosition === "right"
-          ? { marginLeft: "-16px", transform: "translateY(-25px) rotate(-2deg)" }
-          : { marginRight: "-16px", transform: "translateY(-25px) rotate(-96deg)" }
+          ? {
+              marginLeft: "-16px",
+              transform: "translateY(-25px) rotate(-2deg)",
+            }
+          : {
+              marginRight: "-16px",
+              transform: "translateY(-25px) rotate(-96deg)",
+            }
       }
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"
-      />
+      <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
     </svg>
   );
 
@@ -47,7 +52,7 @@ export const MouseTag: React.FC<MouseTagProps> = ({
           textClass
         )}
       >
-        {label}
+        <TypingAnimation>{label}</TypingAnimation>
       </p>
     </div>
   );

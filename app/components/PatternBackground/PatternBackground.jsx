@@ -2,8 +2,6 @@ const PatternBackground = () => {
     return (
       <div
         style={{
-          borderLeft: "2px solid var(--pattern-fg)",
-          borderRight: "2px solid var(--pattern-fg)",
           backgroundImage: "repeating-linear-gradient(315deg, var(--pattern-fg) 0, var(--pattern-fg) 1px, transparent 0, transparent 50%)",
           backgroundSize: "6px 6px",
           backgroundAttachment: "fixed",

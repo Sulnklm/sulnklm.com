@@ -62,7 +62,7 @@ const Works = () => {
           </span>
         </h2>
         <div className="flex items-center pt-5 sm:py-4 border-t border-dashed">
-          <div className="flex-1 flex justify-end md:justify-start pr-2">
+          <div className="w-full md:flex-1 flex justify-end md:justify-start pr-2">
             <CategoriesTabs
               labels={CATEGORY_TABS}
               icons={icons}

@@ -15,19 +15,19 @@ export function withFrameShine<T extends {}>(
   .maskShine {
     -webkit-mask-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0.5) 30%,
-      rgba(255, 255, 255, 1.5) 50%,
-      rgba(255, 255, 255, 0.5) 70%
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 1.0) 70%,
+      rgba(255, 255, 255, 0.5) 90%
     );
     mask-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0.5) 30%,
-      rgba(255, 255, 255, 1.5) 50%,
-      rgba(255, 255, 255, 0.5) 70%
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 1.0) 60%,
+      rgba(255, 255, 255, 0.5) 90%
     );
     -webkit-mask-size: 150% auto;
     mask-size: 150% auto;
-    animation: maskShine 3s ease-in-out infinite;
+    animation: maskShine 5s ease-in-out infinite;
   }
 `;
 
