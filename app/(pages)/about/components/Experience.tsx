@@ -1,6 +1,6 @@
 import React from "react";
 import { Timeline } from "@/components/Timeline/Timeline";
-import { EXPERIENCE_CONST } from "../const";
+import { ABOUT_CONST, EXPERIENCE_CONST } from "../const";
 import { ExperienceItem } from "../../home/types";
 import OrangeTextBox from "@/components/OrangeTextBox/OrangeTextBox";
 import PatternBackground from "@/components/PatternBackground/PatternBackground";
@@ -41,6 +41,7 @@ export default function Experience() {
 
   return (
       <div className="relative w-full overflow-clip pb-10">
+        <img alt={ABOUT_CONST.HERO.TEST.ALT} src={ABOUT_CONST.HERO.TEST.SRC} className="mx-auto dark:invert max-w-[65vw]"></img>
         <Timeline data={timelineData} />
       </div>
   );

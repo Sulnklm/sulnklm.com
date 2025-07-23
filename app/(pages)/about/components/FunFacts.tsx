@@ -8,7 +8,7 @@ const FUN_FACTS = [
   },
   {
     emoji: "🫂",
-    body: "I’m pretty good at managing stress—thanks to my super positive mom mojo.",
+    body: "I’m pretty good at managing stress—thanks to my super positive mom mojo!",
   },
   {
     emoji: "‼️",
@@ -55,7 +55,7 @@ const FunfactCard = ({
   return (
     <figure
       className={cn(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "relative h-full w-64 2xl:w-80 cursor-pointer overflow-hidden rounded-xl border p-4",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01]",
         // dark styles
@@ -65,7 +65,7 @@ const FunfactCard = ({
       <div className="flex flex-row gap-2">
         <p className="text-2xl">{emoji}</p>
         <div className="flex flex-col">
-          <p className="text-sm text-primary dark:text-white">
+          <p className="text-sm text-primary/80 dark:text-grey_scale_200/80">
             {body}
           </p>
         </div>

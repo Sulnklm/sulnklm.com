@@ -18,6 +18,10 @@ export const ABOUT_CONST = {
       SRC: "/images/about/hero/about5.jpg",
       ALT: "Image of Suin 3",
     },
+    TEST: {
+      SRC: "/images/about/hero/test.png",
+      ALT: "Image of Suin 3",
+    },
     HEADING1: "Hi again!",
   },
   MY_STORY: {
