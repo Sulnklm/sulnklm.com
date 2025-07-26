@@ -74,7 +74,7 @@ const FunfactCard = ({
   );
 };
 
-export function MarqueeDemo() {
+export function FunFacts() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden pb-16 pt-10 md:pt-5">
       <Marquee pauseOnHover className="[--duration:40s]">

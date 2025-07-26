@@ -41,7 +41,7 @@ export default function Experience() {
 
   return (
       <div className="relative w-full overflow-clip pb-10">
-        <img alt={ABOUT_CONST.HERO.TEST.ALT} src={ABOUT_CONST.HERO.TEST.SRC} className="mx-auto dark:invert max-w-[65vw]"></img>
+        {/* <img alt={ABOUT_CONST.HERO.TEST.ALT} src={ABOUT_CONST.HERO.TEST.SRC} className="mx-auto dark:invert max-w-[65vw]"></img> */}
         <Timeline data={timelineData} />
       </div>
   );

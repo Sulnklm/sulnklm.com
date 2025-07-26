@@ -89,7 +89,7 @@ module.exports = {
       },
       colors: {
         primary: "#111111",
-        background: "#EBEBE7",
+        background: "#F3F3F2",
         coral: "#F76239",
         grey_scale_50: "#F9F9F9",
         grey_scale_100: "#F8F8F8",

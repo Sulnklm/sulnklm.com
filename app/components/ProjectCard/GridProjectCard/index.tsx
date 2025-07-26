@@ -5,6 +5,7 @@ import { GridProjectCardPropTypes, ToolPropTypes } from "./types";
 import { Button } from "../../Button/Button";
 import { ArrowRight } from "lucide-react";
 import { GlowingEffect } from "@/components/GlowingEffect/GlowingEffect";
+import Link from "next/link";
 
 export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -18,6 +19,8 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
   }, [isHovered, PROJECT.DESCRIPTION]);
 
   return (
+    <Link href={`/works/${PROJECT.SLUG}`} className="block group relative rounded-[10px] ...">
+
     <div
       className="group relative rounded-[10px] overflow-visible border dark:border-grey_scale_900 bg-grey_scale_50 dark:bg-primary w-full min-w-[20rem] p-2"
       onMouseEnter={() => setIsHovered(true)}
@@ -34,7 +37,7 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
       <img
         src={PROJECT.IMAGE.SRC}
         alt={PROJECT.IMAGE.ALT}
-        className="bg-grey_scale_50 dark:bg-primary group-hover:bg-background dark:group-hover:bg-black duration-300 rounded-t-[10px] mb-36 w-full h-auto object-cover min-h-[20rem]"
+        className="bg-grey_scale_50 dark:bg-primary group-hover:scale-[97%] duration-300 rounded-t-[10px] mb-36 w-full h-auto object-cover min-h-[20rem]"
       />
 
       <div className="absolute bottom-0 left-0 bg-grey_scale_50 dark:bg-primary rounded-[45px] w-full">
@@ -65,14 +68,18 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
         </div> */}
         <div className="relative z-10 -translate-y-7">
           <div className="p-5 space-y-2">
-            <p className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]">
-              {PROJECT.DISCIPLINE}
-            </p>
+           
             <h4>{PROJECT.TITLE}</h4>
+            <p
+              ref={descriptionRef}
+              className="text-base font-[350] text-grey_scale_900/80 dark:text-grey_scale_700"
+            >
+              {PROJECT.DESCRIPTION}
+            </p>
           </div>
           <div className="px-5">
             <div className="border-t border-dashed dark:border-t-grey_scale_900 pt-4">
-              <motion.div
+              {/* <motion.div
                 initial={{ maxHeight: 0, opacity: 0 }}
                 animate={{
                   maxHeight: isHovered ? descHeight : 0,
@@ -81,13 +88,8 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
                 transition={{ duration: 0.2, ease: "easeInOut" }}
                 style={{ overflow: "hidden" }}
               >
-                <p
-                  ref={descriptionRef}
-                  className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400] pb-6"
-                >
-                  {PROJECT.DESCRIPTION}
-                </p>
-              </motion.div>
+               
+              </motion.div> */}
 
               <div className="flex items-center justify-between">
                 <div className="flex flex-wrap -space-x-2">
@@ -100,7 +102,19 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
                     />
                   ))}
                 </div>
-                <AnimatePresence mode="wait">
+                <p className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]">
+              {PROJECT.DISCIPLINE}
+            </p>
+                {/* <Button
+                  theme={"primary"}
+                  additionalClasses="px-4 py-2 text-sm !bg-white"
+                  icon={
+                    <ArrowRight className="w-4 h-4 group-hover:-rotate-45 duration-300" />
+                  }
+                >
+                  {""}
+                </Button> */}
+                {/* <AnimatePresence mode="wait">
                   {!isHovered ? (
                     <motion.p
                       key="timeline"
@@ -120,17 +134,10 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
                       exit={{ opacity: 0, y: -5 }}
                       transition={{ duration: 0.1 }}
                     >
-                      <Button
-                        href={"act.href"}
-                        theme={"primary"}
-                        additionalClasses="px-4 py-2 text-sm"
-                        icon={<ArrowRight className="w-4 h-4 ml-1" />}
-                      >
-                        Read me
-                      </Button>
+                      
                     </motion.div>
                   )}
-                </AnimatePresence>
+                </AnimatePresence> */}
               </div>
             </div>
           </div>
@@ -138,5 +145,6 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
         <div></div>
       </div>
     </div>
+    </Link>
   );
 };

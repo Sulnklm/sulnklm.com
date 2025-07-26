@@ -6,12 +6,11 @@ import { TypingAnimation } from "components/magicui/typing-animation";
 export const MouseTag: React.FC<MouseTagProps> = ({
   label = "",
   bgClass = "bg-orange-500",
-  textClass = "text-white dark:text-white",
+  textClass = "!text-black !dark:text-black",
   arrowClass = "fill-orange-500",
   arrowPosition = "left",
   additionalClassName = "",
 }) => {
-  // 화살표 SVG에 Tailwind fill 클래스 적용
   const Arrow = (
     <svg
       width="25px"

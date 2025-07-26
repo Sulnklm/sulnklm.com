@@ -42,7 +42,7 @@ const Works = () => {
   } = useWorks(0); // initial category = all
 
   return (
-    <div className="bg-white/50 dark:bg-primary py-[10vh] md:py-[15vh] relative z-50 border-b border-dashed">
+    <div className="bg-background dark:bg-black py-[12vh] relative z-50 border-b border-dashed">
       <div className="container mx-auto">
         <SubTextBox
           additionalClass="mx-auto md:mx-0"
@@ -54,14 +54,15 @@ const Works = () => {
             />
           }
         >
-          {PROJECTS_CONST.PARAGRAPH}
+          {PROJECTS_CONST.SUBTEXT}
         </SubTextBox>
         <h2 className="md:text-start text-grey_scale_900 pt-2 md:pt-0 mb-7 md:mb-6">
           <span className="font-PerfectlyNineties tracking-normal">
             <FlipWords words={["Works ✦"]} duration={2200} className="" />
           </span>
         </h2>
-        <div className="flex items-center pt-5 sm:py-4 border-t border-dashed">
+        
+        <div className="flex items-center pt-5 sm:py-7 border-t border-dashed">
           <div className="w-full md:flex-1 flex justify-end md:justify-start pr-2">
             <CategoriesTabs
               labels={CATEGORY_TABS}
@@ -78,7 +79,7 @@ const Works = () => {
             />
           </div>
         </div>
-        <InsetBlockInside>
+        {/* <InsetBlockInside> */}
           <section className="pt-5 sm:-mt-5">
             <div className="relative lg:gap-20">
               <div
@@ -106,7 +107,7 @@ const Works = () => {
               </div>
             </div>
           </section>
-        </InsetBlockInside>
+        {/* </InsetBlockInside> */}
       </div>
     </div>
   );

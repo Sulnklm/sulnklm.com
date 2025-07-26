@@ -1,6 +1,8 @@
 import type { ExperienceItem } from "../home/types";
 
 export const ABOUT_CONST = {
+  SUBTEXT: "A closer look at who I am",
+
   HERO: {
     BACKGROUND: {
       SRC: "/images/about/hero/grassland.jpg",
@@ -80,9 +82,27 @@ export const SKILLS_CONST = {
 };
 
 export const EXPERIENCE_CONST: ExperienceItem[] = [
+  
   {
     time: "May - July 2025",
-    position: "Media designer",
+    position: "Front-End Developer",
+    company: "Internship @ Convergence",
+    images: [
+      {
+        src: "/images/about/experience/convergence.png",
+        alt: "Convergence logo",
+      },
+      {
+        src: "/images/about/experience/simuhealth.png",
+        alt: "Simuhealth logo",
+      },
+    ],
+    description:
+      "Developed features and maintained UI consistency for Simuhealth, a SaaS product, using TypeScript and React, and collaborated on QA testing and bug resolution to enhance reliability.",
+  },
+  {
+    time: "May - July 2025",
+    position: "Media Designer",
     company: "Internship @ Pixel Ramen",
     images: [
       {
@@ -102,24 +122,8 @@ export const EXPERIENCE_CONST: ExperienceItem[] = [
         alt: "Pixel Ramen Post Design Image 4",
       },
     ],
-    description: "Designed scroll-stopping visuals for social media",
-  },
-  {
-    time: "May - July 2025",
-    position: "Web developer",
-    company: "Internship @ Convergence",
-    images: [
-      {
-        src: "/images/about/experience/convergence.png",
-        alt: "Convergence logo",
-      },
-      {
-        src: "/images/about/experience/simuhealth.png",
-        alt: "Simuhealth logo",
-      },
-    ],
     description:
-      "Worked on several exciting projects integrating UI/UX and frontend",
+      "Developed interactive and visually engaging content for digital campaigns and social media using Photoshop, Illustrator, and After Effects, effectively boosting user engagement and brand awareness.",
   },
   {
     time: "May - July 2025",
@@ -127,12 +131,14 @@ export const EXPERIENCE_CONST: ExperienceItem[] = [
     position: "Designer & Developer",
     images: [
       {
-        src: "/images/about/experience/pixelramen3.png",
+        src: "/images/about/experience/freelance1.png",
         alt: "Graphic design image3",
       },
-      { src: "/images/home/experience4.png", alt: "Graphic design image4" },
+      { src: "/images/about/experience/freelance2.png", alt: "Graphic design image4" },
+      { src: "/images/about/experience/freelance3.png", alt: "Graphic design image4" },
+
     ],
     description:
-      "Worked on several exciting projects integrating UI/UX and frontend",
+      "Improved user experience and visual consistency by redesigning and rebuilding various client websites, creating and applying design systems, and addressing usability issues through iterative feedback.",
   },
 ];

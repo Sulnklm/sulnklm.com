@@ -5,6 +5,7 @@ import { ListProjectCardPropTypes } from "./types";
 import { Button } from "../../Button/Button";
 import { ArrowRight } from "lucide-react";
 import { GlowingEffect } from "@/components/GlowingEffect/GlowingEffect";
+import Link from "next/link";
 
 export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -18,8 +19,10 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
   }, [isHovered, PROJECT.DESCRIPTION]);
 
   return (
+    <Link href={`/works/${PROJECT.SLUG}`} className="block group relative rounded-[10px] ...">
+
     <div
-      className="group relative shadow-sm rounded-[20px] bg-grey_scale_50 dark:bg-primary p-2 z-0 border"
+      className="group hover:scale-[99%] duration-300 relative shadow-sm rounded-[20px] bg-grey_scale_50 dark:bg-primary p-2 z-0 border"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -56,7 +59,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
           ></path>
         </svg>
       </div> */}
-      <div className="grid lg:flex justify-between items-center gap-5 lg:gap-20 p-1">
+      <div className="grid lg:flex justify-between items-center gap-5 lg:gap-10 p-1">
         <div className="flex-1 z-10 lg:max-w-[30rem]">
           <img
             src={PROJECT.IMAGE.SRC}
@@ -68,11 +71,16 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
           <div className="w-full bg-grey_scale_50 dark:bg-primary rounded-[45px] pr-10">
             <div className="relative z-10">
               <div className="space-y-2 pb-5">
-                <p className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]">
-                  {PROJECT.DISCIPLINE}
-                </p>
+                
                 <h4>{PROJECT.TITLE}</h4>
+                <p
+                ref={descriptionRef}
+                className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]"
+              >
+                {PROJECT.DESCRIPTION}
+              </p>
               </div>
+             
               <div className="">
                 <div className="border-t border-dashed dark:border-t-grey_scale_900 pt-4">
                   {/* <motion.div
@@ -84,14 +92,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
                     transition={{ duration: 0.2, ease: "easeInOut" }}
                     style={{ overflow: "hidden" }}
                   > */}
-                  <div>
-                    <p
-                      ref={descriptionRef}
-                      className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400] pb-6"
-                    >
-                      {PROJECT.DESCRIPTION}
-                    </p>
-                  </div>
+                  <div></div>
 
                   {/* </motion.div> */}
 
@@ -106,7 +107,10 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
                         />
                       ))}
                     </div>
-                    <AnimatePresence mode="wait">
+                    <p className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]">
+                      {PROJECT.DISCIPLINE}
+                    </p>
+                    {/* <AnimatePresence mode="wait">
                       {!isHovered ? (
                         <motion.p
                           key="timeline"
@@ -136,7 +140,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
                           </Button>
                         </motion.div>
                       )}
-                    </AnimatePresence>
+                    </AnimatePresence> */}
                   </div>
                 </div>
               </div>
@@ -145,5 +149,6 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };

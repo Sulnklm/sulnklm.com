@@ -9,6 +9,7 @@ import { ArchiveIcon } from "lucide-react";
 import { SubTextBox } from "@/components/SubTextBox/SubTextBox";
 import { PROJECTS_CONST } from "@/(pages)/works/const";
 import { FlipWords } from "@/components/FlipWords/FlipWords";
+import { ListProjectCard } from "@/components/ProjectCard/ListProjectCard";
 
 const SelectedWorks = () => {
   const filteredProjects = PROJECTS_CONST.PROJECTS.filter((project) =>
@@ -44,14 +45,14 @@ const SelectedWorks = () => {
               </div>
             </div>
 
-            <div className="mt-10 grid lg:grid-cols-2 xl:grid-cols-3 gap-5 2xl:gap-10 place-items-center bg-customGray w-full">
+            <div className="mt-10 grid lg:grid-cols-2 gap-5 2xl:gap-10 place-items-center bg-customGray w-full">
               {filteredProjects.length === 0 ? (
                 <p className="text-center text-gray-500">
                   No selected projects found.
                 </p>
               ) : (
-                filteredProjects.map((project) => (
-                  <GridProjectCard key={project.SLUG} PROJECT={project} />
+                filteredProjects.map((project, i) => (
+                  <ListProjectCard key={project.SLUG} index={i} PROJECT={project} />
                 ))
               )}
             </div>

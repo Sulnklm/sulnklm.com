@@ -1,5 +1,5 @@
 export const PROJECTS_CONST = {
-  PARAGRAPH: "From Design to Dev",
+  SUBTEXT: "From design to dev",
   HEADING1: "My ✦",
   WORKS_HEADING: "",
   PROJECTS: [
@@ -8,7 +8,7 @@ export const PROJECTS_CONST = {
       SLUG: "FlickMood",
       TITLE: "FlickMood",
       DESCRIPTION:
-        "A movie recommendation app that suggests movies based on your mood.",
+        "A movie recommendation app.",
       IMAGE: {
         SRC: "/images/projects/flickmood/thumbnail.png",
         ALT: "FlickMood Hero Image",
