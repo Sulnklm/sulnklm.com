@@ -22,7 +22,7 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
       href={`/works/${PROJECT.SLUG}`}
       className="block group relative rounded-[10px] ..."
     >
-      <div className="group relative rounded-[10px] overflow-visible border dark:border-grey_scale_900 bg-grey_scale_50 dark:bg-primary w-full min-w-[20rem] p-2">
+      <div className="group relative rounded-[10px] overflow-visible border dark:border-grey_scale_900 bg-grey_scale_50 dark:bg-black w-full min-w-[20rem] p-2">
         <GlowingEffect
           spread={40}
           glow={true}
@@ -34,10 +34,10 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
         <img
           src={PROJECT.IMAGE.SRC}
           alt={PROJECT.IMAGE.ALT}
-          className="bg-grey_scale_50 dark:bg-primary group-hover:scale-[97%] duration-300 rounded-t-[10px] mb-36 w-full h-auto object-cover min-h-[20rem]"
+          className="bg-grey_scale_50 dark:bg-black group-hover:scale-[97%] duration-300 rounded-t-[10px] mb-36 w-full h-auto object-cover min-h-[20rem]"
         />
 
-        <div className="absolute bottom-0 left-0 bg-grey_scale_50 dark:bg-primary rounded-[45px] w-full">
+        <div className="absolute bottom-0 left-0 bg-grey_scale_50 dark:bg-black rounded-[45px] w-full">
           {/* <div className="absolute dark:hidden -top-9 z-10 right-0 left-0">
           <svg
             viewBox="0 0 700 226.5"

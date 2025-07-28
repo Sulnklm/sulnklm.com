@@ -42,8 +42,8 @@ const Works = () => {
   } = useWorks(0); // initial category = all
 
   return (
-    <div className="bg-background dark:bg-black py-[12vh] relative z-50 border-b border-dashed">
-      <div className="container mx-auto">
+    <div className="relative z-50 px-10">
+      <div className="mx-auto">
         <SubTextBox
           additionalClass="mx-auto md:mx-0"
           icon={

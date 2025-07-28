@@ -20,7 +20,7 @@ const SelectedWorks = () => {
     <div className="">
       <InsetBlock>
         <PatternBackground />
-        <section className="z-50 lg:px-20">
+        <section className="z-50 lg:px-10">
           <div className="relative lg:gap-20">
             <div className="flex flex-col justify-center mb-3">
               <SubTextBox

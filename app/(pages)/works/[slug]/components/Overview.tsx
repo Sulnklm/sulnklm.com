@@ -4,6 +4,7 @@ import { Button } from "@/components/Button/Button";
 import { ExternalLink, GithubIcon } from "lucide-react";
 import { ToolImage } from "@/components/ToolImage";
 import { Ruler } from "@/components/ruler/Ruler";
+import { CornerBoxes } from "@/components/CornerBoxes/CornerBoxes";
 
 interface OverviewProps {
   project: ProjectType;
@@ -29,11 +30,8 @@ export default function Overview({ project }: OverviewProps) {
   return (
     <section className="relative md:border-x container mx-auto border-dashed md:max-w-[85vw]">
       {/* 꼭짓점 네모 map */}
-      <div className="hidden md:block">
-      {CORNERS.map((corner, idx) => (
-        <CornerBox key={idx} position={corner.position} />
-      ))}
-      </div>
+       <CornerBoxes />
+      
       <Ruler height={height} left />
       {/* 오른쪽 ruler */}
       <Ruler height={height} left={false} />

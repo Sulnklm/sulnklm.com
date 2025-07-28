@@ -24,7 +24,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
       className="block group relative rounded-[10px] ..."
     >
       <div
-        className="group hover:scale-[99%] duration-300 relative shadow-sm rounded-[20px] bg-grey_scale_50 dark:bg-primary p-2 z-0 border"
+        className="group hover:scale-[99%] duration-300 relative shadow-sm rounded-[20px] bg-grey_scale_50 dark:bg-black p-2 z-0 border"
       >
         <GlowingEffect
           spread={40}
@@ -68,7 +68,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
             />
           </div>
           <div className="flex-1">
-            <div className="w-full bg-grey_scale_50 dark:bg-primary rounded-[45px] pr-10">
+            <div className="w-full bg-grey_scale_50 dark:bg-black rounded-[45px] pr-10">
               <div className="relative z-10">
                 <div className="space-y-2 pb-5">
                   <div className="flex gap-2 items-center">

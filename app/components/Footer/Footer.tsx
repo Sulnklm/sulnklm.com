@@ -17,8 +17,6 @@ function getOrbitStyle(angleDeg: number, radius = ORBIT_RADIUS) {
     zIndex: 101,
   };
 }
-
-// ▶️ 아이콘별 커스텀 스타일을 배열에서 지정
 const SOCIALS = [
   {
     icon: <Github className="-rotate-[30deg] w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8" strokeWidth={1.2} />,
@@ -46,7 +44,7 @@ const SOCIALS = [
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="mt-10">
       <div className="relative z-[600] w-full h-[60vh] sm:h-[85vh] lg:h-[90vh] pt-20 lg:pt-24 bg-primary dark:bg-black overflow-hidden">
         <StarsBackground />
         <ShootingStars />

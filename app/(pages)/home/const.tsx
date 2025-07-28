@@ -30,6 +30,10 @@ export const HOME_HERO_CONST = {
     DESCRIPTION1: "Based in Vancouver, BC, Canada",
     DESCRIPTION2: "I focus on usability, clarity, and aesthetics.",
   },
+
+  BUTTON: {
+    HREF: "/about",
+    TEXT: "More",}
 };
 
 export const SELECTED_PROJECTS_CONST = {

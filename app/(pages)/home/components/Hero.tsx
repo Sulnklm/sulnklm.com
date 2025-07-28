@@ -132,8 +132,8 @@ export default function Hero() {
                 <React.Fragment key={tool.label}>
                   <ToolIcon iconSrc={tool.iconSrc} label={tool.label} />
                   {category === "DESIGN" && idx === tools.length - 1 && (
-                    <Button href={EXTERNAL_LINKS.LINKEDIN.href}>
-                      More
+                    <Button href={HOME_HERO_CONST.BUTTON.HREF}>
+                      {HOME_HERO_CONST.BUTTON.TEXT}
                       <span className="group-hover:translate-x-1 ml-1 duration-300">
                         <ArrowRight size={17} />
                       </span>
