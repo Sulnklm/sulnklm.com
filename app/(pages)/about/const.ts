@@ -27,7 +27,7 @@ export const ABOUT_CONST = {
     HEADING1: "Hi again!",
   },
   MY_STORY: {
-    SUBTEXT: "My Story",
+    SUBTEXT: "My story",
     TITLE1: "Where I Began 🌄",
     PARAGRAPH1:
       "I was drawn not only to the aesthetics of design but to creating interactive experiences that truly engage people and bringing those ideas to life. Leaving my comfort zone in Korea right after high school, I took a bold step toward my dreams by moving alone to Vancouver, far from my family. Here, I’ve found inspiration and growth through collaborating with diverse, passionate individuals who share my vision :)",

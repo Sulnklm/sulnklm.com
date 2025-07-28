@@ -24,7 +24,7 @@ const NavBar = (): JSX.Element => {
         position="top"
         className="z-[0] fixed left-0 right-0 bottom-0 pointer-events-none"
       />{" "}
-      <nav className="relative container mx-auto flex justify-between items-center bg-background/90 backdrop-blur-lg dark:bg-black/80 m-5 p-2.5 z-10 mt-0 rounded-b-xl">
+      <nav className="relative container mx-auto flex justify-between items-center bg-background/90 backdrop-blur-lg dark:bg-black/80 m-5 p-2.5 z-10 mt-3 rounded-xl border">
         <ul className="flex items-center gap-5 text-base z-10">
           <Link
             href="/"

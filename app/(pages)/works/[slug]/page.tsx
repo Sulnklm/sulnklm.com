@@ -1,11 +1,21 @@
-// Project detail Page
-import Works from "../components/Works";
+// app/works/[slug]/page.tsx
 
-export default function ProjectDetailPage() {
-    return (
-        // <Works />
-        <div>
-            
-        </div>
-    );
-    }
+import FlickMood from "./components/dev-projects/FlickMood";
+import Yumpick from "./components/uxui-projects/Yumpick/Yumpick";
+
+const PROJECT_COMPONENTS: Record<string, React.FC> = {
+  FlickMood: FlickMood,
+  yumpick: Yumpick,
+};
+
+export default function WorkDetailPage({ params }: { params: { slug: string } }) {
+  const { slug } = params;
+
+  const ProjectComponent = PROJECT_COMPONENTS[slug];
+
+  if (!ProjectComponent) {
+    return <div>Project not found.</div>;
+}
+
+  return <ProjectComponent />;
+}

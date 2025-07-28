@@ -6,11 +6,20 @@ import { Button } from "../../Button/Button";
 import { ArrowRight } from "lucide-react";
 import { GlowingEffect } from "@/components/GlowingEffect/GlowingEffect";
 import Link from "next/link";
+import ProjectBadge from "@/components/ProjectBadge/ProjectBadge";
 
 export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
   const [isHovered, setIsHovered] = useState(false);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
   const [descHeight, setDescHeight] = useState(0);
+
+  const disciplineVariantMap: Record<
+    string,
+    "development" | "case-study" | "default"
+  > = {
+    "Web Development": "development",
+    "Case Study": "case-study",
+  };
 
   useEffect(() => {
     if (descriptionRef.current) {
@@ -19,22 +28,24 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
   }, [isHovered, PROJECT.DESCRIPTION]);
 
   return (
-    <Link href={`/works/${PROJECT.SLUG}`} className="block group relative rounded-[10px] ...">
-
-    <div
-      className="group hover:scale-[99%] duration-300 relative shadow-sm rounded-[20px] bg-grey_scale_50 dark:bg-primary p-2 z-0 border"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+    <Link
+      href={`/works/${PROJECT.SLUG}`}
+      className="block group relative rounded-[10px] ..."
     >
-      <GlowingEffect
-        spread={40}
-        glow={true}
-        disabled={false}
-        proximity={64}
-        inactiveZone={0.01}
-        className="rounded-[inherit]"
-      />
-      {/* <div className="absolute dark:hidden -top-9 z-10 right-0 left-0">
+      <div
+        className="group hover:scale-[99%] duration-300 relative shadow-sm rounded-[20px] bg-grey_scale_50 dark:bg-primary p-2 z-0 border"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+          className="rounded-[inherit]"
+        />
+        {/* <div className="absolute dark:hidden -top-9 z-10 right-0 left-0">
         <svg
           viewBox="0 0 940 226.5"
           xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +58,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
         </svg>
       </div> */}
 
-      {/* <div className="absolute -top-9 right-0 left-0">
+        {/* <div className="absolute -top-9 right-0 left-0">
         <svg
           viewBox="0 0 940 226.5"
           xmlns="http://www.w3.org/2000/svg"
@@ -59,31 +70,44 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
           ></path>
         </svg>
       </div> */}
-      <div className="grid lg:flex justify-between items-center gap-5 lg:gap-10 p-1">
-        <div className="flex-1 z-10 lg:max-w-[30rem]">
-          <img
-            src={PROJECT.IMAGE.SRC}
-            alt={PROJECT.IMAGE.ALT}
-            className="object-cover bg-background dark:bg-grey_scale_900/20 duration-300 rounded-[10px] w-full h-auto"
-          />
-        </div>
-        <div className="flex-1">
-          <div className="w-full bg-grey_scale_50 dark:bg-primary rounded-[45px] pr-10">
-            <div className="relative z-10">
-              <div className="space-y-2 pb-5">
-                
-                <h4>{PROJECT.TITLE}</h4>
-                <p
-                ref={descriptionRef}
-                className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]"
-              >
-                {PROJECT.DESCRIPTION}
-              </p>
-              </div>
-             
-              <div className="">
-                <div className="border-t border-dashed dark:border-t-grey_scale_900 pt-4">
-                  {/* <motion.div
+        <div className="grid lg:flex justify-between items-center gap-5 lg:gap-10 p-1">
+          <div className="flex-1 z-10 lg:max-w-[30rem]">
+            <img
+              src={PROJECT.IMAGE.SRC}
+              alt={PROJECT.IMAGE.ALT}
+              className="object-cover bg-background dark:bg-grey_scale_900/20 duration-300 rounded-[10px] w-full h-auto"
+            />
+          </div>
+          <div className="flex-1">
+            <div className="w-full bg-grey_scale_50 dark:bg-primary rounded-[45px] pr-10">
+              <div className="relative z-10">
+                <div className="space-y-2 pb-5">
+                  <div className="flex gap-2 items-center">
+                    <h4>{PROJECT.TITLE}</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {PROJECT.DISCIPLINE.map((discipline) => (
+                        <ProjectBadge
+                          key={discipline}
+                          variant={
+                            disciplineVariantMap[discipline] || "default"
+                          }
+                        >
+                          {discipline}
+                        </ProjectBadge>
+                      ))}
+                    </div>
+                  </div>
+                  <p
+                    ref={descriptionRef}
+                    className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]"
+                  >
+                    {PROJECT.DESCRIPTION}
+                  </p>
+                </div>
+
+                <div className="">
+                  <div className="border-t border-dashed dark:border-t-grey_scale_900 pt-4">
+                    {/* <motion.div
                     initial={{ maxHeight: 0, opacity: 0 }}
                     animate={{
                       maxHeight: isHovered ? descHeight : 0,
@@ -92,25 +116,22 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
                     transition={{ duration: 0.2, ease: "easeInOut" }}
                     style={{ overflow: "hidden" }}
                   > */}
-                  <div></div>
+                    <div></div>
 
-                  {/* </motion.div> */}
+                    {/* </motion.div> */}
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex flex-wrap -space-x-2">
-                      {PROJECT.TOOLS.map((tool) => (
-                        <ToolImage
-                          key={tool.name}
-                          src={tool.src}
-                          alt={tool.name}
-                          size={28}
-                        />
-                      ))}
-                    </div>
-                    <p className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]">
-                      {PROJECT.DISCIPLINE}
-                    </p>
-                    {/* <AnimatePresence mode="wait">
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap -space-x-2">
+                        {PROJECT.TOOLS.map((tool) => (
+                          <ToolImage
+                            key={tool.name}
+                            src={tool.src}
+                            alt={tool.name}
+                            size={28}
+                          />
+                        ))}
+                      </div>
+                      {/* <AnimatePresence mode="wait">
                       {!isHovered ? (
                         <motion.p
                           key="timeline"
@@ -141,6 +162,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
                         </motion.div>
                       )}
                     </AnimatePresence> */}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -148,7 +170,6 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
           </div>
         </div>
       </div>
-    </div>
     </Link>
   );
 };
