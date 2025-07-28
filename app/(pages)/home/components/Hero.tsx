@@ -57,7 +57,7 @@ export default function Hero() {
                 <h1
                   className={`text-center font-[450] ${
                     p.highlighted
-                      ? "text-grey_scale_900  dark:text-grey_scale_100 font-Playfair italic"
+                      ? "text-grey_scale_1000  dark:text-grey_scale_100 font-Playfair italic"
                       : "text-grey_scale_700 dark:text-grey_scale_800"
                   }`}
                 >
@@ -85,7 +85,7 @@ export default function Hero() {
                 key={i}
                 className={`text-center font-[450] text-nowrap ${
                   p.highlighted
-                    ? "text-grey_scale_900 dark:text-grey_scale_100"
+                    ? "text-grey_scale_1000 dark:text-grey_scale_100"
                     : "text-grey_scale_700 dark:text-grey_scale_800"
                 }`}
               >
@@ -134,7 +134,7 @@ export default function Hero() {
                   {category === "DESIGN" && idx === tools.length - 1 && (
                     <Button href={EXTERNAL_LINKS.LINKEDIN.href}>
                       More
-                      <span className="group-hover:translate-x-1 duration-300">
+                      <span className="group-hover:translate-x-1 ml-1 duration-300">
                         <ArrowRight size={17} />
                       </span>
                     </Button>

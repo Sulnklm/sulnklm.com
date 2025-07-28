@@ -9,10 +9,6 @@ import Link from "next/link";
 import ProjectBadge from "@/components/ProjectBadge/ProjectBadge";
 
 export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const descriptionRef = useRef<HTMLParagraphElement>(null);
-  const [descHeight, setDescHeight] = useState(0);
-
   const disciplineVariantMap: Record<
     string,
     "development" | "case-study" | "default"
@@ -20,22 +16,13 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
     "Web Development": "development",
     "Case Study": "case-study",
   };
-  useEffect(() => {
-    if (descriptionRef.current) {
-      setDescHeight(descriptionRef.current.scrollHeight);
-    }
-  }, [isHovered, PROJECT.DESCRIPTION]);
 
   return (
     <Link
       href={`/works/${PROJECT.SLUG}`}
       className="block group relative rounded-[10px] ..."
     >
-      <div
-        className="group relative rounded-[10px] overflow-visible border dark:border-grey_scale_900 bg-grey_scale_50 dark:bg-primary w-full min-w-[20rem] p-2"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+      <div className="group relative rounded-[10px] overflow-visible border dark:border-grey_scale_900 bg-grey_scale_50 dark:bg-primary w-full min-w-[20rem] p-2">
         <GlowingEffect
           spread={40}
           glow={true}
@@ -91,11 +78,8 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
                   ))}
                 </div>
               </div>
-              <p
-                ref={descriptionRef}
-                className="text-base font-[350] text-grey_scale_900/80 dark:text-grey_scale_700"
-              >
-                {PROJECT.DESCRIPTION}
+              <p className="text-base font-[350] text-grey_scale_900/80 dark:text-grey_scale_700">
+                {PROJECT.SUBTITLE}
               </p>
             </div>
             <div className="px-5">

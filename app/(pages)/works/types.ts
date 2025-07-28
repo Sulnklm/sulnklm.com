@@ -1,10 +1,18 @@
 export type ProjectType = {
     SLUG: string;
     TITLE: string;
-    DESCRIPTION: string;
+    SUBTITLE?: string; 
+    OVERVIEW?: string; 
     IMAGE: { SRC: string; ALT: string };
     TOOLS?: { name: string; src: string }[];   
     DISCIPLINE?: string[];               
     TIMELINE?: string;                   
-    CATEGORY?: string[];                         
+    CATEGORY?: string[];       
+    URL?: string;           
+    SHOW_SAFARI?: boolean;  
+    VIDEO?: string;
+    SAFARI_IMAGE?: { SRC: string; ALT: string };
+    GITHUB_LINK?: { LABEL: string; HREF: string };
+    LIVE_LINK?: { LABEL: string; HREF: string };
+    tools?: { name: string; src: string }[];
   };

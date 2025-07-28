@@ -7,7 +7,11 @@ export const PROJECTS_CONST = {
       // Project 1
       SLUG: "pixeed",
       TITLE: "Pixeed",
-      DESCRIPTION: "How should we close the feedback chaos for client-based teams?",
+      SHOW_SAFARI: true,
+      SUBTITLE:
+        "How should we close the feedback chaos for small client-based teams?",
+      OVERVIEW:
+        "Helping small teams manage feedback loops—clearly, visually, and collaboratively.",
       IMAGE: {
         SRC: "/images/projects/yumpick/thumbnail.png",
         ALT: "YumPick Hero Image",
@@ -23,10 +27,14 @@ export const PROJECTS_CONST = {
     },
     {
       // Project 2
-      SLUG: "FlickMood",
+      SLUG: "flickmood",
+      SHOW_SAFARI: true,
+      URL: "flickmood.sulnklm.com",
+      VIDEO: "/video/projects/flickmood/flickmood.mp4",
       TITLE: "FlickMood",
-      DESCRIPTION:
-        "A movie recommendation app.",
+      SUBTITLE: "Discover movies that match your mood",
+      OVERVIEW:
+        "A personal project focused on web design and frontend development using TMDb API to build an interactive movie recommendation site.",
       IMAGE: {
         SRC: "/images/projects/flickmood/thumbnail.png",
         ALT: "FlickMood Hero Image",
@@ -39,12 +47,21 @@ export const PROJECTS_CONST = {
       DISCIPLINE: ["Web Development"],
       TIMELINE: "December 2024",
       CATEGORY: ["all", "selected", "development"],
+      GITHUB_LINK: {
+        LABEL: "GitHub",
+        HREF: "https://github.com/Sulnklm/FlickMood",
+      },
+      LIVE_LINK: {
+        LABEL: "Live Demo",
+        HREF: "https://flickmood.sulnklm.com",
+      },
     },
+
     {
       // Project 3
       SLUG: "yumpick",
       TITLE: "YumPick",
-      DESCRIPTION: "Trendy Restaurants Discovery App UX/UI Case Study",
+      SUBTITLE: "Trendy Restaurants Discovery App UX/UI Case Study",
       IMAGE: {
         SRC: "/images/projects/yumpick/thumbnail.png",
         ALT: "YumPick Hero Image",
@@ -62,7 +79,7 @@ export const PROJECTS_CONST = {
       // Project 4
       SLUG: "wishbond",
       TITLE: "Wishbond",
-      DESCRIPTION: "Gift-Giving Made Easy: WishBond App UX/UI Case Study",
+      SUBTITLE: "Gift-Giving Made Easy: WishBond App UX/UI Case Study",
       IMAGE: {
         SRC: "/images/projects/wishbond/thumbnail.png",
         ALT: "Wishbond Hero Image",
@@ -78,4 +95,3 @@ export const PROJECTS_CONST = {
     },
   ],
 };
-

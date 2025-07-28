@@ -1,10 +1,10 @@
 // app/works/[slug]/page.tsx
 
-import FlickMood from "./components/dev-projects/FlickMood";
+import FlickMood from "./components/dev-projects/FlickMood/FlickMood";
 import Yumpick from "./components/uxui-projects/Yumpick/Yumpick";
 
 const PROJECT_COMPONENTS: Record<string, React.FC> = {
-  FlickMood: FlickMood,
+  flickmood: FlickMood,
   yumpick: Yumpick,
 };
 

@@ -33,7 +33,7 @@ module.exports = {
       },
 
       boxShadow: {
-        br: "3px 3px 8px rgba(0, 0, 0, 0.15)",
+        br: "0px 0.3px 0.1px rgba(0, 0, 0, 0.2), 0px 2px 10px rgba(0, 0, 0, 0.08)",
         brWhite: "4px 4px 10px rgba(255, 255, 255, 0.55)",
         brBoth:
           "inset 0.5px 2px 2px rgba(0, 0, 0, 0.08), inset 0 -1px 5px rgba(0, 0, 0, 0.03), 4px 4px 25px rgba(255, 255, 255, 0.9)",
@@ -89,7 +89,7 @@ module.exports = {
       },
       colors: {
         primary: "#111111",
-        background: "#F3F3F2",
+        background: "#F7F7F7",
         coral: "#F76239",
         grey_scale_50: "#F9F9F9",
         grey_scale_100: "#F8F8F8",
@@ -99,6 +99,7 @@ module.exports = {
         grey_scale_700: "#9A9A9A",
         grey_scale_800: "#797979",
         grey_scale_900: "#434343",
+        grey_scale_1000: "#2E2E2E",
       },
       backgroundImage: {
         "pattern-bg": "url('/images/pattern.png')",
@@ -200,7 +201,7 @@ module.exports = {
         },
 
         h5: {
-          "@apply text-h5 font-Sans text-grey_scale_900/80 dark:text-grey_scale_500/90 font-[350] lg:font-[300]":
+          "@apply text-h5 font-Sans text-grey_scale_900/80 dark:text-grey_scale_500/90 font-[350]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h5-md": {},

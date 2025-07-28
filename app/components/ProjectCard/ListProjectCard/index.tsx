@@ -9,9 +9,6 @@ import Link from "next/link";
 import ProjectBadge from "@/components/ProjectBadge/ProjectBadge";
 
 export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const descriptionRef = useRef<HTMLParagraphElement>(null);
-  const [descHeight, setDescHeight] = useState(0);
 
   const disciplineVariantMap: Record<
     string,
@@ -21,12 +18,6 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
     "Case Study": "case-study",
   };
 
-  useEffect(() => {
-    if (descriptionRef.current) {
-      setDescHeight(descriptionRef.current.scrollHeight);
-    }
-  }, [isHovered, PROJECT.DESCRIPTION]);
-
   return (
     <Link
       href={`/works/${PROJECT.SLUG}`}
@@ -34,8 +25,6 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
     >
       <div
         className="group hover:scale-[99%] duration-300 relative shadow-sm rounded-[20px] bg-grey_scale_50 dark:bg-primary p-2 z-0 border"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         <GlowingEffect
           spread={40}
@@ -98,10 +87,9 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
                     </div>
                   </div>
                   <p
-                    ref={descriptionRef}
-                    className="text-sm text-grey_scale_900/80 dark:text-grey_scale_700 font-[400]"
+                    className="text-base text-grey_scale_900/80 dark:text-grey_scale_700 font-[350]"
                   >
-                    {PROJECT.DESCRIPTION}
+                    {PROJECT.SUBTITLE}
                   </p>
                 </div>
 

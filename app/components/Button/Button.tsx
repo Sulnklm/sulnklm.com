@@ -82,7 +82,7 @@ export const Button: React.FC<ButtonPropTypes> = ({
     return (
       <a
         href={href}
-        className={`${additionalClasses} group inline-flex items-center gap-2`}
+        className={`${additionalClasses} group inline-flex items-center hover:scale-[97%] duration-300 `}
         onClick={handleClick}
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noopener noreferrer" : undefined}

@@ -15,31 +15,33 @@ export function Safari({
   imageSrc,
   videoSrc,
   url,
-  width = 1203,
-  height = 753,
+  width = 1200,
+  height = 600,
   mode = "default",
   ...props
 }: SafariProps) {
   return (
-    <svg
-      width={width}
-      height={height}
-      viewBox={`0 0 ${width} ${height}`}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <div style={{ width: "100%", maxWidth: width, margin: "0 auto" }}>
+      <svg
+        width="100%"
+        height="auto"
+        viewBox={`0 0 ${width} ${height}`}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ display: "block" }}
+        {...props}
+      >
       <g clipPath="url(#path0)">
-        <path
+        {/* <path
           d="M0 52H1202V741C1202 747.627 1196.63 753 1190 753H12C5.37258 753 0 747.627 0 741V52Z"
           className="fill-[#E5E5E5] dark:fill-[#404040]"
-        />
-        <path
+        /> */}
+        {/* <path
           fillRule="evenodd"
           clipRule="evenodd"
           d="M0 12C0 5.37258 5.37258 0 12 0H1190C1196.63 0 1202 5.37258 1202 12V52H0L0 12Z"
           className="fill-[#E5E5E5] dark:fill-[#404040]"
-        />
+        /> */}
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -137,48 +139,54 @@ export function Safari({
             </g>
           </>
         ) : null}
-        {imageSrc && (
-          <image
-            href={imageSrc}
-            width="1200"
-            height="700"
-            x="1"
-            y="52"
-            preserveAspectRatio="xMidYMid slice"
-            clipPath="url(#roundedBottom)"
-          />
-        )}
-        {videoSrc && (
-          <foreignObject
-            x="1"
-            y="52"
-            width="1200"
-            height="700"
-            preserveAspectRatio="xMidYMid slice"
-            clipPath="url(#roundedBottom)"
-          >
-            <video
-              className="size-full overflow-hidden object-cover"
-              src={videoSrc}
-              autoPlay
-              loop
-              muted
-              playsInline
+       {imageSrc && !videoSrc && (
+            <image
+              href={imageSrc}
+              width={width - 2}    // 1~2px 빼줘야 좌우가 잘림 없이 맞음
+              height={height - 52}
+              x="1"
+              y="52"
+              preserveAspectRatio="xMidYMid slice"
             />
-          </foreignObject>
-        )}
-      </g>
-      <defs>
-        <clipPath id="path0">
-          <rect width={width} height={height} fill="white" />
-        </clipPath>
-        <clipPath id="roundedBottom">
-          <path
-            d="M1 52H1201V741C1201 747.075 1196.08 752 1190 752H12C5.92486 752 1 747.075 1 741V52Z"
-            fill="white"
-          />
-        </clipPath>
-      </defs>
-    </svg>
+          )}
+          {videoSrc && (
+            <foreignObject
+              x="1"
+              y="52"
+              width={width - 2}
+              height={height - 52}
+            >
+              <video
+                src={videoSrc}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block"
+                }}
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+            </foreignObject>
+          )}
+        </g>
+        <defs>
+          <clipPath id="path0">
+            <rect width={width} height={height} rx={20} />
+          </clipPath>
+          <clipPath id="roundedBottom">
+            <rect
+              x="1"
+              y="52"
+              width={width - 2}
+              height={height - 52}
+              rx={20}
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
   );
 }

@@ -45,7 +45,7 @@ const SelectedWorks = () => {
               </div>
             </div>
 
-            <div className="mt-10 grid lg:grid-cols-2 gap-5 2xl:gap-10 place-items-center bg-customGray w-full">
+            <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-5 2xl:gap-10 place-items-center bg-customGray w-full">
               {filteredProjects.length === 0 ? (
                 <p className="text-center text-gray-500">
                   No selected projects found.

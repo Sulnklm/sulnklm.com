@@ -5,7 +5,7 @@ export type ListProjectCardPropTypes = {
       ALT: string;
     };
     TITLE: string;
-    DESCRIPTION: string;
+    SUBTITLE: string;
     DISCIPLINE: string[];
     SLUG: string;
     TIMELINE: string;
