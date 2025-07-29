@@ -41,6 +41,8 @@ module.exports = {
         brBothDark:
           "inset 0.5px 2px 2px rgba(0, 0, 0, 2), inset 0 -2px 5px rgba(0, 0, 0, 0.5), 4px 4px 20px rgba(255, 255, 255, 0.029)",
         "inner-custom": "inset 0 1px 3px rgba(0, 0, 0, 0.1)",
+        "inner-customWhite": "inset 0 1px 1px rgba(255, 255, 255, 1)",
+        "inner-customWhiteDark": "inset 0 0.5px 1px rgba(255, 255, 255, 0.8)",
         "3dShadow":
           "0 0 24px rgba(34,42,53,0.06), 0 1px 1px rgba(0,0,0,0.05), 0 0 0 1px rgba(34,42,53,0.04), 0 0 4px rgba(34,42,53,0.08), 0 16px 68px rgba(47,48,55,0.05), 0 1px 0 rgba(255,255,255,0.1) inset",
       },
@@ -110,7 +112,7 @@ module.exports = {
           "linear-gradient(180deg, #F59C83 10%, #F8805E 40%, #FF4C1F 60%, #A80000 100%)",
         "orange-diagonal":
           "linear-gradient(135deg, #FF906F 0%, #FF804D 22%, #FF6A3D 48%, #FF804D 75%, #FF9D7F 100%)",
-      },
+        },
       fontSize: {
         h1: ["40px", { lineHeight: "0.5" }],
         "h1-sm": ["45px"],
@@ -131,12 +133,12 @@ module.exports = {
         "h4-lg": ["24px"],
 
         h5: ["16px", { lineHeight: "1.3" }],
-        "h5-md": ["16px"],
-        "h5-lg": ["16px"],
+        "h5-md": ["17px"],
+        "h5-lg": ["17px"],
 
         p: ["16px", { lineHeight: "1.3" }],
-        "p-md": ["16px"],
-        "p-lg": ["16px"],
+        "p-md": ["17px"],
+        "p-lg": ["17px"],
       },
       fontFamily: {
         Sans: ['"Geist", sans-serif'],
@@ -212,7 +214,7 @@ module.exports = {
         },
 
         p: {
-          "@apply text-p font-Sans dark:text-grey_scale_500 text-primary font-[350] lg:font-[300]":
+          "@apply text-p font-Sans text-grey_scale_900 dark:text-grey_scale_500 font-[350]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},

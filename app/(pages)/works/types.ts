@@ -14,5 +14,5 @@ export type ProjectType = {
     SAFARI_IMAGE?: { SRC: string; ALT: string };
     GITHUB_LINK?: { LABEL: string; HREF: string };
     LIVE_LINK?: { LABEL: string; HREF: string };
-    tools?: { name: string; src: string }[];
-  };
+    PROJECT_TYPE?: string[];
+};

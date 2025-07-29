@@ -3,6 +3,7 @@ export const HOME_HERO_CONST = {
   HEADSHOT: {
     SRC: "/images/home/headshot.png",
     ALT: "Headshot of Suin",
+    TOOLTIP: "Click for more info! 💭",
   },
 
   SUNSHINE: {

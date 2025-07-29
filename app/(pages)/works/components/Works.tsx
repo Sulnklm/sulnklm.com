@@ -45,7 +45,7 @@ const Works = () => {
     <div className="relative z-50 px-10">
       <div className="mx-auto">
         <SubTextBox
-          additionalClass="mx-auto md:mx-0"
+          additionalClass=""
           icon={
             <PencilRuler
               size={16}
@@ -56,14 +56,14 @@ const Works = () => {
         >
           {PROJECTS_CONST.SUBTEXT}
         </SubTextBox>
-        <h2 className="md:text-start text-grey_scale_900 pt-2 md:pt-0 mb-7 md:mb-6">
+        <h2 className="text-start text-grey_scale_900 pt-2 md:pt-0 mb-7 md:mb-6">
           <span className="font-PerfectlyNineties tracking-normal">
             <FlipWords words={["Works ✦"]} duration={2200} className="" />
           </span>
         </h2>
         
         <div className="flex items-center pt-5 sm:py-7 border-t border-dashed">
-          <div className="w-full md:flex-1 flex justify-end md:justify-start pr-2">
+          <div className="w-full lg:flex-1 flex justify-start pr-2">
             <CategoriesTabs
               labels={CATEGORY_TABS}
               icons={icons}
@@ -71,7 +71,7 @@ const Works = () => {
               onSelect={setSelectedCategoryIndex}
             />
           </div>
-          <div className="hidden flex-1 md:flex justify-end">
+          <div className="hidden flex-1 lg:flex justify-end">
             <ViewTabs
               icons={viewIcons}
               selectedIndex={viewModeIndex}

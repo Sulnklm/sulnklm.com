@@ -62,7 +62,7 @@ export const ShinyTabs: React.FC<ShinyTabsProps> = ({
               }}
             >
               {tab.icon}
-              <p className="ml-2 font-[400] text-sm">{tab.label}</p>
+              <p className="ml-2 font-[400] text-sm text-nowrap">{tab.label}</p>
             </ShinyButton>
           );
         })}

@@ -41,10 +41,10 @@ export default function Hero() {
   const height = 800; 
 
   return (
-      <div className="mt-[15vh] pb-10 md:px-10 relative px-3">
-        <div className="pb-3 mb-14 border-b border-dashed">
+      <div className="mt-[15vh] pb-10 md:px-10 relative px-5">
+        <div className="pb-3 mb-8 md:mb-12 border-b border-dashed">
           <SubTextBox
-            additionalClass="mx-auto md:mx-0"
+            additionalClass=""
             icon={
               <Hand size={16} className="text-orange-400" strokeWidth={1.7} />
             }
@@ -52,7 +52,7 @@ export default function Hero() {
             {/* {PROJECTS_CONST.PARAGRAPH} */}
             {ABOUT_CONST.SUBTEXT}
           </SubTextBox>
-          <h2 className="md:text-start text-grey_scale_900 pt-2 md:pt-0 mb-7 md:mb-6">
+          <h2 className="text-start text-grey_scale_900 pt-2 md:pt-0 mb-6">
             <span className="font-PerfectlyNineties tracking-normal">
               <FlipWords words={["About ✦"]} duration={2200} className="" />
             </span>

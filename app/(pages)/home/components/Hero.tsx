@@ -11,10 +11,11 @@ import { HOME_HERO_CONST } from "../const";
 import { InsetBlock } from "@/components/InsetBlock";
 import { SubTextBox } from "@/components/SubTextBox/SubTextBox";
 import { FlipWords } from "@/components/FlipWords/FlipWords";
+import { LastUpdate } from "@/components/LastUpdate/LastUpdate";
+import { Tooltip } from "@/components/Tooltip/Tooltip";
+import Link from "next/link";
 
 export default function Hero() {
-  const time = useVancouverTime();
-
   const actions = [
     {
       href: EXTERNAL_LINKS.GITHUB.href,
@@ -43,12 +44,15 @@ export default function Hero() {
   ];
 
   return (
-    <section className="md:mt-0 h-[60vh] md:h-screen bg-background dark:bg-primary px-5 border-b !border-b-grey_scale_500/40 dark:!border-b-grey_scale_900 border-dashed">
+    <section className="relative md:mt-0 h-[60vh] md:h-screen bg-background dark:bg-primary px-5 border-b !border-b-grey_scale_500/40 dark:!border-b-grey_scale_900 border-dashed">
+      <div className="hidden lg:block">
+        <LastUpdate />
+      </div>
+
       <div className="absolute inset-0 z-0">
         <DotBackground />
       </div>
-
-      <div className="relative z-[100] container mx-auto flex flex-col items-center justify-center gap-5 h-full text-center mt-28 md:-mt-10">
+      <div className="relative z-[900] container mx-auto flex flex-col items-center justify-center gap-5 h-full text-center mt-28 md:-mt-10">
         {/* 3.1) TITLE */}
         <div className="flex flex-col items-center">
           <div className="flex gap-2 md:gap-4">
@@ -65,16 +69,20 @@ export default function Hero() {
                 </h1>
 
                 {/* headshot */}
-                {i === 1 && (
-                  <WavyImage
-                    src={HOME_HERO_CONST.HEADSHOT.SRC}
-                    alt={HOME_HERO_CONST.HEADSHOT.ALT}
-                    width={300}
-                    height={300}
-                    delay={0.5}
-                    className="relative object-cover min-w-[60px] max-w-16 md:max-w-20 lg:max-w-24 w-full h-auto hover:rotate-6 duration-300 shadow-brBothDark dark:border-grey_scale_900 dark:border p-0.5 rounded-3xl -translate-y-6 md:-translate-y-0 md:mx-3"
-                  />
-                )}
+                <Tooltip message={HOME_HERO_CONST.HEADSHOT.TOOLTIP}>
+                  <Link href="/about">
+                    {i === 1 && (
+                      <WavyImage
+                        src={HOME_HERO_CONST.HEADSHOT.SRC}
+                        alt={HOME_HERO_CONST.HEADSHOT.ALT}
+                        width={300}
+                        height={300}
+                        delay={0.5}
+                        className="relative object-cover min-w-[60px] max-w-16 md:max-w-20 lg:max-w-24 w-full h-auto hover:rotate-6 duration-300 shadow-brBothDark dark:border-grey_scale_900 dark:border p-0.5 rounded-3xl -translate-y-6 md:-translate-y-0 md:mx-3"
+                      />
+                    )}{" "}
+                  </Link>
+                </Tooltip>
               </React.Fragment>
             ))}
           </div>
@@ -99,12 +107,11 @@ export default function Hero() {
 
         <SubTextBox
           icon={
-            <CheckIcon size={18} className="text-orange-400" strokeWidth={2}/>
+            <CheckIcon size={18} className="text-orange-400" strokeWidth={2} />
           }
         >
           {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION1}
         </SubTextBox>
-        
 
         {/* 3.3) ACTIONS */}
         <div className="scale-90 md:scale-100 flex gap-3.5 dark:gap-1 md:gap-4 md:dark:gap-2 -mt-3 md:mt-0">

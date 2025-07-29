@@ -11,6 +11,7 @@ import { HyperText } from "../HyperText/HyperText";
 import { ScrollProgress } from "../ScrollProgress/ScrollProgress";
 import { EXTERNAL_LINKS } from "@/lib/const";
 import ProgressiveBlur from "components/magicui/progressive-blur";
+import { AnimatedShinyText } from "../ShinyText/ShinyText";
 
 const NavBar = (): JSX.Element => {
   const { theme, setTheme } = useTheme();
@@ -18,20 +19,20 @@ const NavBar = (): JSX.Element => {
   const { muted, setMuted } = useSound();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[1000] max-w-[750px] mx-auto">
+    <header className="fixed top-0 left-0 right-0 z-[10000] max-w-[750px] mx-auto">
       <ProgressiveBlur
         height="20%"
         position="top"
         className="z-[0] fixed left-0 right-0 bottom-0 pointer-events-none"
-      />{" "}
-      <nav className="relative container mx-auto flex justify-between items-center bg-white/90 backdrop-blur-lg dark:bg-black/80 m-5 p-2.5 z-10 mt-3 rounded-3xl border shadow-br">
+      />
+      <nav className="relative container mx-auto flex justify-between items-center bg-white/90 backdrop-blur-lg dark:bg-black/80 m-5 p-2.5 z-10 mt-3 rounded-3xl border shadow-br dark:shadow-inner-customWhiteDark">
         <ul className="flex items-center gap-5 text-base z-10">
           <Link
             href="/"
             className="group flex items-center hover:gap-2.5 duration-300 gap-1.5 pl-5 pr-5"
           >
-            <p className="text-2xl group-hover:scale-95 duration-300 font-[300] font-PerfectlyNineties dark:text-background">
-              ✦
+            <p className="text-2xl group-hover:scale-95 duration-300 font-[500] font-PerfectlyNineties dark:text-background -translate-y-0.5">
+              <AnimatedShinyText>Suin✦<span className="italic">k</span> </AnimatedShinyText>
             </p>
           </Link>
           {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, LABEL }) => {
@@ -42,7 +43,7 @@ const NavBar = (): JSX.Element => {
                   href={HREF}
                   additionalClasses={
                     isCurrentPage
-                      ? "text-sm"
+                      ? "text-sm font-[500] text-grey_scale_900 dark:text-background"
                       : "text-grey_scale_700 dark:text-white/40 text-sm"
                   }
                 >

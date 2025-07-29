@@ -16,7 +16,7 @@ export default function ProjectBadge({ children, variant = "default" }: BadgePro
   return (
     <span
       className={
-        "px-2 py-[2px] rounded-lg text-xs font-[500] inline-block align-middle " +
+        "px-2 py-[2px] rounded-lg text-xs font-[500] inline-block align-middle shadow-inner-customWhite dark:shadow-none " +
         (badgeColors[variant] || badgeColors.default)
       }
     >

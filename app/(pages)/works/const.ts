@@ -22,7 +22,7 @@ export const PROJECTS_CONST = {
         // { name: "Illustrator", src: "/images/tools/illustrator.svg" },
       ],
       DISCIPLINE: ["Case Study"],
-      TIMELINE: "December 2024",
+      TIMELINE: "2 Weeks, July 2025",
       CATEGORY: ["all", "case-study", "selected"],
     },
     {
@@ -34,7 +34,7 @@ export const PROJECTS_CONST = {
       TITLE: "FlickMood",
       SUBTITLE: "Discover movies that match your mood",
       OVERVIEW:
-        "A personal project focused on web design and frontend development using TMDb API to build an interactive movie recommendation site.",
+        "A personal project combining web design and frontend development with TMDb API",
       IMAGE: {
         SRC: "/images/projects/flickmood/thumbnail.png",
         ALT: "FlickMood Hero Image",
@@ -45,8 +45,9 @@ export const PROJECTS_CONST = {
         { name: "Figma", src: "/images/tools/figma.png" },
       ],
       DISCIPLINE: ["Web Development"],
-      TIMELINE: "December 2024",
+      TIMELINE: "2 Weeks, December 2024",
       CATEGORY: ["all", "selected", "development"],
+      PROJECT_TYPE: ["Frontend Development","Web Application", "API Integration","Web Design"],
       GITHUB_LINK: {
         LABEL: "GitHub",
         HREF: "https://github.com/Sulnklm/FlickMood",
