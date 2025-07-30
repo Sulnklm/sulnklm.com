@@ -1,9 +1,9 @@
-import { GridPatternDashed } from "@/components/DashedStroke/DashedStroke";
+import { GridPatternDashed } from "@/components/ui/DashedStroke/DashedStroke";
 import React from "react";
 import { SkillsTabs } from "./SkillsTabs/SkillsTabs";
 import { SKILLS_CONST } from "../const";
-import { InsetBlock } from "@/components/InsetBlock";
-import PatternBackground from "@/components/PatternBackground/PatternBackground";
+import { InsetBlock } from "@/components/ui/InsetBlock";
+import PatternBackground from "@/components/ui/PatternBackground/PatternBackground";
 
 type Props = {};
 

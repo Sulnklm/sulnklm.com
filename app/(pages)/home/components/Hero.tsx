@@ -2,16 +2,16 @@
 import React from "react";
 import { ArrowRight, CheckIcon, MapPin } from "lucide-react";
 import WavyImage from "@/components/animation/WavyImage";
-import { DotBackground } from "@/components/DotBackground/DotBackground";
+import { DotBackground } from "@/components/ui/DotBackground/DotBackground";
 import { Button } from "@/components/Button/Button";
 import { ToolIcon } from "@/components/ui/ToolIcon/ToolIcon";
 import { useVancouverTime } from "@/hooks/useVancouverTime";
 import { EXTERNAL_LINKS, TECH_STACK } from "@/lib/const";
 import { HOME_HERO_CONST } from "../const";
-import { InsetBlock } from "@/components/InsetBlock";
+import { InsetBlock } from "@/components/ui/InsetBlock";
 import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
-import { FlipWords } from "@/components/FlipWords/FlipWords";
-import { LastUpdate } from "@/components/LastUpdate/LastUpdate";
+import { FlipWords } from "@/components/animation/FlipWords/FlipWords";
+import { LastUpdate } from "@/components/ui/LastUpdate/LastUpdate";
 import { Tooltip } from "@/components/ui/Tooltip/Tooltip";
 import Link from "next/link";
 

@@ -11,8 +11,8 @@ import React, {
   useState,
 } from "react";
 
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { Button } from "@/components/ui/magicui/button";
+import { ScrollArea } from "@/components/ui/magicui/scroll-area";
 import { cn } from "@/lib/utils";
 
 type TreeViewElement = {

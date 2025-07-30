@@ -1,12 +1,12 @@
-import { InsetBlockInside } from "@/components/InsetBlockInside";
+import { InsetBlockInside } from "@/components/ui/InsetBlockInside";
 import OrangeTextBox from "@/components/ui/OrangeTextBox/OrangeTextBox";
 import { ReflectionTypes } from "./types";
-import { IconCard } from "@/components/IconCard/IconCard";
+import { IconCard } from "@/components/ui/IconCard/IconCard";
 import { Lightbulb } from "lucide-react";
 import { PROJECTS_CONST } from "@/(pages)/works/const";
 import { useParams } from "next/navigation";
 import React from "react";
-import { PreviousProjectButton } from "../NavButton/PreviousProjectButton";
+import { PreviousProjectButton } from "../NavButton/\bPreviousProjectButton";
 import { NextProjectButton } from "../NavButton/NextProjectButton";
 
 export function Reflection({ reflection }: { reflection: ReflectionTypes }) {

@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { GridPattern } from "components/magicui/grid-pattern";
+import { GridPattern } from "@/components/ui/magicui/grid-pattern";
 import { DashedLine } from "../GridContents/\bDashedLine";
 interface GridPatternDashedProps {
   children: React.ReactNode;

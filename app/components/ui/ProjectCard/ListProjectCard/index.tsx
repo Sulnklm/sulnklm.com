@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ToolImage } from "../../ToolImage";
 import { ListProjectCardPropTypes } from "./types";
-import { Button } from "../../button";
+import { Button } from "../../magicui/button";
 import { ArrowRight } from "lucide-react";
-import { GlowingEffect } from "@/components/GlowingEffect/GlowingEffect";
+import { GlowingEffect } from "@/components/animation/GlowingEffect/GlowingEffect";
 import Link from "next/link";
 import ProjectBadge from "../../ProjectBadge/ProjectBadge";
 

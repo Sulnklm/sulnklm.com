@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { withFrameShine } from "@/components/WithFrameShine";
+import { withFrameShine } from "@/components/ui/WithFrameShine";
 import { useClickSound } from "@/hooks/useClickSound";
 
 const ShinyButton = withFrameShine(

@@ -1,4 +1,4 @@
-import { FileTree } from "@/components/FileTree/FileTree";
+import { FileTree } from "@/components/ui/FileTree/FileTree";
 
 export default function CodePreview() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Cpu, PenTool, LayoutList } from "lucide-react";
-import { InsetBlockInside } from "@/components/InsetBlockInside";
+import { InsetBlockInside } from "@/components/ui/InsetBlockInside";
 import { SkillText } from "./SkillText";
 import { ShinyTabs } from "@/components/ui/ShinyTabs/ShinyTabs";
 

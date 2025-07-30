@@ -3,12 +3,12 @@
 import React from "react";
 import { GridProjectCard } from "@/components/ui/ProjectCard/GridProjectCard";
 import { SELECTED_PROJECTS_CONST } from "../const";
-import { InsetBlock } from "@/components/InsetBlock";
+import { InsetBlock } from "@/components/ui/InsetBlock";
 import PatternBackground from "@/components/ui/PatternBackground/PatternBackground";
 import { ArchiveIcon } from "lucide-react";
 import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
 import { PROJECTS_CONST } from "@/(pages)/works/const";
-import { FlipWords } from "@/components/FlipWords/FlipWords";
+import { FlipWords } from "@/components/animation/FlipWords/FlipWords";
 import { ListProjectCard } from "@/components/ui/ProjectCard/ListProjectCard";
 
 const SelectedWorks = () => {

@@ -2,12 +2,12 @@
 import React from "react";
 import { motion } from "framer-motion"; 
 import { ABOUT_CONST, SKILLS_CONST } from "../const";
-import { MouseTag } from "@/components/MouseTag/MouseTag";
+import { MouseTag } from "@/components/ui/MouseTag/MouseTag";
 import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
 import { Hand, MessageCircleHeart, ScrollText } from "lucide-react";
 import { Button } from "@/components/Button/Button";
 import { EXTERNAL_LINKS } from "@/lib/const";
-import { FlipWords } from "@/components/FlipWords/FlipWords";
+import { FlipWords } from "@/components/animation/FlipWords/FlipWords";
 
 export default function Hero() {
   const images = [

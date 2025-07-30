@@ -1,7 +1,7 @@
-import IllustCard from "@/components/IllustCard/IllustCard";
+import IllustCard from "@/components/ui/IllustCard/IllustCard";
 import React from "react";
 import { VALUES, VALUE_INTRO } from "./const";
-import { InsetBlock } from "@/components/InsetBlock";
+import { InsetBlock } from "@/components/ui/InsetBlock";
 import { Button } from "@/components/Button/Button";
 import { INTRO_CONST } from "../../const";
 import { ArrowRight } from "lucide-react";

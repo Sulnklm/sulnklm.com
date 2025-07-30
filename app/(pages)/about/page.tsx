@@ -1,4 +1,4 @@
-import { CornerBoxes } from "@/components/CornerBoxes/CornerBoxes";
+import { CornerBoxes } from "@/components/ui/CornerBoxes/CornerBoxes";
 import About from "./components/About";
 import { Ruler } from "@/components/ui/ruler/Ruler";
 

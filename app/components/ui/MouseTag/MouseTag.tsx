@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx"; // (or use your cn 함수)
 import { MouseTagProps } from "./types";
-import { TypingAnimation } from "components/magicui/typing-animation";
+import { TypingAnimation } from "@/components/ui/magicui/typing-animation";
 
 export const MouseTag: React.FC<MouseTagProps> = ({
   label = "",

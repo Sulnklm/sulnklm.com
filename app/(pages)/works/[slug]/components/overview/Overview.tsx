@@ -6,9 +6,9 @@ import { Button } from "@/components/Button/Button";
 import { Clock, ExternalLink, GithubIcon, Table2, Tags } from "lucide-react";
 import { ToolImage } from "@/components/ui/ToolImage";
 import { Ruler } from "@/components/ui/ruler/Ruler";
-import { CornerBoxes } from "@/components/CornerBoxes/CornerBoxes";
+import { CornerBoxes } from "@/components/ui/CornerBoxes/CornerBoxes";
 import { PROJECT_DETAILS_CONST } from "../const";
-import { IconCard } from "@/components/IconCard/IconCard";
+import { IconCard } from "@/components/ui/IconCard/IconCard";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 

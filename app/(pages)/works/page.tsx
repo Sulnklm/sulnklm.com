@@ -1,5 +1,5 @@
 import Works from "./components/Works";
-import { CornerBoxes } from "@/components/CornerBoxes/CornerBoxes";
+import { CornerBoxes } from "@/components/ui/CornerBoxes/CornerBoxes";
 import { Ruler } from "@/components/ui/ruler/Ruler";
 
 // Project page

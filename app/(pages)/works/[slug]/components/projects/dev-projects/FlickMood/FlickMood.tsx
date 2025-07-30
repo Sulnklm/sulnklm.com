@@ -6,8 +6,6 @@ import { KeyFeatures } from "../../../overview/KeyFeatures/KeyFeatures";
 import { FLICKMOOD_CONST, FLICKMOOD_FEATURES } from "./const";
 import { Table2, LayoutDashboard, Database } from "lucide-react";
 import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
-import { DashedLine } from "@/components/GridContents/\bDashedLine";
-import { CornerBoxes } from "@/components/CornerBoxes/CornerBoxes";
 import { Reflection } from "@/(pages)/works/[slug]/components/Reflection/Reflection";
 import CodePreview from "../CodePreview/CodePreview";
 const iconMap = {

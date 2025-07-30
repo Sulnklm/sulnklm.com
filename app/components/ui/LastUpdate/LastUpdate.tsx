@@ -1,4 +1,4 @@
-import { useLastUpdate } from "@/components/LastUpdate/useLastUpdate";
+import { useLastUpdate } from "./useLastUpdate";
 import React, { useEffect } from "react";
 import { Hammer } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";

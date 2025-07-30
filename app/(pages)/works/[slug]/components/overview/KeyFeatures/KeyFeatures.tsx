@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { IconCard } from "@/components/IconCard/IconCard";
+import { IconCard } from "@/components/ui/IconCard/IconCard";
 import { ProjectFeature } from "./types";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CornerBoxes } from "@/components/CornerBoxes/CornerBoxes";
+import { CornerBoxes } from "@/components/ui/CornerBoxes/CornerBoxes";
 import { useKeyFeatures } from "./useKeyFeatures";
 
 interface KeyFeaturesSectionProps {

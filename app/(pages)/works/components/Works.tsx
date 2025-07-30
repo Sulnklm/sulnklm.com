@@ -15,10 +15,10 @@ import {
 } from "lucide-react";
 import { CategoriesTabs } from "@/components/ui/ProjectsTabs/CategoriesTabs/CategoriesTabs";
 import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
-import { InsetBlockInside } from "@/components/InsetBlockInside";
+import { InsetBlockInside } from "@/components/ui/InsetBlockInside";
 import { useWorks } from "./useWorks";
 import { PROJECTS_CONST } from "../const";
-import { FlipWords } from "@/components/FlipWords/FlipWords";
+import { FlipWords } from "@/components/animation/FlipWords/FlipWords";
 
 const CATEGORY_TABS = ["All", "Selected", "Case Study", "Development"];
 const categoryKeys = ["all", "selected", "case-study", "development"];

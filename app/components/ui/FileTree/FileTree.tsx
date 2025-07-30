@@ -1,4 +1,4 @@
-import { File, Tree, Folder } from "components/magicui/file-tree";
+import { File, Tree, Folder } from "@/components/ui/magicui/file-tree";
 
 
 export function FileTree() {
