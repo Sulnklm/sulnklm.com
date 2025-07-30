@@ -41,7 +41,7 @@ export default function FlickMood() {
           <KeyFeatures features={FLICKMOOD_FEATURES} iconMap={iconMap} />
         </section>
         {/* Process */}
-        <section>
+        <section className="container">
           <SectionHeader
             subText={FLICKMOOD_CONST.PROCESS.SUBTEXT}
             heading={FLICKMOOD_CONST.PROCESS.HEADING}

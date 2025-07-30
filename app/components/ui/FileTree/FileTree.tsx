@@ -30,7 +30,7 @@ export function FileTree() {
               <File value="2">
                 <p className="text-base">Home.jsx</p>
               </File>
-              <File value="3" className="text-coral">
+              <File value="3" className="!text-coral">
                 <p className="text-base !text-coral font-[400]">MovieDetails.jsx</p>
               </File>
               <File value="4">
