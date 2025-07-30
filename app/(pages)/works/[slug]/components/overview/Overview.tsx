@@ -1,11 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Safari } from "@/components/SafariMode/SafariMode";
+import { Safari } from "@/components/ui/SafariMode/SafariMode";
 import type { ProjectType } from "../../../types";
 import { Button } from "@/components/Button/Button";
 import { Clock, ExternalLink, GithubIcon, Table2, Tags } from "lucide-react";
-import { ToolImage } from "@/components/ToolImage";
-import { Ruler } from "@/components/ruler/Ruler";
+import { ToolImage } from "@/components/ui/ToolImage";
+import { Ruler } from "@/components/ui/ruler/Ruler";
 import { CornerBoxes } from "@/components/CornerBoxes/CornerBoxes";
 import { PROJECT_DETAILS_CONST } from "../const";
 import { IconCard } from "@/components/IconCard/IconCard";
@@ -50,7 +50,7 @@ export default function Overview({ project }: OverviewProps) {
       <CornerBoxes overrideBottom={{ 1: "bottom-0", 3: "bottom-0" }} />
       <Ruler height={height} left />
       <Ruler height={height} left={false} />
-      <div className="relative mt-[15vh] mx-auto place-items-center px-5">
+      <div className="relative mt-[15vh] mx-auto place-items-center px-5 ">
         <div className="pt-[7vh] max-w-[55rem] grid gap-5 justify-center items-center">
           {/* 1. TOOLS */}
           {project.TOOLS && project.TOOLS.length > 0 && (

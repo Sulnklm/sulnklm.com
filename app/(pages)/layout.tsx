@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import { Providers } from "../providers";
 import { HOME_HERO_CONST } from "./home/const";
 import Footer from "@/components/Footer/Footer";
-import { SoundProvider } from "@/components/SoundContextType/SoundContextType";
+import { SoundProvider } from "@/components/ui/SoundContextType/SoundContextType";
 import ProgressiveBlur from "components/magicui/progressive-blur";
 
 export const metadata = {

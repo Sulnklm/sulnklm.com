@@ -1,6 +1,6 @@
 import { CornerBoxes } from "@/components/CornerBoxes/CornerBoxes";
 import About from "./components/About";
-import { Ruler } from "@/components/ruler/Ruler";
+import { Ruler } from "@/components/ui/ruler/Ruler";
 
 export default function AboutPage() {
   return (

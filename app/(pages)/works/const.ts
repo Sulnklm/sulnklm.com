@@ -18,8 +18,8 @@ export const PROJECTS_CONST = {
       },
       TOOLS: [
         { name: "Figma", src: "/images/tools/figma.png" },
-        // { name: "Photoshop", src: "/images/tools/photoshop.svg" },
-        // { name: "Illustrator", src: "/images/tools/illustrator.svg" },
+        { name: "Photoshop", src: "/images/tools/photoshop.svg" },
+        { name: "Illustrator", src: "/images/tools/illustrator.svg" },
       ],
       DISCIPLINE: ["Case Study"],
       TIMELINE: "2 Weeks, July 2025",

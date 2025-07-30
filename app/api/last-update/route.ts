@@ -1,4 +1,3 @@
-// /app/api/last-update/route.ts
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -7,9 +6,9 @@ export async function GET() {
     {
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-        "X-GitHub-Api-Version": "2022-11-28", 
+        "X-GitHub-Api-Version": "2022-11-28",
       },
-      
+      cache: "no-store",
     }
   );
   const data = await res.json();
@@ -17,5 +16,14 @@ export async function GET() {
     return NextResponse.json({ date: null }, { status: 500 });
   }
   const date = data[0].commit.author.date;
-  return NextResponse.json({ date });
+  return new NextResponse(
+    JSON.stringify({ date }),
+    {
+      status: 200,
+      headers: {
+        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+        "Content-Type": "application/json",
+      },
+    }
+  );
 }

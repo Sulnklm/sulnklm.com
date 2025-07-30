@@ -2,12 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ToolImage } from "../../ToolImage";
 import { GridProjectCardPropTypes, ToolPropTypes } from "./types";
-import { Button } from "../../Button/Button";
+import { Button } from "../../button";
 import { ArrowRight } from "lucide-react";
 import { GlowingEffect } from "@/components/GlowingEffect/GlowingEffect";
 import Link from "next/link";
-import ProjectBadge from "@/components/ProjectBadge/ProjectBadge";
-
+import ProjectBadge from "../../ProjectBadge/ProjectBadge";
 export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
   const disciplineVariantMap: Record<
     string,

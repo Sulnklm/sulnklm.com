@@ -1,5 +1,5 @@
 // const.tsx
-import type { ProjectFeature } from "../../overview/KeyFeatures/types";
+import type { ProjectFeature } from "../../../overview/KeyFeatures/types";
 
 export const FLICKMOOD_CONST = {
   KEY_FEATURES_SUBTEXT: "Live data via TMDb API",

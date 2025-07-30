@@ -5,7 +5,7 @@ import { InsetBlock } from "@/components/InsetBlock";
 import { Button } from "@/components/Button/Button";
 import { INTRO_CONST } from "../../const";
 import { ArrowRight } from "lucide-react";
-import OrangeTextBox from "@/components/OrangeTextBox/OrangeTextBox";
+import OrangeTextBox from "@/components/ui/OrangeTextBox/OrangeTextBox";
 
 const Values = () => {
   return (

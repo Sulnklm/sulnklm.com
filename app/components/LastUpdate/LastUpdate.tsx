@@ -12,10 +12,10 @@ export const LastUpdate: React.FC = () => {
       rotate: [0, 35, 0, 35, 0, 0],
       y: [0, 10, 0, 10, 0, 0],
       transition: {
-        duration: 1.4, // 전체 반복 사이클 길이 (조절 가능)
+        duration: 1.4,
         times: [0, 0.15, 0.3, 0.45, 0.6, 1],
         repeat: Infinity,
-        repeatDelay: 1.2, // 두 박 이후 멈췄다 재시작
+        repeatDelay: 1.2, 
         ease: "easeInOut",
       },
     });
@@ -46,6 +46,7 @@ export const LastUpdate: React.FC = () => {
               year: "numeric",
               month: "long",
               day: "numeric",
+              timeZone: "America/Vancouver",
             })
           : "Loading..."}
       </p>

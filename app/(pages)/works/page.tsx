@@ -1,6 +1,6 @@
 import Works from "./components/Works";
 import { CornerBoxes } from "@/components/CornerBoxes/CornerBoxes";
-import { Ruler } from "@/components/ruler/Ruler";
+import { Ruler } from "@/components/ui/ruler/Ruler";
 
 // Project page
 export default function ProjectPage() {

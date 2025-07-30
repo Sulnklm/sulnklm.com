@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Cpu, PenTool, LayoutList } from "lucide-react";
 import { InsetBlockInside } from "@/components/InsetBlockInside";
 import { SkillText } from "./SkillText";
-import { ShinyTabs } from "@/components/ShinyTabs/ShinyTabs";
+import { ShinyTabs } from "@/components/ui/ShinyTabs/ShinyTabs";
 
 interface SkillsTabsProps {
   techTools: string[];

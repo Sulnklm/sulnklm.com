@@ -1,15 +1,15 @@
 "use client";
 
 import React from "react";
-import { GridProjectCard } from "@/components/ProjectCard/GridProjectCard";
+import { GridProjectCard } from "@/components/ui/ProjectCard/GridProjectCard";
 import { SELECTED_PROJECTS_CONST } from "../const";
 import { InsetBlock } from "@/components/InsetBlock";
-import PatternBackground from "@/components/PatternBackground/PatternBackground";
+import PatternBackground from "@/components/ui/PatternBackground/PatternBackground";
 import { ArchiveIcon } from "lucide-react";
-import { SubTextBox } from "@/components/SubTextBox/SubTextBox";
+import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
 import { PROJECTS_CONST } from "@/(pages)/works/const";
 import { FlipWords } from "@/components/FlipWords/FlipWords";
-import { ListProjectCard } from "@/components/ProjectCard/ListProjectCard";
+import { ListProjectCard } from "@/components/ui/ProjectCard/ListProjectCard";
 
 const SelectedWorks = () => {
   const filteredProjects = PROJECTS_CONST.PROJECTS.filter((project) =>

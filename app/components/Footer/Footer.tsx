@@ -1,10 +1,19 @@
 "use client";
 import React, { useState } from "react";
-import { Github, Linkedin, Mail, MapPin, MoonStar, SunMoon, Sunset, Umbrella } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  MoonStar,
+  Sunrise,
+  Sun,
+  Sunset,
+  SunMoon,
+} from "lucide-react";
 import { ShootingStars } from "./ShootingStars/ShootingStars";
 import { StarsBackground } from "./StarsBackground/StarsBackground";
 import { FOOTER_CONST } from "./const";
-import { PointerHighlight } from "../PointerHighlight/PointerHighlight";
+import { PointerHighlight } from "../ui/PointerHighlight/PointerHighlight";
 import { useVancouverTime } from "@/hooks/useVancouverTime";
 import { EXTERNAL_LINKS } from "@/lib/const";
 const ORBIT_RADIUS = "35vw";
@@ -58,21 +67,31 @@ const SOCIALS = [
   },
 ];
 
-
-
 const Footer = () => {
   const { str: timeStr, hour } = useVancouverTime();
-const hourNum = hour;
-let Icon = SunMoon;
-if (hourNum >= 6 && hourNum < 18) Icon = SunMoon;
-if (hourNum >= 18 && hourNum < 21) Icon = Sunset;
-if (hourNum >= 21 || hourNum < 6) Icon = MoonStar;
+  const hourNum = hour;
+  let Icon = Sun;
+  if (hourNum >= 0 && hourNum < 4) {
+    Icon = MoonStar; // (00~03)
+  } else if (hourNum >= 4 && hourNum < 7) {
+    Icon = Sunrise; // (04~06)
+  } else if (hourNum >= 7 && hourNum < 18) {
+    Icon = Sun; //(07~10)
+  // } else if (hourNum >= 11 && hourNum < 18) {
+  //   Icon = SunMoon; // (11~17)
+  } else if (hourNum >= 18 && hourNum < 20) {
+    Icon = Sunset; // (18~19)
+  } else if (hourNum >= 20 && hourNum < 24) {
+    Icon = MoonStar; // (20~23)
+  }
 
   return (
     <footer className="relative mt-10 m-5 dark:m-0">
       <div className="flex gap-2 bg-white rounded-lg px-3 py-1 absolute bottom-5 right-5 dark:right-10 w-fit z-[1000] text-white dark:text-yellow-300">
-      <Icon size={17} strokeWidth={1.9} className="text-grey_scale_1000" />
-        <p className="!text-sm text-nowrap dark:text-grey_scale_1000">Vancouver: {timeStr}</p>
+        <Icon size={17} strokeWidth={1.9} className="text-grey_scale_1000" />
+        <p className="!text-sm text-nowrap dark:text-grey_scale_1000">
+          Vancouver: {timeStr}
+        </p>
       </div>
       <div className="relative z-[600] w-full h-[60vh] sm:h-[85vh] lg:h-[90vh] pt-20 lg:pt-24 bg-primary dark:bg-black overflow-hidden rounded-3xl">
         <StarsBackground />

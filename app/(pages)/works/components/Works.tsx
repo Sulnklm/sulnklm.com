@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { ListProjectCard } from "@/components/ProjectCard/ListProjectCard";
-import { GridProjectCard } from "@/components/ProjectCard/GridProjectCard";
-import { ViewTabs } from "@/components/ProjectsTabs/ViewTabs/ViewTabs";
+import { ListProjectCard } from "@/components/ui/ProjectCard/ListProjectCard";
+import { GridProjectCard } from "@/components/ui/ProjectCard/GridProjectCard";
+import { ViewTabs } from "@/components/ui/ProjectsTabs/ViewTabs/ViewTabs";
 import {
   Grid2X2Icon,
   ListIcon,
@@ -13,8 +13,8 @@ import {
   CodeIcon,
   GalleryVertical,
 } from "lucide-react";
-import { CategoriesTabs } from "@/components/ProjectsTabs/CategoriesTabs/CategoriesTabs";
-import { SubTextBox } from "@/components/SubTextBox/SubTextBox";
+import { CategoriesTabs } from "@/components/ui/ProjectsTabs/CategoriesTabs/CategoriesTabs";
+import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
 import { InsetBlockInside } from "@/components/InsetBlockInside";
 import { useWorks } from "./useWorks";
 import { PROJECTS_CONST } from "../const";

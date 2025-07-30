@@ -8,7 +8,7 @@ export const InsetBlockInside = ({
 }: InsetBlockPropTypes) => {
   return (
     <div
-      className={`${additionalClasses} container mx-auto lg:bg-background/50 lg:dark:bg-black/10 lg:shadow-brBoth lg:dark:!border-b lg:dark:!border-b-grey_scale_900/40 lg:dark:!border-t lg:dark:!border-t-black  lg:dark:shadow-brBothDark lg:rounded-[30px] lg:p-10`}
+      className={`${additionalClasses} container mx-auto lg:bg-background/50 lg:dark:bg-primary lg:shadow-brBoth lg:dark:border lg:dark:shadow-brBothDark lg:rounded-[30px] lg:p-10`}
     >
       {children}
     </div>

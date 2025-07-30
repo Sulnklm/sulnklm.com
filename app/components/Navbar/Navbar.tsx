@@ -6,12 +6,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MessageCircleMore, Sun, Moon, Volume2, VolumeX } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useSound } from "../SoundContextType/SoundContextType";
+import { useSound } from "../ui/SoundContextType/SoundContextType";
 import { HyperText } from "../HyperText/HyperText";
-import { ScrollProgress } from "../ScrollProgress/ScrollProgress";
+import { ScrollProgress } from "../ui/ScrollProgress/ScrollProgress";
 import { EXTERNAL_LINKS } from "@/lib/const";
 import ProgressiveBlur from "components/magicui/progressive-blur";
-import { AnimatedShinyText } from "../ShinyText/ShinyText";
+import { AnimatedShinyText } from "../ui/ShinyText/ShinyText";
 
 const NavBar = (): JSX.Element => {
   const { theme, setTheme } = useTheme();

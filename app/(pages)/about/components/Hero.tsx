@@ -1,15 +1,13 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion"; // 추가
+import { motion } from "framer-motion"; 
 import { ABOUT_CONST, SKILLS_CONST } from "../const";
 import { MouseTag } from "@/components/MouseTag/MouseTag";
-import { SubTextBox } from "@/components/SubTextBox/SubTextBox";
+import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
 import { Hand, MessageCircleHeart, ScrollText } from "lucide-react";
 import { Button } from "@/components/Button/Button";
 import { EXTERNAL_LINKS } from "@/lib/const";
 import { FlipWords } from "@/components/FlipWords/FlipWords";
-import { CornerBoxes } from "@/components/CornerBoxes/CornerBoxes";
-import { Ruler } from "@/components/ruler/Ruler";
 
 export default function Hero() {
   const images = [

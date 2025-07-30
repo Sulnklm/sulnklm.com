@@ -1,4 +1,4 @@
-import { useSound } from "../SoundContextType/SoundContextType";
+import { useSound } from "../ui/SoundContextType/SoundContextType";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";

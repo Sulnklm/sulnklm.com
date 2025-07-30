@@ -1,6 +1,6 @@
 import { PROJECTS_CONST } from "@/(pages)/works/const";
 import { YUMPICK_PROJECT } from "./const";
-import Overview from "../../overview/Overview";
+import Overview from "../../../overview/Overview";
 import type { ProjectType } from "@/(pages)/works/types";
 
 export default function Yumpick() {
