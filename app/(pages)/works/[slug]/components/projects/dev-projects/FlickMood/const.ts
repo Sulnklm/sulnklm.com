@@ -2,8 +2,14 @@
 import type { ProjectFeature } from "../../../overview/KeyFeatures/types";
 
 export const FLICKMOOD_CONST = {
-  KEY_FEATURES_SUBTEXT: "Live data via TMDb API",
-  KEY_FEATURES_HEADING: "Key Features ✦",
+  KEY_FEATURES: {
+    SUBTEXT: "Live data via TMDb API",
+    HEADING: "Key Features ✦",
+  },
+  PROCESS: {
+    SUBTEXT: "From Design to Dev",
+    HEADING: "Dev Process",
+  },
   REFLECTION: {
     title: "Technical Growth",
     description:

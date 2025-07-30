@@ -1,4 +1,4 @@
-import { useSound } from "@/components/SoundContextType/SoundContextType";
+import { useSound } from "@/components/ui/SoundContextType/SoundContextType";
 
 export function useClickSound() {
   const { muted } = useSound();

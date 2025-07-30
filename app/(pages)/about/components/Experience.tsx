@@ -1,9 +1,9 @@
 import React from "react";
-import { Timeline } from "@/components/Timeline/Timeline";
+import { Timeline } from "@/components/ui/Timeline/Timeline";
 import { ABOUT_CONST, EXPERIENCE_CONST } from "../const";
 import { ExperienceItem } from "../../home/types";
-import OrangeTextBox from "@/components/OrangeTextBox/OrangeTextBox";
-import PatternBackground from "@/components/PatternBackground/PatternBackground";
+import OrangeTextBox from "@/components/ui/OrangeTextBox/OrangeTextBox";
+import PatternBackground from "@/components/ui/PatternBackground/PatternBackground";
 
 interface TimelineEntry {
   description: string;

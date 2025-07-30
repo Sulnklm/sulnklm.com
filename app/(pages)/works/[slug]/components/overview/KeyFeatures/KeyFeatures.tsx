@@ -104,7 +104,7 @@ export function KeyFeatures({ features, iconMap }: KeyFeaturesSectionProps) {
         </div>
       </div>
       {/* --- feature image --- */}
-      <div className="w-full flex justify-center px-5 min-h-[200px]">
+      <div className="w-full flex justify-center px-5 md:px-0 min-h-[200px]">
         <AnimatePresence mode="wait">
           <motion.img
             key={features[activeIdx].image}

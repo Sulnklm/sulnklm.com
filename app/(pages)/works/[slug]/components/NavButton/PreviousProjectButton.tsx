@@ -13,7 +13,7 @@ export function PreviousProjectButton({ href, disabled }: { href?: string; disab
   return (
     <Link
       href={href}
-      className="px-4 py-2 rounded-xl border bg-white dark:bg-primary hover:bg-grey_scale_100 hover:text-grey_scale_900 dark:hover:text-grey_scale_700 hover:shadow-none transition shadow-br"
+      className="px-4 py-2 rounded-xl border !text-grey_scale_900 dark:!text-background bg-white dark:bg-primary hover:bg-grey_scale_100 hover:text-grey_scale_900 dark:hover:text-grey_scale_700 hover:shadow-none transition shadow-br"
     >
       {NAV_BUTTON_CONST.PREVIOUS_PROJECT.LABEL}
     </Link>

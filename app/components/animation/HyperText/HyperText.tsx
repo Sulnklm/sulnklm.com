@@ -58,7 +58,7 @@ export function HyperText({
     if (!hasAnimated && animateOnHover && !isAnimating) {
       iterationCount.current = 0;
       setIsAnimating(true);
-      setHasAnimated(true); // 한 번만 실행
+      setHasAnimated(true); 
     }
   };
 

@@ -7,7 +7,8 @@ import { FLICKMOOD_CONST, FLICKMOOD_FEATURES } from "./const";
 import { Table2, LayoutDashboard, Database } from "lucide-react";
 import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
 import { Reflection } from "@/(pages)/works/[slug]/components/Reflection/Reflection";
-import CodePreview from "../CodePreview/CodePreview";
+import CodeSnippet from "../CodePreview/CodeSnippet";
+import { SectionHeader } from "@/components/ui/SectionHeader/SectionHeader";
 const iconMap = {
   table2: Table2,
   LayoutDashboard: LayoutDashboard,
@@ -22,23 +23,39 @@ export default function FlickMood() {
   return (
     <div className="relative">
       <Overview project={project} />
-      {/* Key Features */}
-      <div className="relative mt-10 pt-10 lg:mt-16 lg:pt-16 container">
-        <SubTextBox
-          additionalClass="mx-auto"
-          icon={
-            <Database
-              size={16}
-              className="text-grey_scale_700"
-              strokeWidth={1.7}
-            />
-          }
-        >
-          {FLICKMOOD_CONST.KEY_FEATURES_SUBTEXT}
-        </SubTextBox>
-        <h2 className="mb-14"> {FLICKMOOD_CONST.KEY_FEATURES_HEADING}</h2>
-        <KeyFeatures features={FLICKMOOD_FEATURES} iconMap={iconMap} />
-        <CodePreview />
+      <div className="relative mt-10 pt-10 lg:mt-16 lg:pt-16 container space-y-10 lg:space-y-24">
+        {/* Key Features */}
+
+        <section>
+          <SectionHeader
+            subText={FLICKMOOD_CONST.KEY_FEATURES.SUBTEXT}
+            heading={FLICKMOOD_CONST.KEY_FEATURES.HEADING}
+            icon={
+              <Database
+                size={16}
+                className="text-grey_scale_700"
+                strokeWidth={1.7}
+              />
+            }
+          />
+          <KeyFeatures features={FLICKMOOD_FEATURES} iconMap={iconMap} />
+        </section>
+        {/* Process */}
+        <section>
+          <SectionHeader
+            subText={FLICKMOOD_CONST.PROCESS.SUBTEXT}
+            heading={FLICKMOOD_CONST.PROCESS.HEADING}
+            icon={
+              <Database
+                size={16}
+                className="text-grey_scale_700"
+                strokeWidth={1.7}
+              />
+            }
+          />
+          <CodeSnippet />
+        </section>
+
         <div className="relative mt-10 pt-10 lg:mt-16 lg:pt-16 container">
           <Reflection reflection={FLICKMOOD_CONST.REFLECTION} />
         </div>
