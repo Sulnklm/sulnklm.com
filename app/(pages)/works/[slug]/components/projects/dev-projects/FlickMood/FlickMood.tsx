@@ -4,7 +4,7 @@ import Overview from "../../../overview/Overview";
 import type { ProjectType } from "@/(pages)/works/types";
 import { KeyFeatures } from "../../../overview/KeyFeatures/KeyFeatures";
 import { FLICKMOOD_CONST, FLICKMOOD_FEATURES } from "./const";
-import { Table2, LayoutDashboard, Database } from "lucide-react";
+import { Table2, LayoutDashboard, Database, Code } from "lucide-react";
 import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
 import { Reflection } from "@/(pages)/works/[slug]/components/Reflection/Reflection";
 import CodeSnippet from "../CodePreview/CodeSnippet";
@@ -46,7 +46,7 @@ export default function FlickMood() {
             subText={FLICKMOOD_CONST.PROCESS.SUBTEXT}
             heading={FLICKMOOD_CONST.PROCESS.HEADING}
             icon={
-              <Database
+              <Code
                 size={16}
                 className="text-grey_scale_700"
                 strokeWidth={1.7}

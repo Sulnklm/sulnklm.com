@@ -7,8 +7,8 @@ export const FLICKMOOD_CONST = {
     HEADING: "Key Features ✦",
   },
   PROCESS: {
-    SUBTEXT: "From Design to Dev",
-    HEADING: "Dev Process",
+    SUBTEXT: "Key logic for fetching details",
+    HEADING: "Code Snippet",
   },
   REFLECTION: {
     title: "Technical Growth",

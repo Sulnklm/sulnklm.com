@@ -42,7 +42,7 @@ const Works = () => {
   } = useWorks(0); // initial category = all
 
   return (
-    <div className="relative z-50 px-10">
+    <div className="relative z-50 px-5 md:px-10">
       <div className="mx-auto">
         <SubTextBox
           additionalClass=""

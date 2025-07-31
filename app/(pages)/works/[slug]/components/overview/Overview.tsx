@@ -37,7 +37,7 @@ export default function Overview({ project }: OverviewProps) {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const triggerPoint = 600;
-      setIsRotated(scrollY > triggerPoint);  // 스크롤이 위/아래로 움직일 때마다 상태 갱신!
+      setIsRotated(scrollY > triggerPoint);  
     };
   
     window.addEventListener("scroll", handleScroll);
@@ -182,7 +182,7 @@ export default function Overview({ project }: OverviewProps) {
               {project.PROJECT_TYPE?.map((type, index) => (
                 <p
                   key={index}
-                  className="text-sm text-grey_scale_500 bg-white/10 px-1 rounded-lg"
+                  className="text-sm text-grey_scale_500 bg-white/[7%] px-1 rounded-md"
                 >
                   {type}
                 </p>

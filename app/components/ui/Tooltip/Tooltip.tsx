@@ -20,7 +20,7 @@ export const Tooltip = ({
   let positionClass = "";
   if (position === "top")
     positionClass =
-      "bottom-full left-1/3 -translate-x-1/3 mb-3";
+      "bottom-full left-1/2 -translate-x-1/2 mb-3";
   else if (position === "bottom")
     positionClass =
       "top-full left-1/2 -translate-x-1/2 mt-2";
@@ -49,7 +49,7 @@ export const Tooltip = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 5 }}
             transition={{ duration: 0.12 }}
-            style={{ left: '-5%', transform: 'translateX(-55%)' }}
+            style={{ left: '0%', transform: 'translateX(-50%)' }}
           >
             {message}
           </motion.div>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { NAVBAR_CONST } from "./const";
 import { Button } from "../Button/Button";
 import Link from "next/link";
@@ -12,13 +12,19 @@ import { ScrollProgress } from "../ui/ScrollProgress/ScrollProgress";
 import { EXTERNAL_LINKS } from "@/lib/const";
 import ProgressiveBlur from "@/components/ui/magicui/progressive-blur";
 import { AnimatedShinyText } from "../ui/ShinyText/ShinyText";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/NavbarMenu/NavbarMenu";
+import {
+  HoveredLink,
+  Menu,
+  MenuItem,
+  ProductItem,
+} from "../ui/NavbarMenu/NavbarMenu";
 import { PROJECTS_CONST } from "@/(pages)/works/const";
 
 const NavBar = (): JSX.Element => {
   const { theme, setTheme } = useTheme();
   const pathname = usePathname();
   const { muted, setMuted } = useSound();
+  const [active, setActive] = useState<string | null>(null);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[10000] max-w-[750px] mx-auto">
@@ -29,31 +35,77 @@ const NavBar = (): JSX.Element => {
       />
       <nav className="relative container mx-auto flex justify-between items-center bg-white/90 backdrop-blur-lg dark:bg-black/80 m-5 p-2.5 z-10 mt-3 rounded-3xl border shadow-br dark:shadow-inner-customWhiteDark">
         <ul className="flex items-center gap-5 text-base z-10">
+          {/* Logo */}
           <Link
             href="/"
             className="group flex items-center hover:gap-2.5 duration-300 gap-1.5 pl-5 pr-5"
           >
             <p className="text-2xl group-hover:scale-95 duration-300 font-[500] font-PerfectlyNineties dark:text-background -translate-y-0.5">
-              <AnimatedShinyText>Suin✦<span className="italic">k</span> </AnimatedShinyText>
+              <AnimatedShinyText>
+                Suin✦<span className="italic">k</span>{" "}
+              </AnimatedShinyText>
             </p>
           </Link>
-          {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, LABEL }) => {
-            const isCurrentPage = pathname === HREF;
-            return (
-              <li key={LABEL}>
+
+          <div
+            onMouseEnter={() => setActive("Works")}
+            onMouseLeave={() => setActive(null)}
+            className="relative"
+          >
+            <MenuItem
+              setActive={setActive}
+              active={active}
+              itemKey="Works"
+              label={
                 <Button
-                  href={HREF}
+                  href="/works"
                   additionalClasses={
-                    isCurrentPage
+                    pathname === "/works"
                       ? "text-sm font-[500] text-grey_scale_900 dark:!text-background"
-                      : "text-grey_scale_700 dark:text-white/40 text-sm"
+                      : "text-grey_scale_700 font-[400] dark:text-white/40 text-sm"
                   }
                 >
-                  <HyperText key={LABEL}>{LABEL}</HyperText>
+                  <HyperText>Works</HyperText>
                 </Button>
-              </li>
-            );
-          })}
+              }
+            >
+              <div className="grid gap-5 p-1">
+                {PROJECTS_CONST.PROJECTS.filter((project) =>
+                  project.CATEGORY?.includes("selected")
+                ) 
+                  .map((project) => (
+                    <ProductItem
+                      key={project.SLUG}
+                      title={project.TITLE}
+                      href={`/works/${project.SLUG}`}
+                      src={project.IMAGE.SRC}
+                      description={project.SUBTITLE}
+                      disciplineArray={project.DISCIPLINE}
+                    />
+                  ))}
+              </div>
+            </MenuItem>
+          </div>
+
+          {NAVBAR_CONST.LINKS.slice(0, 2)
+            .filter(({ LABEL }) => LABEL !== "Works")
+            .map(({ HREF, LABEL }) => {
+              const isCurrentPage = pathname === HREF;
+              return (
+                <li key={LABEL}>
+                  <Button
+                    href={HREF}
+                    additionalClasses={
+                      isCurrentPage
+                        ? "text-sm font-[500] text-grey_scale_900 dark:!text-background"
+                        : "text-grey_scale_700 dark:text-white/40 text-sm"
+                    }
+                  >
+                    <HyperText>{LABEL}</HyperText>
+                  </Button>
+                </li>
+              );
+            })}
         </ul>
         <ul className="flex items-center gap-4 dark:text-white/80 text-base z-10">
           <li>
@@ -76,7 +128,6 @@ const NavBar = (): JSX.Element => {
               <span className="sr-only">{""}</span>
             </Button>
           </li>
-
           <li className="hidden sm:block">
             <Button
               href={EXTERNAL_LINKS.CONTACT.HREF}

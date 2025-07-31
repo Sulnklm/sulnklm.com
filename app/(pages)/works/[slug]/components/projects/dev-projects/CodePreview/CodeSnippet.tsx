@@ -1,6 +1,7 @@
 "use client";
 import { FileTree } from "@/components/ui/FileTree/FileTree";
 import { CodeBlock } from "@/components/ui/CodeBlock/CodeBlock";
+import { Tooltip } from "@/components/ui/Tooltip/Tooltip";
 
 const code = `// Movie details fetching function
 const fetchMovieDetails = async () => {
@@ -58,11 +59,12 @@ const fetchMovieDetails = async () => {
 export default function CodeSnippet() {
   return (
     <div className="grid lg:flex gap-2 w-full">
-
+      <Tooltip message="See more details on GitHub! 👾">
       <div className="h-full">
         <FileTree />
       </div>
-      <div className="flex-1 h-[300px] lg:h-[480px] overflow-y-auto border rounded-md">
+      </Tooltip>
+      <div className="flex-1 h-[300px] lg:h-[480px] overflow-y-auto border rounded-lg">
         <CodeBlock label="MovieDetails.jsx" language="javascript" code={code} />
       </div>
     </div>
