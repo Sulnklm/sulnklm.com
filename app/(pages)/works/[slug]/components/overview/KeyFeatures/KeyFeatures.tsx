@@ -19,7 +19,7 @@ export function KeyFeatures({ features, iconMap }: KeyFeaturesSectionProps) {
   return (
     <section className="relative w-full flex flex-col items-center">
       {/* --- desktop --- */}
-      <div className="hidden md:flex justify-items-center items-center mb-8 border-y py-5 relative">
+      <div className="hidden md:flex justify-items-center items-center mb-8 border-y py-5 relative container">
         <CornerBoxes overrideBottom={{ 1: "bottom-0", 3: "bottom-0" }} />
         {/* indicator */}
         {features.map((feature, i) => {
@@ -68,7 +68,7 @@ export function KeyFeatures({ features, iconMap }: KeyFeaturesSectionProps) {
       <div className="md:hidden flex items-start w-full justify-between gap-10 mb-8 border-y py-5">
         <div className="flex gap-3 justify-between w-full max-w-[250px] relative pl-5">
           <motion.span
-            className="absolute left-10 -translate-x-1/2 -top-[21px] w-12 h-[1.5px] rounded-full bg-coral"
+            className="absolute left-4 -translate-x-1/2 -top-[21px] w-12 h-[1.5px] rounded-full bg-coral"
             layoutId="mobile-indicator"
             transition={{ type: "spring", stiffness: 500, damping: 30 }}
           />
@@ -114,7 +114,7 @@ export function KeyFeatures({ features, iconMap }: KeyFeaturesSectionProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 0 }}
             transition={{ duration: 0.17, ease: "easeOut" }}
-            className="max-h-[580px] rounded-2xl shadow-md transition-all duration-300"
+            className="max-h-[580px] rounded-2xl transition-all duration-300"
           />
         </AnimatePresence>
       </div>

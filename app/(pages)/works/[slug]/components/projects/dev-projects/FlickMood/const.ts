@@ -1,4 +1,3 @@
-// const.tsx
 import type { ProjectFeature } from "../../../overview/KeyFeatures/types";
 
 export const FLICKMOOD_CONST = {

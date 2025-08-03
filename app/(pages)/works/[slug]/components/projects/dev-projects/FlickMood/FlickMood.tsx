@@ -5,7 +5,6 @@ import type { ProjectType } from "@/(pages)/works/types";
 import { KeyFeatures } from "../../../overview/KeyFeatures/KeyFeatures";
 import { FLICKMOOD_CONST, FLICKMOOD_FEATURES } from "./const";
 import { Table2, LayoutDashboard, Database, Code } from "lucide-react";
-import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
 import { Reflection } from "@/(pages)/works/[slug]/components/Reflection/Reflection";
 import CodeSnippet from "../CodePreview/CodeSnippet";
 import { SectionHeader } from "@/components/ui/SectionHeader/SectionHeader";
@@ -25,7 +24,6 @@ export default function FlickMood() {
       <Overview project={project} />
       <div className="relative mt-10 pt-10 lg:mt-16 lg:pt-16 container space-y-10 lg:space-y-24">
         {/* Key Features */}
-
         <section>
           <SectionHeader
             subText={FLICKMOOD_CONST.KEY_FEATURES.SUBTEXT}

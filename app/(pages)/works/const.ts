@@ -53,7 +53,7 @@ export const PROJECTS_CONST = {
         HREF: "https://github.com/Sulnklm/FlickMood",
       },
       LIVE_LINK: {
-        LABEL: "Live Demo",
+        LABEL: "View Live",
         HREF: "https://flickmood.sulnklm.com",
       },
     },
@@ -62,19 +62,29 @@ export const PROJECTS_CONST = {
       // Project 3
       SLUG: "yumpick",
       TITLE: "YumPick",
-      SUBTITLE: "Trendy Restaurants Discovery App UX/UI Case Study",
+      SUBTITLE: "Can one app end all your dining app-hopping?",
       IMAGE: {
         SRC: "/images/projects/yumpick/thumbnail.png",
         ALT: "YumPick Hero Image",
       },
+      OVERVIEW: "A personal project unifying dining pain points overlooked by multiple apps",
       TOOLS: [
         { name: "Figma", src: "/images/tools/figma.png" },
-        { name: "Photoshop", src: "/images/tools/photoshop.svg" },
         { name: "Illustrator", src: "/images/tools/illustrator.svg" },
+        { name: "React Native", src: "/images/tools/react.svg" },
       ],
-      DISCIPLINE: ["Case Study"],
-      TIMELINE: "December 2024",
+      DISCIPLINE: ["Case Study", "App Development"],
+      TIMELINE: "4 Weeks, December 2024",
       CATEGORY: ["all", "case-study"],
+      PROJECT_TYPE: ["User Research","UI Design", "Mobile Prototyping"],
+      GITHUB_LINK: {
+        LABEL: "GitHub",
+        HREF: "https://github.com/Sulnklm/yumpick",
+      },
+      FIGMA_LINK: {
+        LABEL: "View Prototype",
+        HREF: "https://flickmood.sulnklm.com",
+      },
     },
     {
       // Project 4

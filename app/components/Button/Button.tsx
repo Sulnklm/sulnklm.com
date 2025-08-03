@@ -26,7 +26,6 @@ export const Button: React.FC<ButtonPropTypes> = ({
     }
   };
 
-  // 클릭 이벤트
   const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     playClickSound();
     if (onClick) onClick();
@@ -82,7 +81,7 @@ export const Button: React.FC<ButtonPropTypes> = ({
     return (
       <a
         href={href}
-        className={`${additionalClasses} group inline-flex items-center hover:scale-[97%] duration-300 `}
+        className={`${additionalClasses} !font-[450] group inline-flex items-center hover:scale-[97%] duration-300 `}
         onClick={handleClick}
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
@@ -93,7 +92,7 @@ export const Button: React.FC<ButtonPropTypes> = ({
     );
   }
 
-  // 일반 버튼
+  // 3
   return (
     <button
       className={`${additionalClasses} group inline-flex items-center gap-1 hover:text-grey_scale_700 duration-300`}
