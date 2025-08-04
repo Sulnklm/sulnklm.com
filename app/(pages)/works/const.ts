@@ -17,9 +17,9 @@ export const PROJECTS_CONST = {
         ALT: "YumPick Hero Image",
       },
       TOOLS: [
-        { name: "Figma", src: "/images/tools/figma.png" },
         { name: "Photoshop", src: "/images/tools/photoshop.svg" },
         { name: "Illustrator", src: "/images/tools/illustrator.svg" },
+        { name: "Figma", src: "/images/tools/figma.png" },
       ],
       DISCIPLINE: ["Case Study"],
       TIMELINE: "2 Weeks, July 2025",
@@ -40,9 +40,10 @@ export const PROJECTS_CONST = {
         ALT: "FlickMood Hero Image",
       },
       TOOLS: [
-        { name: "React", src: "/images/tools/react.svg" },
-        { name: "Tailwind CSS", src: "/images/tools/tailwind.svg" },
         { name: "Figma", src: "/images/tools/figma.png" },
+        { name: "Tailwind CSS", src: "/images/tools/tailwind.svg" },
+        { name: "React", src: "/images/tools/react.svg" },
+
       ],
       DISCIPLINE: ["Web Development"],
       TIMELINE: "2 Weeks, December 2024",
@@ -69,9 +70,9 @@ export const PROJECTS_CONST = {
       },
       OVERVIEW: "A personal project unifying dining pain points overlooked by multiple apps",
       TOOLS: [
-        { name: "Figma", src: "/images/tools/figma.png" },
+        { name: "Photoshop", src: "/images/tools/photoshop.svg" },
         { name: "Illustrator", src: "/images/tools/illustrator.svg" },
-        { name: "React Native", src: "/images/tools/react.svg" },
+        { name: "Figma", src: "/images/tools/figma.png" },
       ],
       DISCIPLINE: ["Case Study", "App Development"],
       TIMELINE: "4 Weeks, December 2024",
@@ -96,9 +97,9 @@ export const PROJECTS_CONST = {
         ALT: "Wishbond Hero Image",
       },
       TOOLS: [
-        { name: "Figma", src: "/images/tools/figma.png" },
         { name: "Photoshop", src: "/images/tools/photoshop.svg" },
         { name: "Illustrator", src: "/images/tools/illustrator.svg" },
+        { name: "Figma", src: "/images/tools/figma.png" },
       ],
       DISCIPLINE: ["Case Study"],
       TIMELINE: "January 2025",

@@ -1,6 +1,5 @@
 import { InsetBlockInside } from "@/components/ui/InsetBlockInside";
 import OrangeTextBox from "@/components/ui/OrangeTextBox/OrangeTextBox";
-import { ReflectionTypes } from "./types";
 import { IconCard } from "@/components/ui/IconCard/IconCard";
 import { Lightbulb } from "lucide-react";
 import { PROJECTS_CONST } from "@/(pages)/works/const";
@@ -8,8 +7,14 @@ import { useParams } from "next/navigation";
 import React from "react";
 import { PreviousProjectButton } from "../NavButton/\bPreviousProjectButton";
 import { NextProjectButton } from "../NavButton/NextProjectButton";
+import { ProjectDescriptionCard } from "@/components/ui/ProjectDescriptionCard/ProjectDescriptionCard";
 
-export function Reflection({ reflection }: { reflection: ReflectionTypes }) {
+interface ReflectionTypes {
+  title: string;
+  description: string;
+}
+
+export function Reflection({ title, description }: ReflectionTypes) {
   const params = useParams();
   const currentSlug = Array.isArray(params?.slug)
     ? params.slug[0]
@@ -29,15 +34,12 @@ export function Reflection({ reflection }: { reflection: ReflectionTypes }) {
   return (
     <div className="pb-10">
       <OrangeTextBox text="Reflection" />
-      <InsetBlockInside>
-        <div className="grid gap-3">
-          <IconCard>
-            <Lightbulb />
-          </IconCard>
-          <h4>{reflection.title}</h4>
-          <p>{reflection.description}</p>
-        </div>
-      </InsetBlockInside>
+
+      <ProjectDescriptionCard
+        icon={<Lightbulb />}
+        title={title}
+        description={description}
+      />
 
       {/* Previous/next btn */}
       <div className="flex justify-between mt-8 gap-4">

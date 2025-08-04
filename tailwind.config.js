@@ -19,7 +19,7 @@ module.exports = {
         padding: {
           DEFAULT: "0.5rem",
           sm: "2rem",
-          lg: "4rem",
+          lg: "3rem",
           xl: "5rem",
           "2xl": "6rem",
         },
@@ -136,9 +136,9 @@ module.exports = {
         "h5-md": ["17px"],
         "h5-lg": ["17px"],
 
-        p: ["16px", { lineHeight: "1.3" }],
-        "p-md": ["17px"],
-        "p-lg": ["17px"],
+        p: ["15px", { lineHeight: "1.4" }],
+        "p-md": ["16px"],
+        "p-lg": ["16px"],
       },
       fontFamily: {
         Sans: ['"Geist", sans-serif'],
@@ -214,7 +214,7 @@ module.exports = {
         },
 
         p: {
-          "@apply text-p font-Sans text-grey_scale_900 dark:text-grey_scale_500 font-[350]":
+          "@apply text-p font-Sans text-grey_scale_900 dark:text-grey_scale_500 font-[350] tracking-normal [word-spacing:0.03em]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},

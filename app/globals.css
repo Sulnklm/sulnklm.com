@@ -11,6 +11,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body,
+html {
+  /* overflow: auto !important; */
+  scroll-behavior: smooth;
+}
+
 .text-gradient {
   @apply bg-gradient bg-clip-text text-transparent;
 }
@@ -190,13 +196,8 @@
   border-color: var(--border-color);
 }
 
-body,
-html {
-  overflow: auto !important;
-}
-
 :root {
-  --gap: 1rem; /* 반복 아이템 간 간격 */
+  --gap: 1rem;
 }
 
 @keyframes marquee {

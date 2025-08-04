@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <SoundProvider>
           <Providers>
             <NavBar />
-            <main className="overflow-hidden">
+            <main className="">
               {/* <img
                 src={HOME_HERO_CONST.SUNSHINE.SRC}
                 alt={HOME_HERO_CONST.SUNSHINE.ALT}

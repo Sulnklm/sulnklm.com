@@ -10,8 +10,8 @@ export const FLICKMOOD_CONST = {
     HEADING: "Code Snippet",
   },
   REFLECTION: {
-    title: "Technical Growth",
-    description:
+    TITLE: "Technical Growth",
+    DESCRIPTION:
       "This project strengthened my skills in web design and component-based frontend development with React. I learned how to fetch and manage real-world data using APIs, handle state changes, and store user selections with Local Storage—all while ensuring a fully responsive layout.",
   },
 };

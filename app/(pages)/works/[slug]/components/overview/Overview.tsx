@@ -52,7 +52,7 @@ export default function Overview({ project }: OverviewProps) {
   }, []);
 
   return (
-    <section className="relative md:border-x mx-auto border-dashed md:max-w-[90vw] 2xl:max-w-[80vw]">
+    <section className="relative md:border-x mx-auto border-dashed md:max-w-[90vw] 2xl:max-w-[80vw] overflow-hidden sm:overflow-visible">
       <CornerBoxes overrideBottom={{ 1: "bottom-0", 3: "bottom-0" }} />
       <Ruler height={height} left />
       <Ruler height={height} left={false} />

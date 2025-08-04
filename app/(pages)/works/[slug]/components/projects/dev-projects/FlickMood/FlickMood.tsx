@@ -55,7 +55,7 @@ export default function FlickMood() {
         </section>
 
         <div className="relative mt-10 pt-10 lg:mt-16 lg:pt-16 container">
-          <Reflection reflection={FLICKMOOD_CONST.REFLECTION} />
+          <Reflection title={FLICKMOOD_CONST.REFLECTION.TITLE} description={FLICKMOOD_CONST.REFLECTION.DESCRIPTION}/>
         </div>
       </div>
     </div>

@@ -58,7 +58,7 @@ export default function Hero() {
         </div>
         <div className="relative z-50">
           <div className="relative">
-            <div className="relative mb-5 z-10 grid xl:grid-cols-[auto,1fr] items-center gap-10 xl:gap-16 px-2 h-full">
+            <div className="relative mb-5 z-10 grid xl:grid-cols-[auto,1fr] items-center gap-10 xl:gap-16 h-full">
               <div className="grid h-fit gap-12 justify-center">
                 <div className="w-fit grid pt-3 md:pt-0 md:-translate-y-5">
                   <div className="flex items-end -translate-x-2.5">
@@ -104,7 +104,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="h-full flex flex-col justify-center">
-                <div className="bg-white/30 dark:bg-primary pt-5 md:pt-8 px-7 md:px-10 pb-8 md:pb-10 rounded-xl border">
+                <div className="bg-white/30 dark:bg-primary pt-5 md:pt-8 px-7 md:px-10 pb-8 md:pb-10 rounded-3xl border">
                   <SubTextBox
                     icon={
                       <MessageCircleHeart
