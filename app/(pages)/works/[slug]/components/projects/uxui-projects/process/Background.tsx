@@ -18,7 +18,7 @@ export default function Background({
   description,
 }: BackgroundPropTypes) {
   return (
-    <section id="background" className="container">
+    <section id="background">
       <SectionHeader
         subText={BACKGOUND_CONST.SUBTEXT}
         heading={heading}
