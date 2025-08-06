@@ -17,10 +17,10 @@ const SelectedWorks = () => {
   );
 
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <InsetBlock>
         <PatternBackground />
-        <section className="z-50 lg:px-10">
+        <section className="z-50 lg:px-10 overflow-hidden">
           <div className="relative lg:gap-20">
             <div className="flex flex-col justify-center mb-3">
               <SubTextBox
@@ -45,14 +45,14 @@ const SelectedWorks = () => {
               </div>
             </div>
 
-            <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-5 2xl:gap-10 place-items-center bg-customGray w-full">
+            <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-5 md:gap-8 xl:gap-10 place-items-center bg-customGray w-full xl:container">
               {filteredProjects.length === 0 ? (
                 <p className="text-center text-gray-500">
                   No selected projects found.
                 </p>
               ) : (
                 filteredProjects.map((project, i) => (
-                  <ListProjectCard key={project.SLUG} index={i} PROJECT={project} />
+                  <GridProjectCard key={project.SLUG} PROJECT={project} />
                 ))
               )}
             </div>

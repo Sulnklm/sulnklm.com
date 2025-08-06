@@ -9,6 +9,7 @@ import OrangeTextBox from "@/components/ui/OrangeTextBox/OrangeTextBox";
 
 const Values = () => {
   return (
+    <div className="overflow-hidden">
     <InsetBlock>
       <OrangeTextBox text="About Me" />
       <div className="max-w-[68rem] mx-auto mb-6 md:mb-10">
@@ -35,6 +36,7 @@ const Values = () => {
             </Button>
       </div>
     </InsetBlock>
+    </div>
   );
 };
 
