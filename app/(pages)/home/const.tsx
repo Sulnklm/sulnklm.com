@@ -44,9 +44,9 @@ export const SELECTED_PROJECTS_CONST = {
 
 export const INTRO_CONST = {
   HEADING1:
-    "I create story-driven designs and enjoy the thoughtful process of coding that brings ideas to life.",
+    "I craft story-driven designs and enjoy the thoughtful process of coding that brings ideas to life.",
     HEADING2:
-    "I create story-driven designs and enjoy the thoughtful process of coding that brings ideas to life.",
+    "I craft story-driven designs and enjoy the thoughtful process of coding that brings ideas to life.",
     BUTTON: {
     HREF: "/about",
     TEXT: "Learn more",

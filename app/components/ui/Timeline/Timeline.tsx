@@ -50,12 +50,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
               <div className="md:pl-10">
-                <h5 className="hidden md:block mb-5 font-[400] opacity-80 border rounded-full w-fit px-3 py-1 bg-white dark:bg-primary">
+                <h5 className="hidden text-sm md:block mb-5 font-[400] opacity-80 border rounded-full w-fit px-3 py-1 bg-white dark:bg-primary">
                   {item.time}
                 </h5>
                 <div>
                   <h3 className="hidden md:block font-PerfectlyNineties tracking-normal dark:text-background">{item.position}</h3>
-                  <h5 className="hidden md:block font-[350] text-sm text-primary dark:text-background">
+                  <h5 className="hidden md:block font-[350] text-base text-primary dark:text-background">
                     {item.company}
                   </h5>
                   <p className="hidden md:block mt-3 font-[350] text-sm leading-tight text-grey_scale_800 dark:text-grey_scale_700">
@@ -67,7 +67,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
             <div className="relative pl-10 pr-4 md:pl-4 w-full">
               <div>
-                <h5 className="md:hidden mb-5 font-[400] opacity-80 border rounded-full w-fit px-3 py-1 bg-white dark:bg-primary">
+                <h5 className="md:hidden text-sm mb-5 font-[400] opacity-80 border rounded-full w-fit px-3 py-1 bg-white dark:bg-primary">
                   {item.time}
                 </h5>
                 <div>
@@ -75,7 +75,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   <h5 className="md:hidden font-[400] text-base text-primary dark:text-background">
                     {item.company}
                   </h5>
-                  <h5 className="md:hidden mb-6 mt-3 font-[350] text-sm leading-tight text-grey_scale_800 dark:text-grey_scale_700">
+                  <h5 className="md:hidden mb-6 mt-3 font-[350] text-base leading-tight text-grey_scale_800 dark:text-grey_scale_700">
                     {item.description}
                   </h5>
                 </div>

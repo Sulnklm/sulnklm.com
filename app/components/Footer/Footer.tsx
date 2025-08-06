@@ -16,6 +16,7 @@ import { FOOTER_CONST } from "./const";
 import { PointerHighlight } from "../ui/PointerHighlight/PointerHighlight";
 import { useVancouverTime } from "@/hooks/useVancouverTime";
 import { EXTERNAL_LINKS } from "@/lib/const";
+import BackToTopButton from "../ui/BackToTopButton/BackToTopButton";
 const ORBIT_RADIUS = "35vw";
 
 function getOrbitStyle(angleDeg: number, radius = ORBIT_RADIUS) {
@@ -77,8 +78,8 @@ const Footer = () => {
     Icon = Sunrise; // (04~06)
   } else if (hourNum >= 7 && hourNum < 18) {
     Icon = Sun; //(07~10)
-  // } else if (hourNum >= 11 && hourNum < 18) {
-  //   Icon = SunMoon; // (11~17)
+    // } else if (hourNum >= 11 && hourNum < 18) {
+    //   Icon = SunMoon; // (11~17)
   } else if (hourNum >= 18 && hourNum < 20) {
     Icon = Sunset; // (18~19)
   } else if (hourNum >= 20 && hourNum < 24) {
@@ -87,12 +88,13 @@ const Footer = () => {
 
   return (
     <footer className="relative mt-10 m-5 dark:m-0">
-      <div className="flex gap-2 bg-white rounded-lg px-3 py-1 absolute bottom-5 right-5 dark:right-10 w-fit z-[1000] text-white dark:text-yellow-300">
+      <div className="hidden lg:flex gap-2 bg-white rounded-lg px-3 py-1 absolute bottom-5 left-5 dark:right-10 w-fit z-[1000] text-white dark:text-yellow-300">
         <Icon size={17} strokeWidth={1.9} className="text-grey_scale_1000" />
         <p className="!text-sm text-nowrap dark:text-grey_scale_1000">
-          Vancouver: {timeStr}
+          {FOOTER_CONST.TIME}{timeStr}
         </p>
       </div>
+        <BackToTopButton />
       <div className="relative z-[600] w-full h-[60vh] sm:h-[85vh] lg:h-[90vh] pt-20 lg:pt-24 bg-primary dark:bg-black overflow-hidden rounded-3xl">
         <StarsBackground />
         <ShootingStars />
@@ -102,7 +104,7 @@ const Footer = () => {
               {FOOTER_CONST.HEADING1}
             </h2>
             <PointerHighlight
-              rectangleClassName="!border-orange-200 bg-blue-700/10 dark:bg-blue-700/10"
+              rectangleClassName="!border-orange-200 bg-orange-700/5 dark:bg-orange-700/5"
               pointerClassName="text-coral"
             >
               <h2 className="text-white text-6xl md:text-7xl">
@@ -114,7 +116,6 @@ const Footer = () => {
         <div className="absolute left-1/2 top-full -translate-x-1/2 -translate-y-1/2 lg:-translate-y-72">
           {/* orbit */}
           <div className="relative w-full h-[60vw] min-h-[500px] max-h-[800px] flex justify-center items-center scale-125 lg:scale-100">
-            {/* 바깥 원 */}
             <div
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] rounded-full !border-grey_scale_900 dark:border-grey_scale_800 border border-dashed"
               style={{

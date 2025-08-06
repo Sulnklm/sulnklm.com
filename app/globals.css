@@ -17,6 +17,10 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: #ff753e;   
+  color: #222;         
+}
 .text-gradient {
   @apply bg-gradient bg-clip-text text-transparent;
 }
@@ -233,6 +237,9 @@ pre {
 .token {
   color: #717171 !important;
   background-color: transparent !important;
+  font-weight: 500 !important;
+  font-family: monospace;
+  font-size: 14px !important;
 }
 
 span {

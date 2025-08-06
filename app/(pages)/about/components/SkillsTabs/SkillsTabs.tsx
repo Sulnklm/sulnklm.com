@@ -32,7 +32,7 @@ export const SkillsTabs: React.FC<SkillsTabsProps> = ({
         tabs={tabs}
         onChange={setActiveIndex}
       />
-      <div className="mt-5">
+      <div className="mt-5 relative">
         <InsetBlockInside>
           <div className="flex flex-wrap gap-3">
             {contentMap[activeIndex].map((item, idx) => (

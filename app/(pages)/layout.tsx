@@ -2,10 +2,11 @@ import NavBar from "../components/Navbar/Navbar";
 import "../globals.css";
 import { ReactNode } from "react";
 import { Providers } from "../providers";
-import { HOME_HERO_CONST } from "./home/const";
 import Footer from "@/components/Footer/Footer";
 import { SoundProvider } from "@/components/ui/SoundContextType/SoundContextType";
 import ProgressiveBlur from "@/components/ui/magicui/progressive-blur";
+import { SmoothScroll } from "@/components/ui/Smoothscroll/SmoothScroll";
+import { SmoothCursor } from "@/components/ui/Cursor/Cursor";
 
 export const metadata = {
   title: "Suin Kim | Portfolio",
@@ -32,16 +33,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />{" "}
         <SoundProvider>
           <Providers>
-            <NavBar />
-            <main className="">
-              {/* <img
-                src={HOME_HERO_CONST.SUNSHINE.SRC}
-                alt={HOME_HERO_CONST.SUNSHINE.ALT}
-                className="absolute scale-[150%] brightness-200 md:-left-1/4 top-20 md:-bottom-20 dark:hidden z-[1]"
-              /> */}
-              {children}
-            </main>
-            <Footer />
+            <SmoothScroll>
+              <div className="hidden lg:block">
+                <SmoothCursor />
+              </div>
+              <NavBar />
+              <main>{children}</main>
+              <Footer />
+            </SmoothScroll>
           </Providers>
         </SoundProvider>
       </body>

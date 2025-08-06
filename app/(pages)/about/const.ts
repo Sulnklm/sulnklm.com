@@ -98,7 +98,7 @@ export const EXPERIENCE_CONST: ExperienceItem[] = [
       },
     ],
     description:
-      "Developed features and maintained UI consistency for Simuhealth, a SaaS product, using TypeScript and React, and collaborated on QA testing and bug resolution to enhance reliability.",
+      "Collaborated with developers and designers to conduct QA testing and identify & resolve bugs in a TypeScript-based UI.",
   },
   {
     time: "May - July 2025",
@@ -123,7 +123,7 @@ export const EXPERIENCE_CONST: ExperienceItem[] = [
       },
     ],
     description:
-      "Developed interactive and visually engaging content for digital campaigns and social media using Photoshop, Illustrator, and After Effects, effectively boosting user engagement and brand awareness.",
+      "Created scroll-stopping visuals for social media using Photoshop and Illustrator, and produced motion graphics in After Effects to boost engagement and brand awareness.",
   },
   {
     time: "May - July 2025",
@@ -139,6 +139,6 @@ export const EXPERIENCE_CONST: ExperienceItem[] = [
 
     ],
     description:
-      "Improved user experience and visual consistency by redesigning and rebuilding various client websites, creating and applying design systems, and addressing usability issues through iterative feedback.",
+      "Designed and developed responsive, user-centered websites for clients using React, Tailwind CSS, and WordPress, with a focus on usability, scalability, and visual consistency.",
   },
 ];

@@ -36,7 +36,7 @@ export function Ruler({
           className="
     text-[10px] select-none font-[300]
     !text-grey_scale_500/80
-    dark:!text-grey_scale_500/40"
+    dark:!text-grey_scale_500/60"
           style={{
             opacity: alpha,
             display: "inline-block",

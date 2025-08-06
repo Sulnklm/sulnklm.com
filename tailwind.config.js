@@ -92,7 +92,7 @@ module.exports = {
       colors: {
         primary: "#111111",
         background: "#F7F7F7",
-        coral: "#F76239",
+        coral: "#FF653A",
         grey_scale_50: "#F9F9F9",
         grey_scale_100: "#F8F8F8",
         grey_scale_200: "#EFEFF1",
@@ -203,24 +203,24 @@ module.exports = {
         },
 
         h5: {
-          "@apply text-h5 font-Sans text-grey_scale_900/80 dark:text-grey_scale_500/90 font-[350]":
+          "@apply text-h5 font-Sans text-grey_scale_900/80 dark:text-grey_scale_500/90 font-[400]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h5-md": {},
           },
           "@media (min-width: 1024px)": {
-            "@apply text-h5-lg": {},
+            "@apply text-h5-lg font-[350]": {},
           },
         },
 
         p: {
-          "@apply text-p font-Sans text-grey_scale_900 dark:text-grey_scale_500 font-[350] tracking-normal [word-spacing:0.03em]":
+          "@apply text-p font-Sans text-grey_scale_900 dark:text-grey_scale_500 font-[400] tracking-normal [word-spacing:0.03em]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},
           },
           "@media (min-width: 1024px)": {
-            "@apply text-p-lg": {},
+            "@apply text-p-lg font-[350]": {},
           },
         },
       });

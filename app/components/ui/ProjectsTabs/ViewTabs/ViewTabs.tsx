@@ -17,13 +17,13 @@ export const ViewTabs: React.FC<ViewTabsProps> = ({
   const playClickSound = useClickSound();
 
   return (
-    <div className="flex space-x-2.5 rounded-2xl px-3 py-2.5 relative bg-background dark:bg-black/30 shadow-brBoth dark:shadow-brBothDark dark:border-b dark:!border-b-grey_scale_900/50 dark:border-t dark:!border-t-black">
+    <div className="flex space-x-2.5 rounded-2xl px-3 py-2.5 relative">
       {icons.map((icon, idx) => (
         <button
           key={idx}
           className={`relative rounded-xl ${
             idx === selectedIndex
-              ? "bg-white dark:bg-grey_scale_900/50 text-primary dark:text-white p-2 drop-shadow-md"
+              ? "bg-white dark:bg-primary text-grey_scale_1000 dark:text-white p-2 shadow-sm"
               : "text-grey_scale_500 dark:text-grey_scale_800 hover:text-orange-500 duration-300 px-2"
           } transition-colors flex items-center justify-center`}
           onClick={() => {onSelect(idx); playClickSound();}}

@@ -4,7 +4,7 @@ import GlassButton from "./GlassButton/GlassButton";
 import { ShimmerButton } from "./ShimmerButton/ShimmerButton";
 import PushButton from "./PushButton/PushButton";
 import { ButtonPropTypes } from "./types";
-import { useButtonUtils } from "./useButtonUtils"; 
+import { useButtonUtils } from "./useButtonUtils";
 
 export const Button: React.FC<ButtonPropTypes> = ({
   href,
@@ -26,7 +26,9 @@ export const Button: React.FC<ButtonPropTypes> = ({
     }
   };
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => {
     playClickSound();
     if (onClick) onClick();
 

@@ -12,7 +12,7 @@ interface ReflectionCardProps {
 export function ProjectDescriptionCard({ icon, title, description }: ReflectionCardProps) {
   return (
     <InsetBlockInside>
-      <div className="grid gap-3">
+      <div className="grid gap-3.5">
         <IconCard>
           {icon}
         </IconCard>

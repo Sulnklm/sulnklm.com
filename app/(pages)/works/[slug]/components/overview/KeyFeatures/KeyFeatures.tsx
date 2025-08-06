@@ -104,7 +104,7 @@ export function KeyFeatures({ features, iconMap }: KeyFeaturesSectionProps) {
         </div>
       </div>
       {/* --- feature image --- */}
-      <div className="w-full flex justify-center px-5 md:px-0 min-h-[200px] lg:mt-3">
+      <div className="w-full hidden lg:flex justify-center px-5 md:px-0 min-h-[200px] lg:mt-3">
         <AnimatePresence mode="wait">
           <motion.img
             key={features[activeIdx].image}
@@ -117,6 +117,19 @@ export function KeyFeatures({ features, iconMap }: KeyFeaturesSectionProps) {
             className="max-h-[580px] rounded-2xl transition-all duration-300"
           />
         </AnimatePresence>
+      </div>
+
+      <div className="w-full flex lg:hidden justify-center px-5 md:px-0 min-h-[200px] lg:mt-3">
+          <img
+            key={features[activeIdx].image}
+            src={features[activeIdx].image}
+            alt={features[activeIdx].label}
+            // initial={{ opacity: 0, y: 0 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // exit={{ opacity: 0, y: 0 }}
+            // transition={{ duration: 0.17, ease: "easeOut" }}
+            className="max-h-[580px] rounded-2xl transition-all duration-300"
+          />
       </div>
     </section>
   );

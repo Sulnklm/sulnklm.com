@@ -20,18 +20,18 @@ export const FLICKMOOD_FEATURES: ProjectFeature[] = [
     icon: "table2",
     label: "Mood-Based Filtering",
     description: "Easily browse movies by mood or vibe",
-    image: "/images/projects/flickmood/feature1.png",
+    image: "/images/projects/flickmood/feature1.jpg",
   },
   {
     icon: "LayoutDashboard",
     label: "Dynamic Movie Data Fetching",
     description: "All the movie info at a glance",
-    image: "/images/projects/flickmood/feature2.png",
+    image: "/images/projects/flickmood/feature2.jpg",
   },
   {
     icon: "LayoutDashboard",
     label: "Favorites Stored Locally",
     description: "Save your picks with one click",
-    image: "/images/projects/flickmood/feature3.png",
+    image: "/images/projects/flickmood/feature3.jpg",
   },
 ];

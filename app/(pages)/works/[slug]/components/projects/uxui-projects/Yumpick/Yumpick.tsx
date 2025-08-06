@@ -13,6 +13,7 @@ import { Reflection } from "../../../Reflection/Reflection";
 import { SectionHeader } from "@/components/ui/SectionHeader/SectionHeader";
 import { KeyFeatures } from "../../../overview/KeyFeatures/KeyFeatures";
 import {
+  ArrowLeft,
   Book,
   CalendarCheck,
   Layers,
@@ -42,6 +43,7 @@ import CompetitorAnalysis from "../process/CompetitorAnalysis";
 import Defining from "../process/Defining";
 import IdeasToAction from "../process/DesignProcess";
 import DesignProcess from "../process/DesignProcess";
+import { Button } from "@/components/Button/Button";
 
 export default function Yumpick() {
   const project = PROJECTS_CONST.PROJECTS.find(
@@ -78,20 +80,23 @@ export default function Yumpick() {
         <div className="relative flex border-y py-10 lg:py-20">
           <CornerBoxes overrideBottom={{ 1: "bottom-0", 3: "bottom-0" }} />
 
-          <div className="hidden lg:block mr-8 min-w-[180px]">
+          <div className="hidden lg:block mr-8 min-w-[190px]">
             <TableOfContents
               sections={[
-                { id: "quick-preview", label: "Quick Preview" },
-                { id: "background", label: "Background" },
-                { id: "user-research", label: "User Research" },
-                { id: "competitor-analysis", label: "Competitor Analysis" },
-                { id: "defining", label: "Defining" },
-                { id: "design-process", label: "Design Process" },
-                { id: "reflection", label: "Reflection" },
+                { id: "quick-preview", label: "👁️ Quick Preview" },
+                { id: "background", label: "🏁 Background" },
+                { id: "user-research", label: "👥 User Research" },
+                { id: "competitor-analysis", label: "🔍 Competitor Analysis" },
+                { id: "defining", label: "👩🏻‍🦱 Defining" },
+                { id: "design-process", label: "🎨 Design Process" },
+                { id: "reflection", label: "📝 Reflection" },
               ]}
             />
           </div>
-          <div className="lg:border-l border-dashed space-y-20 container">
+          <div className="relative lg:border-l border-dashed space-y-20 container">
+          <div className="hidden lg:block absolute top-0 -left-[5px] w-[9px] h-[9px] border rounded-[2.5px] border-gray-200 bg-white dark:bg-primary" />
+          <div className="hidden lg:block absolute bottom-0 -left-[5px] w-[9px] h-[9px] border rounded-[2.5px] border-gray-200 bg-white dark:bg-primary" />
+
             <section id="background">
               <Background
                 heading={YUMPICK_PROJECT.BACKGROUND.HEADING}
@@ -107,7 +112,7 @@ export default function Yumpick() {
               />
               <div className="">
                 <InsetBlockInside>
-                  <div className="py-10">
+                  <div className="pt-5 pb-1 lg:py-10">
                     <BarChart
                       data={APP_DATA}
                       title={
@@ -115,7 +120,7 @@ export default function Yumpick() {
                           .SURVEY1_HEADING
                       }
                     />
-                    <div className="border-t mt-14 pb-14 border-dashed"></div>
+                    <div className="border-t mt-10 lg:mt-14 pb-10 lg:pb-14 border-dashed"></div>
                     <AnimatedNotificationList
                       notifications={USER_INTERVIEW_SURVEY}
                     />
@@ -139,12 +144,12 @@ export default function Yumpick() {
                 description={YUMPICK_PROJECT.BACKGROUND.DESCRIPTION}
               />
               <InsetBlockInside>
-                <div className="pb-10">
+                <div className="pb-1 lg:pb-10">
                   <img
                     src={YUMPICK_PROJECT.COMPETITOR_ANALYSIS.IMG.SRC}
                     alt={YUMPICK_PROJECT.COMPETITOR_ANALYSIS.IMG.ALT}
                   />
-                  <div className="border-t mt-3 pb-14 border-dashed"></div>
+                  <div className="border-t mt-3 pb-8 lg:pb-14 border-dashed"></div>
                   <AnimatedNotificationList
                     notifications={USER_INTERVIEW_PROBLEMS}
                   />

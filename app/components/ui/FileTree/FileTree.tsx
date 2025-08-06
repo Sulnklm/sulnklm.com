@@ -2,7 +2,7 @@ import { File, Tree, Folder } from "@/components/ui/magicui/file-tree";
 
 export function FileTree() {
   return (
-    <div className="relative  flex h-[480px] w-full lg:w-fit flex-col items-center justify-center rounded-lg overflow-hidden border">
+    <div className="relative  flex h-[480px] w-full lg:w-fit flex-col items-center justify-center rounded-lg overflow-y-hidden border pointer-events-none">
       <Tree
         className="rounded-md p-2"
         initialSelectedId="7"
@@ -30,8 +30,8 @@ export function FileTree() {
               <File value="2">
                 <p className="text-base">Home.jsx</p>
               </File>
-              <File value="3" className="!text-coral">
-                <p className="text-base !text-coral font-[400]">MovieDetails.jsx</p>
+              <File value="3" className="!text-[#ef8151]">
+                <p className="text-base !text-[#ef8151] font-[400]">MovieDetails.jsx</p>
               </File>
               <File value="4">
                 <p className="text-base">Search.jsx</p>

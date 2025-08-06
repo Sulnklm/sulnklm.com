@@ -8,4 +8,6 @@ export type ButtonPropTypes = {
   theme?: "primary" | "secondary" | "tertiary";
   icon?: ReactNode;
   muted?: boolean;
+  target?: string;
+  rel?: string;
 };

@@ -150,15 +150,29 @@ export default function Overview({ project }: OverviewProps) {
           initial="hidden"
           animate="visible"
           custom={4}
-          className="mt-20 w-full"
+          className="mt-10 lg:mt-20 w-full"
         >
           {isSafariMode ? (
-            <Safari
-              url={project.URL}
-              videoSrc={project.VIDEO}
-              imageSrc={project.SAFARI_IMAGE?.SRC}
-              className="mx-auto drop-shadow-lg"
-            />
+            <>
+              {/* mobile: just video */}
+              <video
+                src={project.VIDEO}
+                className="w-full h-auto rounded-[25px] mx-auto block md:hidden"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+              {/* descktop: Safari */}
+              <div className="hidden md:block">
+                <Safari
+                  url={project.URL}
+                  videoSrc={project.VIDEO}
+                  imageSrc={project.SAFARI_IMAGE?.SRC}
+                  className="mx-auto drop-shadow-lg"
+                />
+              </div>
+            </>
           ) : (
             <img
               src={project.IMAGE.SRC}
@@ -169,7 +183,7 @@ export default function Overview({ project }: OverviewProps) {
         </motion.div>
       </div>
 
-      <div className="md:flex items-center container mt-20">
+      <div className="md:flex items-center container mt-10 lg:mt-20 px-5">
         <div
           className={`flex gap-3 lg:w-1/3 bg-primary border-b lg:border-b-0 lg:border-r dark:!border-grey_scale_1000/50 border-dashed rounded-3xl p-5 transition-transform duration-300 ${
             isRotated

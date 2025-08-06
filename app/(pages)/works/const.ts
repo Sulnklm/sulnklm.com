@@ -45,7 +45,7 @@ export const PROJECTS_CONST = {
         { name: "React", src: "/images/tools/react.svg" },
       ],
       THUMBNAIL1: {
-        SRC: "/images/projects/flickmood/thumbnail-web.png",
+        SRC: "/images/projects/flickmood/thumbnail-web.jpg",
         ALT: "FlickMood Thumbnail Image",
       },
       THUMBNAIL2: {
@@ -108,23 +108,31 @@ export const PROJECTS_CONST = {
         HREF: "https://www.figma.com/board/pe65zE0tDSEV0ajTwXpQU5/YUMPICK?node-id=0-1&t=6xnbUKNRrCFdnWul-1",
       },
     },
-    // {
-    //   // Project 4
-    //   SLUG: "wishbond",
-    //   TITLE: "Wishbond",
-    //   SUBTITLE: "Gift-Giving Made Easy: WishBond App UX/UI Case Study",
-    //   IMAGE: {
-    //     SRC: "/images/projects/wishbond/thumbnail.png",
-    //     ALT: "Wishbond Hero Image",
-    //   },
-    //   TOOLS: [
-    //     { name: "Photoshop", src: "/images/tools/photoshop.svg" },
-    //     { name: "Illustrator", src: "/images/tools/illustrator.svg" },
-    //     { name: "Figma", src: "/images/tools/figma.png" },
-    //   ],
-    //   DISCIPLINE: ["Case Study"],
-    //   TIMELINE: "January 2025",
-    //   CATEGORY: ["all", "case-study"],
-    // },
+    {
+      // Project 4
+      SLUG: "wishbond",
+      TITLE: "Coming Soon...",
+      SUBTITLE: "I’m actively working on this project! 🔨 👩🏻‍💻",
+      IMAGE: {
+        SRC: "/images/projects/wishbond/thumbnail.png",
+        ALT: "Wishbond Hero Image",
+      },
+      THUMBNAIL1: {
+        SRC: "/images/projects/yumpick/yumpick-thumbnail.jpg",
+        ALT: "Thumbnail Image",
+      },
+      THUMBNAIL2: {
+        SRC: "/images/projects/flickmood/flickmood-thumbnail-mobile.jpg",
+        ALT: "Thumbnail Image",
+      },
+      TOOLS: [
+        { name: "Photoshop", src: "/images/tools/photoshop.svg" },
+        { name: "Illustrator", src: "/images/tools/illustrator.svg" },
+        { name: "Figma", src: "/images/tools/figma.png" },
+      ],
+      DISCIPLINE: [],
+      TIMELINE: "January 2025",
+      CATEGORY: ["all", "coming soon"],
+    },
   ],
 };

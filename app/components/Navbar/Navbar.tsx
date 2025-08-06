@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../Button/Button";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useSound } from "../ui/SoundContextType/SoundContextType";
 import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   Sun,
   Moon,
@@ -24,7 +25,14 @@ import { HamburgerXIcon } from "../ui/HamburgerXIcon/HamburgerXIcon";
 
 export default function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true); 
+  }, []);
+
+  if (!mounted) return null; 
   const { muted, setMuted } = useSound();
   const pathname = usePathname();
 
@@ -36,37 +44,58 @@ export default function NavBar() {
         className="z-[0] fixed left-0 right-0 bottom-0 pointer-events-none"
       />
       <nav className="relative container mx-auto flex justify-between items-center bg-white/90 backdrop-blur-lg dark:bg-black/80 m-5 p-2.5 z-10 mt-3 rounded-3xl border shadow-br dark:shadow-inner-customWhiteDark">
-        {/* logo */}
-        <Link
-          href="/"
-          className="group flex items-center hover:gap-2.5 duration-300 gap-1.5 pl-5 pr-5"
-        >
-          <p className="text-2xl group-hover:scale-95 duration-300 font-[500] font-PerfectlyNineties dark:text-background -translate-y-0.5">
-            <AnimatedShinyText>
-              Suin✦<span className="italic">k</span>
-            </AnimatedShinyText>
-          </p>
-        </Link>
+        <div className="flex gap-3">
+          {/* logo */}
+          <Link
+            href="/"
+            className="group flex items-center hover:gap-2.5 duration-300 gap-1.5 pl-5 pr-5"
+            onClick={() => setMobileOpen(false)}
+          >
+            <p className="text-2xl group-hover:scale-95 duration-300 font-[500] font-PerfectlyNineties dark:text-background -translate-y-0.5">
+              <AnimatedShinyText>
+                Suin✦<span className="italic">k</span>
+              </AnimatedShinyText>
+            </p>
+          </Link>
+          <ul className="hidden sm:flex items-center gap-5 text-base z-10">
+            {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, LABEL }) => {
+              const isCurrentPage = pathname === HREF;
+              return (
+                <li key={LABEL}>
+                  <Button
+                    href={HREF}
+                    additionalClasses={
+                      isCurrentPage
+                        ? "text-base font-[500] text-grey_scale_900 dark:!text-background"
+                        : "text-grey_scale_700 dark:text-white/40 text-base"
+                    }
+                  >
+                    <HyperText>{LABEL}</HyperText>
+                  </Button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
         <ul className="hidden sm:flex items-center gap-5 text-base z-10">
-          {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, LABEL }) => {
-            const isCurrentPage = pathname === HREF;
-            return (
-              <li key={LABEL}>
-                <Button
-                  href={HREF}
-                  additionalClasses={
-                    isCurrentPage
-                      ? "text-sm font-[500] text-grey_scale_900 dark:!text-background"
-                      : "text-grey_scale_700 dark:text-white/40 text-sm"
-                  }
-                >
-                  <HyperText>{LABEL}</HyperText>
-                </Button>
-              </li>
-            );
-          })}
-          <li>
+          <li className="flex gap-3">
+            <Button
+              onClick={() => setMuted((m) => !m)}
+              theme="tertiary"
+              additionalClasses="p-2 rounded-full"
+              icon={muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+            >
+              {""}
+            </Button>
+            <Button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              theme="tertiary"
+              additionalClasses="p-2 rounded-full"
+              icon={theme === "dark" ? <Moon size={18} /> : <Sun size={18} />}
+            >
+              {""}
+            </Button>
             <Button
               href={EXTERNAL_LINKS.CONTACT.HREF}
               theme="primary"
@@ -115,31 +144,39 @@ export default function NavBar() {
         </div>
 
         {/* mobile dropdown */}
-        {mobileOpen && (
-          <div className="sm:hidden absolute top-full right-0 mt-2 w-full rounded-3xl bg-grey_scale_100/95 !backdrop-blur-xl drop-shadow-2xl dark:bg-black/95 shadow-xl border z-[9999] flex flex-col px-5 py-7 gap-7 animate-fadeIn">
-            {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, LABEL }) => (
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -40 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -32 }}
+              transition={{ duration: 0.24, ease: [0.48, 0.02, 0.32, 1] }}
+              className="sm:hidden absolute top-full right-0 mt-2 w-full rounded-3xl bg-grey_scale_100/[98%] !backdrop-blur-xl drop-shadow-2xl dark:bg-black/[98%] shadow-xl border z-[9999] flex flex-col px-5 py-7 gap-7"
+            >
+              {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, LABEL }) => (
+                <Button
+                  key={LABEL}
+                  href={HREF}
+                  additionalClasses={
+                    pathname === HREF
+                      ? "w-full justify-start text-grey_scale_700 dark:text-white/40 font-[500]"
+                      : "w-full justify-start text-grey_scale_900 dark:!text-background"
+                  }
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {LABEL}
+                </Button>
+              ))}
               <Button
-                key={LABEL}
-                href={HREF}
-                additionalClasses={
-                  pathname === HREF
-                    ? "w-full justify-start text-grey_scale_700 dark:text-white/40 font-[500]"
-                    : "w-full justify-start text-grey_scale_900 dark:!text-background"
-                }
+                href={EXTERNAL_LINKS.CONTACT.HREF}
+                additionalClasses="w-full justify-start text-grey_scale_900 dark:text-background"
                 onClick={() => setMobileOpen(false)}
               >
-                {LABEL}
+                {EXTERNAL_LINKS.CONTACT.LABEL}
               </Button>
-            ))}
-            <Button
-              href={EXTERNAL_LINKS.CONTACT.HREF}
-              additionalClasses="w-full justify-start text-grey_scale_900 dark:text-background"
-              onClick={() => setMobileOpen(false)}
-            >
-              {EXTERNAL_LINKS.CONTACT.LABEL}
-            </Button>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
       <ScrollProgress />
     </header>

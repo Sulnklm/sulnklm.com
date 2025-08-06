@@ -5,12 +5,9 @@ import WavyImage from "@/components/animation/WavyImage";
 import { DotBackground } from "@/components/ui/DotBackground/DotBackground";
 import { Button } from "@/components/Button/Button";
 import { ToolIcon } from "@/components/ui/ToolIcon/ToolIcon";
-import { useVancouverTime } from "@/hooks/useVancouverTime";
 import { EXTERNAL_LINKS, TECH_STACK } from "@/lib/const";
 import { HOME_HERO_CONST } from "../const";
-import { InsetBlock } from "@/components/ui/InsetBlock";
 import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
-import { FlipWords } from "@/components/animation/FlipWords/FlipWords";
 import { LastUpdate } from "@/components/ui/LastUpdate/LastUpdate";
 import { Tooltip } from "@/components/ui/Tooltip/Tooltip";
 import Link from "next/link";
@@ -83,7 +80,7 @@ export default function Hero() {
       <div className="relative z-[900] container mx-auto flex flex-col items-center justify-center gap-5 h-full text-center mt-28 md:-mt-10">
         {/* 3.1) TITLE */}
         <div className="flex flex-col items-center">
-          <div className="flex gap-2 md:gap-4">
+          <div className="flex gap-2 md:gap-3">
             {titleParts.slice(0, 3).map((p, i) => (
               <React.Fragment key={i}>
                 <h1
@@ -135,7 +132,7 @@ export default function Hero() {
 
         <SubTextBox
           icon={
-            <CheckIcon size={18} className="text-orange-400" strokeWidth={2} />
+            <CheckIcon size={18} className="text-coral" strokeWidth={2} />
           }
         >
           {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION1}

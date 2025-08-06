@@ -28,7 +28,7 @@ const SelectedWorks = () => {
                 icon={
                   <ArchiveIcon
                     size={15}
-                    className="text-orange-400"
+                    className="text-coral"
                     strokeWidth={1.5}
                   />
                 }
@@ -45,7 +45,7 @@ const SelectedWorks = () => {
               </div>
             </div>
 
-            <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-5 md:gap-8 xl:gap-10 place-items-center bg-customGray w-full">
+            <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-5 place-items-center bg-customGray w-full">
               {filteredProjects.length === 0 ? (
                 <p className="text-center text-gray-500">
                   No selected projects found.

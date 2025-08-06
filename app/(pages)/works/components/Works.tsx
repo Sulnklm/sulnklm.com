@@ -49,7 +49,7 @@ const Works = () => {
           icon={
             <PencilRuler
               size={16}
-              className="text-orange-400"
+              className="text-coral"
               strokeWidth={1.7}
             />
           }
@@ -63,7 +63,7 @@ const Works = () => {
         </h2>
         
         <div className="flex items-center pt-5 sm:py-7 border-t border-dashed">
-          <div className="w-full lg:flex-1 flex justify-start pr-2">
+          <div className="w-full hidden lg:flex lg:flex-1 justify-end lg:justify-start pr-2">
             <CategoriesTabs
               labels={CATEGORY_TABS}
               icons={icons}
@@ -80,7 +80,7 @@ const Works = () => {
           </div>
         </div>
         {/* <InsetBlockInside> */}
-          <section className="pt-5 sm:-mt-5">
+          <section className="pt-3 sm:-mt-5">
             <div className="relative lg:gap-20">
               <div
                 className={

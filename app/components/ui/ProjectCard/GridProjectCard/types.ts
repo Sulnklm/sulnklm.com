@@ -8,6 +8,11 @@ export type GridProjectCardPropTypes = {
       SRC: string;
       ALT: string;
     };
+    IMAGE: {
+      SRC: string;
+      ALT: string;
+    }
+    CATEGORY: string[];
     TITLE: string;
     SUBTITLE: string;
     DISCIPLINE: string[];

@@ -8,11 +8,11 @@ export const EXTERNAL_LINKS = {
     label: "LinkedIn",
   },
   RESUME: {
-    href: "",
+    href: "/resume/Suin-Resume.pdf",
     label: "View Resume",
   },
   CONTACT: {
-    HREF: "hello@sulnklm.com",
+    HREF: "mailto:hello@sulnklm.com",
     LABEL: "Contact",
   },
 };

@@ -1,7 +1,7 @@
-import type { IllustCardProps } from "@/components/IllustCard/types";
+import type { IllustCardProps } from "@/components/ui/IllustCard/types";
 
 export const VALUE_INTRO = {
-  heading: "I create story-driven designs and enjoy the thoughtful process of coding that brings ideas to life."
+  heading: "I craft story-driven designs and enjoy the thoughtful process of coding that brings ideas to life."
 };
 
 export const VALUES: IllustCardProps[] = [
@@ -10,7 +10,7 @@ export const VALUES: IllustCardProps[] = [
     alt: "Goal icon",
     title: "My Journey Ahead",
     description:
-      "At the intersection of design and development, I push myself every day to learn, adapt, and grow. Turning challenges into stepping stones toward meaningful and joyful creations.",
+      "At the intersection of design and development, I push myself daily to learn, adapt, and grow, turning challenges into stepping stones toward meaningful, joyful creations.",
   },
 
   {
@@ -18,20 +18,20 @@ export const VALUES: IllustCardProps[] = [
     alt: "Coding icon",
     title: "Vibe Coding",
     description:
-      "I write clean, easy-to-maintain code every day. In my free time, I love vibe coding. Just flowing with ideas, learning on the fly, and growing as I go.",
+      "In my free time, I love vibe coding, just flowing with ideas, experimenting, learning as I go, and slowly building things I care about.",
   },
   {
     icon: "/images/about/values/palette.png",
     alt: "Design icon",
     title: "Design That Connects",
     description:
-      "I love taking trendy ideas and blending them with the brand’s unique vibe. Finding my own way to make designs that truly fit and stand out.",
+      "I love blending fresh ideas with a brand’s unique vibe, finding my own way to craft designs that truly fit and stand out.",
   },
   {
     icon: "/images/about/values/file.png",
     alt: "Learning icon",
-    title: "A Mind That Grows",
+    title: "What I Keep",
     description:
-      "Like carefully curated archives, I continuously gather insights and experiences. Building a refined foundation that fuels thoughtful growth and lasting impact.",
+      "I treat everything as something worth saving, including ideas, feedback, and even mistakes. They become part of my learning mindset and creative process.",
   },
 ];

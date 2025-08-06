@@ -31,6 +31,10 @@ export function Reflection({ title, description }: ReflectionTypes) {
   const prevProject = projects[currentIndex - 1];
   const nextProject = projects[currentIndex + 1];
 
+  // 'coming soon' 여부 체크
+  const isPrevComingSoon = prevProject?.CATEGORY?.includes("coming soon");
+  const isNextComingSoon = nextProject?.CATEGORY?.includes("coming soon");
+
   return (
     <div className="pb-10">
       <OrangeTextBox text="Reflection" />
@@ -44,12 +48,20 @@ export function Reflection({ title, description }: ReflectionTypes) {
       {/* Previous/next btn */}
       <div className="flex justify-between mt-8 gap-4">
         <PreviousProjectButton
-          href={prevProject ? `/works/${prevProject.SLUG}` : undefined}
-          disabled={!prevProject}
+          href={
+            prevProject && !isPrevComingSoon
+              ? `/works/${prevProject.SLUG}`
+              : undefined
+          }
+          disabled={!prevProject || isPrevComingSoon}
         />
         <NextProjectButton
-          href={nextProject ? `/works/${nextProject.SLUG}` : undefined}
-          disabled={!nextProject}
+          href={
+            nextProject && !isNextComingSoon
+              ? `/works/${nextProject.SLUG}`
+              : undefined
+          }
+          disabled={!nextProject || isNextComingSoon}
         />
       </div>
     </div>
