@@ -34,7 +34,7 @@ const getRandomInt = (max: number): number => Math.floor(Math.random() * max);
 export function HyperText({
   children,
   className,
-  duration = 800,
+  duration = 1000,
   delay = 0,
   as: Component = "div",
   startOnView = false,
@@ -62,7 +62,6 @@ export function HyperText({
     }
   };
 
-  // Handle animation start based on view or delay
   useEffect(() => {
     if (!startOnView) {
       const startTimeout = setTimeout(() => {
@@ -139,7 +138,7 @@ export function HyperText({
             key={index}
             className={cn("font-Sans", letter === " " ? "w-3" : "")}
           >
-            {letter.toUpperCase()}
+            {letter}
           </motion.span>
         ))}
       </AnimatePresence>
