@@ -40,7 +40,7 @@ export const ShinyTabs: React.FC<ShinyTabsProps> = ({
           const isActive = idx === activeIndex;
           const baseClass = `flex items-center py-2 px-5 rounded-full border font-semibold transition-colors duration-300 select-none ${
             isActive
-              ? "bg-[#F3F1EB] wh dark:bg-[#161514] !border-orange-400 text-orange-500 cursor-default"
+              ? "bg-[#F3F1EB] wh dark:bg-[#161514] !border-orange-500 text-orange-500 cursor-default"
               : "bg-[#F1F1EF] dark:bg-[#090909] !border-gray-400 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-orange-500 hover:text-orange-600"
           }`;
 

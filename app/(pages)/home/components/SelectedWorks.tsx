@@ -17,7 +17,7 @@ const SelectedWorks = () => {
   );
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden pt-5">
       <InsetBlock>
         <PatternBackground />
         <section className="z-50 lg:px-10 overflow-hidden">
@@ -45,7 +45,7 @@ const SelectedWorks = () => {
               </div>
             </div>
 
-            <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-5 md:gap-8 xl:gap-10 place-items-center bg-customGray w-full xl:container">
+            <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-5 md:gap-8 xl:gap-10 place-items-center bg-customGray w-full">
               {filteredProjects.length === 0 ? (
                 <p className="text-center text-gray-500">
                   No selected projects found.

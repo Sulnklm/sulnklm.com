@@ -9,7 +9,6 @@ import Link from "next/link";
 import ProjectBadge from "../../ProjectBadge/ProjectBadge";
 
 export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
-
   const disciplineVariantMap: Record<
     string,
     "development" | "case-study" | "default"
@@ -23,9 +22,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
       href={`/works/${PROJECT.SLUG}`}
       className="block group relative rounded-[10px] ..."
     >
-      <div
-        className="group hover:scale-[99%] duration-300 relative shadow-sm rounded-[20px] bg-grey_scale_50 dark:bg-black p-2 z-0 border"
-      >
+      <div className="group hover:scale-[99%] duration-300 relative shadow-sm rounded-[20px] bg-grey_scale_50 dark:bg-black p-2 z-0 border">
         <GlowingEffect
           spread={40}
           glow={true}
@@ -34,13 +31,24 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
           inactiveZone={0.01}
           className="rounded-[inherit]"
         />
-        <div className="grid lg:flex justify-between items-center gap-5 lg:gap-10 p-1">
-          <div className="flex-1 z-10 lg:max-w-[30rem]">
-            <img
-              src={PROJECT.IMAGE.SRC}
-              alt={PROJECT.IMAGE.ALT}
-              className="object-cover bg-background dark:bg-grey_scale_900/20 duration-300 rounded-[10px] w-full h-auto"
-            />
+        <div className="grid md:flex justify-between items-center gap-5 lg:gap-10 p-1">
+          <div className="flex-1 z-10 w-full md:max-w-[20rem] lg:max-w-[35rem] 2xl:max-w-[40rem] overflow-hidden">
+            <div className="flex w-full h-fit max-h-[17rem] lg:max-h-[20rem] bg-neutral-200/50 dark:bg-grey_scale_1000/30 group-hover:bg-neutral-200 dark:group-hover:bg-grey_scale_1000/50 duration-200 px-5 md:pt-5 xl:pt-8 lg:px-10 rounded-md">
+              <div className="flex-[3] relative rounded-2xl overflow-hidden -rotate-3 max-w-[30rem] min-w-[12rem] translate-x-1 translate-y-7 lg:translate-y-5 lg:group-hover:translate-y-1 group-hover:-rotate-6 duration-200 bg-white dark:bg-black p-0.5 shadow-2xl border">
+                <img
+                  src={PROJECT.THUMBNAIL1.SRC}
+                  alt={PROJECT.THUMBNAIL1.ALT}
+                  className="w-full h-fit object-contain shadow-2xl rounded-xl"
+                />
+              </div>
+              <div className="flex-[1] relative overflow-hidden rounded-t-2xl sm:max-w-[8rem] md:max-w-[9rem] lg:max-w-[9.5rem] xl:max-w-[10rem] min-w-[5rem] rotate-6 -translate-x-1 translate-y-14 md:translate-y-10 lg:translate-y-16 lg:group-hover:translate-y-12 duration-200 bg-white dark:bg-black p-0.5 h-fit shadow-2xl border">
+                <img
+                  src={PROJECT.THUMBNAIL2.SRC}
+                  alt={PROJECT.THUMBNAIL2.ALT}
+                  className="w-full h-full object-contain rounded-t-xl"
+                />
+              </div>
+            </div>
           </div>
           <div className="flex-1">
             <div className="w-full bg-grey_scale_50 dark:bg-black rounded-[45px] pr-10">
@@ -61,9 +69,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
                       ))}
                     </div>
                   </div>
-                  <p
-                    className="text-base text-grey_scale_900/80 dark:text-grey_scale_700 font-[350]"
-                  >
+                  <p className="text-base text-grey_scale_900/80 dark:text-grey_scale_700 font-[350]">
                     {PROJECT.SUBTITLE}
                   </p>
                 </div>
@@ -87,6 +93,9 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="group absolute right-0 bottom-0 p-1.5 group-hover:border group-hover:!border-coral group-hover:bg-coral duration-300 m-3 rounded-xl">
+          <ArrowRight className="text-coral group-hover:text-white group-hover:rotate-0 -rotate-45 duration-300"/>
         </div>
       </div>
     </Link>

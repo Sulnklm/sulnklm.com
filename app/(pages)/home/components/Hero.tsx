@@ -14,6 +14,8 @@ import { FlipWords } from "@/components/animation/FlipWords/FlipWords";
 import { LastUpdate } from "@/components/ui/LastUpdate/LastUpdate";
 import { Tooltip } from "@/components/ui/Tooltip/Tooltip";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
   const actions = [
@@ -43,10 +45,36 @@ export default function Hero() {
     { text: HOME_HERO_CONST.TITLE.PART7, highlighted: true },
   ];
 
+  const [showLastUpdate, setShowLastUpdate] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowLastUpdate(false);
+      } else {
+        setShowLastUpdate(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="relative md:mt-0 h-[60vh] md:h-screen bg-background dark:bg-primary px-5 border-b !border-b-grey_scale_500/40 dark:!border-b-grey_scale_900 border-dashed">
       <div className="hidden lg:block">
-        <LastUpdate />
+        <AnimatePresence>
+          {showLastUpdate && (
+            <motion.div
+              className="hidden lg:block"
+              initial={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            >
+              <LastUpdate />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <div className="absolute inset-0 z-0">

@@ -1,6 +1,10 @@
 export type ListProjectCardPropTypes = {
   PROJECT: {
-    IMAGE: {
+    THUMBNAIL1: {
+      SRC: string;
+      ALT: string;
+    };
+    THUMBNAIL2: {
       SRC: string;
       ALT: string;
     };

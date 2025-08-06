@@ -49,7 +49,7 @@ export const PROJECTS_CONST = {
         ALT: "FlickMood Thumbnail Image",
       },
       THUMBNAIL2: {
-        SRC: "/images/projects/flickmood/thumbnail-mobile.png",
+        SRC: "/images/projects/flickmood/flickmood-thumbnail-mobile.jpg",
         ALT: "FlickMood Thumbnail Image",
       },
       DISCIPLINE: ["Web Development"],

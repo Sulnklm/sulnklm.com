@@ -32,7 +32,6 @@ export function Ruler({
           pointerEvents: "none",
         }}
       >
-        {/* 숫자 */}
         <span
           className="
     text-[10px] select-none font-[300]

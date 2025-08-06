@@ -8,7 +8,7 @@ export const InsetBlock = ({
   additionalClasses,
 }: InsetBlockPropTypes) => {
   return (
-    <div className="mx-auto relative z-50 px-0 my-5 lg:my-10 backdrop-blur-2xl">
+    <div className="mx-auto relative z-50 px-0 my-5 lg:mb-5 backdrop-blur-2xl">
       <DashedLine direction="horizontal" position="top" />
       <DashedLine direction="horizontal" position="bottom" />
       {/* <DashedLine direction="vertical" position="left" />

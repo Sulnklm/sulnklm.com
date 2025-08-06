@@ -30,19 +30,19 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
           inactiveZone={0.01}
           className="rounded-[inherit]"
         />
-        <div className="flex w-full h-fit sm:min-h-[30rem] min-h-[24rem] bg-neutral-200/50 dark:bg-grey_scale_1000/30 hover:bg-neutral-200 duration-200 px-5 pt-3 lg:pt-10 lg:px-10 rounded-md">
-          <div className="flex-1 relative rounded-2xl overflow-hidden -rotate-3 max-w-[30rem] min-w-[12rem] translate-y-7 lg:translate-y-5 lg:group-hover:translate-y-1 group-hover:-rotate-6 duration-200 bg-white dark:bg-black p-0.5 shadow-2xl border">
+        <div className="flex w-full h-fit min-h-[25rem] sm:min-h-[30rem] md:min-h-[29rem] lg:min-h-[26rem] xl:min-h-[32rem] bg-neutral-200/50 dark:bg-grey_scale_1000/30 group-hover:bg-neutral-200 dark:group-hover:bg-grey_scale_1000/50 duration-200 px-5 md:pt-5 xl:pt-8 lg:px-10 rounded-md">
+          <div className="flex-[3] relative rounded-2xl overflow-hidden -rotate-3 max-w-[30rem] min-w-[12rem] translate-x-1 translate-y-7 lg:translate-y-5 lg:group-hover:translate-y-1 group-hover:-rotate-6 duration-200 bg-white dark:bg-black p-0.5 shadow-2xl border">
             <img
               src={PROJECT.THUMBNAIL1.SRC}
               alt={PROJECT.THUMBNAIL1.ALT}
               className="w-full h-fit object-contain shadow-2xl rounded-xl"
             />
           </div>
-          <div className="flex-1 relative overflow-hidden rounded-t-2xl max-w-[10rem] min-w-[5rem] rotate-6 translate-y-10 lg:translate-y-16 lg:group-hover:translate-y-12 duration-200 bg-white dark:bg-black p-0.5 h-fit shadow-2xl border">
+          <div className="sm:flex-[1] max-w-[7rem] relative overflow-hidden rounded-t-2xl sm:max-w-[8rem] md:max-w-[9rem] lg:max-w-[9.5rem] xl:max-w-[10rem] min-w-[5rem] rotate-6 -translate-x-1 translate-y-14 md:translate-y-10 lg:translate-y-16 lg:group-hover:translate-y-12 duration-200 bg-white dark:bg-black p-0.5 h-fit shadow-2xl border">
             <img
               src={PROJECT.THUMBNAIL2.SRC}
               alt={PROJECT.THUMBNAIL2.ALT}
-              className="w-full h-full object-contain rounded-t-xl" 
+              className="w-full h-full object-contain rounded-t-xl"
             />
           </div>
         </div>
@@ -80,11 +80,14 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
                       />
                     ))}
                   </div>
+
+                  <div className="p-1.5 group-hover:border group-hover:!border-coral group-hover:bg-coral duration-300 rounded-xl">
+                    <ArrowRight className="text-coral group-hover:text-white group-hover:rotate-0 -rotate-45 duration-300" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div></div>
         </div>
       </div>
     </Link>
