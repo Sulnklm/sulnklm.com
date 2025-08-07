@@ -1,10 +1,22 @@
-export async function getLastUpdatedDate(): Promise<Date | null> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/last-updated`, {
+export async function getLastUpdatedDate() {
+  const baseURL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+  const res = await fetch(`${baseURL}/api/last-updated`, {
     cache: "no-store",
   });
 
-  if (!res.ok) return null;
+  if (!res.ok) {
+    console.error("❌ Failed to fetch last updated date");
+    return null;
+  }
 
-  const { date } = await res.json();
-  return date ? new Date(date) : null;
+  const data = await res.json();
+  const dateString = data?.date;
+
+  if (!dateString) {
+    console.error("❌ No date found in API response");
+    return null;
+  }
+
+  return new Date(dateString);
 }
