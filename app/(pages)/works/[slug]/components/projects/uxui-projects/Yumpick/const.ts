@@ -83,7 +83,7 @@ export const YUMPICK_PROJECT = {
       },
       PROTOTYPE: {
         VIDEO: {
-          SRC: "/images/projects/yumpick/design-process/yumpick-prototype.mp4",
+          SRC: "/images/projects/yumpick/design-process/Yumpick-prototype.mp4",
           ALT: "Prototype Video",
         },
       },
