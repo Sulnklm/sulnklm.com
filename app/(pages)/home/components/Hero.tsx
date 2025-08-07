@@ -96,16 +96,14 @@ export default function Hero() {
                 {/* headshot */}
                 <Tooltip message={HOME_HERO_CONST.HEADSHOT.TOOLTIP}>
                   <Link href="/about">
-                    {i === 1 && (
                       <WavyImage
-                        src={HOME_HERO_CONST.HEADSHOT.SRC}
+                        src="/images/home/headshot.png"
                         alt={HOME_HERO_CONST.HEADSHOT.ALT}
                         width={300}
                         height={300}
                         delay={0.5}
                         className="relative object-cover min-w-[60px] max-w-16 md:max-w-20 lg:max-w-24 w-full h-auto hover:rotate-6 duration-300 shadow-brBothDark dark:border-grey_scale_900 dark:border p-0.5 rounded-3xl -translate-y-6 md:-translate-y-0 md:mx-3"
                       />
-                    )}{" "}
                   </Link>
                 </Tooltip>
               </React.Fragment>
