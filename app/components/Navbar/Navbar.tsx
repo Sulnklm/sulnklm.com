@@ -29,7 +29,8 @@ export default function NavBar() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true); 
+    setMounted(true);
+      setTheme("light");
   }, []);
 
   if (!mounted) return null; 
