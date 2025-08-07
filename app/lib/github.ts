@@ -1,20 +1,26 @@
+// app/lib/github.ts
 export async function getLastUpdatedDate() {
-  const baseURL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-
-  const res = await fetch(`${baseURL}/api/last-updated`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "https://api.github.com/repos/Sulnklm/sulnklm.com/commits?per_page=1",
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        Accept: "application/vnd.github+json",
+      },
+      next: { revalidate: 3600 },
+    }
+  );
 
   if (!res.ok) {
-    console.error("❌ Failed to fetch last updated date");
+    console.error("❌ Failed to fetch from GitHub API");
     return null;
   }
 
   const data = await res.json();
-  const dateString = data?.date;
+  const dateString = data?.[0]?.commit?.committer?.date;
 
   if (!dateString) {
-    console.error("❌ No date found in API response");
+    console.error("❌ No commit date found");
     return null;
   }
 
