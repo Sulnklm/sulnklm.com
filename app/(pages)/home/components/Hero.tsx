@@ -98,7 +98,7 @@ export default function Hero() {
                   <Link href="/about">
                     {i === 1 && (
                       <WavyImage
-                        src={HOME_HERO_CONST.HEADSHOT.SRC}
+                        src="/images/home/headshot.png"
                         alt={HOME_HERO_CONST.HEADSHOT.ALT}
                         width={300}
                         height={300}
