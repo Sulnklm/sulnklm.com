@@ -14,7 +14,11 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function Hero() {
+interface HeroProps {
+  lastUpdate: Date | null;
+}
+
+export default function Hero({ lastUpdate }: HeroProps) {
   const actions = [
     {
       href: EXTERNAL_LINKS.GITHUB.href,
@@ -68,7 +72,7 @@ export default function Hero() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
             >
-              <LastUpdate />
+              <LastUpdate lastUpdate={lastUpdate} />
             </motion.div>
           )}
         </AnimatePresence>
@@ -131,9 +135,7 @@ export default function Hero() {
         {/* 3.2) DESCRIPTION */}
 
         <SubTextBox
-          icon={
-            <CheckIcon size={18} className="text-coral" strokeWidth={2} />
-          }
+          icon={<CheckIcon size={18} className="text-coral" strokeWidth={2} />}
         >
           {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION1}
         </SubTextBox>

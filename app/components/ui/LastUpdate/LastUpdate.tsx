@@ -1,10 +1,12 @@
-import { useLastUpdate } from "./useLastUpdate";
-import React, { useEffect } from "react";
 import { Hammer } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
-export const LastUpdate: React.FC = () => {
-  const lastUpdate = useLastUpdate();
+interface LastUpdateProps {
+  lastUpdate: Date | null;
+}
+
+export const LastUpdate: React.FC<LastUpdateProps> = ({ lastUpdate }) => {
   const controls = useAnimation();
 
   useEffect(() => {
@@ -15,7 +17,7 @@ export const LastUpdate: React.FC = () => {
         duration: 1.4,
         times: [0, 0.15, 0.3, 0.45, 0.6, 1],
         repeat: Infinity,
-        repeatDelay: 1.2, 
+        repeatDelay: 1.2,
         ease: "easeInOut",
       },
     });
@@ -48,7 +50,7 @@ export const LastUpdate: React.FC = () => {
               day: "numeric",
               timeZone: "America/Vancouver",
             })
-          : "Loading..."}
+          : "Unknown"}
       </p>
     </div>
   );
