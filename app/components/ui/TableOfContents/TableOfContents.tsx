@@ -35,12 +35,12 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
 
   return (
     
-    <nav className="sticky top-32 left-0 flex flex-col gap-4 font-Sans text-grey_scale_900 dark:text-grey_scale_700">
+    <nav className="sticky top-32 left-0 flex flex-col font-Sans text-grey_scale_900 dark:text-grey_scale_700">
       {sections.map((section) => (
         <a
           key={section.id}
           href={`#${section.id}`}
-          className={`cursor-pointer ${activeId === section.id ? "font-[450] text-coral pl-3 border-coral border-l-2" : ""}`}
+          className={`hover:bg-grey_scale_200 hover:dark:bg-grey_scale_1000/50 py-2.5 rounded-xl px-3 cursor-pointer ${activeId === section.id ? "font-[450] text-coral bg-grey_scale_200 dark:bg-grey_scale_1000/50" : ""}`}
         >
           {section.label}
         </a>

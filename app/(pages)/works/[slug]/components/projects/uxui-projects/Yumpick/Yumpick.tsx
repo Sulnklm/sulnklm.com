@@ -80,7 +80,7 @@ export default function Yumpick() {
         <div className="relative flex border-y py-10 lg:py-20">
           <CornerBoxes overrideBottom={{ 1: "bottom-0", 3: "bottom-0" }} />
 
-          <div className="hidden lg:block mr-8 min-w-[190px]">
+          <div className="hidden lg:block mr-8 min-w-[195px]">
             <TableOfContents
               sections={[
                 { id: "quick-preview", label: "👁️ Quick Preview" },
