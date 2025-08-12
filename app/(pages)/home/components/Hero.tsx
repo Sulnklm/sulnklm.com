@@ -1,6 +1,13 @@
 "use client";
 import React from "react";
-import { ArrowRight, CheckIcon, MapPin } from "lucide-react";
+import {
+  ArrowRight,
+  CheckIcon,
+  MoonStar,
+  Sunrise,
+  Sun,
+  Sunset,
+} from "lucide-react";
 import WavyImage from "@/components/animation/WavyImage";
 import { DotBackground } from "@/components/ui/DotBackground/DotBackground";
 import { Button } from "@/components/Button/Button";
@@ -13,6 +20,7 @@ import { Tooltip } from "@/components/ui/Tooltip/Tooltip";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useVancouverTime } from "@/hooks/useVancouverTime";
 
 interface HeroProps {
   lastUpdate: Date | null;
@@ -47,6 +55,22 @@ export default function Hero({ lastUpdate }: HeroProps) {
   ];
 
   const [showLastUpdate, setShowLastUpdate] = useState(true);
+  const { str: timeStr, hour } = useVancouverTime();
+  const hourNum = hour;
+  let Icon = Sun;
+  if (hourNum >= 0 && hourNum < 4) {
+    Icon = MoonStar; // (00~03)
+  } else if (hourNum >= 4 && hourNum < 7) {
+    Icon = Sunrise; // (04~06)
+  } else if (hourNum >= 7 && hourNum < 18) {
+    Icon = Sun; //(07~10)
+    // } else if (hourNum >= 11 && hourNum < 18) {
+    //   Icon = SunMoon; // (11~17)
+  } else if (hourNum >= 18 && hourNum < 20) {
+    Icon = Sunset; // (18~19)
+  } else if (hourNum >= 20 && hourNum < 24) {
+    Icon = MoonStar; // (20~23)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -135,9 +159,9 @@ export default function Hero({ lastUpdate }: HeroProps) {
         {/* 3.2) DESCRIPTION */}
 
         <SubTextBox
-          icon={<CheckIcon size={18} className="text-coral" strokeWidth={2} />}
+          icon={<Icon size={15} strokeWidth={1.8} className="text-coral" />}
         >
-          {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION1}
+          {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION1}: {timeStr}
         </SubTextBox>
 
         {/* 3.3) ACTIONS */}

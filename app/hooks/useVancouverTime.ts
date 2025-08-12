@@ -6,23 +6,23 @@ export function useVancouverTime() {
   useEffect(() => {
     const update = () => {
       const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        hour: "2-digit",
+
+      const vancouverTime12 = now.toLocaleTimeString("en-US", {
+        hour: "numeric",     
         minute: "2-digit",
         second: "2-digit",
-        hour12: false,
+        hour12: true,           
         timeZone: "America/Vancouver",
-      };
-      const vancouverTime = now.toLocaleTimeString("en-US", options);
+      });
 
-      const hourStr = now.toLocaleString("en-US", {
+      const hourStr24 = now.toLocaleString("en-US", {
         hour: "2-digit",
         hour12: false,
         timeZone: "America/Vancouver",
       });
-      const hourNum = Number(hourStr);
+      const hourNum = Number(hourStr24);
 
-      setTime({ str: vancouverTime, hour: hourNum });
+      setTime({ str: vancouverTime12, hour: hourNum });
     };
 
     update();

@@ -88,12 +88,12 @@ const Footer = () => {
 
   return (
     <footer className="relative mt-10 m-5 dark:m-0">
-      <div className="hidden lg:flex gap-2 bg-white rounded-lg px-3 py-1 absolute bottom-5 left-5 dark:right-10 w-fit z-[1000] text-white dark:text-yellow-300">
+      {/* <div className="hidden lg:flex gap-2 bg-white rounded-lg px-3 py-1 absolute bottom-5 left-5 dark:right-10 w-fit z-[1000] text-white dark:text-yellow-300">
         <Icon size={17} strokeWidth={1.9} className="text-grey_scale_1000" />
         <p className="!text-sm text-nowrap dark:text-grey_scale_1000">
           {FOOTER_CONST.TIME}{timeStr}
         </p>
-      </div>
+      </div> */}
         <BackToTopButton />
       <div className="relative z-[600] w-full h-[60vh] sm:h-[85vh] lg:h-[90vh] pt-20 lg:pt-24 bg-primary dark:bg-black overflow-hidden rounded-3xl">
         <StarsBackground />
