@@ -33,7 +33,7 @@ export default function BackToTopButton() {
       <span
         className={`
           flex items-center justify-center
-          bg-coral
+          bg-primary dark:border
           shadow-lg
           transition-all duration-200
           ${
@@ -45,7 +45,7 @@ export default function BackToTopButton() {
       >
         <p
           className={`
-            text-sm font-[450] !text-background dark:!text-primary whitespace-nowrap
+            text-sm font-[450] !text-background whitespace-nowrap
             transition-all duration-200
             opacity-0 scale-x-0
             group-hover:opacity-100 group-hover:scale-x-100
@@ -53,10 +53,10 @@ export default function BackToTopButton() {
         >
           Back to Top
         </p>
-        <ChevronUp size={20} className="text-white dark:text-primary mx-auto" />
+        <ChevronUp size={20} className="text-white mx-auto" />
       </span>
       <div className="absolute right-0 left-0 group-hover:opacity-0">
-      <ChevronUp size={26} className="text-white dark:text-primary mx-auto" />
+      <ChevronUp size={26} className="text-white mx-auto" />
       </div>
     </button>
   );
