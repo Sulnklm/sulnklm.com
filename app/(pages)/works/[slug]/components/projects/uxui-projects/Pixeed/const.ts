@@ -37,9 +37,9 @@ export const PIXEED_PROJECT = {
   COMPETITOR_ANALYSIS: {
     HEADING: "Alternative Approaches to Client Feedback",
     IMG1: {
-        SRC: "/images/projects/pixeed/pixeed-competitors.jpg",
-        ALT: "Competitor Analysis Image",
-      },
+      SRC: "/images/projects/pixeed/pixeed-competitors.jpg",
+      ALT: "Competitor Analysis Image",
+    },
     IMG2: {
       SRC: "/images/projects/pixeed/pixeed-competitors-table.jpg",
       ALT: "Competitor Analysis Image",
@@ -47,7 +47,7 @@ export const PIXEED_PROJECT = {
     TITLE: "Video-first vs. Pin-on-page: What’s the Difference?",
     DESCRIPTION:
       "Tools like Marker.io and BugHerd focus on pin-on-page annotations. This is perfect for quick visual fixes, copy tweaks, or spotting small UI glitches. You click directly on the page, leave a note, and the team knows exactly where to look. This works well for simple, isolated changes.",
-      DESCRIPTION2:
+    DESCRIPTION2:
       "However, when a project involves complex user flows, multi-step processes, or interactions across multiple screens, single-point annotations fall short. In these cases, video feedback becomes a better solution, as it captures the entire journey in context and helps teams understand not just where an issue occurs, but how the user got there.",
   },
   DIFFERENTIATORS: {
@@ -76,26 +76,47 @@ export const PIXEED_PROJECT = {
   DESIGN_PROCESS: {
     HEADING: "Bringing Ideas to Life",
     STEP1: {
-        TITLE: "Step 1: Laying the Foundations",
-        DESCRIPTION: "Before diving into full UI design, I mapped out the information architecture and user flows to ensure the app’s structure would meet real user needs. This groundwork let me validate key workflows and flow into higher-fidelity mockups with confidence.",
-        IA: {
-          IMG: {
-            SRC: "/images/projects/pixeed/pixeed-ia.png",
-            ALT: "Information Architecture Image",
-          },
+      TITLE: "Step 1: Structuring the Experience",
+      DESCRIPTION:
+        "Before diving into the complete design phase, I focused on visualizing the product’s overall structure to ensure a clear foundation. I started by building the information architecture (IA), mapping both the team and client-side user flows to understand every interaction point. This was followed by wireframe sketches that laid out the core layouts and interactions, providing a blueprint for the detailed design work ahead.",
+      IA: {
+        IMG: {
+          SRC: "/images/projects/pixeed/pixeed-ia.png",
+          ALT: "Information Architecture Image",
         },
-        IA_DARK: {
-            IMG: {
-              SRC: "/images/projects/pixeed/pixeed-ia-dark.png",
-              ALT: "Information Architecture Image",
-            },
-          },
-        USER_FLOW: {
-          IMG: {
-            SRC: "/images/projects/pixeed/pixeed-user-flow.png",
-            ALT: "User Flow Image",
-          },
-        }
       },
-  }
+      IA_DARK: {
+        IMG: {
+          SRC: "/images/projects/pixeed/pixeed-ia-dark.png",
+          ALT: "Information Architecture Image",
+        },
+      },
+      USER_FLOW: {
+        IMG: {
+          SRC: "/images/projects/pixeed/pixeed-user-flow.png",
+          ALT: "User Flow Image",
+        },
+      },
+      SKETCH: {
+        IMG: {
+          SRC: "/images/projects/pixeed/pixeed-sketch.png",
+          ALT: "Sketch Image",
+        },
+      },
+    },
+    STEP2: {
+      STYLE_GUIDE: {
+        IMG: {
+          SRC: "/images/projects/pixeed/pixeed-styleguide.jpg",
+          ALT: "Styleguide Image",
+        },
+      },
+      STYLE_GUIDE_DARK: {
+        IMG: {
+          SRC: "/images/projects/pixeed/pixeed-styleguide-dark.jpg",
+          ALT: "Styleguide Image",
+        },
+      },
+    },
+  },
 };

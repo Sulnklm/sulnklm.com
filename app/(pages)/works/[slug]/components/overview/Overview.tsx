@@ -176,7 +176,7 @@ export default function Overview({ project }: OverviewProps) {
             <img
               src={project.IMAGE.SRC}
               alt={project.IMAGE.ALT}
-              className="max-w-[70rem] mx-auto h-auto w-full"
+              className="max-w-[70rem] mx-auto h-auto w-full rounded-2xl"
             />
           )}
         </motion.div>

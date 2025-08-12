@@ -11,6 +11,7 @@ import {
   Frown,
   RefreshCw,
   RouteOff,
+  RulerDimensionLine,
   Sparkles,
   Star,
   Video,
@@ -205,26 +206,49 @@ export default function Pixeed() {
                 title={PIXEED_PROJECT.BACKGROUND.TITLE}
                 description={PIXEED_PROJECT.BACKGROUND.DESCRIPTION}
               />
-              {/* <InsetBlockInside> */}
-
-              <img
-                className="dark:hidden my-10"
-                src={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.IA.IMG.SRC}
-                alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.IA.IMG.ALT}
+              <InsetBlockInside>
+                <img
+                  className="dark:hidden mt-5 mb-10"
+                  src={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.IA.IMG.SRC}
+                  alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.IA.IMG.ALT}
+                />
+                <img
+                  className="hidden dark:block mt-5 mb-10"
+                  src={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.IA_DARK.IMG.SRC}
+                  alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.IA_DARK.IMG.ALT}
+                />
+                <div className="border-t mt-5 pb-5 border-dashed"></div>
+                <div className="grid grid-cols-3 gap-10">
+                  <img
+                    className="col-span-1 mt-10 dark:invert w-full h-auto mx-auto"
+                    src={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.USER_FLOW.IMG.SRC}
+                    alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.USER_FLOW.IMG.ALT}
+                  />
+                  <img
+                    className="col-span-2 mt-10 dark:invert w-full h-auto mx-auto rounded-xl"
+                    src={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.SKETCH.IMG.SRC}
+                    alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.SKETCH.IMG.ALT}
+                  />
+                </div>
+              </InsetBlockInside>
+              <VerticalConnector />
+              <ProjectDescriptionCard
+                icon={<RulerDimensionLine />}
+                title={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.TITLE}
+                description={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.DESCRIPTION}
               />
-              <img
-                className="hidden dark:block my-10"
-                src={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.IA_DARK.IMG.SRC}
-                alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.IA_DARK.IMG.ALT}
-              />
-              <div className="border-t mt-5 pb-5 border-dashed"></div>
-
-              <img
-                className="mt-10 dark:invert w-full max-w-[23rem] h-auto mx-auto"
-                src={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.USER_FLOW.IMG.SRC}
-                alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.USER_FLOW.IMG.ALT}
-              />
-              {/* </InsetBlockInside> */}
+              <InsetBlockInside>
+                <img
+                  className="dark:hidden mt-10 w-full h-auto mx-auto rounded-xl"
+                  src={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.STYLE_GUIDE.IMG.SRC}
+                  alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.STYLE_GUIDE.IMG.ALT}
+                />
+                <img
+                  className="hidden dark:block mt-10 w-full h-auto mx-auto rounded-xl"
+                  src={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.STYLE_GUIDE_DARK.IMG.SRC}
+                  alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.STYLE_GUIDE_DARK.IMG.ALT}
+                />
+              </InsetBlockInside>
             </section>
           </div>
         </div>
