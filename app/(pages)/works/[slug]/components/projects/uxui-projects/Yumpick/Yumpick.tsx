@@ -13,11 +13,7 @@ import { Reflection } from "../../../Reflection/Reflection";
 import { SectionHeader } from "@/components/ui/SectionHeader/SectionHeader";
 import { KeyFeatures } from "../../../overview/KeyFeatures/KeyFeatures";
 import {
-  ArrowLeft,
-  Book,
   CalendarCheck,
-  Layers,
-  Lightbulb,
   ListChecks,
   MapPinned,
   PenLine,
@@ -27,7 +23,6 @@ import {
   Telescope,
   Utensils,
   UtensilsCrossed,
-  X,
 } from "lucide-react";
 import TableOfContents from "@/components/ui/TableOfContents/TableOfContents";
 import { CornerBoxes } from "@/components/ui/CornerBoxes/CornerBoxes";
@@ -36,14 +31,11 @@ import UserResearch from "../process/UserResearch";
 import { AnimatedNotificationList } from "@/components/ui/Notification/Notification";
 import { BarChart } from "@/components/ui/Chart/BarChart";
 import { InsetBlockInside } from "@/components/ui/InsetBlockInside";
-import { InsetBlock } from "@/components/ui/InsetBlock";
 import { ProjectDescriptionCard } from "@/components/ui/ProjectDescriptionCard/ProjectDescriptionCard";
 import { VerticalConnector } from "@/components/ui/VerticalConnector/VerticalConnector";
 import CompetitorAnalysis from "../process/CompetitorAnalysis";
 import Defining from "../process/Defining";
-import IdeasToAction from "../process/DesignProcess";
 import DesignProcess from "../process/DesignProcess";
-import { Button } from "@/components/Button/Button";
 
 export default function Yumpick() {
   const project = PROJECTS_CONST.PROJECTS.find(

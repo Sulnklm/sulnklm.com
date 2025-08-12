@@ -124,10 +124,6 @@ export function KeyFeatures({ features, iconMap }: KeyFeaturesSectionProps) {
             key={features[activeIdx].image}
             src={features[activeIdx].image}
             alt={features[activeIdx].label}
-            // initial={{ opacity: 0, y: 0 }}
-            // animate={{ opacity: 1, y: 0 }}
-            // exit={{ opacity: 0, y: 0 }}
-            // transition={{ duration: 0.17, ease: "easeOut" }}
             className="max-h-[580px] rounded-2xl transition-all duration-300"
           />
       </div>
