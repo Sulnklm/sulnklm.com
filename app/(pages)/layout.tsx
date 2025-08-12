@@ -20,6 +20,9 @@ export const metadata = {
   authors: [{ name: "Suin Kim", url: "https://sulnklm.com" }],
   creator: "Suin Kim",
   description: "Welcome to my portfolio!",
+  icons: {
+    icon: '/images/icons/icon.png', 
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
