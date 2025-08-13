@@ -4,7 +4,7 @@ export type GridProjectCardPropTypes = {
       SRC: string;
       ALT: string;
     };
-    THUMBNAIL2: {
+    THUMBNAIL2?: {
       SRC: string;
       ALT: string;
     };
