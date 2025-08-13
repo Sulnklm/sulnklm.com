@@ -1,13 +1,44 @@
+
+import type { ProjectFeature } from "../../../overview/KeyFeatures/types";
+
+export const PIXEED_FEATURES: ProjectFeature[] = [
+  {
+    icon: "video",
+    label: "Time-Stamped feedback",
+    description: "Break long feedback video into manageable, time-stamped segments.",
+    image: "/images/projects/pixeed/pixeed-video-first.jpg",
+  },
+  {
+    icon: "sparkles",
+    label: "AI Chaptering & Ticketing",
+    description: "Automatic video chapters for clients, instant ticket creation for teams.",
+    image: "/images/projects/pixeed/pixeed-ai.jpg",
+  },
+  {
+    icon: "copyMinus",
+    label: "Duplicate Report Prevention",
+    description: "Instantly detects and flags potential duplicate tickets.",
+    image: "/images/projects/pixeed/pixeed-duplicate.jpg",
+  },
+  {
+    icon: "workflow",
+    label: "Shared Context",
+    description: "Keep clients and teams aligned with the same updates and explanations.",
+    image: "/images/projects/pixeed/pixeed-shared-context.jpg",
+  },
+];
+
 export const PIXEED_PROJECT = {
   KEY_FEATURES: {
     SUBTEXT: "Quick preview",
     HEADING: "Key Features ✦",
   },
+  
   BACKGROUND: {
     HEADING: "Why This Project?",
     TITLE: "From Messy Feedback to Clear Action",
     DESCRIPTION:
-      "While working on SaaS and freelance projects, I often struggled with scattered client feedback, long user testing videos, and tickets that lacked context. Important details were buried in lengthy recordings, making it hard for teams to act quickly and confidently. Pixeed was created to turn messy video feedback into clear, actionable insights by automatically breaking it into chapters, generating tickets with the right context, and helping teams collaborate with clarity from the start.",
+      "While working on SaaS and freelance projects, my team often struggled with scattered feedback and lengthy user testing videos. Instead of accepting that messiness as normal, I wanted to rethink the workflow not just as a designer, but as someone who values clarity, context, and collaboration. This project wasn’t about finding a perfect solution but about exploring a more thoughtful, transparent, and collaborative way of working.",
     IMAGE: {
       SRC: "/images/projects/pixeed/background.png",
       ALT: "Pixeed image",
@@ -105,18 +136,55 @@ export const PIXEED_PROJECT = {
       },
     },
     STEP2: {
-      STYLE_GUIDE: {
+      TITLE: "Step 2: Design System & Figma Setup",
+      DESCRIPTION:
+        "To ensure visual consistency, I developed a design system in Figma that defined typography, color palettes, and reusable UI components. This shared system enabled both the client and team to work within a unified, structured environment, reducing design debt and accelerating iteration. It also established a solid foundation for creating high-fidelity wireframes.",
+      DESIGN_SYSTEM: {
         IMG: {
-          SRC: "/images/projects/pixeed/pixeed-styleguide.jpg",
-          ALT: "Styleguide Image",
+          SRC: "/images/projects/pixeed/pixeed-design-system.jpg",
+          ALT: "Design System Image",
         },
       },
-      STYLE_GUIDE_DARK: {
+      DESIGN_SYSTEM_DARK: {
         IMG: {
-          SRC: "/images/projects/pixeed/pixeed-styleguide-dark.jpg",
-          ALT: "Styleguide Image",
+          SRC: "/images/projects/pixeed/pixeed-design-system-dark.jpg",
+          ALT: "Design System Image",
         },
       },
     },
+    STEP3: {
+      TITLE: "Step3: High-Fidelity Wireframes and Interactive Prototypes",
+      DESCRIPTION:
+        "Building on the initial Information Architecture and sketches, I developed high-fidelity wireframes for both the team and client views, refining visual details and layout. Guided by the user flows, I then created interactive prototypes to simulate the full experience and test key interactions.",
+      WIREFRAMES: {
+        IMG: {
+          SRC: "/images/projects/pixeed/pixeed-wireframes.jpg",
+          ALT: "Wireframes Image",
+        },
+      },
+      WIREFRAMES_DARK: {
+        IMG: {
+          SRC: "/images/projects/pixeed/pixeed-wireframes-dark.jpg",
+          ALT: "Wireframes Image",
+        },
+      },
+      PROTOTYPE: {
+        CLIENT: {
+          SUBTEXT: "Client View: Submitting New Feedback",
+          SRC: "/video/projects/pixeed/pixeed-client.mp4",
+          ALT: "Client Side Prototype",
+        },
+        TEAM: {
+          SUBTEXT: "Team View: Reviewing Feedback and Creating a Ticket",
+          SRC: "/video/projects/pixeed/pixeed-team.mp4",
+          ALT: "Team Side Prototype",
+        },
+      },
+    },
+  },
+  REFLECTION: {
+    TITLE: "Designing for the Unseen Frustrations",
+    DESCRIPTION:
+      "This project was a reminder that meaningful innovation doesn’t always come from solving grand, complex problems. Sometimes, it’s about addressing the everyday frictions everyone has grown used to tolerating. By stripping away unnecessary steps and rethinking how feedback is shared and acted on, I learned the value of designing for simplicity without sacrificing depth. The process reinforced that when you make the obvious easy, you free up time and energy for the truly challenging work. Moving forward, I’ll continue to seek opportunities to remove these hidden inefficiencies so teams can focus on creating, not troubleshooting.",
   },
 };

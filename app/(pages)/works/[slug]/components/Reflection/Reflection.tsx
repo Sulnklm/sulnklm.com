@@ -31,7 +31,6 @@ export function Reflection({ title, description }: ReflectionTypes) {
   const prevProject = projects[currentIndex - 1];
   const nextProject = projects[currentIndex + 1];
 
-  // 'coming soon' 여부 체크
   const isPrevComingSoon = prevProject?.CATEGORY?.includes("coming soon");
   const isNextComingSoon = nextProject?.CATEGORY?.includes("coming soon");
 

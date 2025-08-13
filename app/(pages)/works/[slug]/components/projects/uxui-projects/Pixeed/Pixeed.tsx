@@ -4,11 +4,13 @@ import type { ProjectType } from "@/(pages)/works/types";
 import Overview from "../../../overview/Overview";
 import { KeyFeatures } from "../../../overview/KeyFeatures/KeyFeatures";
 import { SectionHeader } from "@/components/ui/SectionHeader/SectionHeader";
-import { PIXEED_PROJECT } from "./const";
+import { PIXEED_FEATURES, PIXEED_PROJECT } from "./const";
 import {
   CopyMinus,
   Drum,
   Frown,
+  PenLine,
+  Pointer,
   RefreshCw,
   RouteOff,
   RulerDimensionLine,
@@ -27,23 +29,25 @@ import CompetitorAnalysis from "../process/CompetitorAnalysis";
 import { ProjectDescriptionCard } from "@/components/ui/ProjectDescriptionCard/ProjectDescriptionCard";
 import { VerticalConnector } from "@/components/ui/VerticalConnector/VerticalConnector";
 import DesignProcess from "../process/DesignProcess";
+import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
+import { Reflection } from "../../../Reflection/Reflection";
 
 export default function Pixeed() {
   const project = PROJECTS_CONST.PROJECTS.find(
     (p: ProjectType) => p.SLUG === "pixeed"
   );
   if (!project) return <div>Project not found.</div>;
-  // const iconMap = {
-  //   mapPin: MapPinned,
-  //   telescope: Telescope,
-  //   utensils: Utensils,
-  //   calendarCheck: CalendarCheck,
-  // };
+  const iconMap = {
+    video: Video,
+    sparkles: Sparkles,
+    copyMinus: CopyMinus,
+    workflow: Workflow,
+  };
   return (
     <div>
       <Overview project={project} />
       <div className="relative mt-10 pt-10 lg:mt-16 lg:pt-16 container space-y-10 lg:space-y-16 2xl:space-y-24">
-        {/* <section id="quick-preview">
+        <section id="quick-preview">
           <SectionHeader
             subText={PIXEED_PROJECT.KEY_FEATURES.SUBTEXT}
             heading={PIXEED_PROJECT.KEY_FEATURES.HEADING}
@@ -55,7 +59,8 @@ export default function Pixeed() {
               />
             }
           />
-        </section> */}
+          <KeyFeatures features={PIXEED_FEATURES} iconMap={iconMap} />
+        </section>
 
         <div className="relative flex border-y py-10 lg:py-20">
           <CornerBoxes overrideBottom={{ 1: "bottom-0", 3: "bottom-0" }} />
@@ -71,8 +76,8 @@ export default function Pixeed() {
                   id: "competitor-analysis",
                   label: "🔍 Competitor Analysis",
                 },
-                { id: "opportunity", label: "🥁 Opportunities" },
                 { id: "design-process", label: "🎨 Design Process" },
+                { id: "prototype", label: "⭐️ Prototype" },
                 { id: "reflection", label: "📝 Reflection" },
               ]}
             />
@@ -206,6 +211,7 @@ export default function Pixeed() {
                 title={PIXEED_PROJECT.BACKGROUND.TITLE}
                 description={PIXEED_PROJECT.BACKGROUND.DESCRIPTION}
               />
+              {/* Step 1 */}
               <InsetBlockInside>
                 <img
                   className="dark:hidden mt-5 mb-10"
@@ -233,22 +239,112 @@ export default function Pixeed() {
               </InsetBlockInside>
               <VerticalConnector />
               <ProjectDescriptionCard
-                icon={<RulerDimensionLine />}
+                icon={<PenLine />}
                 title={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.TITLE}
                 description={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.DESCRIPTION}
               />
+            </section>
+            <div className="border-t border-dashed"></div>
+            {/* Step 2 */}
+            <section>
               <InsetBlockInside>
                 <img
-                  className="dark:hidden mt-10 w-full h-auto mx-auto rounded-xl"
-                  src={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.STYLE_GUIDE.IMG.SRC}
-                  alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.STYLE_GUIDE.IMG.ALT}
+                  className="dark:hidden w-full h-auto mx-auto rounded-xl"
+                  src={
+                    PIXEED_PROJECT.DESIGN_PROCESS.STEP2.DESIGN_SYSTEM.IMG.SRC
+                  }
+                  alt={
+                    PIXEED_PROJECT.DESIGN_PROCESS.STEP2.DESIGN_SYSTEM.IMG.ALT
+                  }
                 />
                 <img
-                  className="hidden dark:block mt-10 w-full h-auto mx-auto rounded-xl"
-                  src={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.STYLE_GUIDE_DARK.IMG.SRC}
-                  alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.STYLE_GUIDE_DARK.IMG.ALT}
+                  className="hidden dark:block w-full h-auto mx-auto rounded-xl"
+                  src={
+                    PIXEED_PROJECT.DESIGN_PROCESS.STEP2.DESIGN_SYSTEM_DARK.IMG
+                      .SRC
+                  }
+                  alt={
+                    PIXEED_PROJECT.DESIGN_PROCESS.STEP2.DESIGN_SYSTEM_DARK.IMG
+                      .ALT
+                  }
                 />
               </InsetBlockInside>
+              <VerticalConnector />
+              <ProjectDescriptionCard
+                icon={<RulerDimensionLine />}
+                title={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.TITLE}
+                description={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.DESCRIPTION}
+              />
+            </section>
+            <div className="border-t border-dashed"></div>
+            {/* Step 3 */}
+            <section>
+              <InsetBlockInside>
+                <img
+                  className="dark:hidden w-full h-auto mx-auto rounded-xl"
+                  src={PIXEED_PROJECT.DESIGN_PROCESS.STEP3.WIREFRAMES.IMG.SRC}
+                  alt={PIXEED_PROJECT.DESIGN_PROCESS.STEP3.WIREFRAMES.IMG.ALT}
+                />
+                <img
+                  className="hidden dark:block w-full h-auto mx-auto rounded-xl"
+                  src={
+                    PIXEED_PROJECT.DESIGN_PROCESS.STEP3.WIREFRAMES_DARK.IMG.SRC
+                  }
+                  alt={
+                    PIXEED_PROJECT.DESIGN_PROCESS.STEP3.WIREFRAMES_DARK.IMG.ALT
+                  }
+                />
+                <section id="prototype">
+                  <div className="border-t mt-10 pb-10 border-dashed"></div>
+                  <SubTextBox>
+                    {
+                      PIXEED_PROJECT.DESIGN_PROCESS.STEP3.PROTOTYPE.CLIENT
+                        .SUBTEXT
+                    }
+                  </SubTextBox>
+                  <video
+                    src={
+                      PIXEED_PROJECT.DESIGN_PROCESS.STEP3.PROTOTYPE.CLIENT.SRC
+                    }
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto mx-auto border"
+                  />
+                  <div className="border-t mt-10 pb-10 border-dashed"></div>
+
+                  <SubTextBox>
+                    {PIXEED_PROJECT.DESIGN_PROCESS.STEP3.PROTOTYPE.TEAM.SUBTEXT}
+                  </SubTextBox>
+                  <video
+                    src={PIXEED_PROJECT.DESIGN_PROCESS.STEP3.PROTOTYPE.TEAM.SRC}
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto mx-auto border"
+                  />
+                </section>
+              </InsetBlockInside>
+              <VerticalConnector />
+              <ProjectDescriptionCard
+                icon={<Pointer />}
+                title={PIXEED_PROJECT.DESIGN_PROCESS.STEP3.TITLE}
+                description={PIXEED_PROJECT.DESIGN_PROCESS.STEP3.DESCRIPTION}
+              />
+            </section>
+
+            <section
+              id="reflection"
+              className="relative mt-10 pt-10 lg:mt-16 lg:pt-16"
+            >
+              <Reflection
+                title={PIXEED_PROJECT.REFLECTION.TITLE}
+                description={PIXEED_PROJECT.REFLECTION.DESCRIPTION}
+              />
             </section>
           </div>
         </div>

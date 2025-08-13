@@ -24,13 +24,18 @@ export const PROJECTS_CONST = {
         { name: "Illustrator", src: "/images/tools/illustrator.svg" },
         { name: "Figma", src: "/images/tools/figma.png" },
       ],
-      PROJECT_TYPE: ["User Research", "Web UI Design", "Prototyping"],
+      PROJECT_TYPE: [
+        "SaaS",
+        "Workflow Optimization",
+        "UI Design",
+        "Prototyping",
+      ],
       DISCIPLINE: ["Case Study"],
       TIMELINE: "2 Weeks, July 2025",
       CATEGORY: ["all", "case-study", "selected"],
       FIGMA_LINK: {
         LABEL: "Prototype",
-        HREF: "https://www.figma.com/board/pe65zE0tDSEV0ajTwXpQU5/YUMPICK?node-id=0-1&t=6xnbUKNRrCFdnWul-1",
+        HREF: "https://www.figma.com/proto/VWk6KkvPN7xHZoa0XArt6p/Pixeed?page-id=0%3A1&node-id=16-2102&viewport=114%2C131%2C0.13&t=8iowF3nzKElIC4Jl-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=16%3A2102&show-proto-sidebar=1",
       },
     },
     {
@@ -62,7 +67,7 @@ export const PROJECTS_CONST = {
       },
       DISCIPLINE: ["Web Development"],
       TIMELINE: "2 Weeks, December 2024",
-      CATEGORY: ["all", "selected", "development"],
+      CATEGORY: ["all", "development"],
       PROJECT_TYPE: [
         "Frontend Development",
         "Web Application",
@@ -106,7 +111,7 @@ export const PROJECTS_CONST = {
       DISCIPLINE: ["Case Study"],
       TIMELINE: "4 Weeks, December 2024",
       CATEGORY: ["all", "case-study", "selected"],
-      PROJECT_TYPE: ["User Research", "UI Design", "Mobile Prototyping"],
+      PROJECT_TYPE: ["User Research", "App Design", "Prototyping"],
       GITHUB_LINK: {
         LABEL: "GitHub",
         HREF: "https://github.com/Sulnklm/yumpick",
@@ -126,7 +131,7 @@ export const PROJECTS_CONST = {
         ALT: "Wishbond Hero Image",
       },
       THUMBNAIL1: {
-        SRC: "/images/projects/yumpick/yumpick-thumbnail.jpg",
+        SRC: "/images/projects/pixeed/pixeed-thumbnail.jpg",
         ALT: "Thumbnail Image",
       },
       TOOLS: [

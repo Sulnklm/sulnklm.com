@@ -57,7 +57,7 @@ export function KeyFeatures({ features, iconMap }: KeyFeaturesSectionProps) {
                 <h5 className="mt-1 text-sm">{feature.description}</h5>
               </button>
               {i < features.length - 1 && (
-                <div className="w-px mx-7 bg-grey_scale_500/30 dark:bg-grey_scale_900 h-20 self-center" />
+                <div className="w-px mx-5 2xl:mx-7 bg-grey_scale_500/30 dark:bg-grey_scale_900 h-20 self-center" />
               )}
             </React.Fragment>
           );
@@ -114,7 +114,7 @@ export function KeyFeatures({ features, iconMap }: KeyFeaturesSectionProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 0 }}
             transition={{ duration: 0.17, ease: "easeOut" }}
-            className="max-h-[580px] rounded-2xl transition-all duration-300"
+            className="max-h-[580px] border dark:border-none rounded-2xl transition-all duration-300"
           />
         </AnimatePresence>
       </div>
@@ -124,7 +124,7 @@ export function KeyFeatures({ features, iconMap }: KeyFeaturesSectionProps) {
             key={features[activeIdx].image}
             src={features[activeIdx].image}
             alt={features[activeIdx].label}
-            className="max-h-[580px] rounded-2xl transition-all duration-300"
+            className="max-h-[580px] border dark:border-none rounded-2xl transition-all duration-300"
           />
       </div>
     </section>
