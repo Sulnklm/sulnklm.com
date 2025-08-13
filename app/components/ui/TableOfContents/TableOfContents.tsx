@@ -20,8 +20,9 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
         const el = document.getElementById(id);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (Math.abs(rect.top) < minOffset) {
-            minOffset = Math.abs(rect.top);
+          const offsetTop = rect.top - 500; 
+          if (Math.abs(offsetTop) < minOffset) {
+            minOffset = Math.abs(offsetTop);
             closest = id;
           }
         }

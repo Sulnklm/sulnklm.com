@@ -49,33 +49,41 @@ export const GridProjectCard = ({ PROJECT }: GridProjectCardPropTypes) => {
             </p>
           </div>
           <div
-            className={`flex-[3] relative rounded-2xl overflow-hidden -rotate-3 max-w-[30rem] min-w-[12rem] translate-x-1 translate-y-7 lg:translate-y-5 lg:group-hover:translate-y-1 lg:group-hover:-rotate-6 duration-200 bg-white dark:bg-black p-0.5 shadow-2xl border ${
-              isComingSoon
-                ? "lg:group-hover:translate-y-5 group-hover:-rotate-3"
-                : ""
-            }`}
+            className={`relative rounded-2xl overflow-hidden -rotate-3 translate-x-1 translate-y-7 lg:translate-y-5 lg:group-hover:translate-y-1 lg:group-hover:-rotate-6 duration-200 bg-white dark:bg-black p-0.5 shadow-2xl border
+      ${
+        PROJECT.THUMBNAIL2?.SRC ? "flex-[3] max-w-[30rem]" : "flex-1 max-w-full"
+      }
+      ${
+        isComingSoon ? "lg:group-hover:translate-y-5 group-hover:-rotate-3" : ""
+      }
+    `}
           >
             <img
               src={PROJECT.THUMBNAIL1.SRC}
               alt={PROJECT.THUMBNAIL1.ALT}
               className={`w-full !h-auto object-contain shadow-2xl rounded-xl
-    ${isComingSoon ? "opacity-15 grayscale blur-md" : ""}`}
+        ${isComingSoon ? "opacity-15 grayscale blur-md" : ""}`}
             />
           </div>
-          <div
-            className={`sm:flex-[1] max-w-[7rem] relative overflow-hidden rounded-t-2xl sm:max-w-[8rem] md:max-w-[9rem] lg:max-w-[9.5rem] xl:max-w-[10rem] min-w-[5rem] rotate-6 -translate-x-1 translate-y-14 md:translate-y-10 lg:translate-y-16 lg:group-hover:translate-y-12 duration-200 bg-white dark:bg-black p-0.5 h-fit shadow-2xl border ${
-              isComingSoon
-                ? "lg:group-hover:translate-y-16 group-hover:rotate-6"
-                : ""
-            }`}
-          >
-            <img
-              src={PROJECT.THUMBNAIL2.SRC}
-              alt={PROJECT.THUMBNAIL2.ALT}
-              className={`w-full h-auto object-contain rounded-t-xl
-    ${isComingSoon ? "opacity-15 grayscale blur-md" : ""}`}
-            />
-          </div>
+
+          {PROJECT.THUMBNAIL2?.SRC && (
+            <div
+              className={`sm:flex-[1] max-w-[7rem] relative overflow-hidden rounded-t-2xl sm:max-w-[8rem] md:max-w-[9rem] lg:max-w-[9.5rem] xl:max-w-[10rem] min-w-[5rem] rotate-6 -translate-x-1 translate-y-14 md:translate-y-10 lg:translate-y-16 lg:group-hover:translate-y-12 duration-200 bg-white dark:bg-black p-0.5 h-fit shadow-2xl border
+        ${
+          isComingSoon
+            ? "lg:group-hover:translate-y-16 group-hover:rotate-6"
+            : ""
+        }
+      `}
+            >
+              <img
+                src={PROJECT.THUMBNAIL2.SRC}
+                alt={PROJECT.THUMBNAIL2.ALT}
+                className={`w-full h-auto object-contain rounded-t-xl
+          ${isComingSoon ? "opacity-15 grayscale blur-md" : ""}`}
+              />
+            </div>
+          )}
         </div>
 
         <div className="absolute bottom-0 left-0 bg-grey_scale_50 dark:bg-black w-full pt-10">

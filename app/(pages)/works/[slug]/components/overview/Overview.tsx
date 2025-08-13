@@ -57,7 +57,7 @@ export default function Overview({ project }: OverviewProps) {
       <Ruler height={height} left />
       <Ruler height={height} left={false} />
       <div className="relative mt-[14vh] mx-auto place-items-center px-5 ">
-        <div className="pt-[7vh] max-w-[55rem] grid gap-5 justify-center items-center">
+        <div className="pt-[7vh] max-w-[57rem] grid gap-5 justify-center items-center">
           {/* 1. TOOLS */}
           {project.TOOLS && project.TOOLS.length > 0 && (
             <motion.div
@@ -112,9 +112,9 @@ export default function Overview({ project }: OverviewProps) {
               {project.GITHUB_LINK && (
                 <Button
                   href={project.GITHUB_LINK.HREF}
-                  theme="primary"
+                  theme="tertiary"
                   icon={<GithubIcon size={16} className="ml-2" />}
-                  additionalClasses="!py-2.5 !px-3.5 text-sm rounded-[11px]"
+                  additionalClasses="!py-2.5 !px-3.5 text-sm border rounded-full"
                 >
                   {project.GITHUB_LINK.LABEL}
                 </Button>
@@ -122,9 +122,9 @@ export default function Overview({ project }: OverviewProps) {
               {project.FIGMA_LINK && (
                 <Button
                   href={project.FIGMA_LINK.HREF}
-                  theme="tertiary"
+                  theme="primary"
                   icon={<Figma size={16} className="ml-2" />}
-                  additionalClasses="!py-2.5 !px-3.5 text-sm rounded-full border"
+                  additionalClasses="!py-2.5 !px-3.5 text-sm"
                 >
                   {project.FIGMA_LINK.LABEL}
                 </Button>
@@ -133,9 +133,9 @@ export default function Overview({ project }: OverviewProps) {
               {project.LIVE_LINK && (
                 <Button
                   href={project.LIVE_LINK.HREF}
-                  theme="tertiary"
+                  theme="primary"
                   icon={<ExternalLink size={16} className="ml-2" />}
-                  additionalClasses="!py-2.5 !px-3.5 text-sm rounded-full border"
+                  additionalClasses="!py-2.5 !px-3.5 text-sm"
                 >
                   {project.LIVE_LINK.LABEL}
                 </Button>
@@ -168,7 +168,6 @@ export default function Overview({ project }: OverviewProps) {
                 <Safari
                   url={project.URL}
                   videoSrc={project.VIDEO}
-                  imageSrc={project.SAFARI_IMAGE?.SRC}
                   className="mx-auto drop-shadow-lg"
                 />
               </div>
@@ -183,7 +182,7 @@ export default function Overview({ project }: OverviewProps) {
         </motion.div>
       </div>
 
-      <div className="md:flex items-center container mt-10 lg:mt-20 px-5">
+      <div className="md:flex items-center container max-w-[80rem] mt-10 lg:mt-20 px-5">
         <div
           className={`flex gap-3 lg:w-1/3 bg-primary border-b lg:border-b-0 lg:border-r dark:!border-grey_scale_1000/50 border-dashed rounded-3xl p-5 transition-transform duration-300 ${
             isRotated
