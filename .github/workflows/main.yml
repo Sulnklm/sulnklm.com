@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Inject GITHUB_TOKEN into .env.production
+        run: echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> .env.production
+
       - name: Install and Build
         run: |
           npm install
