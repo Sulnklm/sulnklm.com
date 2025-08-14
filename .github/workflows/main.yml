@@ -24,7 +24,7 @@ jobs:
           npm run build
           npx next export
 
-      - name: SFTP Deploy
+      - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
