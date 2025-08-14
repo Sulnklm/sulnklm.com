@@ -336,7 +336,6 @@ export default function Pixeed() {
                 </section>
               </InsetBlockInside>
             </section>
-{/* test */}
             <section
               id="reflection"
               className="relative mt-10 pt-10 lg:mt-16 lg:pt-16"
