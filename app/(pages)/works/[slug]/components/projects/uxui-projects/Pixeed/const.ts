@@ -107,7 +107,7 @@ export const PIXEED_PROJECT = {
   DESIGN_PROCESS: {
     HEADING: "Bringing Ideas to Life",
     STEP1: {
-      TITLE: "Step 1: Structuring the Experience",
+      TITLE: "Structuring the Experience",
       DESCRIPTION:
         "Before diving into the complete design phase, I focused on visualizing the product’s overall structure to ensure a clear foundation. I started by building the information architecture (IA), mapping both the team and client-side user flows to understand every interaction point. This was followed by wireframe sketches that laid out the core layouts and interactions, providing a blueprint for the detailed design work ahead.",
       IA: {
@@ -136,7 +136,7 @@ export const PIXEED_PROJECT = {
       },
     },
     STEP2: {
-      TITLE: "Step 2: Design System & Figma Setup",
+      TITLE: "Design System & Figma Setup",
       DESCRIPTION:
         "To ensure visual consistency, I developed a design system in Figma that defined typography, color palettes, and reusable UI components. This shared system enabled both the client and team to work within a unified, structured environment, reducing design debt and accelerating iteration. It also established a solid foundation for creating high-fidelity wireframes.",
       DESIGN_SYSTEM: {
@@ -153,7 +153,7 @@ export const PIXEED_PROJECT = {
       },
     },
     STEP3: {
-      TITLE: "Step3: High-Fidelity Wireframes and Interactive Prototypes",
+      TITLE: "High-Fidelity Wireframes and Interactive Prototypes",
       DESCRIPTION:
         "Building on the initial Information Architecture and sketches, I developed high-fidelity wireframes for both the team and client views, refining visual details and layout. Guided by the user flows, I then created interactive prototypes to simulate the full experience and test key interactions.",
       WIREFRAMES: {

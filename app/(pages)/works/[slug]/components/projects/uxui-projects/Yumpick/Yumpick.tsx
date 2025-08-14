@@ -86,8 +86,8 @@ export default function Yumpick() {
             />
           </div>
           <div className="relative lg:border-l border-dashed space-y-20 container">
-          <div className="hidden lg:block absolute top-0 -left-[5px] w-[9px] h-[9px] border rounded-[2.5px] border-gray-200 bg-white dark:bg-primary" />
-          <div className="hidden lg:block absolute bottom-0 -left-[5px] w-[9px] h-[9px] border rounded-[2.5px] border-gray-200 bg-white dark:bg-primary" />
+            <div className="hidden lg:block absolute top-0 -left-[5px] w-[9px] h-[9px] border rounded-[2.5px] border-gray-200 bg-white dark:bg-primary" />
+            <div className="hidden lg:block absolute bottom-0 -left-[5px] w-[9px] h-[9px] border rounded-[2.5px] border-gray-200 bg-white dark:bg-primary" />
 
             <section id="background">
               <Background
@@ -203,6 +203,12 @@ export default function Yumpick() {
                 description={YUMPICK_PROJECT.BACKGROUND.DESCRIPTION}
               />
               {/* Step 1 */}
+              <ProjectDescriptionCard
+                icon={<PenLine />}
+                title={YUMPICK_PROJECT.DESIGN_PROCESS.STEP1.TITLE}
+                description={YUMPICK_PROJECT.DESIGN_PROCESS.STEP1.DESCRIPTION}
+              />
+              <VerticalConnector />
               <InsetBlockInside>
                 <img
                   className="pb-5"
@@ -216,14 +222,15 @@ export default function Yumpick() {
                   alt={YUMPICK_PROJECT.DESIGN_PROCESS.STEP1.LOW_FI.IMG.ALT}
                 />
               </InsetBlockInside>
-              <VerticalConnector />
-              <ProjectDescriptionCard
-                icon={<PenLine />}
-                title={YUMPICK_PROJECT.DESIGN_PROCESS.STEP1.TITLE}
-                description={YUMPICK_PROJECT.DESIGN_PROCESS.STEP1.DESCRIPTION}
-              />
+
               <div className="border-t mt-10 pb-10 lg:mt-16 lg:pb-16 border-dashed"></div>
               {/* Step 2 */}
+              <ProjectDescriptionCard
+                icon={<RulerDimensionLine />}
+                title={YUMPICK_PROJECT.DESIGN_PROCESS.STEP2.TITLE}
+                description={YUMPICK_PROJECT.DESIGN_PROCESS.STEP2.DESCRIPTION}
+              />
+              <VerticalConnector />
               <InsetBlockInside>
                 <img
                   className="pb-5"
@@ -252,15 +259,16 @@ export default function Yumpick() {
                   }
                 />
               </InsetBlockInside>
-              <VerticalConnector />
-              <ProjectDescriptionCard
-                icon={<RulerDimensionLine />}
-                title={YUMPICK_PROJECT.DESIGN_PROCESS.STEP2.TITLE}
-                description={YUMPICK_PROJECT.DESIGN_PROCESS.STEP2.DESCRIPTION}
-              />
+
               <div className="border-t mt-10 pb-10 lg:mt-16 lg:pb-16 border-dashed"></div>
 
               {/* Step 3 */}
+              <ProjectDescriptionCard
+                icon={<Pointer />}
+                title={YUMPICK_PROJECT.DESIGN_PROCESS.STEP3.TITLE}
+                description={YUMPICK_PROJECT.DESIGN_PROCESS.STEP3.DESCRIPTION}
+              />
+              <VerticalConnector />
               <InsetBlockInside>
                 <img
                   className="pb-5"
@@ -278,12 +286,6 @@ export default function Yumpick() {
                   className="w-full h-auto rounded-[49px] max-w-[18rem] mx-auto"
                 />
               </InsetBlockInside>
-              <VerticalConnector />
-              <ProjectDescriptionCard
-                icon={<Pointer />}
-                title={YUMPICK_PROJECT.DESIGN_PROCESS.STEP3.TITLE}
-                description={YUMPICK_PROJECT.DESIGN_PROCESS.STEP3.DESCRIPTION}
-              />
             </section>
 
             <section

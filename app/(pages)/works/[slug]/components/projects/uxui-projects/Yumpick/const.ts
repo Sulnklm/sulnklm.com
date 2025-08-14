@@ -35,7 +35,7 @@ export const YUMPICK_PROJECT = {
   DESIGN_PROCESS: {
     HEADING: "Bringing Ideas to Life",
     STEP1: {
-      TITLE: "Step 1: Laying the Foundations",
+      TITLE: "Laying the Foundations",
       DESCRIPTION: "Before diving into full UI design, I mapped out the information architecture and rough wireframe sketches to ensure the app’s structure would meet real user needs. This groundwork let me validate key workflows and flow into higher-fidelity mockups with confidence.",
       IA: {
         IMG: {
@@ -51,7 +51,7 @@ export const YUMPICK_PROJECT = {
       }
     },
     STEP2: {
-      TITLE: "Step2: Crafting a Consistent Visual Framework",
+      TITLE: "Crafting a Consistent Visual Framework",
       DESCRIPTION:"After validating the app’s structure, I translated core user flows into medium-fidelity wireframes, iterating on layouts, interactions, and visual hierarchy to balance clarity and functionality. I also established a cohesive design system by defining typography, color palette, components, and spacing guidelines to ensure consistency across screens and speed up future iterations.",
       MID_FI: {
         IMG: {
@@ -73,7 +73,7 @@ export const YUMPICK_PROJECT = {
       }
     },
     STEP3: {
-      TITLE: "Step3: From Mockups to Interactive Prototype",
+      TITLE: "From Mockups to Interactive Prototype",
       DESCRIPTION:"Building on the design system, I crafted polished high-fidelity mockups that showcase finalized UI elements, including typography, color palette, and components. I then assembled an interactive prototype with clickable flows to simulate key user journeys. Usability tests on this prototype revealed minor tweaks needed for smoother interactions, ensuring the final design delivers a seamless, intuitive experience.",
       HI_FI: {
         IMG: {

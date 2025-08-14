@@ -212,6 +212,12 @@ export default function Pixeed() {
                 description={PIXEED_PROJECT.BACKGROUND.DESCRIPTION}
               />
               {/* Step 1 */}
+              <ProjectDescriptionCard
+                icon={<PenLine />}
+                title={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.TITLE}
+                description={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.DESCRIPTION}
+              />
+              <VerticalConnector />
               <InsetBlockInside>
                 <img
                   className="dark:hidden mt-5 mb-10"
@@ -237,16 +243,16 @@ export default function Pixeed() {
                   />
                 </div>
               </InsetBlockInside>
-              <VerticalConnector />
-              <ProjectDescriptionCard
-                icon={<PenLine />}
-                title={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.TITLE}
-                description={PIXEED_PROJECT.DESIGN_PROCESS.STEP1.DESCRIPTION}
-              />
             </section>
             <div className="border-t border-dashed"></div>
             {/* Step 2 */}
             <section>
+              <ProjectDescriptionCard
+                icon={<RulerDimensionLine />}
+                title={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.TITLE}
+                description={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.DESCRIPTION}
+              />
+              <VerticalConnector />
               <InsetBlockInside>
                 <img
                   className="dark:hidden w-full h-auto mx-auto rounded-xl"
@@ -269,16 +275,16 @@ export default function Pixeed() {
                   }
                 />
               </InsetBlockInside>
-              <VerticalConnector />
-              <ProjectDescriptionCard
-                icon={<RulerDimensionLine />}
-                title={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.TITLE}
-                description={PIXEED_PROJECT.DESIGN_PROCESS.STEP2.DESCRIPTION}
-              />
             </section>
             <div className="border-t border-dashed"></div>
             {/* Step 3 */}
             <section>
+              <ProjectDescriptionCard
+                icon={<Pointer />}
+                title={PIXEED_PROJECT.DESIGN_PROCESS.STEP3.TITLE}
+                description={PIXEED_PROJECT.DESIGN_PROCESS.STEP3.DESCRIPTION}
+              />
+              <VerticalConnector />
               <InsetBlockInside>
                 <img
                   className="dark:hidden w-full h-auto mx-auto rounded-xl"
@@ -329,12 +335,6 @@ export default function Pixeed() {
                   />
                 </section>
               </InsetBlockInside>
-              <VerticalConnector />
-              <ProjectDescriptionCard
-                icon={<Pointer />}
-                title={PIXEED_PROJECT.DESIGN_PROCESS.STEP3.TITLE}
-                description={PIXEED_PROJECT.DESIGN_PROCESS.STEP3.DESCRIPTION}
-              />
             </section>
 
             <section
