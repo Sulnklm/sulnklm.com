@@ -56,8 +56,8 @@ export default function Overview({ project }: OverviewProps) {
       <CornerBoxes overrideBottom={{ 1: "bottom-0", 3: "bottom-0" }} />
       <Ruler height={height} left />
       <Ruler height={height} left={false} />
-      <div className="relative mt-[14vh] mx-auto place-items-center px-5 ">
-        <div className="pt-[7vh] max-w-[57rem] grid gap-5 justify-center items-center">
+      <div className="relative mt-[14vh] !mx-auto place-items-center px-5">
+        <div className="pt-[7vh] max-w-[57rem] grid gap-5 justify-center items-center mx-auto">
           {/* 1. TOOLS */}
           {project.TOOLS && project.TOOLS.length > 0 && (
             <motion.div
