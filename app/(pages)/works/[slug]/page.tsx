@@ -1,6 +1,6 @@
-import FlickMood from "./components/projects/dev-projects/FlickMood/FlickMood";
-import Pixeed from "./components/projects/uxui-projects/Pixeed/Pixeed";
-import Yumpick from "./components/projects/uxui-projects/Yumpick/Yumpick";
+import FlickMood from "./components/projects/dev-projects/FlickMood";
+import Pixeed from "./components/projects/uxui-projects/Pixeed";
+import Yumpick from "./components/projects/uxui-projects/Yumpick";
 
 const PROJECT_COMPONENTS: Record<string, React.FC> = {
   pixeed: Pixeed,
