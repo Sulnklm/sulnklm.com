@@ -75,13 +75,13 @@ export default function Yumpick() {
           <div className="hidden lg:block mr-8 min-w-[195px]">
             <TableOfContents
               sections={[
-                { id: "quick-preview", label: "👁️ Quick Preview" },
-                { id: "background", label: "🏁 Background" },
-                { id: "user-research", label: "👥 User Research" },
-                { id: "competitor-analysis", label: "🔍 Competitor Analysis" },
-                { id: "defining", label: "👩🏻‍🦱 Defining" },
-                { id: "design-process", label: "🎨 Design Process" },
-                { id: "reflection", label: "📝 Reflection" },
+                { id: "quick-preview", label: "Quick Preview" },
+                { id: "background", label: "Background" },
+                { id: "user-research", label: "User Research" },
+                { id: "competitor-analysis", label: "Competitor Analysis" },
+                { id: "defining", label: "Defining" },
+                { id: "design-process", label: "Design Process" },
+                { id: "reflection", label: "Reflection" },
               ]}
             />
           </div>

@@ -36,14 +36,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />{" "}
         <SoundProvider>
           <Providers>
-            <SmoothScroll>
+            {/* <SmoothScroll> */}
               <div className="hidden lg:block">
                 <SmoothCursor />
               </div>
               <NavBar />
               <main>{children}</main>
               <Footer />
-            </SmoothScroll>
+            {/* </SmoothScroll> */}
           </Providers>
         </SoundProvider>
       </body>

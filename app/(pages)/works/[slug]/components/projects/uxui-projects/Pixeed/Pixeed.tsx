@@ -67,18 +67,18 @@ export default function Pixeed() {
           <div className="hidden lg:block mr-8 min-w-[195px]">
             <TableOfContents
               sections={[
-                { id: "quick-preview", label: "👁️ Quick Preview" },
-                { id: "background", label: "🏁 Background" },
-                { id: "problem", label: "☹️ Problem" },
+                { id: "quick-preview", label: "Quick Preview" },
+                { id: "background", label: "Background" },
+                { id: "problem", label: "Problem" },
 
                 // { id: "user-research", label: "👥 User Research" },
                 {
                   id: "competitor-analysis",
-                  label: "🔍 Competitor Analysis",
+                  label: "Competitor Analysis",
                 },
-                { id: "design-process", label: "🎨 Design Process" },
-                { id: "prototype", label: "⭐️ Prototype" },
-                { id: "reflection", label: "📝 Reflection" },
+                { id: "design-process", label: "Design Process" },
+                { id: "prototype", label: "Prototype" },
+                { id: "reflection", label: "Reflection" },
               ]}
             />
           </div>
