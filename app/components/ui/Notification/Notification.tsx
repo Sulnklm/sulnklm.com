@@ -33,8 +33,9 @@ export interface AnimatedListProps extends ComponentPropsWithoutRef<"div"> {
 export const AnimatedList = React.memo(
   ({ children, className, delay = 700, ...props }: AnimatedListProps) => {
     const [index, setIndex] = useState(0);
-    const [hasAnimated, setHasAnimated] = useState(false);
+    const [isInView, setIsInView] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
+    const timeoutRef = useRef<number | null>(null);
 
     const childrenArray = useMemo(
       () => React.Children.toArray(children),
@@ -42,34 +43,43 @@ export const AnimatedList = React.memo(
     );
 
     useEffect(() => {
-      if (hasAnimated) return;
       const el = ref.current;
       if (!el) return;
+
       const observer = new window.IntersectionObserver(
         ([entry]) => {
-          if (entry.isIntersecting) {
-            setHasAnimated(true);
-          }
+          setIsInView(entry.isIntersecting);
         },
         { threshold: 0.2 }
       );
+
       observer.observe(el);
       return () => observer.disconnect();
-    }, [hasAnimated]);
+    }, []);
 
     useEffect(() => {
-      if (!hasAnimated) return;
-      if (index < childrenArray.length - 1) {
-        const timeout = setTimeout(() => {
-          setIndex((prevIndex) => prevIndex + 1);
-        }, delay);
-        return () => clearTimeout(timeout);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
       }
-    }, [hasAnimated, index, delay, childrenArray.length]);
+
+      if (!isInView) return; 
+      if (index >= childrenArray.length - 1) return;
+
+      timeoutRef.current = window.setTimeout(() => {
+        setIndex((prev) => Math.min(prev + 1, childrenArray.length - 1));
+      }, delay);
+
+      return () => {
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+          timeoutRef.current = null;
+        }
+      };
+    }, [isInView, index, delay, childrenArray.length]);
 
     const itemsToShow = useMemo(() => {
-      const result = childrenArray.slice(0, index + 1).reverse();
-      return result;
+      return childrenArray.slice(0, index + 1).reverse();
     }, [index, childrenArray]);
 
     return (
