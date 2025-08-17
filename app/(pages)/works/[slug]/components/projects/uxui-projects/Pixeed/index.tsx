@@ -70,8 +70,6 @@ export default function Pixeed() {
                 { id: "quick-preview", label: "Quick Preview" },
                 { id: "background", label: "Background" },
                 { id: "problem", label: "Problem" },
-
-                // { id: "user-research", label: "👥 User Research" },
                 {
                   id: "competitor-analysis",
                   label: "Competitor Analysis",
