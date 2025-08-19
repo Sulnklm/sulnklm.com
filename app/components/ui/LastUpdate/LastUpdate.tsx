@@ -24,7 +24,7 @@ export const LastUpdate: React.FC<LastUpdateProps> = ({ lastUpdate }) => {
   }, [controls]);
 
   return (
-    <div className="absolute bottom-0 right-10 z-[100000] mt-4 flex items-center gap-2 !text-background bg-primary dark:bg-background py-2 px-4 rounded-xl">
+    <div className="absolute bottom-0 right-10 z-[100000] mt-4 flex items-center gap-1.5 !text-background bg-primary dark:bg-background py-2 px-4 rounded-xl">
       <motion.span
         animate={controls}
         style={{
@@ -34,15 +34,15 @@ export const LastUpdate: React.FC<LastUpdateProps> = ({ lastUpdate }) => {
         }}
       >
         <Hammer
-          size={18}
+          size={16}
           strokeWidth={1.9}
-          className="text-white dark:text-grey_scale_1000"
+          className="text-white dark:text-grey_scale_1000 -translate-y-0.5"
         />
       </motion.span>
       <p className="!text-background dark:!text-grey_scale_1000 text-sm">
-        Last updated 👩🏻‍💻:
+        Last updated:
       </p>
-      <p className="!text-background dark:!text-grey_scale_1000 text-sm font-[450]">
+      <p className="!text-background dark:!text-grey_scale_1000 text-sm">
         {lastUpdate
           ? lastUpdate.toLocaleDateString("en-US", {
               year: "numeric",

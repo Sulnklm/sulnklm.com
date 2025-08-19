@@ -30,10 +30,10 @@ export default function NavBar() {
 
   useEffect(() => {
     setMounted(true);
-      setTheme("light");
+    setTheme("light");
   }, []);
 
-  if (!mounted) return null; 
+  if (!mounted) return null;
   const { muted, setMuted } = useSound();
   const pathname = usePathname();
 
@@ -60,14 +60,28 @@ export default function NavBar() {
           </Link>
           <ul className="hidden sm:flex items-center gap-5 text-base z-10">
             {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, LABEL }) => {
-              const isCurrentPage = pathname === HREF;
+              const cleanPath = pathname.replace(/\/+$/, "");
+              const cleanHref = HREF.replace(/\/+$/, "");
+
+              const isCurrentPage = cleanPath === cleanHref;
+              {
+                console.log(
+                  "isCurrentPage:",
+                  isCurrentPage,
+                  "pathname:",
+                  pathname,
+                  "href:",
+                  HREF
+                );
+              }
+
               return (
                 <li key={LABEL}>
                   <Button
                     href={HREF}
                     additionalClasses={
                       isCurrentPage
-                        ? "text-base font-[500] text-grey_scale_900 dark:!text-background"
+                        ? "text-base !font-[500] !text-grey_scale_900 dark:!text-background"
                         : "text-grey_scale_700 dark:text-white/40 text-base"
                     }
                   >
@@ -154,20 +168,25 @@ export default function NavBar() {
               transition={{ duration: 0.24, ease: [0.48, 0.02, 0.32, 1] }}
               className="sm:hidden absolute top-full right-0 mt-2 w-full rounded-3xl bg-grey_scale_100/[98%] !backdrop-blur-xl drop-shadow-2xl dark:bg-black/[98%] shadow-xl border z-[9999] flex flex-col px-5 py-7 gap-7"
             >
-              {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, LABEL }) => (
-                <Button
-                  key={LABEL}
-                  href={HREF}
-                  additionalClasses={
-                    pathname === HREF
-                      ? "w-full justify-start text-grey_scale_700 dark:text-white/40 font-[500]"
-                      : "w-full justify-start text-grey_scale_900 dark:!text-background"
-                  }
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {LABEL}
-                </Button>
-              ))}
+              {NAVBAR_CONST.LINKS.slice(0, 2).map(({ HREF, LABEL }) => {
+                const isCurrentPage =
+                  pathname.replace(/\/+$/, "") === HREF.replace(/\/+$/, "");
+
+                return (
+                  <Button
+                    key={LABEL}
+                    href={HREF}
+                    additionalClasses={
+                      isCurrentPage
+                        ? "w-full justify-start text-coral dark:text-coral font-[500]"
+                        : "w-full justify-start text-grey_scale_900 dark:!text-background"
+                    }
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {LABEL}
+                  </Button>
+                );
+              })}
               <Button
                 href={EXTERNAL_LINKS.CONTACT.HREF}
                 additionalClasses="w-full justify-start text-grey_scale_900 dark:text-background"

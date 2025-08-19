@@ -36,8 +36,6 @@ export default function Hero() {
     },
   ];
 
-  const height = 800;
-
   return (
     <div className="mt-[15vh] pb-10 md:px-10 relative px-5">
       <div className="pb-3 mb-8 md:mb-12 border-b border-dashed">
