@@ -69,7 +69,7 @@ export default function Pixeed() {
               sections={[
                 { id: "quick-preview", label: "Quick Preview" },
                 { id: "background", label: "Background" },
-                { id: "problem", label: "Problem" },
+                { id: "challenges", label: "Challenges" },
                 {
                   id: "competitor-analysis",
                   label: "Competitor Analysis",
@@ -96,7 +96,7 @@ export default function Pixeed() {
               />
             </section>
 
-            <section id="problem">
+            <section id="challenges">
               <SectionHeader
                 subText={PIXEED_PROJECT.PROBLEM.SUBTEXT}
                 heading={PIXEED_PROJECT.PROBLEM.HEADING}

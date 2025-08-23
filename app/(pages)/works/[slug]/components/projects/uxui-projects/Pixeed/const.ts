@@ -31,7 +31,7 @@ export const PIXEED_FEATURES: ProjectFeature[] = [
 export const PIXEED_PROJECT = {
   KEY_FEATURES: {
     SUBTEXT: "Quick preview",
-    HEADING: "Key Features ✦",
+    HEADING: "Solutions ✦",
   },
   
   BACKGROUND: {
@@ -45,7 +45,7 @@ export const PIXEED_PROJECT = {
     },
   },
   PROBLEM: {
-    SUBTEXT: "Problem",
+    SUBTEXT: "Challenges",
     HEADING: "Real-World Frustration",
     TITLE: "Where things often get messy",
     DESCRIPTION: {

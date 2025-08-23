@@ -3,7 +3,7 @@ import type { ProjectFeature } from "../../../overview/KeyFeatures/types";
 export const YUMPICK_PROJECT = {
   KEY_FEATURES: {
     SUBTEXT: "Quick preview",
-    HEADING: "Key Features ✦",
+    HEADING: "Solutions ✦",
   },
   BACKGROUND: {
     HEADING: "Why This Project?",
@@ -27,7 +27,7 @@ export const YUMPICK_PROJECT = {
       SRC: "/images/projects/yumpick/competitor-analysis/yumpick-competitor1.png",
       ALT: "Competitor Analysis Image",
     },
-    TITLE: "No App Delivers Visuals and Details Simultaneously",
+    TITLE: "Challenges: No App Delivers Visuals and Details Simultaneously",
     DESCRIPTION:
       "To identify where existing apps fell short, I analyzed Instagram, Yelp, Beli, and Google Maps by evaluating their social-media style browsing, detailed reviews, local recommendations, and location data. I discovered that no platform offers immersive visual discovery alongside comprehensive menu and reservation details at the same time. This clear gap became the project’s guiding focus: uniting rich, photo-driven exploration with accurate, up-to-date information in one seamless experience.",
   },
