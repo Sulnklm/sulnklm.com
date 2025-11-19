@@ -30,7 +30,7 @@ export const recommendations: Recommendation[] = [
     name: "Sharleen Yan",
     role: "Head of Product Design",
     company: "SimuHealth & Convergence",
-    avatarSrc: "/images/home/sharleen.webp",
+    avatarSrc: "/images/home/Sharleen.webp",
     avatarAlt: "Portrait of Sharleen Yan",
     quote:
       "Suin consistently shares thoughtful ideas and has a solid eye for clean, well-structured design. She’s also dependable on the development side, contributing to both front-end tasks and QA fixes with care. She’s reliable, steady, and has grown well across both design and development.",
