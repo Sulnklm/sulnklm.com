@@ -60,7 +60,7 @@ export default function Overview({ project }: OverviewProps) {
         <Ruler height={height} left={false} />
       </div>
       <div className="relative mt-[14vh] !mx-auto place-items-center">
-        <div className="ml-10 lg:ml-20 w-full">
+        <div className="ml-0 lg:ml-20 w-full">
           <Button href="/projects">
             <div className="flex items-center gap-2 opacity-90 hover:opacity-100 duration-300">
               <ChevronLeft className="opacity-70" size={16} />
@@ -95,7 +95,7 @@ export default function Overview({ project }: OverviewProps) {
             initial="hidden"
             animate="visible"
             custom={1}
-            className="text-3xl md:text-4xl md:max-w-[70vw] lg:max-w-2xl lg:text-4xl text-grey_scale_1000 !leading-[1.4] font-[400] mb-2"
+            className="text-2xl md:text-4xl md:max-w-[70vw] lg:max-w-2xl lg:text-4xl text-grey_scale_1000 !leading-[1.4] font-[400] mb-2"
           >
             {project.SUBTITLE}
           </motion.h1>
@@ -155,7 +155,7 @@ export default function Overview({ project }: OverviewProps) {
               )}
             </motion.div>
           )}
-          <div className="flex flex-wrap gap-10 lg:gap-20 lg:justify-center border-t border-dashed pt-10">
+          <div className="grid lg:flex flex-wrap gap-10 lg:gap-20 lg:justify-center border-t border-dashed pt-10">
             <div>
               <h4 className=""> {PROJECT_DETAILS_CONST.PROJECT_ROLE_HEADER}</h4>
               <div className="flex flex-wrap gap-2 mt-3">
