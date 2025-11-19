@@ -12,19 +12,33 @@ import AnalyticsListener from "@/AnalyticsListener";
 import LetsWork from "@/components/Footer/LetsWork";
 
 export const metadata = {
+  metadataBase: new URL("https://www.sulnklm.com"),
   title: "Suin Kim | Portfolio",
-  // keywords: [
-  //   "Portfolio",
-  //   "Suin Kim",
-  //   "UX/UI Designer",
-  //   "Web Developer",
-  //   "Graphic Designer",
-  // ],
   authors: [{ name: "Suin Kim", url: "https://sulnklm.com" }],
   creator: "Suin Kim",
   description: "Welcome to my portfolio!",
   icons: {
     icon: "/images/icons/icon.png",
+  },
+  openGraph: {
+    title: "Suin Kim | Portfolio",
+    description: "Hello, I'm Suin. I design & code ✴︎",
+    url: "https://www.sulnklm.com",
+    siteName: "Suin Kim Portfolio",
+    images: [
+      {
+        url: "/images/home/thumbnail.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Suin Kim | Portfolio",
+    description: "Hello, I'm Suin. I design & code ✴︎",
+    images: ["/images/home/thumbnail.webp"],
   },
 };
 
@@ -66,7 +80,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           height="10%"
           position="bottom"
           className="z-[500] fixed left-0 right-0 bottom-0 pointer-events-none"
-        />{" "}
+        />
         <Providers>
           {/* <SmoothScroll> */}
           <div className="hidden lg:block">{/* <SmoothCursor /> */}</div>
