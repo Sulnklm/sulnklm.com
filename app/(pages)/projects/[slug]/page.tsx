@@ -5,10 +5,10 @@ import Yumpick from "./components/projects/uxui-projects/Yumpick";
 import Deepidv from "./components/projects/uxui-projects/DeepIDV";
 import DeepSign from "./components/projects/uxui-projects/DeepIDV";
 const PROJECT_COMPONENTS: Record<string, React.FC> = {
-  pixeed: Pixeed,
+  // pixeed: Pixeed,
   flickmood: FlickMood,
   yumpick: Yumpick,
-  furrytales: FurryTales,
+  // furrytales: FurryTales,
   deepsign: DeepSign
 };
 

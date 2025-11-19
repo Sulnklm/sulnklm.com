@@ -59,8 +59,7 @@ export const PROJECTS_CONST = {
         ALT: "DeepIDV Thumbnail Image",
       },
       TOOLS: [
-        // { name: "Photoshop", src: "/images/tools/photoshop.svg" },
-        { name: "Illustrator", src: "/images/tools/illustrator.svg" },
+        { name: "After Effects", src: "/images/tools/after-effects.svg" },
         { name: "Figma", src: "/images/tools/figma.png" },
       ],
       PROJECT_TYPE: [
@@ -110,42 +109,6 @@ export const PROJECTS_CONST = {
     //   },
     // },
 
-    // {
-    //   SLUG: "pixeed",
-    //   TITLE: "Pixeed",
-    //   SUBTITLE:
-    //     "How might we help teams extract key insights without watching entire videos?",
-    //   OVERVIEW:
-    //     "AI-powered tool that transforms scattered client video feedback into clear, actionable tickets for small teams.",
-    //   IMAGE: {
-    //     SRC: "/images/projects/pixeed/pixeed-thumbnail.jpg",
-    //     ALT: "YumPick Hero Image",
-    //   },
-    //   THUMBNAIL1: {
-    //     SRC: "/images/projects/pixeed/pixeed-thumbnail.jpg",
-    //     ALT: "YumPick Thumbnail Image",
-    //   },
-    //   TOOLS: [
-    //     { name: "Photoshop", src: "/images/tools/photoshop.svg" },
-    //     { name: "Illustrator", src: "/images/tools/illustrator.svg" },
-    //     { name: "Figma", src: "/images/tools/figma.png" },
-    //   ],
-    //   PROJECT_TYPE: [
-    //     "SaaS",
-    //     "Workflow Optimization",
-    //     "UI Design",
-    //     "Prototyping",
-    //   ],
-    //   ROLE: "UX/UI Designer",
-    //   DISCIPLINE: ["Case Study"],
-    //   TIMELINE: "2 Weeks, July 2025",
-    //   PLATFORM: "Web App",
-    //   CATEGORY: ["all", "case-study", ],
-    //   FIGMA_LINK: {
-    //     LABEL: "View Prototype",
-    //     HREF: "https://www.figma.com/proto/VWk6KkvPN7xHZoa0XArt6p/Pixeed?page-id=0%3A1&node-id=16-2102&viewport=114%2C131%2C0.13&t=8iowF3nzKElIC4Jl-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=16%3A2102&show-proto-sidebar=1",
-    //   },
-    // },
     {
       SLUG: "flickmood",
       SHOW_SAFARI: true,
@@ -190,6 +153,42 @@ export const PROJECTS_CONST = {
       LIVE_LINK: {
         LABEL: "Live Website",
         HREF: "https://flickmood.sulnklm.com",
+      },
+    },
+
+    {
+      SLUG: "",
+      TITLE: "Pixeed",
+      SUBTITLE:
+        "How might we help teams extract key insights without watching entire videos?",
+      OVERVIEW:
+        "AI-powered tool that transforms scattered client video feedback into clear, actionable tickets for small teams.",
+      IMAGE: {
+        SRC: "/images/projects/pixeed/pixeed-thumbnail.jpg",
+        ALT: "YumPick Hero Image",
+      },
+      THUMBNAIL1: {
+        SRC: "/images/projects/pixeed/pixeed-thumbnail.jpg",
+        ALT: "YumPick Thumbnail Image",
+      },
+      TOOLS: [
+        { name: "Illustrator", src: "/images/tools/illustrator.svg" },
+        { name: "Figma", src: "/images/tools/figma.png" },
+      ],
+      PROJECT_TYPE: [
+        "SaaS",
+        "Workflow Optimization",
+        "UI Design",
+        "Prototyping",
+      ],
+      ROLE: "UX/UI Designer",
+      DISCIPLINE: ["Case Study"],
+      TIMELINE: "2 Weeks, July 2025",
+      PLATFORM: "Web App",
+      CATEGORY: ["all", "case-study", "coming soon"],
+      FIGMA_LINK: {
+        LABEL: "View Prototype",
+        HREF: "https://www.figma.com/proto/VWk6KkvPN7xHZoa0XArt6p/Pixeed?page-id=0%3A1&node-id=16-2102&viewport=114%2C131%2C0.13&t=8iowF3nzKElIC4Jl-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=16%3A2102&show-proto-sidebar=1",
       },
     },
     // {
