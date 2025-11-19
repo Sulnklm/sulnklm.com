@@ -300,7 +300,7 @@ export const PIXEED_PROJECT = {
   },
 
   SOLUTIONS: {
-    TITLE: "THE SOLUTIONS",
+    TITLE: "The Solutions",
     SUBTITLE:
       "Combining visual exploration, detailed information, and seamless usability in one platform.",
     DESCRIPTION:
