@@ -138,7 +138,7 @@ export const EXPERIENCE_CONST: ExperienceItem[] = [
       "Created scroll-stopping branded graphics and motion content for Pixel Ramen’s social media channels, turning ideas into visuals that felt cohesive, playful, and true to the brand.",
   },
   {
-    time: "May - July 2025",
+    time: "Nov 2024 – Apr 2025",
     company: "Freelance",
     position: "UX/UI Designer & Front-End Developer",
     images: [
