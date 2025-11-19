@@ -22,7 +22,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Suin Kim | Portfolio",
-    description: "Hello, I'm Suin. I design & code ✴︎",
+    description: "A Strategic Empath who designs with clarity and intention.",
     url: "https://www.sulnklm.com",
     siteName: "Suin Kim Portfolio",
     images: [
@@ -37,7 +37,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Suin Kim | Portfolio",
-    description: "Hello, I'm Suin. I design & code ✴︎",
+    description: "A Strategic Empath who designs with clarity and intention.",
     images: ["/images/home/thumbnail.webp"],
   },
 };
