@@ -126,6 +126,7 @@ export default function NavBar() {
               <Button
                 href={EXTERNAL_LINKS.RESUME.href}
                 theme="primary"
+                target="_blank"
                 icon={<ArrowRight size={16} className="ml-2 -rotate-45 " />}
                 additionalClasses="!py-2 !px-3.5 text-base font-[450] rounded-[11px] !!hover:rotate-0"
               >
