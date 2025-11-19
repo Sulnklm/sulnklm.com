@@ -7,7 +7,7 @@ export function DotBackground() {
       <div
         className={cn(
           "absolute inset-0",
-          "[background-size:32px_32px]",
+          "[background-size:40px_40px]",
           "[background-image:radial-gradient(#111111,transparent_1px)]",
           "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
         )}

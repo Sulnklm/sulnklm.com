@@ -20,7 +20,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
 
   return (
     <Link
-      href={`/works/${PROJECT.SLUG}`}
+      href={`/projects/${PROJECT.SLUG}`}
       className={`block group relative rounded-[10px] ${
         isComingSoon ? "pointer-events-none opacity-80 cursor-not-allowed" : ""
       }`}
@@ -52,7 +52,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
             </div>
             <div className="flex w-full h-fit max-h-[17rem] lg:max-h-[20rem] bg-neutral-200/50 dark:bg-grey_scale_1000/30 group-hover:bg-neutral-200 dark:group-hover:bg-grey_scale_1000/50 duration-200 px-5 md:pt-5 xl:pt-8 lg:px-10 rounded-md">
               <div
-                className={`relative rounded-2xl overflow-hidden -rotate-3 translate-x-1 translate-y-7 lg:translate-y-5 lg:group-hover:translate-y-1 group-hover:-rotate-6 duration-200 bg-white dark:bg-black p-0.5 shadow-2xl border
+                className={`relative rounded-2xl overflow-hidden -rotate-3 translate-x-1 translate-y-7 lg:translate-y-8 lg:group-hover:translate-y-6 group-hover:-rotate-6 duration-200 bg-white dark:bg-black p-0.5 shadow-2xl border
       ${
         PROJECT.THUMBNAIL2?.SRC
           ? "flex-[3] max-w-[30rem] min-w-[12rem]"
@@ -131,7 +131,7 @@ export const ListProjectCard = ({ PROJECT }: ListProjectCardPropTypes) => {
           </div>
         </div>
         <div className="group absolute right-0 bottom-0 p-1.5 dark:group-hover:bg-white/[8%] duration-300 m-3 rounded-xl">
-          <ArrowRight className="text-grey_scale_800 group-hover:text-coral dark:group-hover:text-coral dark:text-grey_scale_500 group-hover:rotate-0 -rotate-45 duration-300" />
+          <ArrowRight className="text-grey_scale_800 dark:text-grey_scale_500 group-hover:rotate-0 -rotate-45 duration-300" />
         </div>
       </div>
     </Link>

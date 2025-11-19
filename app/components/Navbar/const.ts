@@ -6,9 +6,13 @@ export const NAVBAR_CONST = {
     ALT: "Smiley Face Logo",
   },
   LINKS: [
+     {
+      HREF: "/",
+      LABEL: "Home",
+    },
     {
-      HREF: "/works",
-      LABEL: "Works",
+      HREF: "/projects",
+      LABEL: "Projects",
     },
     {
       HREF: "/about",

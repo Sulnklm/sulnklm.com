@@ -22,7 +22,7 @@ export function Safari({
 }: SafariProps) {
   return (
     <div
-      className="w-full max-w-[70rem] mx-auto"
+      className="w-full max-w-[70rem] xl:max-w-7xl mx-auto"
       style={{ aspectRatio: `${width} / ${height}` }}
     >
       <svg

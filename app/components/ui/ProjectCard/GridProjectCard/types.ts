@@ -11,7 +11,7 @@ export type GridProjectCardPropTypes = {
     IMAGE: {
       SRC: string;
       ALT: string;
-    }
+    };
     CATEGORY: string[];
     TITLE: string;
     SUBTITLE: string;
@@ -19,6 +19,7 @@ export type GridProjectCardPropTypes = {
     SLUG: string;
     TIMELINE: string;
     TOOLS: { name: string; src: string }[];
+    IS_UNDER_NDA?: boolean;
   };
 };
 

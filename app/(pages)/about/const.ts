@@ -9,7 +9,7 @@ export const ABOUT_CONST = {
       ALT: "Grassland Image",
     },
     IMAGE1: {
-      SRC: "/images/about/hero/about1.jpg",
+      SRC: "/images/about/hero/about.webp",
       ALT: "Image of Suin 1",
     },
     IMAGE2: {
@@ -28,12 +28,12 @@ export const ABOUT_CONST = {
   },
   MY_STORY: {
     SUBTEXT: "My story",
-    TITLE1: "Where I Began 🌄",
+    TITLE1: "Hi, I’m Suin — a strategic designer driven by curiosity.",
     PARAGRAPH1:
-      "I was drawn not only to the aesthetics of design but to creating interactive experiences that truly engage people and bringing those ideas to life. Leaving my comfort zone in Korea right after high school, I took a bold step toward my dreams by moving alone to Vancouver, far from my family. Here, I’ve found inspiration and growth through collaborating with diverse, passionate individuals who share my vision :)",
-    TITLE2: "Where I Stand Today 👩🏻‍💻",
+      "I first became interested in user experience after switching to a new banking app and realizing how much smoother and more intuitive it felt. It made me curious about what makes everyday interactions feel effortless, and why those small decisions matter so much. That moment is what sparked my interest in UX/UI design and shaped the way I think about building clear, intentional experiences.",
+    TITLE2: "Where I stand today.",
     PARAGRAPH2:
-      "Completing my first internship, I came to understand that in the ever-evolving world of digital design, there is always infinite room for growth. This ongoing journey of improvement deepened my passion for the field and drives me to continuously push my creative and technical boundaries. Moving forward, I aspire to create work that truly inspires while evolving into a more innovative designer and developer.",
+      "Today, I work on simplifying complex verification flows and dashboard systems. I focus on understanding why a problem exists before deciding how to solve it, and I help my team make sense of messy systems by turning them into clearer, more sustainable structures and interactions. My front-end experience also helps bridge the gap between ideas and implementation, making sure the solutions we design are both realistic and consistent in practice.",
   },
 };
 
@@ -82,7 +82,19 @@ export const SKILLS_CONST = {
 };
 
 export const EXPERIENCE_CONST: ExperienceItem[] = [
-  
+  {
+    time: "Sep 2025 - Present",
+    position: "UX/UI Designer",
+    company: "@ DeepIDV",
+    images: [
+      {
+        src: "/images/about/experience/deepidv.svg",
+        alt: "DeepIDV logo",
+      },
+    ],
+    description:
+      "Led end-to-end UX/UI design for DeepIDV’s suite of enterprise identity verification products, including DeepDoc, DeepCam, and DeepSign. Focused on streamlining complex KYC and e-signing flows, improving clarity, and strengthening visual and structural consistency across the product ecosystem.",
+  },
   {
     time: "May - July 2025",
     position: "Front-End Developer",
@@ -98,7 +110,7 @@ export const EXPERIENCE_CONST: ExperienceItem[] = [
       },
     ],
     description:
-      "Collaborated with developers and designers to conduct QA testing and identify & resolve bugs in a TypeScript-based UI.",
+      "Worked on both design and development for SimuHealth, a SaaS healthcare training platform. Supported the redesign of the survey flow to improve clarity and completion rates, and assisted with QA testing and front-end fixes across the dashboard to enhance overall usability and consistency.",
   },
   {
     time: "May - July 2025",
@@ -123,12 +135,12 @@ export const EXPERIENCE_CONST: ExperienceItem[] = [
       },
     ],
     description:
-      "Created scroll-stopping visuals for social media using Photoshop and Illustrator, and produced motion graphics in After Effects to boost engagement and brand awareness.",
+      "Created scroll-stopping branded graphics and motion content for Pixel Ramen’s social media channels, turning ideas into visuals that felt cohesive, playful, and true to the brand.",
   },
   {
     time: "May - July 2025",
     company: "Freelance",
-    position: "Designer & Developer",
+    position: "UX/UI Designer & Front-End Developer",
     images: [
       {
         src: "/images/about/experience/freelance1.png",
@@ -139,6 +151,6 @@ export const EXPERIENCE_CONST: ExperienceItem[] = [
 
     ],
     description:
-      "Designed and developed responsive, user-centered websites for clients using React, Tailwind CSS, and WordPress, with a focus on usability, scalability, and visual consistency.",
+      "Led the redesign of client websites for customer-facing brands, restructuring complex layouts and crafting interfaces that better reflected each brand’s identity. Collaborated with back-end developers while handling front-end implementation to deliver cohesive, user-centered experiences from design to code.",
   },
 ];

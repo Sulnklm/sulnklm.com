@@ -1,9 +1,7 @@
 import React from "react";
 import { Timeline } from "@/components/ui/Timeline/Timeline";
-import { ABOUT_CONST, EXPERIENCE_CONST } from "../const";
+import { EXPERIENCE_CONST } from "../const";
 import { ExperienceItem } from "../../home/types";
-import OrangeTextBox from "@/components/ui/OrangeTextBox/OrangeTextBox";
-import PatternBackground from "@/components/ui/PatternBackground/PatternBackground";
 
 interface TimelineEntry {
   description: string;
@@ -21,8 +19,8 @@ export default function Experience() {
       company: item.company,
       description: item.description,
       content: (
-        <div className="relative z-50 p-5 shadow-brBoth dark:shadow-brBothDark bg-background dark:bg-black rounded-[30px]">
-          <div className="grid grid-cols-2 xl:grid-cols-4 gap-3">
+        <div className="relative z-50 p-4 w-full shadow-brBoth dark:shadow-brBothDark bg-background dark:bg-black rounded-[20px]">
+          <div className="grid grid-cols-2 xl:grid-cols-4 w-full gap-2">
             {item.images.map((img, idx) => (
               <img
                 key={idx}
@@ -30,7 +28,7 @@ export default function Experience() {
                 alt={img.alt}
                 width={500}
                 height={500}
-                className="h-auto max-w-[13rem] min-h-[2rem] w-full rounded-lg bg-background dark:bg-primary object-contain p-0.5 shadow-3dShadow"
+                className="h-auto md:max-w-[13rem] lg:max-w-[20rem] min-h-[2rem] w-full rounded-lg bg-background dark:bg-primary object-contain p-0.5 shadow-3dShadow"
               />
             ))}
           </div>

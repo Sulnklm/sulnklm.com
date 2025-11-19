@@ -27,7 +27,7 @@ export const PushButton: React.FC<PushButtonProps> = ({
         <div className={styles.outer}>
           <div className={styles.inner}>
             <p
-              className={`${styles.label} font-[400] md:font-[350] font-Sans text-black dark:text-primary flex items-center gap-2`}
+              className={`${styles.label} font-[400] font-Sans text-primary/70 dark:text-primary flex items-center gap-2`}
             >
               {children}
               {icon && <span>{icon}</span>}

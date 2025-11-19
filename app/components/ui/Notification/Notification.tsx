@@ -115,12 +115,12 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
     <figure
       className={cn(
         "relative mx-auto min-h-fit w-full max-w-[650px] rounded-3xl p-4",
-        "transition-all duration-200 ease-in-out hover:scale-[103%]",
+        "transition-all duration-200 ease-in-out",
         "bg-white/50 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
         "transform-gpu dark:bg-primary dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-50px_#ffffff1f_inset]",
       )}
     >
-      <div className="flex flex-row items-start gap-3">
+      <div className="flex flex-row items-start gap-3.5">
         <div
           className="w-9 h-9 aspect-square flex items-center justify-center rounded-xl"
           style={{ backgroundColor: color }}
@@ -128,12 +128,12 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
           <span className="text-xl">{icon}</span>
         </div>
         <div className="flex flex-col">
-          <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white ">
+          <figcaption className="flex flex-row items-center whitespace-pre text-lg font-[450] dark:text-white opacity-85">
             <span className="text-sm sm:text-base">{name}</span>
-            <span className="mx-1">·</span>
-            <span className="text-xs text-gray-500">{time}</span>
+            <span className="mx-1"></span>
+            {/* <span className="text-xs text-gray-500">{time}</span> */}
           </figcaption>
-          <p className="text-sm font-normal dark:text-white/60 max-w-[480px]">
+          <p className="text-sm dark:text-white/60 max-w-[480px] pt-1.5">
             {description}
           </p>
         </div>

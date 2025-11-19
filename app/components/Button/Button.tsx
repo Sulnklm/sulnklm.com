@@ -13,27 +13,22 @@ export const Button: React.FC<ButtonPropTypes> = ({
   theme = "tertiary",
   icon,
   additionalClasses = "",
+  target,
 }) => {
-  const { muted, currentTheme, mounted, router } = useButtonUtils();
+  const { currentTheme, mounted, router } = useButtonUtils();
 
-  const playClickSound = () => {
-    if (muted) return;
-    if (typeof window !== "undefined") {
-      const audio = new Audio("/audio/click.wav");
-      audio.currentTime = 0;
-      audio.volume = 0.4;
-      audio.play();
-    }
-  };
+  if (!mounted) return null;
+
+  const isExternalLink = href ? href.startsWith("http") : false;
 
   const handleClick = (
     e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
   ) => {
-    playClickSound();
     if (onClick) onClick();
 
     if (href) {
       if (href.startsWith("http")) {
+        // 🔹 primary 말고 나머지 테마에서 외부 링크 쓸 때만 사용됨
         setTimeout(() => {
           window.open(href, "_blank", "noopener,noreferrer");
         }, 120);
@@ -46,19 +41,49 @@ export const Button: React.FC<ButtonPropTypes> = ({
     }
   };
 
-  if (!mounted) return null;
-
-  // primary
+  // 🔹 PRIMARY: href 있으면 <a> + ShimmerButton 조합으로 처리
   if (theme === "primary") {
+    // href가 있는 primary 버튼 (예: View Resume)
+    if (href) {
+      const finalTarget =
+        target ?? (isExternalLink ? "_blank" : undefined);
+
+      return (
+        <a
+          href={href}
+          target={finalTarget}
+          rel={
+            finalTarget === "_blank" ? "noopener noreferrer" : undefined
+          }
+          className="inline-block" // 버튼 크기 깨지지 않게 래퍼만 최소 스타일
+        >
+          <ShimmerButton
+            // a 태그가 네비게이션을 담당하니까 여기선 onClick만 전달
+            onClick={onClick}
+            className={additionalClasses}
+            type="button"
+          >
+            {children}
+            {icon && <span>{icon}</span>}
+          </ShimmerButton>
+        </a>
+      );
+    }
+
+    // href 없는 primary 버튼 (단순 액션 버튼)
     return (
-      <ShimmerButton onClick={handleClick} className={additionalClasses}>
+      <ShimmerButton
+        onClick={onClick}
+        className={additionalClasses}
+        type="button"
+      >
         {children}
         {icon && <span>{icon}</span>}
       </ShimmerButton>
     );
   }
 
-  // secondary
+  // 🔹 SECONDARY
   if (theme === "secondary") {
     return currentTheme === "dark" ? (
       <GlassButton
@@ -78,15 +103,19 @@ export const Button: React.FC<ButtonPropTypes> = ({
     );
   }
 
-  // link btn
+  // 🔹 LINK BUTTON (href만 있고 theme은 tertiary 등일 때)
   if (href) {
     return (
       <a
         href={href}
         className={`${additionalClasses} !font-[450] group inline-flex items-center hover:scale-[97%] duration-300 `}
         onClick={handleClick}
-        target={href.startsWith("http") ? "_blank" : undefined}
-        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+        target={isExternalLink ? (target ?? "_blank") : target}
+        rel={
+          (isExternalLink && (target ?? "_blank") === "_blank")
+            ? "noopener noreferrer"
+            : undefined
+        }
       >
         {children}
         {icon && <span>{icon}</span>}
@@ -94,11 +123,12 @@ export const Button: React.FC<ButtonPropTypes> = ({
     );
   }
 
-  // 3
+  // 🔹 일반 버튼 (href 없음)
   return (
     <button
       className={`${additionalClasses} group inline-flex items-center gap-1 hover:text-grey_scale_700 duration-300`}
       onClick={handleClick}
+      type="button"
     >
       {children}
       {icon && <span>{icon}</span>}

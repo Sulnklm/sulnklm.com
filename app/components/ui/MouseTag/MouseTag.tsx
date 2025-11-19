@@ -6,7 +6,7 @@ import { TypingAnimation } from "@/components/ui/magicui/typing-animation";
 export const MouseTag: React.FC<MouseTagProps> = ({
   label = "",
   bgClass = "bg-orange-500",
-  textClass = "!text-black !dark:text-black",
+  textClass = "text-grey_scale_700 dark:text-black",
   arrowClass = "fill-orange-500",
   arrowPosition = "left",
   additionalClassName = "",
@@ -46,7 +46,7 @@ export const MouseTag: React.FC<MouseTagProps> = ({
       {Arrow}
       <p
         className={clsx(
-          "rounded-[8px] px-4 py-2 inline-block font-[350]",
+          "rounded-xl px-3 py-1 inline-block font-[350]",
           bgClass,
           textClass
         )}

@@ -15,7 +15,7 @@ export default function Hero() {
       src: ABOUT_CONST.HERO.IMAGE1.SRC,
       alt: ABOUT_CONST.HERO.IMAGE1.ALT,
       className:
-        "bg-white/20 dark:bg-primary/50 backdrop-blur-lg border w-full max-w-[40vw] sm:max-w-[13rem] h-auto rounded-xl object-cover p-1",
+        "bg-white/20 dark:bg-primary/50 backdrop-blur-lg border w-full max-w-[40vw] sm:max-w-[14rem] h-auto rounded-xl object-cover p-1",
       style: {
         rotate: "-12deg",
         translateX: "1.25rem",
@@ -26,13 +26,13 @@ export default function Hero() {
       src: ABOUT_CONST.HERO.IMAGE3.SRC,
       alt: ABOUT_CONST.HERO.IMAGE3.ALT,
       className:
-        "bg-white/20 dark:bg-primary/50 backdrop-blur-lg border w-full max-w-[40vw] sm:max-w-[12rem] h-auto rounded-xl object-cover p-1",
+        "bg-white/20 dark:bg-primary/50 backdrop-blur-lg border w-full max-w-[40vw] sm:max-w-[13rem] h-auto rounded-xl object-cover p-1",
     },
     {
       src: ABOUT_CONST.HERO.IMAGE2.SRC,
       alt: ABOUT_CONST.HERO.IMAGE2.ALT,
       className:
-        "bg-white/20 dark:bg-primary/50 backdrop-blur-lg border w-full max-w-[40vw] sm:max-w-[14rem] h-auto rounded-xl object-cover p-1 !rotate-6 -translate-y-1 brightness-125",
+        "bg-white/20 dark:bg-primary/50 backdrop-blur-lg border w-full max-w-[40vw] sm:max-w-[15rem] h-auto rounded-xl object-cover p-1 !rotate-6 -translate-y-1 brightness-125",
     },
   ];
 
@@ -43,24 +43,24 @@ export default function Hero() {
       <div className="pb-3 mb-8 md:mb-12 border-b border-dashed">
         <SubTextBox
           additionalClass=""
-          icon={<Hand size={16} className="text-coral" strokeWidth={1.7} />}
+          icon={
+            <Hand size={16} className="text-grey_scale_700" strokeWidth={1.7} />
+          }
         >
           {/* {PROJECTS_CONST.PARAGRAPH} */}
           {ABOUT_CONST.SUBTEXT}
         </SubTextBox>
         <h2 className="text-start text-grey_scale_900 pt-2 md:pt-0 mb-6">
-          <span className="font-PerfectlyNineties tracking-normal">
-            <FlipWords words={["About ✦"]} duration={2200} className="" />
-          </span>
+          <FlipWords words={["About ✦"]} duration={2200} className="" />
         </h2>
       </div>
       <div className="relative z-50">
         <div className="relative">
-          <div className="relative mb-5 z-10 grid xl:grid-cols-[auto,1fr] items-center gap-10 xl:gap-16 h-full">
-            <div className="grid h-fit gap-12 justify-center">
+          <div className="relative mb-5 z-10 grid lg:grid-cols-[auto,1fr] items-center gap-10 lg:gap-0 xl:gap-5 2xl:max-w-[75vw] mx-auto h-full">
+            <div className="grid h-fit gap-12 justify-center md:min-w-[29rem]">
               <div className="w-fit grid pt-3 md:pt-0 md:-translate-y-5">
                 <div className="flex items-end -translate-x-2.5">
-                  <div className="-rotate-12 translate-x-5 grid gap-2 -translate-y-3">
+                  <div className="-rotate-12 translate-x-8 grid gap-2 -translate-y-3">
                     <motion.img
                       key={images[0].src}
                       src={images[0].src}
@@ -93,17 +93,18 @@ export default function Hero() {
                   </div>
                 </div>
                 <MouseTag
-                  label="Hey, it's me again! :)"
-                  bgClass="bg-coral"
-                  arrowClass="fill-coral"
+                  label="Countless leaves feel like my curiosity! 🌳"
+                  bgClass="bg-white/20 dark:bg-primary/10 border"
+                  arrowClass="fill-primary/30 dark:fill-white/60"
                   arrowPosition="left"
-                  additionalClassName="translate-x-[6rem] lg:translate-x-[12rem] mt-6"
+                  textClass="!text-grey_scale_700 dark:text-bg"
+                  additionalClassName="hidden lg:flex lg:translate-x-[5rem] mt-10"
                 />
               </div>
             </div>
             <div className="h-full flex flex-col justify-center">
-              <div className="bg-white/30 dark:bg-primary pt-5 md:pt-8 px-7 md:px-10 pb-8 md:pb-10 rounded-3xl border">
-                <SubTextBox
+              <div className=" pt-5 md:pt-0 px-2 md:px-10 pb-8 md:pb-10">
+                {/* <SubTextBox
                   icon={
                     <MessageCircleHeart
                       size={17}
@@ -113,32 +114,29 @@ export default function Hero() {
                   }
                 >
                   {ABOUT_CONST.MY_STORY.SUBTEXT}
-                </SubTextBox>
-                <div className="border-b pb-5 border-dashed pt-1">
-                  <h3 className="mb-3 font-PerfectlyNineties tracking-normal">
-                    {ABOUT_CONST.MY_STORY.TITLE1}
-                  </h3>
-                  <p className="text-grey_scale_900/80">
+                </SubTextBox> */}
+                <div className="pt-1">
+                  <h4 className="mb-3">{ABOUT_CONST.MY_STORY.TITLE1}</h4>
+                  <p className="text-grey_scale_900/90 text-base leading-7">
                     {ABOUT_CONST.MY_STORY.PARAGRAPH1}
                   </p>
                 </div>
-                <div className="pt-5">
-                  <h3 className="mb-3 font-PerfectlyNineties tracking-normal">
-                    {ABOUT_CONST.MY_STORY.TITLE2}
-                  </h3>
-                  <p className="text-grey_scale_900/80">
+                <div className="pt-8">
+                  {/* <h4 className="mb-3">{ABOUT_CONST.MY_STORY.TITLE2}</h4> */}
+                  <p className="text-grey_scale_900/90 text-base leading-7">
                     {ABOUT_CONST.MY_STORY.PARAGRAPH2}
                   </p>
                 </div>
+                {/* <Button
+                  href={EXTERNAL_LINKS.RESUME.href}
+                  theme="primary"
+                  target="_blank"
+                  icon={<ScrollText size={16} className="ml-2" />}
+                  additionalClasses="!py-2.5 !px-3.5 text-sm rounded-[11px] mt-10 w-full md:!w-fit mx-auto md:mx-0"
+                >
+                  View Resume
+                </Button> */}
               </div>
-              <Button
-                href={EXTERNAL_LINKS.RESUME.href}
-                theme="primary"
-                icon={<ScrollText size={16} className="ml-2" />}
-                additionalClasses="!py-2.5 !px-3.5 text-sm rounded-[11px] mt-5 w-full md:!w-fit mx-auto xl:mx-0"
-              >
-                {EXTERNAL_LINKS.RESUME.label}
-              </Button>
             </div>
           </div>
         </div>

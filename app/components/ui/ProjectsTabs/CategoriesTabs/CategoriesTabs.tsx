@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { useClickSound } from "@/hooks/useClickSound";
 import { Cpu, PenTool, LayoutList, Filter as FilterIcon } from "lucide-react";
 import { ShinyTabs } from "@/components/ui/ShinyTabs/ShinyTabs";
 

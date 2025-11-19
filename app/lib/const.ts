@@ -9,12 +9,16 @@ export const EXTERNAL_LINKS = {
   },
   RESUME: {
     href: "/resume/Suin-Resume.pdf",
-    label: "View Resume",
+    label: "Resume",
   },
   CONTACT: {
     HREF: "mailto:hello@sulnklm.com",
     LABEL: "Contact",
   },
+  PROJECTS: {
+    HREF: "/projects",
+    LABEL: "Projects",
+  }
 };
 
 export const TECH_STACK = {

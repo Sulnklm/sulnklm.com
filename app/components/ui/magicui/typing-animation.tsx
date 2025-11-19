@@ -84,7 +84,7 @@ export function TypingAnimation({
       )}
       {...props}
     >
-      <p className="font-[450] lg:font-[350] !text-white">
+      <p className="font-[300] font-mono tracking-tighter text-sm">
       {displayedText}</p>
     </MotionComponent>
   );

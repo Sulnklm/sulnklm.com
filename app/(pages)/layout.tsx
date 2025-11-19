@@ -7,45 +7,75 @@ import { SoundProvider } from "@/components/ui/SoundContextType/SoundContextType
 import ProgressiveBlur from "@/components/ui/magicui/progressive-blur";
 import { SmoothScroll } from "@/components/ui/Smoothscroll/SmoothScroll";
 import { SmoothCursor } from "@/components/ui/Cursor/Cursor";
+import Script from "next/script";
+import AnalyticsListener from "@/AnalyticsListener";
+import LetsWork from "@/components/Footer/LetsWork";
 
 export const metadata = {
   title: "Suin Kim | Portfolio",
-  keywords: [
-    "Portfolio",
-    "Suin Kim",
-    "UX/UI Designer",
-    "Web Developer",
-    "Graphic Designer",
-  ],
+  // keywords: [
+  //   "Portfolio",
+  //   "Suin Kim",
+  //   "UX/UI Designer",
+  //   "Web Developer",
+  //   "Graphic Designer",
+  // ],
   authors: [{ name: "Suin Kim", url: "https://sulnklm.com" }],
   creator: "Suin Kim",
   description: "Welcome to my portfolio!",
   icons: {
-    icon: '/images/icons/icon.png', 
+    icon: "/images/icons/icon.png",
   },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+  (function(){
+    try{
+      var key = 'theme-v2';
+      var t = localStorage.getItem(key);
+      var sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var wantDark = t === 'dark' || (!t || t === 'system') && sysDark;
+      document.documentElement.classList[wantDark ? 'add' : 'remove']('dark');
+    }catch(e){}
+  })();
+`,
+        }}
+      />
       <body className="bg-background dark:bg-black relative">
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-LPB1T054P7"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LPB1T054P7', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+        <AnalyticsListener />
         <ProgressiveBlur
           height="10%"
           position="bottom"
           className="z-[500] fixed left-0 right-0 bottom-0 pointer-events-none"
         />{" "}
-        <SoundProvider>
-          <Providers>
-            {/* <SmoothScroll> */}
-              <div className="hidden lg:block">
-                <SmoothCursor />
-              </div>
-              <NavBar />
-              <main>{children}</main>
-              <Footer />
-            {/* </SmoothScroll> */}
-          </Providers>
-        </SoundProvider>
+        <Providers>
+          {/* <SmoothScroll> */}
+          <div className="hidden lg:block">{/* <SmoothCursor /> */}</div>
+          <NavBar />
+          <main>{children}</main>
+          {/* <LetsWork /> */}
+          <Footer />
+          {/* </SmoothScroll> */}
+        </Providers>
       </body>
     </html>
   );

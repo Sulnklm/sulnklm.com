@@ -28,7 +28,7 @@ module.exports = {
           md: "768px",
           lg: "1024px",
           xl: "1440px",
-          "2xl": "1540px",
+          "2xl": "1740px",
         },
       },
 
@@ -90,9 +90,10 @@ module.exports = {
         "3xl-custom": { raw: "(min-width: 2300px) and (max-width: 3000px)" },
       },
       colors: {
-        primary: "#111111",
+        primary: "#020202",
         background: "#F7F7F7",
-        coral: "#FF653A",
+        coral: "#FF6E26",
+        blue: "#0084FF",
         grey_scale_50: "#F9F9F9",
         grey_scale_100: "#F8F8F8",
         grey_scale_200: "#EFEFF1",
@@ -114,31 +115,32 @@ module.exports = {
           "linear-gradient(135deg, #FF906F 0%, #FF804D 22%, #FF6A3D 48%, #FF804D 75%, #FF9D7F 100%)",
         },
       fontSize: {
-        h1: ["40px", { lineHeight: "0.5" }],
-        "h1-sm": ["45px"],
-        "h1-md": ["80px", { lineHeight: "1" }],
-        "h1-lg": ["85px"],
-        "h1-2xl": ["100px"],
+        h1: ["30px", { lineHeight: "0.5" }],
+        "h1-sm": ["30px"],
+        "h1-md": ["40px", { lineHeight: "1" }],
+        "h1-lg": ["54px"],
+        "h1-2xl": ["63px"],
 
-        h2: ["28px", { lineHeight: "1.03" }],
-        "h2-md": ["40px"],
-        "h2-lg": ["45px"],
+        h2: ["24px", { lineHeight: "1.5" }],
+        "h2-md": ["30px"],
+        "h2-lg": ["32px"],
 
         h3: ["25px", { lineHeight: "1.1" }],
         "h3-md": ["28px"],
         "h3-lg": ["30px"],
 
         h4: ["20px", { lineHeight: "1.1" }],
-        "h4-md": ["22px"],
-        "h4-lg": ["24px"],
+        "h4-md": ["20px"],
+        "h4-lg": ["22px"],
 
         h5: ["16px", { lineHeight: "1.3" }],
         "h5-md": ["17px"],
         "h5-lg": ["17px"],
 
-        p: ["15px", { lineHeight: "1.4" }],
+        p: ["15px", { lineHeight: "1.7" }],
         "p-md": ["16px"],
         "p-lg": ["16px"],
+        "p-xl": ["17px"],
       },
       fontFamily: {
         Sans: ['"Geist", sans-serif'],
@@ -156,7 +158,7 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         h1: {
-          "@apply text-h1 font-Sans text-primary dark:text-white font-[500] text-center tracking-tighter":
+          "@apply text-h1 font-Sans text-grey_scale_900 dark:text-white/90 font-[350] lg:font-[400] text-center tracking-tight":
             {},
           "@media (min-width: 340px)": {
             "@apply text-h1-sm": {},
@@ -172,7 +174,7 @@ module.exports = {
           },
         },
         h2: {
-          "@apply text-h2 font-PerfectlyNineties font-[500] text-grey_scale_900 dark:text-grey_scale_300 text-center":
+          "@apply text-h2 font-Sans tracking-tight font-[400] text-grey_scale_900 dark:text-grey_scale_300 text-center":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h2-md": {},
@@ -182,7 +184,7 @@ module.exports = {
           },
         },
         h3: {
-          "@apply text-h3 font-Sans tracking-tighter text-grey_scale_900 font-[450] dark:text-grey_scale_100":
+          "@apply text-h3 font-Sans tracking-tight text-grey_scale_900 font-[400] dark:text-grey_scale_100":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h3-md": {},
@@ -192,7 +194,7 @@ module.exports = {
           },
         },
         h4: {
-          "@apply text-h4 font-PerfectlyNineties font-[500] dark:text-grey_scale_100 text-grey_scale_900":
+          "@apply text-h4 font-Sans tracking-tight font-[350] dark:text-grey_scale_100 text-grey_scale_900":
             {},
           "@media (min-width: 768px)": {
             "@apply text-h4-md": {},
@@ -214,14 +216,17 @@ module.exports = {
         },
 
         p: {
-          "@apply text-p font-Sans text-grey_scale_900 dark:text-grey_scale_500 font-[400] tracking-normal [word-spacing:0.03em]":
+          "@apply text-p font-Sans text-grey_scale_900 dark:text-grey_scale_300/70 font-[350] tracking-normal [word-spacing:0.03em]":
             {},
           "@media (min-width: 768px)": {
             "@apply text-p-md": {},
           },
           "@media (min-width: 1024px)": {
-            "@apply text-p-lg font-[350]": {},
+            "@apply text-p-lg font-[300]": {},
           },
+          "@media (min-width: 1440px)": {
+            "@apply text-p-xl": {},
+          },  
         },
       });
     },

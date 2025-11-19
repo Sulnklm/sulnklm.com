@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { withFrameShine } from "@/components/ui/WithFrameShine";
-import { useClickSound } from "@/hooks/useClickSound";
 
 const ShinyButton = withFrameShine(
   ({
@@ -29,7 +28,6 @@ export const ShinyTabs: React.FC<ShinyTabsProps> = ({
   activeIndex,
   onChange,
 }) => {
-  const playClickSound = useClickSound();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
@@ -59,7 +57,6 @@ export const ShinyTabs: React.FC<ShinyTabsProps> = ({
               key={tab.label}
               className={baseClass}
               onClick={() => {
-                playClickSound();
                 onChange(idx);
               }}
             >
@@ -113,7 +110,6 @@ export const ShinyTabs: React.FC<ShinyTabsProps> = ({
                     : "text-gray-700 dark:text-gray-300"
                 }`}
                 onClick={() => {
-                  playClickSound();
                   onChange(idx);
                   setDropdownOpen(false);
                 }}

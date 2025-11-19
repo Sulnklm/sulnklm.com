@@ -136,7 +136,7 @@ export function HyperText({
         {displayText.map((letter, index) => (
           <motion.span
             key={index}
-            className={cn("font-Sans", letter === " " ? "w-3" : "")}
+            className={cn("font-Sans font-[400]", letter === " " ? "w-3" : "")}
           >
             {letter}
           </motion.span>

@@ -13,7 +13,7 @@ export const ToolImage = ({ src, alt, size = 24 }: ToolImageProps) => {
 
   return (
     <div
-      className="relative bg-primary dark:bg-black border-white dark:border-primary border-2 rounded-[13px] w-10 h-auto place-items-center p-1.5 cursor-pointer"
+      className="relative bg-primary dark:bg-black border-white dark:border-primary border-2 rounded-[13px] w-9 h-auto place-items-center py-1 px-1.5 cursor-pointer"
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >

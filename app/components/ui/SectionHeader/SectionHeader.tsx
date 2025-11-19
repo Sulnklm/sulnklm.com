@@ -18,6 +18,6 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
     <SubTextBox icon={icon} additionalClass="mx-auto">
       {subText}
     </SubTextBox>
-    <h2 className="mb-10">{heading}</h2>
+    <h2 className="mb-10 max-w-[40vw]">{heading}</h2>
   </section>
 );

@@ -1,170 +1,284 @@
 "use client";
-import React from "react";
-import {
-  ArrowRight,
-  CheckIcon,
-  MoonStar,
-  Sunrise,
-  Sun,
-  Sunset,
-} from "lucide-react";
-import WavyImage from "@/components/animation/WavyImage";
+import React, { useEffect, useMemo, useState } from "react";
+import { ArrowRight, MoonStar, Sunrise, Sun, Sunset } from "lucide-react";
 import { DotBackground } from "@/components/ui/DotBackground/DotBackground";
 import { Button } from "@/components/Button/Button";
-import { ToolIcon } from "@/components/ui/ToolIcon/ToolIcon";
-import { EXTERNAL_LINKS, TECH_STACK } from "@/lib/const";
+import { EXTERNAL_LINKS } from "@/lib/const";
 import { HOME_HERO_CONST } from "../const";
 import { SubTextBox } from "@/components/ui/SubTextBox/SubTextBox";
-import { LastUpdate } from "@/components/ui/LastUpdate/LastUpdate";
-import { Tooltip } from "@/components/ui/Tooltip/Tooltip";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
 import { useVancouverTime } from "@/hooks/useVancouverTime";
+import OutlineTag from "@/components/ui/OutlineTag/OutlineTag";
+import ScrollOffscreen from "@/components/ui/ScrollOffScreen/ScrollOffScreen";
+import ScrollOffscreenImage from "@/components/ui/ScrollOffScreen/ScrollOffScreenImage";
+import Image from "next/image";
+import FloatingScrollCue from "@/components/ui/FloatingScrollCue/FloatingScrollCue";
+import { TypingAnimation } from "@/components/ui/typing-animation";
+import { PointerHighlight } from "@/components/ui/PointerHighlight/PointerHighlight";
+import { FlipWords } from "@/components/animation/FlipWords/FlipWords";
+import { Highlighter } from "@/components/ui/highlighter";
 
 interface HeroProps {
   lastUpdate: Date | null;
 }
 
-export default function Hero({ lastUpdate }: HeroProps) {
-  const actions = [
-    {
-      href: EXTERNAL_LINKS.GITHUB.href,
-      theme: "primary" as const,
-      label: EXTERNAL_LINKS.GITHUB.label,
-      icon: null,
-      extraClasses: "dark:px-8",
-    },
-    {
-      href: EXTERNAL_LINKS.LINKEDIN.href,
-      theme: "secondary" as const,
-      label: EXTERNAL_LINKS.LINKEDIN.label,
-      icon: <ArrowRight size={16} />,
-      extraClasses: "",
-    },
-  ];
+type Deco = {
+  side: "left" | "right";
+  src: string;
+  alt?: string;
+  width: number;
+  height: number;
+  positionClass?: string;
+  initialX?: number;
+  initialY?: number;
+  initialRotate?: number;
+  scale?: number;
+  disappearAt?: number; // 0~1
+  z?: number;
+};
 
-  const titleParts = [
-    { text: HOME_HERO_CONST.TITLE.PART1 },
-    { text: HOME_HERO_CONST.TITLE.PART2 },
-    { text: HOME_HERO_CONST.TITLE.PART3, highlighted: true },
-    { text: HOME_HERO_CONST.TITLE.PART4 },
-    { text: HOME_HERO_CONST.TITLE.PART5, highlighted: true },
-    { text: HOME_HERO_CONST.TITLE.PART6, highlighted: true },
-    { text: HOME_HERO_CONST.TITLE.PART7, highlighted: true },
-  ];
+const LEFT_ITEMS: Deco[] = [
+  {
+    side: "left",
+    src: "/images/home/figma.svg",
+    alt: "Figma blobs",
+    width: 150,
+    height: 220,
+    positionClass:
+      "left-[-20px] grayscale dark:brightness-50 dark:opacity-80 top-[120px] hidden lg:block rotate-[30deg] 2xl:scale-[1.2] dark:opacity-70",
+    initialX: 0,
+    initialY: 0,
+    initialRotate: 0,
+    scale: 1,
+    disappearAt: 0.95,
+    z: 410,
+  },
+  {
+    side: "left",
+    src: "/images/home/headshot.webp",
+    alt: "Headshot",
+    width: 140,
+    height: 220,
+    positionClass:
+      "left-[-20px]  top-[380px] hidden dark:grayscale dark:brightness-50 dark:opacity-80 lg:block -rotate-[10deg] 2xl:scale-[120%] dark:opacity-70",
+    initialX: 0,
+    initialY: 0,
+    initialRotate: 0,
+    scale: 1,
+    disappearAt: 0.95,
+    z: 420,
+  },
+];
+
+const RIGHT_ITEMS: Deco[] = [
+  {
+    side: "right",
+    src: "/images/home/smile.svg",
+    alt: "Portfolio browser card",
+    width: 140,
+    height: 340,
+    positionClass:
+      "right-[4px] dark:invert translate-x-3 grayscale opacity-60 dark:opacity-30 top-[140px] hidden lg:block",
+    initialX: 10,
+    initialY: 0,
+    initialRotate: 3,
+    scale: 1,
+    disappearAt: 0.95,
+    z: 410,
+  },
+  {
+    side: "right",
+    src: "/images/home/pixel.webp",
+    alt: "Avatar orange tile",
+    width: 300,
+    height: 150,
+    positionClass:
+      "right-[-129px] bottom-[100px] hidden lg:block dark:grayscale dark:opacity-40 dark:brightness-75 overflow-hidden -rotate-[20deg] xl:scale-[120%] 2xl:scale-[130%] dark:opacity-70",
+    initialX: 0,
+    initialY: 0,
+    scale: 1,
+    disappearAt: 0.9,
+    z: 420,
+  },
+];
+
+export default function Hero({ lastUpdate }: HeroProps) {
+  const actions = useMemo(
+    () => [
+      {
+        href: EXTERNAL_LINKS.CONTACT.HREF,
+        theme: "primary" as const,
+        label: EXTERNAL_LINKS.CONTACT.LABEL,
+        icon: null,
+        extraClasses: "dark:px-8",
+      },
+      {
+        href: EXTERNAL_LINKS.LINKEDIN.href,
+        theme: "secondary" as const,
+        label: EXTERNAL_LINKS.LINKEDIN.label,
+        icon: <ArrowRight size={16} className="-rotate-45"/>,
+        extraClasses: "",
+      },
+    ],
+    []
+  );
+
+  const { str: timeStr, hour } = useVancouverTime();
+
+  const Icon = useMemo(() => {
+    if (hour >= 0 && hour < 4) return MoonStar;
+    if (hour < 7) return Sunrise;
+    if (hour < 18) return Sun;
+    if (hour < 20) return Sunset;
+    return MoonStar;
+  }, [hour]);
 
   const [showLastUpdate, setShowLastUpdate] = useState(true);
-  const { str: timeStr, hour } = useVancouverTime();
-  const hourNum = hour;
-  let Icon = Sun;
-  if (hourNum >= 0 && hourNum < 4) {
-    Icon = MoonStar; // (00~03)
-  } else if (hourNum >= 4 && hourNum < 7) {
-    Icon = Sunrise; // (04~06)
-  } else if (hourNum >= 7 && hourNum < 18) {
-    Icon = Sun; //(07~10)
-    // } else if (hourNum >= 11 && hourNum < 18) {
-    //   Icon = SunMoon; // (11~17)
-  } else if (hourNum >= 18 && hourNum < 20) {
-    Icon = Sunset; // (18~19)
-  } else if (hourNum >= 20 && hourNum < 24) {
-    Icon = MoonStar; // (20~23)
-  }
-
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setShowLastUpdate(false);
-      } else {
-        setShowLastUpdate(true);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setShowLastUpdate(window.scrollY <= 100);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  return (
-    <section className="relative md:mt-0 h-[60vh] md:h-screen bg-background dark:bg-primary px-5 border-b !border-b-grey_scale_500/40 dark:!border-b-grey_scale_900 border-dashed">
-      <div className="hidden lg:block">
-        <AnimatePresence>
-          {showLastUpdate && (
-            <motion.div
-              className="hidden lg:block"
-              initial={{ opacity: 1, y: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-            >
-              <LastUpdate lastUpdate={lastUpdate} />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+  const DECOS = useMemo(() => [...LEFT_ITEMS, ...RIGHT_ITEMS], []);
 
-      <div className="absolute inset-0 z-0">
+  return (
+    <section className="relative place-content-center md:mt-10 py-20 lg:py-0 md:h-[80vh] xl:h-screen bg-background dark:bg-primary px-5 border-b md:border-b-0 !border-b-grey_scale_500/40 dark:!border-b-grey_scale_900 border-dashed overflow-hidden">
+      {DECOS.map((d, i) => (
+        <ScrollOffscreenImage
+          key={`${d.side}-${i}`}
+          side={d.side}
+          src={d.src}
+          alt={d.alt}
+          width={d.width}
+          height={d.height}
+          positionClass={`${d.positionClass} pointer-events-none`}
+          initialX={d.initialX}
+          initialY={d.initialY}
+          initialRotate={d.initialRotate}
+          scale={d.scale}
+          disappearAt={d.disappearAt}
+          z={100}
+        />
+      ))}
+
+      <div className="absolute inset-0 z-0 opacity-90 dark:opacity-70">
         <DotBackground />
       </div>
-      <div className="relative z-[900] container mx-auto flex flex-col items-center justify-center gap-5 h-full text-center mt-28 md:-mt-10">
-        {/* 3.1) TITLE */}
-        <div className="flex flex-col items-center">
-          <div className="flex gap-2 md:gap-3">
-            {titleParts.slice(0, 3).map((p, i) => (
-              <React.Fragment key={i}>
-                <h1
-                  className={`text-center font-[450] ${
-                    p.highlighted
-                      ? "text-grey_scale_1000  dark:text-grey_scale_100 font-Playfair italic"
-                      : "text-grey_scale_700 dark:text-grey_scale_800"
-                  }`}
-                >
-                  {p.text}
-                </h1>
 
-                {/* headshot */}
-                <Tooltip message={HOME_HERO_CONST.HEADSHOT.TOOLTIP}>
-                  <Link href="/about">
-                    {i === 1 && (
-                      <WavyImage
-                        src={HOME_HERO_CONST.HEADSHOT.SRC}
-                        alt={HOME_HERO_CONST.HEADSHOT.ALT}
-                        width={300}
-                        height={300}
-                        delay={0.5}
-                        className="relative object-cover min-w-[60px] max-w-16 md:max-w-20 lg:max-w-24 w-full h-auto hover:rotate-6 duration-300 shadow-brBothDark dark:border-grey_scale_900 dark:border p-0.5 rounded-3xl -translate-y-6 md:-translate-y-0 md:mx-3"
-                      />
-                    )}
-                  </Link>
-                </Tooltip>
-              </React.Fragment>
-            ))}
-          </div>
-
-          <div className="flex gap-2 md:gap-4 -mt-4 md:-mt-0 -mb-1 md:mb-0">
-            {titleParts.slice(3).map((p, i) => (
-              <h1
-                key={i}
-                className={`text-center font-[450] text-nowrap ${
-                  p.highlighted
-                    ? "text-grey_scale_1000 dark:text-grey_scale_100"
-                    : "text-grey_scale_700 dark:text-grey_scale_800"
-                }`}
-              >
-                {p.text}
-              </h1>
-            ))}
-          </div>
-        </div>
-
-        {/* 3.2) DESCRIPTION */}
-
+      <ScrollOffscreen
+        side="left"
+        positionClass="left-[1px] top-[670px] rotate-12 hidden lg:block"
+        frameClass="pointer-events-auto"
+        initialX={0}
+        initialY={0}
+        disappearAt={0.9}
+        z={1000}
+      >
         <SubTextBox
           icon={<Icon size={15} strokeWidth={1.8} className="text-coral" />}
         >
-          {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION1}: {timeStr}
+          <div className="opacity-80 dark:opacity-50">
+            {HOME_HERO_CONST.DESCRIPTION.DESCRIPTION1}: {timeStr}
+          </div>
         </SubTextBox>
+      </ScrollOffscreen>
 
-        {/* 3.3) ACTIONS */}
+      <div className="relative z-[900] container mx-auto flex flex-col items-center justify-center 2xl:pb-20 gap-10 h-full text-center mt-24 mb-10 md:mb-0 md:-mt-28">
+        <div className="flex flex-col items-center">
+          <div className="grid items-start">
+            {/* <OutlineTag
+              variant="filled"
+              className="rounded-md w-fit font-mono !px-2 !py-1.5 text-sm tracking-tighter font-[300] lg:!py-1.5"
+            > */}
+            <div className="w-fit mb-3">
+              <Highlighter action="highlight" color="#E75900">
+                <p className="text-white dark:text-white font-[450] px-2 lg:py-0.5 text-base lg:text-lg">
+                Hey! I’m Suin,
+                </p>
+              </Highlighter>
+            </div>
+            {/* </OutlineTag> */}
+            <div className="hidden lg:block">
+              <h1 className="mt-4 flex gap-1">
+                {/* <PointerHighlight
+                              rectangleClassName="!border-coral bg-coral/[3%] dark:bg-coral/10"
+                              pointerClassName="text-coral dark:text-coral/80"
+                            > */}
+                <span className="text-[#A2A2A2] dark:text-grey_scale_800">
+                  a&nbsp;
+                </span>
+                <Highlighter action="underline" color="#E75900">
+                  <FlipWords
+                    words={["Strategic Empath"]}
+                    className="font-[450]"
+                  />
+                </Highlighter>
+
+                {/* </PointerHighlight> */}
+                {/* <OutlineTag
+                  variant="outline"
+                  showCornerDots
+                  className="!rounded-none ring-1 ring-coral"
+                  dotSizeEm={0.09}
+                >
+                  <span className="text-[#A2A2A2] dark:text-grey_scale_800">
+                    a&nbsp;
+                  </span>
+                  <span className="font-[400]">Strategic Empath</span>
+                </OutlineTag> */}
+                <span className="text-[#A2A2A2] dark:text-grey_scale_800">
+                  who designs
+                </span>
+              </h1>
+
+              <h1 className="mt-4">
+                <span className="text-[#A2A2A2] dark:text-grey_scale_800">
+                  with
+                </span>
+                <span className="font-[450]">&nbsp;precision and purpose.</span>
+              </h1>
+            </div>
+            <div className="lg:hidden space-y-5 md:space-y-2.5">
+              <h1 className="mt-4 text-nowrap">
+                {/* <OutlineTag
+                  variant="outline"
+                  showCornerDots
+                  className="!rounded-none ring-1 ring-coral"
+                  dotSizeEm={0.09}
+                > */}
+                <span className="text-[#A2A2A2] dark:text-grey_scale_800">
+                  a&nbsp;
+                </span>
+                <Highlighter action="underline" color="coral">
+                  <FlipWords
+                    words={["Strategic Empath"]}
+                    className="font-[450]"
+                  />
+                </Highlighter>
+
+                {/* </OutlineTag> */}
+              </h1>
+              <h1 className="text-[#A2A2A2] dark:text-grey_scale_800 pb-1 md:pb-0 pt-1.5">
+                who designs with
+              </h1>
+              <h1 className="text-nowrap font-[400]">precision and purpose.</h1>
+            </div>
+          </div>
+        </div>
+
+        <p className="max-w-sm md:max-w-full md:text-lg">
+          Currently leading the redesign of KYC and complex identity
+          verification flows at{" "}
+          <a
+            href="https://www.deepidv.com/"
+            target="_blank"
+            className="underline"
+          >
+            DeepIDV
+          </a>
+          .
+        </p>
+
         <div className="scale-90 md:scale-100 flex gap-3.5 dark:gap-1 md:gap-4 md:dark:gap-2 -mt-3 md:mt-0">
           {actions.map((act, i) => (
             <Button
@@ -178,30 +292,16 @@ export default function Hero({ lastUpdate }: HeroProps) {
             </Button>
           ))}
         </div>
-
-        {/* 3.4) TECH STACK */}
-        <div className="hidden md:block absolute bottom-10 left-1/2 transform -translate-x-1/2 text-grey_scale_500 dark:text-grey_scale_700">
-          {Object.entries(TECH_STACK).map(([category, tools]) => (
-            <div
-              key={category}
-              className="flex items-center justify-center gap-10 mt-3"
-            >
-              {tools.map((tool, idx) => (
-                <React.Fragment key={tool.label}>
-                  <ToolIcon iconSrc={tool.iconSrc} label={tool.label} />
-                  {category === "DESIGN" && idx === tools.length - 1 && (
-                    <Button href={HOME_HERO_CONST.BUTTON.HREF}>
-                      {HOME_HERO_CONST.BUTTON.TEXT}
-                      <span className="group-hover:translate-x-1 ml-1 duration-300">
-                        <ArrowRight size={17} />
-                      </span>
-                    </Button>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-          ))}
-        </div>
+        {/* <Image
+          src="images/home/group.png"
+          alt=""
+          className="hidden border-b md:block w-full lg:hidden scale-125 grayscale-0 mt-10"
+          width={100}
+          height={100}
+        /> */}
+      </div>
+      <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bottom-32 z-[1100]">
+        <FloatingScrollCue targetId="next-section" label="Scroll" />
       </div>
     </section>
   );

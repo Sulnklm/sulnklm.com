@@ -13,7 +13,7 @@ export const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
   }, [pathname, lenis]);
 
   return (
-    <ReactLenis root options={{ lerp: 0.1 }}>
+    <ReactLenis root options={{ lerp: 0.12 }}>
       {children}
     </ReactLenis>
   );

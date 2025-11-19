@@ -2,13 +2,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-// 기본 바 색상 (보라색 예시, hex)
 const BASE_COLOR = "#2E2E2E";
 
 function hexToRgb(hex: string) {
-  // hex 색상코드를 r, g, b로 분리
   const res = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  if (!res) return [99, 68, 236]; // fallback to 보라색
+  if (!res) return [99, 68, 236];
   return [parseInt(res[1], 16), parseInt(res[2], 16), parseInt(res[3], 16)];
 }
 
@@ -54,17 +52,17 @@ export function BarChart({
 
   return (
     <div ref={chartRef} className="w-full max-w-3xl mx-auto">
-      <h4 className="text-center mb-10 font-Sans tracking-tight"><span className="text-coral pr-3">Q.</span>{title}</h4>
-      <div className="flex flex-col gap-2">
+      <h4 className=" px-5 lg:pl-8 mb-10 font-Sans font-[350] tracking-tight opacity-90 text-xl"><span className="text-coral pr-3">Q.</span>{title}</h4>
+      <div className="flex flex-col gap-2 lg:-translate-x-5 px-5 md:px-10 lg:px-0">
         {data.map((d, idx) => {
           const percent = sum ? (d.value / sum) * 100 : 0;
           const opacity = 0.8 + 1.5 * (percent / 100);
           return (
             <div key={d.label} className="flex items-center">
-              <p className="w-20 lg:w-36 2xl:w-44 text-right pr-4 font-[450] text-sm">
+              <p className="w-20 lg:w-36 2xl:w-44 text-right pr-4 font-[400] text-xs lg:text-sm">
                 {d.label}
               </p>
-              <div className="relative flex-1 h-8">
+              <div className="relative flex-1 h-8 lg:h-9">
                 <motion.div
                   className="rounded-lg h-full relative transition-all"
                   style={{
