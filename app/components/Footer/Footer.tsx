@@ -52,7 +52,7 @@ const Footer = () => {
               </h2>
             </PointerHighlight>
 
-            <p className="hidden md:block text-sm pb-10 2xl:text-base text-center text-white/60 mt-10">
+            <p className="hidden md:block text-sm pb-10 2xl:text-base text-center text-white/60 mt-10 text-nowrap">
               {FOOTER_CONST.COPYRIGHT1_DESKTOP}
             </p>
           </div>

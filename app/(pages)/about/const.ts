@@ -84,7 +84,7 @@ export const SKILLS_CONST = {
 export const EXPERIENCE_CONST: ExperienceItem[] = [
   {
     time: "Sep 2025 - Present",
-    position: "UX/UI Designer",
+    position: "UX/UI Engineer",
     company: "@ DeepIDV",
     images: [
       {

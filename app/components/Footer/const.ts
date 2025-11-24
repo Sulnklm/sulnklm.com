@@ -3,6 +3,6 @@ export const FOOTER_CONST = {
     HEADING2: "creativity",
     TIME: "Vancouver: ",
     PARAGRAPH: "hello@sulnklm.com",
-    COPYRIGHT1_DESKTOP: "© 2025 Suin.K | Hand-crafted in code & curiosity ✦",
+    COPYRIGHT1_DESKTOP: "© 2025 Suin.K | Designed & developed with Next.js, TypeScript, and love ✦",
     COPYRIGHT1_MOBILE: "© 2025 Suin.K",
 }
