@@ -118,7 +118,7 @@ For signers, the verification step felt long and unclear, making it difficult to
   },
 
   REFLECTION: {
-    subtext: "Hear More About This Project! 🔒",
+    subtext: "Hear more about this project! 🔒",
     title: "Reflection",
     description:
       "This experience taught me the importance of designing clarity and trust within complex systems while balancing business needs with user empathy in every decision.",
