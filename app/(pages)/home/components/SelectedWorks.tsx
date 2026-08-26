@@ -71,7 +71,7 @@ const SelectedWorks = () => {
               </p>
             ) : (
               filteredProjects.map((project, i) => (
-                <ListProjectCard key={project.SLUG} PROJECT={project} />
+                <ListProjectCard key={project.SLUG} PROJECT={project} index={i} />
               ))
             )}
           </div>
