@@ -64,7 +64,19 @@ const SelectedWorks = () => {
             </div>
           </div>
 
-          <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-5 lg:gap-8 place-items-center bg-customGray w-full px-5">
+          <div className="hidden md:grid mt-10 md:mt-16  gap-5 lg:gap-8 bg-customGray w-full px-5">
+            {filteredProjects.length === 0 ? (
+              <p className="text-center text-gray-500">
+                No selected projects found.
+              </p>
+            ) : (
+              filteredProjects.map((project, i) => (
+                <ListProjectCard key={project.SLUG} PROJECT={project} />
+              ))
+            )}
+          </div>
+
+          <div className="md:hidden mt-10 md:mt-16 grid gap-5 lg:gap-8 bg-customGray w-full px-5">
             {filteredProjects.length === 0 ? (
               <p className="text-center text-gray-500">
                 No selected projects found.

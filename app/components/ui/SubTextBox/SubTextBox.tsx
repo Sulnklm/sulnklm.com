@@ -19,7 +19,7 @@ export const SubTextBox: React.FC<SubTextBoxProps> = ({
       }
     >
       {icon && <span className="flex items-center">{icon}</span>}
-      <h5 className="text-sm font-[400] tracking-wide">{children}</h5>
+      <h5 className="text-sm md:text-base font-[400] tracking-wide">{children}</h5>
     </div>
   );
 };

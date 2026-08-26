@@ -92,8 +92,8 @@ module.exports = {
       colors: {
         primary: "#020202",
         background: "#F7F7F7",
-        coral: "#FF6E26",
-        blue: "#0084FF",
+        coral: "#FF500B",
+        blue: "#0090F3",
         grey_scale_50: "#F9F9F9",
         grey_scale_100: "#F8F8F8",
         grey_scale_200: "#EFEFF1",
@@ -138,8 +138,8 @@ module.exports = {
         "h5-lg": ["17px"],
 
         p: ["15px", { lineHeight: "1.7" }],
-        "p-md": ["16px"],
-        "p-lg": ["16px"],
+        "p-md": ["17px"],
+        "p-lg": ["17px"],
         "p-xl": ["17px"],
       },
       fontFamily: {
@@ -158,7 +158,7 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         h1: {
-          "@apply text-h1 font-Sans text-grey_scale_900 dark:text-white/90 font-[350] lg:font-[400] text-center tracking-tight":
+          "@apply text-h1 font-Sans text-grey_scale_900 dark:text-white/90 font-[350] lg:font-[400] text-center tracking-tighter":
             {},
           "@media (min-width: 340px)": {
             "@apply text-h1-sm": {},

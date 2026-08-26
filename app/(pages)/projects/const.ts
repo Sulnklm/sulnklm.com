@@ -4,44 +4,46 @@ export const PROJECTS_CONST = {
   WORKS_HEADING: "",
   PROJECTS: [
     {
-      SLUG: "yumpick",
-      TITLE: "YumPick",
+      SLUG: "",
+      TITLE: "Wishmon",
       SUBTITLE:
-        "How Might We Help Diners Make Confident Choices Without App-Hopping?",
+        "How might we make giving feel more personal, intentional, and joyful?",
+      OVERVIEW:
+        "AI-powered tool that transforms scattered client video feedback into clear, actionable tickets for small teams.",
       IMAGE: {
-        SRC: "/images/projects/yumpick/overview.webp",
+        SRC: "/images/projects/wishmon/wishmon-cover.webp",
         ALT: "YumPick Hero Image",
       },
-      // OVERVIEW:
-      //   "A personal project unifying dining pain points overlooked by multiple apps",
-      TOOLS: [
-        { name: "Photoshop", src: "/images/tools/photoshop.svg" },
-        { name: "Illustrator", src: "/images/tools/illustrator.svg" },
-        { name: "Figma", src: "/images/tools/figma.png" },
-      ],
       THUMBNAIL1: {
-        SRC: "/images/projects/yumpick/thumbnail.jpg",
-        ALT: "FlickMood Thumbnail Image",
+        SRC: "/images/projects/wishmon/wishmon-cover.webp",
+        ALT: "YumPick Thumbnail Image",
       },
       THUMBNAIL2: {
-        SRC: "/images/projects/yumpick/thumbnail2.webp",
-        ALT: "FlickMood Thumbnail Image",
+        SRC: "/images/projects/wishmon/wishmon-thumbnail.webp",
+        ALT: "YumPick Thumbnail Image",
       },
-      DISCIPLINE: ["Case Study"],
-      TIMELINE: "4 weeks, December 2024",
-      CATEGORY: ["all", "case-study", "selected"],
-      PLATFORM: "Mobile App",
-      PROJECT_TYPE: ["User Research", "App Design", "Prototyping"],
+      TOOLS: [
+        { name: "Illustrator", src: "/images/tools/illustrator.svg" },
+        { name: "After Effects", src: "/images/tools/after-effects.svg" },
+        { name: "Figma", src: "/images/tools/figma.png" },
+      ],
+      PROJECT_TYPE: [
+        "SaaS",
+        "Workflow Optimization",
+        "UI Design",
+        "Prototyping",
+      ],
       ROLE: "UX/UI Designer",
-      // GITHUB_LINK: {
-      //   LABEL: "GitHub",
-      //   HREF: "https://github.com/Sulnklm/yumpick",
-      // },
-      // FIGMA_LINK: {
-      //   LABEL: "Design Process",
-      //   HREF: "https://www.figma.com/board/pe65zE0tDSEV0ajTwXpQU5/YUMPICK?node-id=0-1&t=6xnbUKNRrCFdnWul-1",
-      // },
+      DISCIPLINE: ["Case Study"],
+      TIMELINE: "2 Weeks, July 2025",
+      PLATFORM: "Web App",
+      CATEGORY: ["all", "case-study", "coming soon", "selected"],
+      FIGMA_LINK: {
+        LABEL: "View Prototype",
+        HREF: "https://www.figma.com/proto/VWk6KkvPN7xHZoa0XArt6p/Pixeed?page-id=0%3A1&node-id=16-2102&viewport=114%2C131%2C0.13&t=8iowF3nzKElIC4Jl-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=16%3A2102&show-proto-sidebar=1",
+      },
     },
+
     {
       // Project 1
       SLUG: "deepsign",
@@ -76,6 +78,45 @@ export const PROJECTS_CONST = {
       // FIGMA_LINK: {
       //   LABEL: "View Prototype",
       //   HREF: "https://www.figma.com/proto/VWk6KkvPN7xHZoa0XArt6p/Pixeed?page-id=0%3A1&node-id=16-2102&viewport=114%2C131%2C0.13&t=8iowF3nzKElIC4Jl-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=16%3A2102&show-proto-sidebar=1",
+      // },
+    },
+    {
+      SLUG: "yumpick",
+      TITLE: "YumPick",
+      SUBTITLE:
+        "How Might We Help Diners Make Confident Choices Without App-Hopping?",
+      IMAGE: {
+        SRC: "/images/projects/yumpick/overview.webp",
+        ALT: "YumPick Hero Image",
+      },
+      // OVERVIEW:
+      //   "A personal project unifying dining pain points overlooked by multiple apps",
+      TOOLS: [
+        { name: "Photoshop", src: "/images/tools/photoshop.svg" },
+        { name: "Illustrator", src: "/images/tools/illustrator.svg" },
+        { name: "Figma", src: "/images/tools/figma.png" },
+      ],
+      THUMBNAIL1: {
+        SRC: "/images/projects/yumpick/thumbnail.webp",
+        ALT: "FlickMood Thumbnail Image",
+      },
+      THUMBNAIL2: {
+        SRC: "/images/projects/yumpick/thumbnail2.webp",
+        ALT: "FlickMood Thumbnail Image",
+      },
+      DISCIPLINE: ["Case Study"],
+      TIMELINE: "4 weeks, December 2024",
+      CATEGORY: ["all", "case-study", "selected"],
+      PLATFORM: "Mobile App",
+      PROJECT_TYPE: ["User Research", "App Design", "Prototyping"],
+      ROLE: "UX/UI Designer",
+      // GITHUB_LINK: {
+      //   LABEL: "GitHub",
+      //   HREF: "https://github.com/Sulnklm/yumpick",
+      // },
+      // FIGMA_LINK: {
+      //   LABEL: "Design Process",
+      //   HREF: "https://www.figma.com/board/pe65zE0tDSEV0ajTwXpQU5/YUMPICK?node-id=0-1&t=6xnbUKNRrCFdnWul-1",
       // },
     },
     // {
@@ -156,41 +197,6 @@ export const PROJECTS_CONST = {
       },
     },
 
-    {
-      SLUG: "",
-      TITLE: "Pixeed",
-      SUBTITLE:
-        "How might we help teams extract key insights without watching entire videos?",
-      OVERVIEW:
-        "AI-powered tool that transforms scattered client video feedback into clear, actionable tickets for small teams.",
-      IMAGE: {
-        SRC: "/images/projects/pixeed/pixeed-thumbnail.jpg",
-        ALT: "YumPick Hero Image",
-      },
-      THUMBNAIL1: {
-        SRC: "/images/projects/pixeed/pixeed-thumbnail.jpg",
-        ALT: "YumPick Thumbnail Image",
-      },
-      TOOLS: [
-        { name: "Illustrator", src: "/images/tools/illustrator.svg" },
-        { name: "Figma", src: "/images/tools/figma.png" },
-      ],
-      PROJECT_TYPE: [
-        "SaaS",
-        "Workflow Optimization",
-        "UI Design",
-        "Prototyping",
-      ],
-      ROLE: "UX/UI Designer",
-      DISCIPLINE: ["Case Study"],
-      TIMELINE: "2 Weeks, July 2025",
-      PLATFORM: "Web App",
-      CATEGORY: ["all", "case-study", "coming soon"],
-      FIGMA_LINK: {
-        LABEL: "View Prototype",
-        HREF: "https://www.figma.com/proto/VWk6KkvPN7xHZoa0XArt6p/Pixeed?page-id=0%3A1&node-id=16-2102&viewport=114%2C131%2C0.13&t=8iowF3nzKElIC4Jl-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=16%3A2102&show-proto-sidebar=1",
-      },
-    },
     // {
     //   SLUG: "wishbond",
     //   TITLE: "Coming Soon...",

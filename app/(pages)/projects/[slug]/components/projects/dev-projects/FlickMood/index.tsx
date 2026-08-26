@@ -24,7 +24,7 @@ export default function FlickMood() {
   return (
     <div className="relative">
       <Overview project={project} />
-      <div className="relative mt-10 pt-10 lg:mt-16 lg:pt-16 space-y-10 lg:space-y-24">
+      <div className="relative mt-10 pt-10 lg:mt-16 lg:pt-16 space-y-10 lg:space-y-24 px-5">
         {/* Key Features */}
         <section className="container">
           <SectionHeader

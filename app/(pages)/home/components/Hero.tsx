@@ -191,7 +191,7 @@ export default function Hero({ lastUpdate }: HeroProps) {
               className="rounded-md w-fit font-mono !px-2 !py-1.5 text-sm tracking-tighter font-[300] lg:!py-1.5"
             > */}
             <div className="w-fit mb-3">
-              <Highlighter action="highlight" color="#E75900">
+              <Highlighter action="highlight" color="#FF500B">
                 <p className="text-white dark:text-white font-[450] px-2 lg:py-0.5 text-base lg:text-lg">
                 Hey! I’m Suin,
                 </p>
@@ -207,7 +207,7 @@ export default function Hero({ lastUpdate }: HeroProps) {
                 <span className="text-[#A2A2A2] dark:text-grey_scale_800">
                   a&nbsp;
                 </span>
-                <Highlighter action="underline" color="#E75900">
+                <Highlighter action="underline" color="#FF500B">
                   <FlipWords
                     words={["Strategic Empath"]}
                     className="font-[450]"
@@ -249,7 +249,7 @@ export default function Hero({ lastUpdate }: HeroProps) {
                 <span className="text-[#A2A2A2] dark:text-grey_scale_800">
                   a&nbsp;
                 </span>
-                <Highlighter action="underline" color="coral">
+                <Highlighter action="underline" color="#FF500B">
                   <FlipWords
                     words={["Strategic Empath"]}
                     className="font-[450]"
